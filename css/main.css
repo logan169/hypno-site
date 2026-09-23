@@ -30,6 +30,8 @@
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Inter',-apple-system,'Segoe UI',sans-serif;
   --ease:cubic-bezier(.22,.8,.28,1);
+  --rayon:12px;        /* boutons + boîtes (commentaire client : coins trop droits) */
+  --rayon-btn:8px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -137,7 +139,7 @@ h3{font-size:1.35rem;font-weight:500}
 .btn{
   display:inline-block;padding:.95rem 2.1rem;
   font-family:var(--sans);font-size:.92rem;font-weight:500;letter-spacing:.02em;
-  border:1px solid transparent;cursor:pointer;
+  border:1px solid transparent;cursor:pointer;border-radius:var(--rayon-btn);
   transition:background var(--transition),color var(--transition),transform var(--transition),border-color var(--transition);
 }
 .btn:hover{transform:translateY(-1px)}
@@ -173,7 +175,9 @@ h3{font-size:1.35rem;font-weight:500}
   font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.65rem);font-weight:500;font-style:italic;
   line-height:1.55;color:var(--foret);
   border-left:2px solid var(--terre);
-  padding-left:1.6rem;margin-top:3.2rem;max-width:64ch;
+  padding:1rem 1.6rem 1rem 1.6rem;margin-top:3.2rem;max-width:64ch;
+  background:linear-gradient(90deg,rgba(197,169,157,.06),rgba(197,169,157,0));
+  border-radius:var(--rayon-btn);
 }
 
 /* ── 03 · PILIERS ── */
@@ -214,11 +218,13 @@ h3{font-size:1.35rem;font-weight:500}
 .about-media{position:relative}
 .about-media img{
   width:100%;aspect-ratio:4/5;object-fit:cover;
+  border-radius:var(--rayon);
   filter:saturate(.85);
 }
 .about-media::after{
   content:"";position:absolute;inset:14px -14px -14px 14px;z-index:-1;
   background:var(--sauge-pale);
+  border-radius:var(--rayon);
 }
 .about-body h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:1rem}
 .about-body .lead{margin-bottom:2.4rem}
@@ -271,6 +277,7 @@ h3{font-size:1.35rem;font-weight:500}
   flex:0 0 100%;min-width:0;
   padding:clamp(2.2rem,5vw,4rem) clamp(1rem,4vw,4rem);
   background:var(--creme);border:1px solid var(--ligne);
+  border-radius:var(--rayon);
 }
 .tst-card blockquote{
   font-family:var(--serif);font-size:clamp(1.35rem,2.6vw,1.8rem);font-weight:500;font-style:italic;
@@ -329,13 +336,15 @@ h3{font-size:1.35rem;font-weight:500}
   background:var(--creme);color:var(--ambre);
   padding:clamp(1.8rem,3.4vw,2.8rem);
   display:grid;gap:1.15rem;
+  border-radius:var(--rayon);
   box-shadow:var(--ombre);
 }
 .rdv-form label{display:grid;gap:.4rem;font-size:.82rem;font-weight:500;letter-spacing:.03em;color:rgba(48,47,43,.8)}
 .rdv-form input,.rdv-form select,.rdv-form textarea{
   font-family:var(--sans);font-size:.95rem;color:var(--ambre);
   background:var(--ivoire);border:1px solid rgba(48,47,43,.22);
-  border-radius:0;padding:.8rem .95rem;
+  border-radius:var(--rayon-btn);
+  padding:.8rem .95rem;
   transition:border-color var(--transition),background var(--transition);
   width:100%;
 }
@@ -347,6 +356,7 @@ h3{font-size:1.35rem;font-weight:500}
   margin-top:.4rem;padding:.85rem 1rem;
   background:var(--sauge-pale);color:var(--foret);
   font-size:.9rem;font-weight:500;text-align:center;
+  border-radius:var(--rayon-btn);
 }
 
 /* ── FOOTER ── */
