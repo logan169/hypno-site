@@ -1,264 +1,401 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurá Natural Health | Where Science Meets Serenity</title>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["MedicalClinic", "HealthAndBeautyBusiness"],
-      "name": "Aurá Natural Health",
-      "url": "https://logan169.github.io/hypno-site/",
-      "telephone": "+1-503-551-9847",
-      "email": "hello@auranaturalhealth.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Suite 302, Pearl District",
-        "addressLocality": "Portland",
-        "addressRegion": "OR",
-        "postalCode": "97209",
-        "addressCountry": "US"
-      },
-      "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday"], "opens": "09:00", "closes": "18:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "14:00" }
-      ],
-      "priceRange": "$$$",
-      "sameAs": ["https://instagram.com/auranaturalhealth","https://linkedin.com/in/sarahchen-nmd"]
-    },
-    {
-      "@type": "Person",
-      "name": "Dr. Sarah Chen, NMD, DABAM",
-      "jobTitle": "Founding Naturopathic Doctor at Aurá",
-      "alumniOf": "Bastyr University",
-      "award": "Portland Best Naturopath 2023-24"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question","name": "What does NMD mean?","acceptedAnswer": { "@type": "Answer","text": "NMD stands for Naturopathic Medical Doctor — a licensed professional who treats patients using natural, non-invasive therapies and diagnostic methods." } },
-        { "@type": "Question","name": "Do you accept insurance?","acceptedAnswer": { "@type": "Answer","text": "Many services are out of network but we provide superbills for reimbursement. Contact us directly to discuss coverage options." } },
-        { "@type": "Question","name": "Is hypnotherapy scientifically proven?","acceptedAnswer": { "@type": "Answer","text": "Yes — clinical hypnotherapy has extensive peer-reviewed literature demonstrating efficacy for pain management, anxiety reduction, trauma processing and habit changes." } },
-        { "@type": "Question","name": "Can I access sessions remotely?","acceptedAnswer": { "@type": "Answer","text": "Absolutely. We offer HIPAA-compliant telehealth platforms with same therapeutic depth as in-person visits." } }
-      ]
-    }
-  ]
-}
-</script>
-
+<title>Marion — Hypnose · Santé des femmes · Santé intégrative — Vancouver</title>
+<meta name="description" content="Hypnothérapie clinique à Vancouver, C.-B. : une approche intégrative qui unit hypnose thérapeutique, santé des femmes et données scientifiques — pour le stress, le sommeil, la périménopause et l'équilibre global.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link href="css/main.css?v=31" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css?v=brief1">
 </head>
-<body id="top">
-<a href="#main" class="skip-link sr-only">Skip to main content.</a>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
 
-<!-- ===== NAVIGATION BAR ===== -->
-<nav class="site-nav" aria-label="Main navigation">
+<!-- ══════════════════ 00 · NAV ══════════════════ -->
+<header class="site-nav" id="top">
   <div class="nav-inner">
-    <a href="#home" class="nav-logo">
-      <span class="logo-aura">AURÁ</span>
-      <span class="logo-sub">Natural Health</span>
+    <a class="brand" href="#accueil" aria-label="Marion — accueil">
+      <span class="brand-name">Marion</span>
+      <span class="brand-tag">Hypnose · Santé des femmes · Intégrative</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span class="bar bar1"></span>
-      <span class="bar bar2"></span>
-      <span class="bar bar3"></span>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#signals">Signaux</a>
+      <a href="#piliers">Piliers</a>
+      <a href="#approche">Approche</a>
+      <a href="#apropos">À propos</a>
+      <a href="#comprendre">Comprendre</a>
+      <a href="#faq">FAQ</a>
+      <a href="#rendezvous" class="nav-cta">Prendre rendez-vous</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
     </button>
-    <ul class="nav-links">
-      <li><a href="#home" class="nav-link active">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#services" class="nav-link">Services</a></li>
-      <li><a href="#membership" class="nav-link">Membership</a></li>
-      <li><a href="#resources" class="nav-link">Resources</a></li>
-      <li><a href="#contact" class="nav-link cta-btn">Book Consultation</a></li>
-    </ul>
   </div>
-</nav>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#signals">Signaux</a>
+    <a href="#piliers">Piliers</a>
+    <a href="#approche">Approche</a>
+    <a href="#apropos">À propos</a>
+    <a href="#comprendre">Comprendre</a>
+    <a href="#faq">FAQ</a>
+    <a href="#rendezvous" class="nav-cta">Prendre rendez-vous</a>
+  </div>
+</header>
 
-<!-- ===== HERO SECTION ===== -->
 <main id="main">
-<section id="home" class="hero fade-in-section">
-  <div class="hero-overlay"></div>
-  <div class="hero-particles">
-    <span class="particle p1"></span><span class="particle p2"></span>
-    <span class="particle p3"></span><span class="particle p4"></span>
-    <span class="particle p5"></span>
-  </div>
-  <div class="hero-content fade-in-section">
-    <p class="hero-eyebrow">Naturopathic Medicine &amp; Clinical Hypnotherapy</p>
-    <h1 class="hero-title"><span class="title-line">Where Science Meets</span><span class="title-line title-accent">Serenity</span></h1>
-    <p class="hero-subtitle">Dr. Sarah Chen, NMD guides patients to lasting healing through evidence-based integrative medicine and therapeutic hypnotherapy — rooted in compassion, grounded in science.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary btn-glow">Book Your Free Discovery Call</a>
-      <a href="#services" class="btn btn-outline">Explore Treatments</a>
-    </div>
-    <div class="hero-trust">
-      <span class="trust-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M12 2L3.5 6.5v5.5c0 5.25 3.63 10.19 8.5 11.34C17.04 22.19 20.5 17.25 20.5 12V6.5L12 2z"/></svg>Bastyr University Graduate</span>
-      <span class="trust-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0114 0v2"/></svg>14+ Years Practice</span>
-      <span class="trust-badge">✓ HIPAA Compliant Telehealth</span>
-    </div>
-  </div>
-  <div class="hero-scroll-hint">
-    <span>Scroll to discover</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
 
-<!-- ===== TRUST BAR ===== -->
-<section class="trust-bar fade-in-section">
-  <div class="container trust-inner">
-    <div class="trust-stat"><strong>2,500+</strong><span>Patient outcomes transformed</span></div>
-    <div class="trust-divider"></div>
-    <div class="trust-stat"><strong>14+</strong><span>Years clinical experience &amp; research</span></div>
-    <div class="trust-divider"></div>
-    <div class="trust-stat">Portland Best Naturopath<span>2023-24 Winner</span></div>
-    <div class="trust-divider"></div>
-    <div class="trust-stat"><strong>$5B+</strong><span>Valued in clinical studies on naturopathic outcomes</span></div>
+<!-- ══════════════════ 01 · HÉROS ══════════════════ -->
+<section class="hero fade" id="accueil">
+  <div class="hero-media">
+    <!-- PHOTO MONDE 1 (nature / contemplation) — à remplacer par la photo réelle du client -->
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=75"
+         alt="Sentier de forêt de Colombie-Britannique dans la lumière douce" fetchpriority="high">
+    <div class="hero-veil" aria-hidden="true"></div>
   </div>
-</section>
-
-<!-- ===== THE AURÁ DIFFERENCE (3 Pillars) ===== -->
-<section id="about" class="pillars fade-in-section">
-  <div class="container">
-    <div class="section-header reveal"><p class="section-eyebrow">The Aurá Difference</p><h2 class="section-title">A practice where your whole person is the patient — not just your symptoms.</h2></div>
-    <div class="pillars-grid">
-      <article class="pillar-card reveal">
-        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5B7C5E" aria-hidden><path d="M12 2L3.5 6.5v5.5c0 5.25 3.63 10.19 8.5 11.34 4.87-1.15 8.5-6.09 8.5-11.34V6.5L12 2z"/></svg></div>
-        <h3 class="pillar-title">Root-Cause Medicine</h3>
-        <p>We don't mask symptoms. Our diagnostics trace imbalances to their origin — gut, nerve pathways, endocrine systems, and the mind-body connections that shape your healing trajectory.</p>
-      </article>
-      <article class="pillar-card reveal">
-        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5B7C5E" aria-hidden><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 008 0"/></svg></div>
-        <h3 class="pillar-title">Clinical Hypnotherapy</h3>
-        <p>Hypnosis isn't mysticism — it's neuroscience in action. Our trained protocols rewire maladaptive patterns (phobias, chronic stress, weight habits) at the neural level for lasting change.</p>
-      </article>
-      <article class="pillar-card reveal">
-        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5B7C5E" aria-hidden><path d="M3 17l6-6 4 4 8-8"/><polygon points="17,6 21,6 21,10"/></svg></div>
-        <h3 class="pillar-title">Whole-Person Wellness</h3>
-        <p>Treatment plans weave together botanical medicine, nutrition coaching, functional testing, and psychospiritual work — because real healing doesn't happen in silos.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SERVICES SECTION ===== -->
-<section id="services" class="services fade-in-section">
-  <div class="container">
-    <div class="section-header reveal"><p class="section-eyebrow">Our Treatments</p><h2 class="section-title">Pathways to Restoration</h2><p class="section-subtitle">Every plan is personalized — here are the treatment pillars we weave together.</p></div>
-    
-    <div class="services-tabs reveal">
-      <!-- Tab navigation (accessible) -->
-      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="mind-panel">Mind</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="body-panel">Body</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="women-panel">Women's Health</button>
-    </div>
-    
-    <!-- Mind tab content -->
-    <div id="mind-panel" class="service-panel active" role="tabpanel">
-      <div class="services-grid">
-        <div class="service-card reveal"><span class="service-tag">Anxiety & Stress</span><h3>Hypnotherapy for Anxiety</h3><p>Evidence-based sessions that calm the nervous system, reframe thought loops, and restore autonomic balance—using proven neurolinguistic protocols.</p><span class="service-price">$180/session • 60 min</span></div>
-        <div class="service-card reveal"><span class="service-tag">Phobia & Trauma</span><h3>Deep Hypnotherapy</h3><p>Targeted hypnosis for phobias, PTSD and panic attacks — rewiring fear-conditioning at the subconscious level without prolonged exposure therapy.</p><span class="service-price">$200/session • 75 min</span></div>
-        <div class="service-card reveal"><span class="service-tag">Sleep & Fatigue</span><h3>Sleep Optimization Program</h3><p>We address insomnia and chronic fatigue holistically: nervous system regulation, botanical nervines, circadian-nutrition plans, and hypnotherapy for sleep-conditioning.</p><span class="service-price">$350/mo • 4-session program</span></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="overline">Hypnothérapie clinique — Vancouver, C.-B.</p>
+      <h1>Le corps et l'esprit,<br>en dialogue.</h1>
+      <p class="hero-sub">Une approche intégrative de la santé des femmes, où l'hypnose
+      thérapeutique s'appuie sur la science plutôt que sur les clichés.</p>
+      <p class="hero-meta">Hypnose thérapeutique&nbsp;·&nbsp;Santé des femmes&nbsp;·&nbsp;Approche intégrative</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#approche">Découvrir mon approche</a>
+        <a class="btn btn-ghost" href="#rendezvous">Prendre rendez-vous</a>
       </div>
     </div>
-    
-    <!-- Body tab content -->
-    <div id="body-panel" class="service-panel" role="tabpanel"><div class="services-grid">
-      <div class="service-card reveal"><span class="service-tag">Detox</span><h3>Gut Restoration Protocol</h3><p>Comprehensive gut-health program with functional testing, botanical antimicrobials, microbiome restoration and nutritional protocols that restore barrier integrity.</p><span class="service-price">$500/mo • 12-week intensive</span></div>
-      <div class="service-card reveal"><span class="service-tag">Immunology</span><h3>Holistic Immune Support</h3><p>A layered approach to immune function with adaptive herbs, vitamin protocols and lifestyle modifications to strengthen your body's natural defense architecture.</p><span class="service-price">$280/mo • Ongoing program</span></div>
-      <div class="service-card reveal"><span class="service-tag">Diagnostics</span><h3>Comprehensive Naturopathic Exam</h3><p>175-minute first visit includes full history, functional assessment, targeted lab ordering and an integrated treatment blueprint.</p><span class="service-price">$450 initial consult • 175 min</span></div>
-    </div></div>
-
-    <!-- Women's tab content -->
-    <div id="women-panel" class="service-panel" role="tabpanel"><div class="services-grid">
-      <div class="service-card reveal"><span class="service-tag">Hormonal Balance</span><h3>Women's Hormone Optimization</h3><p>Natural hormone balancing through targeted botanicals, nutrition and functional testing for PMS, PCOS, perimenopause and fertility support.</p><span class="service-price">$400/mo • 12-week protocol</span></div>
-      <div class="service-card reveal"><span class="service-tag">Postpartum</span><h3>Maternal Wellness Program</h3><p>Postpartum recovery that addresses physical, hormonal and emotional dimensions — nutritional support for milk production, herbal lactation help and mood stabilization therapy.</p><span class="service-price">$500/mo • 8-week structured care</span></div>
-      <div class="service-card reveal"><span class="service-tag">Fertility Support</span><h3>Functional Fertility Prep</h3><p>Preconception protocols for both partners — optimizing egg/sperm quality, hormonal foundations and stress-reduction therapy to prepare the body for conception naturally.</p><span class="service-price">$600/mo • 16-week prep program</span></div>
-    </div></div>
   </div>
 </section>
 
-<!-- ===== MEMBERSHIP SECTION ===== -->
-<section id="membership" class="membership fade-in-section">
-  <div class="container">
-    <div class="section-header reveal"><p class="section-eyebrow">Membership Plans</p><h2 class="section-title">Continuous Care, Transparent Pricing</h2><p class="section-subtitle">Monthly plans provide ongoing support with flexible scheduling and priority access to Dr. Chen.</p></div>
-    <div class="membership-grid reveal">
-      <div class="member-card"><div class="card-header"><span class="plan-name">Discovery</span><span class="plan-desc">Essential consultations &amp; follow-up visits</span></div><div class="member-price-wrap"><strong class="price-amount">$350</strong><span class="price-period per-month">/month</span></div><ul class="member-features"><li>2 virtual or in-person visits per month</li><li>Email support between sessions</li><li>Basic botanical &amp; nutrition plan</li><li>Messaging with care coordinator</li></ul><div class="card-footer"><a href="#contact" class="btn btn-outline member-btn">Start Discovery</a></div></div>
-      <div class="member-card featured"><div class="popular-badge">Most Popular</div><div class="card-header"><span class="plan-name">Integrative</span><span class="plan-desc">Hypnotherapy + naturopathic care bundle</span></div><div class="member-price-wrap"><strong class="price-amount">$450</strong><span class="price-period per-month">/month</span></div><ul class="member-features"><li>3 therapy/naturopathic visits/month</li><li>1 hypnotherapy session included</li><li>Custom herbal formula &amp; supplement protocol</li><li>Priority telehealth scheduling</li><li>Lab ordering &amp; interpretation</li></ul><div class="card-footer"><a href="#contact" class="btn btn-primary member-btn">Start Integrative</a></div></div>
-      <div class="member-card"><div class="card-header"><span class="plan-name">Full Circle VIP</span><span class="plan-desc">Concierge-level naturopathic medicine</span></div><div class="member-price-wrap"><strong class="price-amount">$950</strong><span class="price-period per-month">/month</span></div><ul class="member-features"><li>Unlimited virtual visits &amp; in-person sessions</li><li>Unlimited hypnotherapy + acupuncture</li><li>30-min weekly check-ins with Dr. Chen</li><li>Ongoing herbal formulations custom-made</li><li>Priority 24hr messaging access</li></ul><div class="card-footer"><a href="#contact" class="btn btn-outline member-btn">Start VIP Care</a></div></div>
+<!-- ══════════════════ 02 · SIGNAUX ══════════════════ -->
+<section class="section fade" id="signals">
+  <div class="wrap prose">
+    <p class="overline">Vous êtes peut-être ici parce que…</p>
+    <h2>Votre corps vous envoie des signaux.</h2>
+    <p class="lead">Parfois, ce n'est pas une douleur précise qui vous amène — c'est l'impression
+    de ne plus tenir ensemble. Ces éléments reviennent souvent chez les personnes que j'accompagne&nbsp;:</p>
+  </div>
+  <div class="wrap signals-grid">
+    <span class="signal">Stress et anxiété persistants</span>
+    <span class="signal">Sommeil perturbé, réveils nombreux</span>
+    <span class="signal">Fatigue qui ne se règle pas en dormant</span>
+    <span class="signal">Tensions, douleurs, inconforts physiques</span>
+    <span class="signal">Transitions hormonales, périménopause</span>
+    <span class="signal">Un rapport difficile à son corps</span>
+    <span class="signal">Changements de vie qui bouleversent l'équilibre</span>
+    <span class="signal">Le besoin, simplement, de retrouver un équilibre</span>
+  </div>
+  <div class="wrap prose">
+    <blockquote class="pull">
+      Je vous accompagne avec une approche qui considère la santé dans sa globalité —
+      physiologie, système nerveux, vécu émotionnel et contexte de vie.
+      Sans promesse magique : des outils éprouvés, appliqués à votre histoire.
+    </blockquote>
+  </div>
+</section>
+
+<!-- ══════════════════ 03 · TROIS PILIERS ══════════════════ -->
+<section class="section section-lin fade" id="piliers">
+  <div class="wrap prose">
+    <p class="overline">Ce que je propose</p>
+    <h2>Trois dimensions d'une même approche.</h2>
+    <p class="lead">Ce ne sont pas trois services côte à côte. C'est une même manière de penser la
+    santé — vue de trois angles complémentaires.</p>
+  </div>
+  <div class="wrap pillars">
+    <article class="pillar">
+      <p class="pillar-num">01</p>
+      <h3>Hypnose</h3>
+      <p>Comprendre le rôle de l'inconscient, des automatismes, des émotions et du
+      système nerveux dans votre expérience quotidienne. L'hypnose comme outil
+      thérapeutique précis — ni mystère, ni spectacle.</p>
+      <a class="link-quiet" href="#comprendre">Découvrir l'hypnose →</a>
+    </article>
+    <article class="pillar">
+      <p class="pillar-num">02</p>
+      <h3>Santé des femmes</h3>
+      <p>Une attention particulière aux réalités physiologiques et psychologiques qui
+      traversent la vie des femmes — cycle, fertilité, périménopause, rapport au corps —
+      avec un vocabulaire exact, jamais décoratif.</p>
+      <a class="link-quiet" href="#rendezvous">Découvrir l'accompagnement →</a>
+    </article>
+    <article class="pillar">
+      <p class="pillar-num">03</p>
+      <h3>Santé intégrative</h3>
+      <p>Mettre en relation corps, psychologie, habitudes de vie et données issues de
+      la recherche, pour des recommandations cohérentes. Vous savez pourquoi, pas seulement comment.</p>
+      <a class="link-quiet" href="#approche">Comprendre mon approche →</a>
+    </article>
+  </div>
+  <div class="wrap prose">
+    <p class="fine">Recommandation&nbsp;: chaque piste de travail est présentée avec son niveau de preuve —
+    y compris ce que la littérature ne permet pas encore d'affirmer.</p>
+  </div>
+</section>
+
+<!-- ══════════════════ 04 · MA FAÇON DE TRAVAILLER ══════════════════ -->
+<section class="section fade" id="approche">
+  <div class="wrap prose">
+    <p class="overline">Ma façon de travailler</p>
+    <h2>Une approche humaine, rigoureuse et intégrative.</h2>
+  </div>
+  <div class="wrap principles">
+    <article class="principle">
+      <p class="principle-num">I</p>
+      <h3>Fondée sur les connaissances</h3>
+      <p>Les outils que je vous propose s'appuient, autant que possible, sur les
+      données disponibles et leur niveau de preuve. Quand la littérature est
+      limitative, je vous le dis.</p>
+    </article>
+    <article class="principle">
+      <p class="principle-num">II</p>
+      <h3>Centrée sur la personne</h3>
+      <p>La recherche donne des repères. Votre histoire, votre corps et votre
+      expérience restent singuliers — et priment sur le manuel.</p>
+    </article>
+    <article class="principle">
+      <p class="principle-num">III</p>
+      <h3>Corps et esprit en interaction</h3>
+      <p>Stress, sommeil, hormones, émotions et santé physique interagissent
+      constamment. Les traiter séparément, c'est s'interdire de voir le tableau entier.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════════════ 05 · À PROPOS ══════════════════ -->
+<section class="section section-creme fade" id="apropos">
+  <div class="wrap about-grid">
+    <div class="about-media">
+      <!-- PHOTO MONDE 2 (portrait éditorial) — à remplacer par la photo réelle du client -->
+      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1200&q=75"
+           alt="Portrait éditorial, lumière naturelle" loading="lazy">
     </div>
-    <p class="membership-note reveal">✨ All plans include a 10-day free trial — no commitment needed. Telehealth available in OR, WA &amp; CA.</p>
-  </div>
-</section>
-
-<!-- ===== TESTIMONIALS SECTION ===== -->
-<section class="testimonials fade-in-section">
-  <div class="container">
-    <div class="section-header reveal"><p class="section-eyebrow">Patient Stories</p><h2 class="section-title">Voices From the Healing Room</h2></div>
-    <div class="testimonial-carousel reveal" id="testimonial-carousel">
-      <div class="testimonial-track" id="track">
-        <div class="testimonial-card"><div class="quote-mark">&rdquo;</div><p class="t-text">I was skeptical about hypnotherapy, but after 6 sessions with Dr. Chen my anxiety attacks stopped completely. No more racing heart before work, no more panic. It genuinely changed my life.</p><div class="author-block"><strong>Sarah M.</strong><span>Patient for 14 months</span></div></div>
-        <div class="testimonial-card"><div class="quote-mark">&rdquo;</div><p class="t-text">After a decade of failed diets and endless frustration, the gut restoration program gave me my body back — and my energy. Dr. Chen doesn't just prescribe; she partners with you.</p><div class="author-block"><strong>James T.</strong><span>Patient for 8 months</span></div></div>
-        <div class="testimonial-card"><div class="quote-mark">&rdquo;</div><p class="t-text">My hormone levels were a nightmare going into perimenopause. Dr. Chen's botanical protocols and naturopathic approach got me to feel like myself again at 51. She is remarkable.</p><div class="author-block"><strong>Patricia R.</strong><span>Patient for 3 years</span></div></div>
-        <div class="testimonial-card"><div class="quote-mark">&rdquo;</div><p class="t-text">I drove 2 hours to Aurá but switched to virtual sessions the moment she offered them — and the care quality didn't drop one bit. This is how telehealth should feel.</p><div class="author-block"><strong>Emily L.</strong><span>Patient for 2 years</span></div></div>
-        <div class="testimonial-card"><div class="quote-mark">&rdquo;</div><p class="t-text">The VIP membership is worth every dollar. Dr. Chen responds to my messages within hours, and the monthly herbal formulations are always precisely matched to where I am that week.</p><div class="author-block"><strong>David K.</strong><span>Patient for 20 months</span></div></div>
+    <div class="about-body">
+      <p class="overline">À propos</p>
+      <h2>Bonjour, je suis Marion.</h2>
+      <p class="lead">Hypnothérapeute et praticienne en santé intégrative à Vancouver.
+      Mon parcours croise la recherche et la clinique — et c'est précisément cette
+      rencontre que je souhaite vous transmettre&nbsp;:</p>
+      <div class="cred-grid">
+        <div class="cred">
+          <h3>Parcours scientifique</h3>
+          <!-- À COMPLÉTER : diplômes et publications réels du client -->
+          <ul>
+            <li>Doctorat en psychologie</li>
+            <li>Recherche en régulation émotionnelle et sommeil</li>
+            <li>Enseignement &amp; vulgarisation scientifique</li>
+          </ul>
+        </div>
+        <div class="cred">
+          <h3>Approches thérapeutiques</h3>
+          <!-- À COMPLÉTER : formations certifiantes réelles du client -->
+          <ul>
+            <li>Hypnose thérapeutique — formation certifiante</li>
+            <li>Santé des femmes — cycle, fertilité, périménopause</li>
+            <li>Santé intégrative — habitudes de vie, sommeil</li>
+          </ul>
+        </div>
       </div>
-      <button class="carousel-btn prev" aria-label="Previous testimonial">&#10094;</button>
-      <button class="carousel-btn next" aria-label="Next testimonial">&#10095;</button>
+      <a class="btn btn-outline" href="#comprendre">Découvrir mon parcours</a>
     </div>
   </div>
 </section>
 
-<!-- ===== RESOURCES PREVIEW ===== -->
-<section id="resources" class="resources fade-in-section">
-  <div class="container">
-    <div class="section-header reveal"><p class="section-eyebrow">Resources &amp; Insights</p><h2 class="section-title">Knowledge for Your Healing Journey</h2></div>
-    <div class="articles-grid reveal">
-      <article class="article-card"><img src="https://placehold.co/600x400/5B7C5E/F5F1EB?text=Hypnosis+%26+the+Brain" alt="Illustration of neural pathways in brain highlighted in warm green tones" loading="lazy"><div class="article-body"><span class="article-tag">Neuroscience</span><h3>How Hypnotherapy Reshapes the Brain: Evidence From fMRI Studies</h3><p>A deep look into how therapeutic hypnotherapy creates measurable structural changes in neural circuits of anxiety and pain.</p></div><a href="#" class="read-more" aria-label="Read more about how hypnotherapy reshapes the brain">Continue reading &rarr;</a></article>
-      <article class="article-card"><img src="https://placehold.co/600x400/D4A862/F5F1EB?text=Gut+%26+Mouth" alt="Portrait of healthy gut microbiome and oral health connection in warm gold tones" loading="lazy"><div class="article-body"><span class="article-tag">Gut Health</span><h3>The Mouth-Gut Axis: Why Oral Health Predicts Chronic Illness</h3><p>New research reveals a surprising link between periodontal bacteria and systemic inflammation — naturopathic approaches to restoration.</p></div><a href="#" class="read-more" aria-label="Read more about mouth-gut axis">Continue reading &rarr;</a></article>
-      <article class="article-card"><img src="https://placehold.co/600x400/7B9CB5/F5F1EB?text=Womens+Wellness" alt="Serene botanical illustration of women's wellness themes in soft blue tones" loading="lazy"><div class="article-body"><span class="article-tag">Women's Health</span><h3>Natural Approaches to Menopause: Beyond Hormone Replacement</h3><p>Evidence-based, non-hormonal interventions for hot flashes, mood swings and sleep disruption — botanical medicine in action.</p></div><a href="#" class="read-more" aria-label="Read more about natural approaches to menopause">Continue reading &rarr;</a></article>
-    </div>
-    <div class="resources-actions reveal"><a href="#contact" class="btn btn-outline">Explore All Articles</a><a href="#contact" class="btn btn-primary">Download Our New Patient Packet (PDF)</a></div>
+<!-- ══════════════════ 06 · COMPRENDRE (REVIEW) ══════════════════ -->
+<section class="section fade" id="comprendre">
+  <div class="wrap prose">
+    <p class="overline">Comprendre</p>
+    <h2>La revue de Marion.</h2>
+    <p class="lead">Des notes courtes, claires et sourcées, pour mieux comprendre les
+    mécanismes avant de choisir une démarche. Lire pour comprendre — pas pour convaincre.</p>
+  </div>
+  <div class="wrap articles">
+    <article class="article">
+      <p class="article-tag">Hypnose</p>
+      <h3>Hypnose : que dit réellement la recherche&nbsp;?</h3>
+      <p>Ce que les méta-analyses montrent, ce qu'elles ne montrent pas, et où se trouvent les limites honnêtes de la méthode.</p>
+      <a href="#comprendre" class="link-quiet">Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag">Santé des femmes</p>
+      <h3>Périménopause : comprendre les changements du corps et du cerveau</h3>
+      <p>Hormones, sommeil, humeur — ce qui bouge réellement, et ce qu'on peut y faire avec des outils fondés.</p>
+      <a href="#comprendre" class="link-quiet">Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag">Système nerveux</p>
+      <h3>Stress chronique et système nerveux</h3>
+      <p>Pourquoi l'anxiété s'installe dans le corps, et ce que la régulation nerveuse change concrètement.</p>
+      <a href="#comprendre" class="link-quiet">Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag">Sommeil</p>
+      <h3>Sommeil et santé hormonale</h3>
+      <p>Le lien bidirectionnel entre sommeil, cycle et hormones — et les leviers qui comptent vraiment.</p>
+      <a href="#comprendre" class="link-quiet">Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag">Douleur</p>
+      <h3>Le lien entre douleur, attention et cerveau</h3>
+      <p>Ce que la recherche de la douleur nous apprend sur l'attention — et pourquoi cela change la pratique.</p>
+      <a href="#comprendre" class="link-quiet">Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag">Intégratif</p>
+      <h3>Santé intégrative : de quoi parle-t-on exactement&nbsp;?</h3>
+      <p>Décomposer le terme pour en distinguer ce qui est rigoureux de ce qui est marketing.</p>
+      <a href="#comprendre" class="link-quiet">Lire →</a>
+    </article>
   </div>
 </section>
 
-<!-- ===== CONTACT SECTION ===== -->
-<section id="contact" class="contact fade-in-section">
-  <div class="container">
-    <div class="contact-split">
-      <div class="contact-info reveal"><p class="section-eyebrow">Get in Touch</p><h2 class="section-title section-dark">Begin Your Healing Journey</h2><p class="contact-desc">Your first step is a free 15-minute discovery call. Tell Dr. Chen about your symptoms, your history and where you'd like to be — then we'll map out a treatment path together.</p><div class="contact-details"><div class="ct-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B7C5E" aria-hidden><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg><div><strong>Office:</strong><br><span>Suite 302, Pearl District<br>Portland, OR 97209</span></div></div><div class="ct-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B7C5E" aria-hidden><path d="M22 16.92v3a2 2 0 01-2.8.18L3.5 14.5a2 2 0 01-.18-2.8l10.6-10.6a2 2 0 012.8 0l7.48 7.48zM21,12A9,9 0 0,1 3.5 14.5"/></svg><strong>Phone:</strong><br><span>+1 (503) 551-9847</span></div><div class="ct-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B7C5E" aria-hidden><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M22,5L12,13 2,5"/></svg><strong>Email:</strong><br><span>hello@auranaturalhealth.com</span></div><div class="ct-hours"><strong>Hours:</strong><br>Mon &mdash; Fri: 9 AM – 6 PM<br>Saturday: 10 AM – 2 PM</div></div>
-      <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6!2d-122.68!3d45.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDMxJzEyLjAiTiAxMjJcwogNTIuMCJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="280" style="border:0;border-radius:16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Aurá location map of Pearl District, Portland OR"></iframe></div>
+<!-- ══════════════════ 07 · TÉMOIGNAGES ══════════════════ -->
+<section class="section section-lin fade" id="temoignages">
+  <div class="wrap prose">
+    <p class="overline">Paroles de patientes</p>
+    <h2>Des patientes, en leurs mots.</h2>
+  </div>
+  <div class="wrap">
+    <div class="tst-carousel">
+      <div class="tst-track" id="tstTrack" role="region" aria-roledescription="carrousel" aria-label="témoignages de patientes">
+        <figure class="tst-card">
+          <blockquote>
+            « Je pensais que l'hypnose serait floue. En réalité, c'est une méthode structurée&nbsp;:
+            des objectifs, des outils, un suivi. Ça m'a aidée à retrouver un sommeil stable. »
+          </blockquote>
+          <figcaption>Patiente depuis 8 mois — sommeil</figcaption>
+        </figure>
+        <figure class="tst-card">
+          <blockquote>
+            « Marion m'a accompagnée dans ma périménopause sans jamais me promettre des
+            miracles, en s'appuyant sur ce qu'on sait. C'est cette honnêteté qui m'a rassurée. »
+          </blockquote>
+          <figcaption>Patiente depuis 14 mois — période de la vie</figcaption>
+        </figure>
+        <figure class="tst-card">
+          <blockquote>
+            « Un espace où l'on m'écoute, où l'on explique. J'y suis allée anxieuse,
+            j'en suis repartie avec un plan clair que je pouvais comprendre et suivre. »
+          </blockquote>
+          <figcaption>Patiente depuis 1 an — anxiété</figcaption>
+        </figure>
       </div>
-      <div class="contact-form-wrapper reveal"><form action="https://formsubmit.co/hello@auranaturalhealth.com" method="POST" id="contactForm" class="contact-form" novalidate><input type="hidden" name="_subject" value="New Aurá Contact Form Submission"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none"><label for="name" class="form-label sr-only">Your full name</label><input id="name" name="name" type="text" placeholder="Full Name *" required autocomplete="name"><label for="email" class="form-label sr-only">Your email address</label><input id="email" name="_replyto" type="email" placeholder="Email Address *" required autocomplete="email"><label for="phone" class="form-label sr-only">Your phone number</label><input id="phone" name="phone" type="tel" placeholder="Phone Number"><label for="service" class="form-label sr-only">Which service are you interested in?</label><select id="service" name="service" required><option value="">Select a Service *</option><option value="hypnotherapy-anxiety">Hypnotherapy – Anxiety</option><option value="hypnotherapy-deep">Deep Hypnotherapy</option><option value="sleep-optimization">Sleep Optimization</option><option value="gut-restoration">Gut Restoration Protocol</option><option value="immune-support">Holistic Immune Support</option><option value="initial-evaluation">Comprehensive Naturopathic Exam</option><option value="hormone-balance">Women's Hormone Optimization</option><option value="maternal-wellness">Maternal Wellness Program</option><option value="fertility-prep">Functional Fertility Prep</option><option value="membership-general">Membership Plans Inquiry</option></select><label for="message" class="form-label sr-only">Your message</label><textarea id="message" name="message" placeholder="Tell us about your health goals &amp; current symptoms *" required rows="5"></textarea><button type="submit" class="btn btn-btn-primary btn-full contact-submit">Book Your Discovery Call →</button><p class="form-privacy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden title="Secure & private"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7,11V7a5,5 0 0110,0v4"/></svg>All information is HIPAA-eligible and encrypted in transit.</p></form>
+      <div class="tst-controls">
+        <button class="tst-btn" id="tstPrev" aria-label="Témoignage précédent">←</button>
+        <button class="tst-btn" id="tstNext" aria-label="Témoignage suivant">→</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-<!-- ===== FOOTER ===== -->
+<!-- ══════════════════ 08 · FAQ ══════════════════ -->
+<section class="section fade" id="faq">
+  <div class="wrap prose">
+    <p class="overline">Questions fréquentes</p>
+    <h2>Avant de prendre rendez-vous.</h2>
+  </div>
+  <div class="wrap faq-list">
+    <details class="faq-item" open>
+      <summary>L'hypnose a-t-elle une base scientifique&nbsp;?</summary>
+      <p>Oui — à des degrés. Des méta-analyses soutiennent son usage pour la gestion de certaines
+      douleurs, le stress et certains aspects du sommeil. D'autres domaines font l'objet de
+      recherches moins abouties. Je vous indique, pour chaque piste, ce que les données disent —
+      et où elles s'arrêtent.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Comment se déroule une séance&nbsp;?</summary>
+    <p>Elle commence par un échange sur ce qui vous amène, puis des objectifs communs.
+    L'hypnose en elle-même est un état naturel d'attention focalisée — vous ne «&nbsp;perdez pas
+    le contrôle&nbsp;», et vous en sortez avec des outils concrets. Une séance dure de 60 à
+    75 minutes.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Est-ce pour moi&nbsp;?</summary>
+      <p>Si vous cherchez une réponse unique et définitive, probablement pas. Si vous cherchez
+      un accompagnement structuré, où l'on explique, où l'on mesure, et où votre expérience est
+      prise sérieusement — probablement oui. Un appel découverte de 15 minutes suffit pour
+      s'en assurer ensemble.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Peut-on travailler à distance&nbsp;?</summary>
+      <p>Oui. Un grand nombre de séances se déroulent par vidéoconférence, y compris depuis la
+      Colombie-Britannique. La qualité du travail ne dépend pas de la salle — elle dépend de
+      la relation et du cadre, et nous les maintenons tous deux à distance.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Qu'est-ce que la «&nbsp;santé intégrative&nbsp;» précisément&nbsp;?</summary>
+      <p>Une démarche qui met en relation plusieurs niveaux de l'expérience — corps, psychologie,
+      habitudes, contexte — et qui s'appuie sur les données disponibles. Elle se distingue de la
+      médecine conventionnelle par son regard sur l'ensemble de la personne — et de l'approche
+      «&nbsp;wellness&nbsp;» par son exigence de preuves. J'aime cette position : celle du centre.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ══════════════════ 09 · RENDEZ-VOUS / CONTACT ══════════════════ -->
+<section class="section section-foret fade text-light" id="rendezvous">
+  <div class="wrap rdv-grid">
+    <div class="rdv-left">
+      <p class="overline light">Premier pas</p>
+      <h2>Un appel découverte, de 15 minutes.</h2>
+      <p>Le premier pas, c'est une simple conversation. On fait le point sur ce qui vous
+      amène, sur ce que vous attendez, et — le cas échéant — sur les options qui ont un
+      sens. Sans engagement, et sans script.</p>
+      <ul class="rdv-info">
+        <li><strong>Lieu</strong><br>Vancouver, C.-B. — ou par vidéoconférence</li>
+        <li><strong>Email</strong><br><a href="mailto:bonjour@marion-cabin.ca">bonjour@marion-cabin.ca</a></li>
+        <li><strong>Réponse</strong><br>Sous 24&nbsp;h ouvrées</li>
+      </ul>
+    </div>
+    <form class="rdv-form" id="contactForm" novalidate>
+      <label>Nom <input type="text" name="nom" required autocomplete="name"></label>
+      <label>Email <input type="email" name="email" required autocomplete="email"></label>
+      <label>
+        Ce qui vous amène
+        <select name="sujet" required>
+          <option value="" selected disabled>Choisir…</option>
+          <option>Hypnose, stress ou sommeil</option>
+          <option>Santé des femmes</option>
+          <option>Santé intégrative</option>
+          <option>Autre / je ne sais pas encore</option>
+        </select>
+      </label>
+      <label>Message <textarea name="message" rows="5" required></textarea></label>
+      <button type="submit" class="btn btn-primary btn-block">Envoyer ma demande →</button>
+      <p class="fine light">Vos informations restent confidentielles — jamais partagées,
+      jamais transmises à des tiers.</p>
+      <p class="form-note" id="formNote" hidden>Merci — votre demande est bien prise en compte.
+      Une réponse arrive sous 24&nbsp;h ouvrées.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════ 10 · FOOTER ══════════════════ -->
 <footer class="site-footer">
-<div class="container f-inner">
-  <div class="f-brand"><span class="logo-aura logo-f">AURÁ</span><span class="logo-sub">Natural Health</span></div>
-  <nav class="f-nav" aria-label="Footer navigation">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#membership">Membership</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div class="f-social"><span>Follow us:</span><span class="social-icons"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F9F7EF3" aria-hidden><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></span><span class="social-icons"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F9F7EF3" aria-hidden><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16,11.37A4,4 0 1,1 12.63,8 4,4 0 0,1 16,11.37z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></span><span class="social-icons"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F9F7EF3" aria-hidden><path d="M16,8A6,6 0 0,1 22 14V17H16V8Z"/></svg></span></span>
-</div>
-<div class="f-bottom">
-  <p>&copy; 2025 Aurá Natural Health. All rights reserved. | Designed with care for your healing journey.</p>
-</div>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <p class="brand-name">Marion</p>
+      <p class="brand-tag">Hypnose · Santé des femmes · Santé intégrative</p>
+    </div>
+    <nav class="footer-nav" aria-label="Navigation pied de page">
+      <a href="#accueil">Accueil</a>
+      <a href="#approche">Approche</a>
+      <a href="#apropos">À propos</a>
+      <a href="#comprendre">Comprendre</a>
+      <a href="#rendezvous">Rendez-vous</a>
+    </nav>
+    <div class="footer-legal">
+      <p>Vancouver, Colombie-Britannique</p>
+      <p>© 2026 Marion — Tous droits réservés.</p>
+      <p>Aucune information sur ce site ne remplace l'avis d'une médecin.</p>
+    </div>
+  </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=brief1"></script>
 </body>
 </html>
