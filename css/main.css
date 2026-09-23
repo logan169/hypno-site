@@ -85,11 +85,14 @@ p    { margin-bottom:.85em; color:var(--clr-charcoal); }
 /* Glass-morphism when scrolled */
 .site-nav.scrolled, nav.scrolled { background:rgba(42,62,38,.94)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important;box-shadow:0 2px 24px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.05)!important;border-bottom:1px solid rgba(255,255,255,.06)!important }
 
-/* === HERO SECTION (premium visual anchor) === */
-.hero { position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#2D4928; }
+/* === HERO SECTION (smooth sage gradient) === */
+.hero { position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#4A684E; }
 
-.hero-gradient-bg { position:absolute;inset:0;background:linear-gradient(145deg,#3A6B3C 0%,#5B7C5E 25%,#4A7854 50%,#2D4928 80%,#1a351d 100%);z-index:1; }
-.hero-overlay-layer { position:absolute;inset:0;background:radial-gradient(ellipse at 60% 30%,rgba(93,124,94,.5) 0%,transparent 50%), radial-gradient(circle at 30% 80%,rgba(212,168,98,.12) 0%,transparent 50%);z-index:2; }
+.hero-gradient-bg { position:absolute;inset:0;z-index:1;overflow:hidden; }
+.hero-gradient-bg::before { content:'';position:absolute;inset:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 40%,#7A9E7D 0%,transparent 50%),radial-gradient(circle at 75% 60%,#5B7C5E 0%,transparent 45%),radial-gradient(circle at 50% 80%,#3A5A3B 0%,transparent 40%);animation:hero-drift 25s ease-in-out infinite; }
+.hero-gradient-bg::after { content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(74,104,78,.7) 0%,rgba(58,90,59,.85) 100%); }
+@keyframes hero-drift { 0%,100%{transform:translate(0,0)} 33%{transform:translate(-2%,1.5%)};66%{transform:translate(1.5%,-2%)} }
+.hero-overlay-layer { position:absolute;inset:0;background:radial-gradient(ellipse at 60% 30%,rgba(255,255,255,.06) 0%,transparent 50%), radial-gradient(circle at 30% 80%,rgba(212,168,98,.06) 0%,transparent 50%);z-index:2; }
 .hero-grain-overlay { position:absolute;inset:0;background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJnoiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjUiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjZykiIG9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=);opacity:.3;z-index:3;pointer-events:none; }
 
 /* Floating particles */
