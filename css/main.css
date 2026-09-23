@@ -270,9 +270,13 @@ h3{font-size:1.35rem;font-weight:500}
 .article h3{font-size:1.3rem;line-height:1.3;margin-bottom:.7rem}
 .article p{font-size:.9rem;line-height:1.65;color:rgba(48,47,43,.66);margin-bottom:1.3rem}
 
-/* ── 07 · TÉMOIGNAGES ── */
+/* ── 07 · TÉMOIGNAGES ── (carrousel glissable — sans flèches) */
 .tst-carousel{overflow:hidden;margin-top:3.2rem}
-.tst-track{display:flex;transition:transform .6s var(--ease)}
+.tst-track{
+  display:flex;transition:transform .6s var(--ease);
+  cursor:grab;touch-action:pan-y;user-select:none;
+}
+.tst-track.dragging{transition:none;cursor:grabbing}
 .tst-card{
   flex:0 0 100%;min-width:0;
   padding:clamp(2.2rem,5vw,4rem) clamp(1rem,4vw,4rem);
@@ -288,14 +292,7 @@ h3{font-size:1.35rem;font-weight:500}
   font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
   color:rgba(48,47,43,.5);
 }
-.tst-controls{display:flex;justify-content:center;gap:1rem;margin-top:1.8rem}
-.tst-btn{
-  width:46px;height:46px;border-radius:50%;
-  border:1px solid var(--ligne);background:transparent;
-  color:var(--ambre);font-size:1.05rem;cursor:pointer;
-  transition:background var(--transition),border-color var(--transition),color var(--transition);
-}
-.tst-btn:hover{background:var(--foret);border-color:var(--foret);color:var(--creme)}
+/* (tst-controls / tst-btn supprimés — carrousel glissable, sans flèches) */
 
 /* ── 08 · FAQ ── */
 .faq-list{margin-top:3rem;max-width:780px}

@@ -21,25 +21,48 @@
     });
   }
 
-  /* ── Témoignages carousel ── */
+  /* ── Témoignages carrousel — glissable (pointer), sans flèches ── */
   var track = document.getElementById('tstTrack');
-  var prev = document.getElementById('tstPrev');
-  var next = document.getElementById('tstNext');
-  if (track && prev && next) {
-    var cards = track.querySelectorAll('.tst-card');
+  if (track) {
     var idx = 0;
-    var per = 1;
-    var max = Math.max(0, cards.length - per);
-    function update() {
-      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
-      prev.disabled = idx === 0;
-      next.disabled = idx >= max;
-      prev.style.opacity = prev.disabled ? '.35' : '1';
-      next.style.opacity = next.disabled ? '.35' : '1';
+    var max = track.children.length - 1; // 1 carte visible à la fois
+    function clamp() { idx = Math.max(0, Math.min(max, idx)); }
+    function render() { track.style.transform = 'translateX(-' + (idx * 100) + '%)'; }
+    // Pointeur (souris) + tactile, via Pointer Events
+    var dragging = false, startX = 0, dx = 0;
+    track.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      dragging = true; startX = e.clientX; dx = 0;
+      track.classList.add('dragging');
+      track.setPointerCapture(e.pointerId);
+      track.style.transform = 'translateX(' + (-(idx * 100)) + '%)';
+    });
+    track.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      dx = e.clientX - startX;
+      var w = track.clientWidth || 1;
+      track.style.transform = 'translateX(' + (-(idx * 100) + (dx / w * 100)) + '%)';
+    });
+    function end(e) {
+      if (!dragging) return;
+      dragging = false;
+      track.classList.remove('dragging');
+      if (e && e.type === 'pointercancel') { render(); return; }
+      var w = track.clientWidth || 1;
+      if (Math.abs(dx) > w * 0.14) {
+        clamp();
+        idx = (dx < 0 && idx < max) ? idx + 1 : (dx > 0 && idx > 0) ? idx - 1 : idx;
+      } else { clamp(); }
+      render();
     }
-    prev.addEventListener('click', function () { idx = Math.max(0, idx - 1); update(); });
-    next.addEventListener('click', function () { idx = Math.min(max, idx + 1); update(); });
-    update();
+    track.addEventListener('pointerup', end);
+    track.addEventListener('pointercancel', end);
+    // Clavier (accessibilité, car la zone est focusable)
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { if (idx < max) { idx++; render(); } }
+      else if (e.key === 'ArrowLeft') { if (idx > 0) { idx--; render(); } }
+    });
+    render();
   }
 
   /* ── Contact form — envoi fonctionnel via e-mail
