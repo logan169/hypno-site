@@ -106,6 +106,9 @@
 
   /* ── Reveal-on-scroll (fade-in sections + inner reveals) ── */
   var revealEls = document.querySelectorAll('.fade-in-section, .reveal');
+  function revealAll(){
+    revealEls.forEach(function (el) { el.classList.add('visible'); });
+  }
   if ('IntersectionObserver' in window && !reduceMotion) {
     document.documentElement.classList.add('fx-fade');
     var observer = new IntersectionObserver(function (entries) {
@@ -115,10 +118,10 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
     revealEls.forEach(function (el) { observer.observe(el); });
   } else {
-    revealEls.forEach(function (el) { el.classList.add('visible'); });
+    revealAll();
   }
 
   /* ── Hero parallax-lite ── */
