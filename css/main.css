@@ -104,7 +104,11 @@ h3{font-size:1.35rem;font-weight:500}
 .nav-burger span{display:block;width:22px;height:1.6px;background:var(--ambre);margin:5px 0;transition:transform .3s,opacity .3s}
 .mobile-menu{display:none;flex-direction:column;width:100%}
 .mobile-menu a{padding:.9rem 4%;border-bottom:1px solid var(--ligne);font-size:.95rem;color:var(--ambre)}
-.mobile-menu .nav-cta{background:var(--foret);color:var(--creme);text-align:center}
+.mobile-menu .nav-cta{
+  background:var(--foret);color:var(--creme);text-align:center;
+  border-radius:var(--rayon);margin:.9rem 4%;
+  padding:1rem 1.25rem;font-weight:500;
+}
 .site-nav.open .mobile-menu{display:flex}
 .site-nav.open .nav-burger span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
 .site-nav.open .nav-burger span:nth-child(2){opacity:0}
