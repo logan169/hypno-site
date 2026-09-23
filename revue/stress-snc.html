@@ -12,9 +12,13 @@
 <meta property="og:locale" content="fr_CA">
 <meta property="og:url" content="/revue/stress-snc.html">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23F5F1E9'/><text x='50%25' y='52%25' font-family='Georgia,serif' font-size='42' text-anchor='middle' fill='%23435249' dominant-baseline='middle'>M</text></svg>">
-<link rel="preload" as="style" href="../css/main.css?v=brief1">
-<link rel="stylesheet" href="../css/main.css?v=brief1">
-<link rel="stylesheet" href="revue.css?v=1">
+<meta name="theme-color" content="#F5F1E9">
+<link rel="preload" as="style" href="../css/main.css?v=brief3">
+<script>
+(function(){var s=null;try{s=localStorage.getItem('marion-theme')}catch(e){}var d=s||(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',d);})();
+</script>
+<link rel="stylesheet" href="../css/main.css?v=brief3">
+<link rel="stylesheet" href="revue.css?v=2">
 </head>
 <body class="revue">
 <a class="skip-link" href="#main">Aller au contenu</a>
@@ -22,6 +26,9 @@
   <div class="nav-inner">
     <a class="brand" href="../#accueil" aria-label="Retour à l’accueil"><span class="brand-name">Marion</span></a>
     <nav class="nav-links" aria-label="Navigation"><a href="../#accueil">Accueil</a><a href="../#approche">Approche</a><a href="../#comprendre" class="revue-current">La revue</a><a href="../#rendezvous" class="nav-cta">Prendre rendez-vous</a></nav>
+    <button class="tool-btn theme-toggle" type="button" aria-label="Mode nuit" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+    </button>
     <a class="btn btn-outline btn-back" href="../#comprendre">← Retour à la revue</a>
   </div>
 </header>
@@ -59,4 +66,5 @@
     <div class="footer-legal"><p>Vancouver, Colombie-Britannique</p><p>© 2026 Marion — Tous droits réservés.</p><p>Ce contenu n’est pas un avis médical.</p></div>
   </div>
 </footer>
+<script src="../js/theme.js?v=2" defer></script>
 </body></html>
