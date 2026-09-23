@@ -367,7 +367,7 @@
         <li><strong>Réponse</strong><br>Sous 24&nbsp;h ouvrées</li>
       </ul>
     </div>
-    <form class="rdv-form" id="contactForm" novalidate>
+    <form class="rdv-form" id="contactForm" data-formaction="mailto:bonjour@marion-cabin.ca" novalidate>
       <label>Nom <input type="text" name="nom" required autocomplete="name"></label>
       <label>Email <input type="email" name="email" required autocomplete="email"></label>
       <label>
@@ -384,8 +384,9 @@
       <button type="submit" class="btn btn-primary btn-block">Envoyer ma demande →</button>
       <p class="fine light">Vos informations restent confidentielles — jamais partagées,
       jamais transmises à des tiers.</p>
-      <p class="form-note" id="formNote" hidden>Merci — votre demande est bien prise en compte.
-      Une réponse arrive sous 24&nbsp;h ouvrées.</p>
+      <p class="form-note" id="formNote" hidden>Votre message s'ouvre dans votre application e-mail
+      (objet et contenu pré-remplis). Il vous suffit de cliquer sur «&nbsp;Envoyer&nbsp;» —
+      une réponse arrive sous 24&nbsp;h ouvrées.</p>
     </form>
   </div>
 </section>

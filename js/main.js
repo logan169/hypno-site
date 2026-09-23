@@ -42,7 +42,10 @@
     update();
   }
 
-  /* ── Contact form (client-side placeholder — à brancher plus tard sur un service d'envoi) ── */
+  /* ── Contact form — envoi fonctionnel via e-mail
+       (mailto natif : aucune back-end, aucune clé exposée, conforme GitHub Pages).
+       Le champ data-formaction permet de basculer plus tard vers Formspree/Getform
+       en changeant une seule valeur. ── */
   var form = document.getElementById('contactForm');
   var note = document.getElementById('formNote');
   if (form) {
@@ -52,8 +55,34 @@
         form.reportValidity();
         return;
       }
+      var d = new FormData(form);
+      var name = String(d.get('nom') || '').trim();
+      var mail = String(d.get('email') || '').trim();
+      var subject = String(d.get('sujet') || 'Demande de rendez-vous').trim();
+      var message = String(d.get('message') || '').trim();
+
+      var body = [
+        'Nom : ' + name,
+        'Email : ' + mail,
+        'Sujet : ' + subject,
+        '',
+        message,
+        '',
+        '— Envoyé depuis le site marion-cabin.ca (formulaire de contact) —'
+      ].join('\n');
+
+      var base = form.dataset.formaction || 'mailto:bonjour@marion-cabin.ca';
+      var mailto = base + '?subject=' + encodeURIComponent('Rendez-vous découverte — ' + subject + ' — ' + name) + '&body=' + encodeURIComponent(body);
+      // Si le destinataire est une URL http(s) (basculé vers Formspree/Getform),
+      // faire un vrai POST au lieu d'un mailto.
+      if (base.indexOf('http') === 0) {
+        fetch(base, { method: 'POST', headers: { 'Accept': 'application/json' }, body: d })
+          .then(function () { if (note) note.hidden = false; form.reset(); })
+          .catch(function () { window.location.href = mailto; if (note) note.hidden = false; });
+        return;
+      }
+      window.location.href = mailto;
       if (note) note.hidden = false;
-      form.reset();
     });
   }
 
