@@ -1,0 +1,9 @@
+{
+  "name": "hypnosis-practice",
+  "private": true,
+  "scripts": {
+    "build": "cp -r src/* dist/ && mkdir -p dist/css dist/js && cp assets/* dist/assets 2>/dev/null || true",
+    "dev": "npx http-server dist --port 8080 --cors",
+    "preview": "npm run dev"
+  }
+}
