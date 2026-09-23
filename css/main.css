@@ -208,7 +208,7 @@ ul{list-style:none}
 
 /* ===== TESTIMONIALS ===== */
 .testimonials{padding:var(--section-pad) 0;background:linear-gradient(180deg,var(--clr-cream) 0%,var(--clr-warm-bg) 100%)}
-.testimonial-carousel{position:relative;max-width:820px;margin:0 auto}
+.testimonial-carousel{position:relative;max-width:820px;margin:0 auto;overflow:hidden}
 .testimonial-track{display:flex;transition:transform .6s var(--ease)}
 .testimonial-card{flex:0 0 100%;background:var(--clr-card);border:1px solid rgba(91,124,94,.1);border-radius:var(--r-lg);padding:3rem clamp(1.8rem,5vw,3.4rem);text-align:center;box-shadow:0 8px 24px rgba(58,55,52,.06)}
 .quote-mark{font-family:var(--font-serif);font-size:4.5rem;line-height:.6;color:var(--clr-accent);display:block;height:2.4rem}
