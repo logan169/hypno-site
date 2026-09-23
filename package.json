@@ -1,9 +1,22 @@
 {
-  "name": "hypnosis-practice",
+  "name": "marion-hypno-site",
+  "version": "1.0.0",
   "private": true,
+  "description": "Marion — Hypnose, santé des femmes, santé intégrative. Site vitrine statique (GitHub Pages).",
   "scripts": {
-    "build": "cp -r src/* dist/ && mkdir -p dist/css dist/js && cp assets/* dist/assets 2>/dev/null || true",
-    "dev": "npx http-server dist --port 8080 --cors",
-    "preview": "npm run dev"
-  }
+    "dev": "python3 -m http.server 8080",
+    "preview": "python3 -m http.server 8080",
+    "check:js": "node --check js/main.js",
+    "check:css-vars": "grep -oE -- '--[a-z-]+:' css/main.css | sort -u",
+    "deploy": "git push origin main"
+  },
+  "keywords": [
+    "hypnose",
+    "santé des femmes",
+    "santé intégrative",
+    "vancouver",
+    "static site",
+    "github pages"
+  ],
+  "license": "UNLICENSED"
 }
