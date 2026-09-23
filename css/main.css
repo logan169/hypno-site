@@ -13,10 +13,11 @@
   --ambre:#302F2B;       /* texte — brun anthracite */
   --creme:#FBF9F5;       /* blanc */
 
-  /* dérivés */
-  --foret-deep:#37423B;
-  --sauge-pale:#DDE0D8;
-  --terre-pale:#EFE4DD;
+  /* dérivés — calculés à partir des 7 hex du brief (color-mix), pas des couleurs à part
+     ; la palette de base reste strictement les 7 valeurs client */
+  --foret-deep:color-mix(in srgb, var(--foret) 86%, var(--ambre));
+  --sauge-pale:color-mix(in srgb, var(--sauge) 32%, var(--ivoire));
+  --terre-pale:color-mix(in srgb, var(--terre) 30%, var(--ivoire));
   --ligne:rgba(48,47,43,.14);
   --ligne-foret:rgba(245,241,233,.22);
   --ombre:0 18px 40px -24px rgba(48,47,43,.28);
