@@ -1,169 +1,189 @@
-/* ============================================
-   VOSSHYPNOSIS — Main JavaScript
-   Minimal, dependency-free, vanilla ES6+
-   ============================================ */
+/* ====================================================
+   AURÁ NATURAL HEALTH — Interactions & Scripts
+   Mobile menu toggle, IntersectionObserver fade-ins,
+   testimonial carousel, sticky scroll effects.
+   ==================================================== */
 
-(() => {
+(function() {
   'use strict';
 
-  // ---- Mobile Navigation Toggle ----
-  const navToggle = document.querySelector('.nav__toggle');
-  const navLinks = document.querySelector('.nav__links');
+  // ── DOM refs ───────────────────────────
+  const mobTog = document.getElementById('mobTog');
+  const mobMenu = document.getElementById('mobMenu');
+  const sitenav = document.getElementById('sitenav');
+  const closeMob = mobMenu ? mobMenu.querySelector('.close-mobile') : null;
+  const tracks = document.querySelectorAll('#testimonialTrack');
+  let currentSlide = 0;
 
-  if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
+  // ── Mobile menu toggle ─────────────────
+  if (mobTog && mobMenu) {
+    mobTog.addEventListener('click', function() {
+      const isOpen = mobMenu.classList.contains('show');
+      mobMenu.classList.toggle('show');
+      mobMenu.setAttribute('aria-hidden', isOpen);
+      mobTog.setAttribute('aria-expanded', !isOpen);
     });
 
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
+    closeMob.addEventListener('click', function() {
+      mobMenu.classList.remove('show');
+      mobMenu.setAttribute('aria-hidden', 'true');
+      mobTog.setAttribute('aria-expanded', 'false');
+    });
+
+    // Close menu on link click
+    mobMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobMenu.classList.remove('show');
+        mobMenu.setAttribute('aria-hidden', 'true');
+        mobTog.setAttribute('aria-expanded', 'false');
       });
     });
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.focus();
-      }
-    });
   }
 
-  // ---- Sticky Nav Background on Scroll ----
-  const nav = document.querySelector('.nav');
-  let lastScrollY = 0;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      nav.style.boxShadow = '0 4px 24px rgba(0,0,0,0.3)';
-    } else {
-      nav.style.boxShadow = 'none';
+  // ── Sticky nav shadow on scroll ─────────
+  let lastScroll = 0;
+  function handleScroll() {
+    const y = window.scrollY;
+    if (sitenav) {
+      sitenav.classList.toggle('scrolled', y > 60);
     }
-    lastScrollY = window.scrollY;
-  }, { passive: true });
+    lastScroll = y;
+  }
+  window.addEventListener('scroll', handleScroll, { passive: true });
 
-  // ---- Smooth Scroll for Anchor Links ----
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const href = anchor.getAttribute('href');
-      if (href === '#') return;
-
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        const navHeight = nav ? nav.offsetHeight : 64;
-        const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    });
-  });
-
-  // ---- Intersection Observer for Scroll Animations ----
-  const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        scrollObserver.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Observe service cards, process steps, and testimonials
-  document.querySelectorAll('.service-card, .process-step, .testimonial-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    scrollObserver.observe(el);
-  });
-
-  // Stagger the animations within each grid
-  document.querySelectorAll('.services__grid, .process__steps, .testimonials__grid').forEach(grid => {
-    const cards = grid.children;
-    Array.from(cards).forEach((card, i) => {
-      card.style.transitionDelay = `${i * 0.1}s`;
-    });
-  });
-
-  // ---- Navbar active link highlight on scroll ----
-  const sections = document.querySelectorAll('section[id]');
-  const navItems = document.querySelectorAll('.nav__links a:not(.btn--nav)');
-
-  function updateActiveNav() {
-    const scrollY = window.scrollY + 200;
-
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
-      if (scrollY >= top && scrollY < top + height) {
-        navItems.forEach(item => {
-          item.style.color = '';
-          if (item.getAttribute('href') === `#${id}`) {
-            item.style.color = 'var(--accent-green)';
+  // ── Fade-in on scroll via IntersectionObserver ──
+  function observeFadeEls() {
+    var els = document.querySelectorAll('.fade-in-section');
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
           }
         });
+      }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+
+      els.forEach(function(el) { observer.observe(el); });
+    } else {
+      // Fallback: just show everything
+      els.forEach(function(el) { el.classList.add('visible'); });
+    }
+  }
+
+  // ── Testimonial carousel ───────────────
+  function initCarousel() {
+    if (!tracks.length || !tracks[0].children.length) return;
+    
+    var slides = tracks[0].children;
+    currentSlide = 0;
+
+    function showSlide(n) {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+      }
+      slides[n].classList.add('active');
+    }
+
+    // Next button
+    var nextBtn = document.getElementById('testNext');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+    }
+
+    // Prev button
+    var prevBtn = document.getElementById('testPrev');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+    }
+
+    // Auto-advance every 6s
+    setInterval(function() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 6000);
+  }
+
+  // ── Active nav link highlight on scroll ──
+  function updateActiveNav() {
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav-list a:not(.nav-cta-btn)');
+    if (!sections.length || !navLinks.length) return;
+
+    var scrollY = window.scrollY + 120;
+    var current = '';
+
+    sections.forEach(function(sec) {
+      if (sec.offsetTop <= scrollY) {
+        current = sec.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
       }
     });
   }
 
-  window.addEventListener('scroll', updateActiveNav, { passive: true });
-
-  // ---- Contact Form Handling ----
-  const contactForm = document.querySelector('.contact__form');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData.entries());
-
-      // Placeholder: replace with your actual backend/form endpoint
-      console.log('Contact form submission:', data);
-
-      // Show success feedback
-      const btn = contactForm.querySelector('.btn--primary');
-      const originalText = btn.textContent;
-      btn.textContent = '✓ Message Sent!';
-      btn.style.background = 'var(--accent-green)';
-
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        contactForm.reset();
-      }, 3000);
+  // ── Smooth scroll for anchor links ───────
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          var offset = sitenav ? sitenav.offsetHeight : 68;
+          window.scrollTo({
+            top: target.offsetTop - offset,
+            behavior: 'smooth'
+          });
+        }
+      });
     });
   }
 
-  // ---- Typing Animation for Terminal ----
-  const terminalBody = document.querySelector('.hero__terminal-body');
-  if (terminalBody) {
-    const fadeElements = terminalBody.querySelectorAll('.fade-in');
-    fadeElements.forEach((el, i) => {
-      el.style.opacity = '0';
-      setTimeout(() => {
-        el.style.transition = 'opacity 0.5s ease';
-        el.style.opacity = '1';
-      }, 2000 + (i * 400));
-    });
+  // ── Parallax-lite on hero ──────────────
+  function parallaxHero() {
+    var bg = document.querySelector('.hero .parallax-bg');
+    if (!bg) return;
+    var scrollY = window.scrollY;
+    var speed = 0.3;
+    bg.style.backgroundPositionY = scrollY * speed + 'px';
   }
 
-  // ---- Console Easter Egg ----
-  console.log(
-    '%c Welcome to Voss Hypnosis ',
-    'background: #10b981; color: white; font-size: 16px; padding: 4px 8px; border-radius: 4px;'
-  );
+  // ── Boot ───────────────────────────────
+  function ready() {
+    observeFadeEls();
+    initCarousel();
+    updateActiveNav();
+    initSmoothScroll();
+    
+    // Parallax on scroll
+    window.addEventListener('scroll', parallaxHero, { passive: true });
+
+    // Update active nav periodically
+    var navInterval = null;
+    function startNavWatch() {
+      navInterval = setInterval(updateActiveNav, 250);
+    }
+    startNavWatch();
+    
+    // Handle initial state after page load finishes rendering
+    setTimeout(observeFadeEls, 100);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ready);
+  } else {
+    ready();
+  }
 
 })();
