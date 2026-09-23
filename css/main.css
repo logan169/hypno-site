@@ -48,9 +48,9 @@ ul{list-style:none}
 .skip-link{position:absolute;left:-9999px;top:0;z-index:9999;background:var(--clr-primary);color:#fff;padding:.9rem 1.5rem;border-radius:0 0 var(--r-sm) var(--r-sm)}
 .skip-link:focus{left:2rem;top:2rem;clip:auto;width:auto;height:auto;white-space:normal;overflow:visible}
 
-/* ===== FADE-IN (pairs with IntersectionObserver JS) ===== */
-.fade-in-section{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
-.fade-in-section.visible{opacity:1;transform:none}
+/* ===== FADE-IN (JS adds .fx-fade to <html>; base state stays visible without JS) ===== */
+html.fx-fade .fade-in-section{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+html.fx-fade .fade-in-section.visible{opacity:1;transform:none}
 
 /* ===== BUTTONS ===== */
 .btn{display:inline-block;padding:.95rem 2.3rem;font-size:.8rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;border-radius:var(--r-sm);cursor:pointer;border:2px solid transparent;transition:all .35s var(--ease);text-align:center;line-height:1.3;font-family:var(--font-sans)}

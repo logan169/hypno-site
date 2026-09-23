@@ -107,6 +107,7 @@
   /* ── Reveal-on-scroll (fade-in sections + inner reveals) ── */
   var revealEls = document.querySelectorAll('.fade-in-section, .reveal');
   if ('IntersectionObserver' in window && !reduceMotion) {
+    document.documentElement.classList.add('fx-fade');
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
