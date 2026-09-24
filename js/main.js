@@ -64,13 +64,13 @@
     'What I offer',                                                                // pillars overline
     'Three dimensions of a single approach.',                                      // h2
     'These aren’t three services side by side. It’s one way of thinking about health — seen from three complementary angles.', // lead
-    'Hypnosis',
+    '<span class="pillar-num">01</span> Hypnosis',
     'Understanding the role of the unconscious, of habits, of emotions and of the nervous system in your daily experience. Hypnosis as a precise therapeutic tool — neither mystery nor spectacle.',
     'Discover hypnosis →',
-    'Women’s health',
+    '<span class="pillar-num">02</span> Women’s health',
     'Particular attention to the physiological and psychological realities that shape women’s lives — cycle, fertility, perimenopause, relationship with the body — with precise language, never decorative.',
     'Discover the support →',
-    'Integrative health',
+    '<span class="pillar-num">03</span> Integrative health',
     'Bringing together body, psychology, lifestyle and research findings into coherent recommendations. You know the why, not just the how.',
     'Understand my approach →',
     'Note: each working avenue is presented with its level of evidence — including what the literature does not yet allow us to claim.', // fine
