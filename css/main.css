@@ -253,7 +253,7 @@ h3{font-size:1.35rem;font-weight:500}
   background-color:var(--bg-alt);
   background-image:
     linear-gradient(color-mix(in srgb,var(--bg-alt) 88%,transparent),color-mix(in srgb,var(--bg-alt) 94%,transparent)),
-    url("https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=2000&q=75");
+    url("https://images.unsplash.com/photo-1444044205806-38f3ed106c10?auto=format&fit=crop&w=2000&q=75");
   background-size:auto,cover;
   background-position:center,center;
   background-repeat:no-repeat;
