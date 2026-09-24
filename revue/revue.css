@@ -13,10 +13,9 @@ body.revue{background:var(--bg);color:var(--ink);line-height:1.75}
    (1) .btn:hover (spécificité 0-2-0) écrasait transform:translateY(-50%) (0-1-0)
        → le bouton sautait de 28px au survol. Fix dans main.css avec
        .btn:hover:not(.btn-back) (pas de transform résiduel).
-   (2) Aligné au bord DROIT DE LA COLONNE DE TEXTE (min(1180px,92%)/2 du
-       viewport), au lieu du bord du viewport + 1,1rem. Sur mobile
-       (<720px) la grille collapse et il n'y a plus de gouttière : on retombe
-       sur right:1rem. */
+   (2) Aligné au bord DROIT DE LA COLONNE DE TEXTE (.revue-article,
+       max 62ch) via --btn-back-inset mesuré par article.js.
+       Sur mobile (<900px) on revient sur right:1rem (pas de gouttière). */
 .btn-back{
   position:fixed;top:50%;z-index:40;
   transform:translateY(-50%);
