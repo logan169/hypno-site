@@ -252,7 +252,7 @@ h3{font-size:1.35rem;font-weight:500}
 #temoignages{
   background-color:var(--bg-alt);
   background-image:
-    linear-gradient(color-mix(in srgb,var(--bg-alt) 88%,transparent),color-mix(in srgb,var(--bg-alt) 94%,transparent)),
+    linear-gradient(color-mix(in srgb,var(--bg-alt) 60%,transparent),color-mix(in srgb,var(--bg-alt) 40%,transparent)),
     url("https://images.unsplash.com/photo-1444044205806-38f3ed106c10?auto=format&fit=crop&w=2000&q=75");
   background-size:auto,cover;
   background-position:center,center;
@@ -264,7 +264,7 @@ h3{font-size:1.35rem;font-weight:500}
 #rendezvous{
   background-color:var(--forest-deep);
   background-image:
-    linear-gradient(color-mix(in srgb,var(--forest-deep) 86%,transparent),color-mix(in srgb,var(--forest-deep) 94%,transparent)),
+    linear-gradient(color-mix(in srgb,var(--forest-deep) 60%,transparent),color-mix(in srgb,var(--forest-deep) 40%,transparent)),
     url("https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=2000&q=75");
   background-size:auto,cover;
   background-position:center,center;
@@ -450,6 +450,27 @@ h3{font-size:1.35rem;font-weight:500}
 }
 .rdv-left{padding-top:.4rem}
 .rdv-left h2{margin-bottom:1.1rem}
+/* C26/C27 — client: "blanc en mode clair, noir en mode sombre".
+   Fond forêt reste foncé en clair → texte blanc passe AA.
+   En dark, --forest-deep lightte vers --sage et devient clair-sauge → texte foncé.
+   L'overline (.overline.light) garde intentionally son accent sauge. */
+.rdv-left,
+.rdv-left h2,
+.rdv-left p,
+.rdv-left .rdv-info li,
+.rdv-left .rdv-info li strong{
+  color:#FFFFFF;
+}
+[data-theme="dark"] .rdv-left,
+[data-theme="dark"] .rdv-left h2,
+[data-theme="dark"] .rdv-left p,
+[data-theme="dark"] .rdv-left .rdv-info li,
+[data-theme="dark"] .rdv-left .rdv-info li strong,
+[data-theme="dark"] #rendezvous .text-light p,
+[data-theme="dark"] #rendezvous .text-light h2,
+[data-theme="dark"] #rendezvous .text-light strong{
+  color:#1F1D1A;
+}
 .rdv-info{list-style:none;margin-top:2.2rem}
 .rdv-info li{
   padding:1.05rem 0;border-top:1px solid var(--ligne-foret);
