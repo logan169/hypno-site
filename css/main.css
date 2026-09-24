@@ -262,7 +262,7 @@ h3{font-size:1.35rem;font-weight:500}
 #piliers{
   background-color:var(--bg-alt);
   background-image:
-    linear-gradient(color-mix(in srgb,var(--bg-alt) 86%,transparent),color-mix(in srgb,var(--bg-alt) 93%,transparent)),
+    linear-gradient(color-mix(in srgb,var(--bg-alt) 60%,transparent),color-mix(in srgb,var(--bg-alt) 40%,transparent)),
     url("https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=2000&q=75");
   background-size:auto,cover;
   background-position:center,center;
