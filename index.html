@@ -159,17 +159,14 @@ document.documentElement.setAttribute('data-theme',d);})();
   </div>
   <div class="wrap principles">
     <article class="principle">
-      <p class="principle-num">I</p>
       <h3 data-i18n>Fondée sur les connaissances</h3>
       <p data-i18n>Les outils que je vous propose s’appuient, autant que possible, sur les données disponibles et leur niveau de preuve. Quand la littérature est limitative, je vous le dis.</p>
     </article>
     <article class="principle">
-      <p class="principle-num">II</p>
       <h3 data-i18n>Centrée sur la personne</h3>
       <p data-i18n>La recherche donne des repères. Votre histoire, votre corps et votre expérience restent singuliers — et priment sur le manuel.</p>
     </article>
     <article class="principle">
-      <p class="principle-num">III</p>
       <h3 data-i18n>Corps et esprit en interaction</h3>
       <p data-i18n>Stress, sommeil, hormones, émotions et santé physique interagissent constamment. Les traiter séparément, c’est s’interdire de voir le tableau entier.</p>
     </article>
@@ -285,6 +282,10 @@ document.documentElement.setAttribute('data-theme',d);})();
           <figcaption data-i18n>— Patiente, anxiété et stress</figcaption>
         </figure>
       </div>
+      <div class="tst-nav" role="group" aria-label="Navigation des témoignages">
+        <button class="tst-arrow" id="tstPrev" type="button" aria-label="Témoignage précédent">‹</button>
+        <button class="tst-arrow" id="tstNext" type="button" aria-label="Témoignage suivant">›</button>
+      </div>
     </div>
   </div>
 </section>
@@ -327,9 +328,7 @@ document.documentElement.setAttribute('data-theme',d);})();
       <h2 data-i18n>Un appel découverte, de 15 minutes.</h2>
       <p data-i18n>Le premier pas, c’est une simple conversation. On fait le point sur ce qui vous amène, sur ce que vous attendez, et — le cas échéant — sur les options qui ont un sens. Sans engagement, et sans script.</p>
       <ul class="rdv-info">
-        <li data-i18n><strong>Lieu</strong><br>Vancouver, C.-B. — ou par vidéoconférence</li>
-        <li><strong data-i18n>Email</strong><br><a href="mailto:bonjour@marion-cabin.ca">bonjour@marion-cabin.ca</a></li>
-        <li data-i18n><strong>Réponse</strong><br>Sous 24&nbsp;h ouvrées</li>
+        <li data-i18n><strong>Modalité</strong><br>En visioconférence — l'accompagnement complet, depuis le confort de votre foyer</li>
       </ul>
     </div>
     <form class="rdv-form" id="contactForm" data-formaction="mailto:bonjour@marion-cabin.ca" novalidate>
@@ -372,7 +371,7 @@ document.documentElement.setAttribute('data-theme',d);})();
     <div class="footer-legal">
       <p data-i18n>Vancouver, Colombie-Britannique</p>
       <p data-i18n>© 2026 Marion — Tous droits réservés.</p>
-      <p data-i18n>Aucune information sur ce site ne remplace l’avis d’une médecin.</p>
+      <p data-i18n>Aucune information sur ce site ne remplace l’avis d’un médecin.</p>
     </div>
   </div>
 </footer>

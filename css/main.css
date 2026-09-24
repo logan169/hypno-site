@@ -299,9 +299,8 @@ h3{font-size:1.35rem;font-weight:500}
   transition:transform var(--transition),border-color var(--transition),box-shadow var(--transition);
 }
 .principle:hover{transform:translateY(-4px);border-color:var(--sauge);box-shadow:var(--ombre)}
-.principle-num{font-family:var(--serif);font-size:2.6rem;font-style:italic;color:var(--sauge);line-height:1;margin-bottom:1.2rem}
-.principle h3{font-size:1.35rem;margin-bottom:.8rem}
-.principle p{font-size:.95rem;line-height:1.7;color:var(--ink-72)}
+.principle h3{font-size:1.55rem;margin-bottom:.9rem}
+.principle p{font-size:.97rem;line-height:1.7;color:var(--ink-75)}
 
 /* ── 05 · À PROPOS ── */
 .about-grid{
@@ -333,36 +332,27 @@ h3{font-size:1.35rem;font-weight:500}
 }
 .cred li::before{content:"—";position:absolute;left:0;color:var(--terre)}
 
-/* ── 06 · ARTICLES ── */
+/* ── 06 · ARTICLES (cartes arrondies, sans pastille N°) ── */
 .articles{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
-  border-top:1px solid var(--ligne);border-left:1px solid var(--ligne);
-  margin-top:3.4rem;background:var(--ligne);
-  counter-reset:articleNum;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.6rem;margin-top:3.4rem;
 }
 .article{
-  background:var(--bg);padding:2.2rem 1.9rem;position:relative;
-  border-right:1px solid var(--ligne);border-bottom:1px solid var(--ligne);
-  counter-increment:articleNum;
-  transition:background var(--transition);
+  background:var(--card);
+  border:1px solid var(--ligne);
+  border-radius:var(--rayon-card);
+  padding:2.4rem 2.1rem;position:relative;
+  transition:transform var(--transition),border-color var(--transition),box-shadow var(--transition);
 }
-.article::before{
-  content:"N°" counter(articleNum,decimal-leading-zero);
-  position:absolute;top:1.5rem;right:1.6rem;
-  font-family:var(--serif);font-style:italic;font-size:1rem;
-  color:var(--ink-26);letter-spacing:.02em;
-  transition:color var(--transition);
-}
-.article:hover{background:var(--card)}
-.article:hover::before{color:var(--terre)}
+.article:hover{transform:translateY(-4px);border-color:var(--sauge);box-shadow:var(--ombre)}
 .article-tag{
   font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
   color:var(--forest);margin-bottom:1rem;
 }
-.article h3{font-size:1.3rem;line-height:1.3;margin-bottom:.7rem}
-.article p{font-size:.9rem;line-height:1.65;color:var(--ink-66);margin-bottom:1.3rem}
+.article h3{font-size:1.4rem;line-height:1.3;margin-bottom:.7rem}
+.article p{font-size:.95rem;line-height:1.65;color:var(--ink-66);margin-bottom:1.3rem}
 
-/* ── 07 · TÉMOIGNAGES (carrousel glissable — sans flèches) ── */
+/* ── 07 · TÉMOIGNAGES (auto-avance + flèches ‹ › + glissable) ── */
 .tst-carousel{overflow:hidden;margin-top:3.2rem}
 .tst-track{
   display:flex;transition:transform .6s var(--ease);
@@ -384,6 +374,17 @@ h3{font-size:1.35rem;font-weight:500}
   font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
   color:var(--ink-50);
 }
+.tst-nav{display:flex;justify-content:center;gap:1rem;margin-top:1.6rem}
+.tst-arrow{
+  width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--ligne);border-radius:50%;
+  background:transparent;color:var(--ink-72);
+  font-family:var(--serif);font-size:1.6rem;line-height:1;padding-bottom:.18em;
+  cursor:pointer;
+  transition:color var(--transition),border-color var(--transition),background var(--transition),transform var(--transition);
+}
+.tst-arrow:hover{color:var(--forest);border-color:var(--forest);background:var(--ink-05);transform:translateY(-1px)}
+.tst-arrow:active{transform:translateY(0)}
 
 /* ── 08 · FAQ ── */
 .faq-list{margin-top:3rem;max-width:780px}

@@ -109,9 +109,7 @@
     'An approach that connects several levels of experience — body, psychology, habits, context — and relies on the available evidence. It differs from conventional medicine in its view of the whole person — and from the “wellness” approach by its demand for proof. I like this position: the centre.', // 5 Q/R
     'First step', 'A discovery call, 15 minutes.',                                 // rdv
     'The first step is a simple conversation. We take stock of what brings you, what you expect, and — where relevant — the options that make sense. No commitment, no script.',
-    '<strong>Location</strong><br>Vancouver, B.C. — or by video call',
-    '<strong>Email</strong><br><a href="mailto:bonjour@marion-cabin.ca">bonjour@marion-cabin.ca</a>',
-    '<strong>Reply</strong><br>Within 24 business hours',
+    '<strong>Format</strong><br>By video call — full support, from the comfort of your home',
     'Name', 'Email', 'What brings you in',                                         // form labels
     'Choose…', 'Hypnosis, stress or sleep', 'Women’s health', 'Integrative health', 'Other / not sure yet', // options
     'Message', 'Send my request →',                                                // message + submit
@@ -215,11 +213,40 @@
     }
     track.addEventListener('pointerup', end);
     track.addEventListener('pointercancel', end);
+    // Flèches ‹ › (souris + clavier)
+    var prevBtn = document.getElementById('tstPrev');
+    var nextBtn = document.getElementById('tstNext');
+    function go(dir) {
+      clamp();
+      var n = idx + dir;
+      if (n < 0) n = max;
+      if (n > max) n = 0;
+      if (n !== idx) { idx = n; render(); }
+      bump();
+    }
+    if (prevBtn) prevBtn.addEventListener('click', function () { go(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { go(1); });
     track.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowRight') { if (idx < max) { idx++; render(); } }
-      else if (e.key === 'ArrowLeft') { if (idx > 0) { idx--; render(); } }
+      if (e.key === 'ArrowRight') { if (idx < max) { idx++; render(); bump(); } }
+      else if (e.key === 'ArrowLeft') { if (idx > 0) { idx--; render(); bump(); } }
     });
+    // Auto-avance : ~6,5 s par témoignage, en boucle (→ puis retour à gauche) ;
+    // pause au survol / focus / glissement, reprise au retrait.
+    var timer = null, delay = 6500;
+    function bump() { if (timer) { clearInterval(timer); startAuto(); } }
+    function startAuto() {
+      if (reduceMotion) return;
+      if (timer) clearInterval(timer);
+      timer = setInterval(function () { go(1); }, delay);
+    }
+    var host = track.closest('.tst-carousel') || track;
+    host.addEventListener('mouseenter', function () { if (timer) { clearInterval(timer); timer = null; } });
+    host.addEventListener('mouseleave', function () { if (!timer && !reduceMotion) startAuto(); });
+    track.addEventListener('focusin', function () { if (timer) { clearInterval(timer); timer = null; } });
+    track.addEventListener('focusout', function () { if (!timer && !reduceMotion) startAuto(); });
+    track.addEventListener('pointerdown', function () { if (timer) { clearInterval(timer); timer = null; } });
     render();
+    startAuto();
   }
 
   /* ═══════ 5 · FORMULAIRE (mailto, sans back-end) ═══════ */
