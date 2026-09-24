@@ -38,10 +38,10 @@
   var NAV = {
     fr: { sig:'Signaux', pil:'Piliers', app:'Approche',
           aprop:'À propos', comp:'Comprendre', faq:'FAQ', cta:'Prendre rendez-vous',
-          tag:'Hypnose · Santé des femmes · Intégrative', back:'← Retour à la revue' },
+          tag:'Hypnose · Santé des femmes · Intégrative', back:'← Accueil' },
     en: { sig:'Signals', pil:'Pillars', app:'Approach',
           aprop:'About', comp:'Understand', faq:'FAQ', cta:'Book an appointment',
-          tag:'Hypnotherapy · Women’s health · Integrative', back:'← Back to the review' }
+          tag:'Hypnotherapy · Women’s health · Integrative', back:'← Home' }
   };
   // Liens de la nav (desktop + mobile), dans .site-nav — SANS la marque « Marion »
   // (la marque n'est jamais traduite telle quelle : seul son libellé .brand-tag

@@ -296,10 +296,18 @@
     }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
     fadeEls.forEach(function (el) { observer.observe(el); });
   }
-  /* ═══════ 7 · SCROLL-SPY NAV (hint de position pendant le défilement) ═══════ */
+  /* ═══════ 7 · SCROLL-SPY NAV (C30 + C40) ═══════
+     L'item de menu correspondant à la section la plus en vue
+     (34 % du viewport en haut) reçoit .nav-active :
+     pastille sauge (liens) / halo sauge (CTA) — la position
+     change à chaque section qui prend le dessus, y compris
+     « Prendre rendez-vous » sur la section #rendezvous. */
   if (location.pathname.replace(/index\.html$|\/$/, '').indexOf('revue') === -1) {
     var spyLinks = [].slice.call(document.querySelectorAll('.nav-links a[href^="#"]')).filter(function (a) {
-      return !a.classList.contains('nav-cta') && a.getAttribute('href').length > 1;
+      // C40 : la CTA « Prendre rendez-vous » participe aussi au spy
+      // (avant elle était exclue → la section #rendezvous activait
+      // par erreur la dernière entrée du menu).
+      return a.getAttribute('href') && a.getAttribute('href').length > 1;
     });
     if (spyLinks.length && 'requestAnimationFrame' in window) {
       var spyTargets = spyLinks

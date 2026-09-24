@@ -160,18 +160,34 @@ h3{font-size:1.35rem;font-weight:500}
 }
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after{width:100%}
-/* Scroll-spy : l'item dont la section est en vue garde le soulignage. */
-.nav-links a.nav-active{color:var(--ink)}
+/* Scroll-spy : l'item dont la section est en vue est MARQUÉ (pastille +
+   soulignement persistent), distinct du survol (uniquement souligné). */
+.nav-links a.nav-active{
+  color:var(--ink);position:relative;z-index:0;
+}
 .nav-links a.nav-active::after{width:100%}
+.nav-links a.nav-active::before{
+  content:"";position:absolute;inset:-.3rem -.65rem;z-index:-1;
+  background:color-mix(in srgb,var(--sauge) 26%,transparent);
+  border-radius:999px;
+  transition:background var(--transition);
+}
 .mobile-menu a.nav-active{color:var(--forest);font-weight:600}
 .nav-links a.nav-cta{
   color:var(--on-forest);background:var(--forest);
   padding:.55rem 1.25rem;font-size:.95rem;font-weight:500;white-space:nowrap;
   border-radius:999px;
-  transition:background var(--transition),transform var(--transition);
+  transition:background var(--transition),transform var(--transition),box-shadow var(--transition);
 }
 .nav-links a.nav-cta::after{display:none}
 .nav-links a.nav-cta:hover{background:var(--forest-deep);transform:translateY(-1px)}
+/* CTA active (section #rendezvous en vue) : contour distinctif au lieu d'une
+   double pastille. La pastille .nav-active::before est désactivée. */
+.nav-links a.nav-cta.nav-active::before{display:none}
+.nav-links a.nav-cta.nav-active{
+  background:var(--forest-deep);
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--sauge) 55%,transparent);
+}
 .nav-tools{display:flex;align-items:center;gap:.5rem}
 .tool-btn{
   display:inline-flex;align-items:center;justify-content:center;
