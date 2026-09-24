@@ -21,7 +21,7 @@
   --on-forest:var(--paper);   /* texte sur fond forêt — suit la polarity du thème */  --card:var(--creme);
   --ink:#302F2B;
   --forest:#435249;
-  --forest-deep:#404D45;
+  --forest-deep:color-mix(in srgb,var(--foret) 88%,black);
   --paper:#F5F1E9;
 
   /* Tints — texte sur fond clair */
@@ -45,8 +45,8 @@
   --paper-60:rgba(245,241,233,.60);
   --paper-40:rgba(245,241,233,.40);
 
-  --sauge-pale:#DCDCD2;
-  --terre-pale:#E7DBD2;
+  --sauge-pale:color-mix(in srgb,var(--sauge) 42%,var(--ivoire) 58%);
+  --terre-pale:color-mix(in srgb,var(--terre) 30%,var(--ivoire) 70%);
   --ligne:rgba(48,47,43,.14);
   --ligne-foret:rgba(245,241,233,.22);
   --nav-bg:rgba(245,241,233,.85);
@@ -64,8 +64,8 @@
 /* ── MODE NUIT (data-theme="dark" sur <html>, persisté + système) ── */
 [data-theme="dark"]{
   color-scheme:dark;
-  --bg:#20241F;
-  --bg-alt:#262B26;
+  --bg:color-mix(in srgb,var(--foret) 78%,black);
+  --bg-alt:color-mix(in srgb,var(--foret) 68%,black);
   --card:color-mix(in srgb,var(--foret) 94%,var(--creme) 6%);
   --ink:#ECE7DC;
   --ink-82:rgba(236,231,220,.82);
@@ -81,8 +81,8 @@
   --ink-26:rgba(236,231,220,.26);
   --ink-14:rgba(236,231,220,.14);
   --ink-05:rgba(236,231,220,.06);
-  --forest:#8FA293;
-  --forest-deep:#7E9182;
+  --forest:color-mix(in srgb,var(--sauge) 80%,var(--creme) 20%);
+  --forest-deep:color-mix(in srgb,var(--sauge) 68%,var(--creme) 32%);
   --on-forest:var(--bg);        /* dark text on lightened forest fill */
   --ligne:rgba(236,231,220,.16);
   --nav-bg:rgba(32,36,31,.82);
