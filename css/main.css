@@ -67,7 +67,7 @@
   --bg:color-mix(in srgb,var(--foret) 78%,black);
   --bg-alt:color-mix(in srgb,var(--foret) 68%,black);
   --card:color-mix(in srgb,var(--foret) 94%,var(--creme) 6%);
-  --ink:#ECE7DC;
+  --ink:color-mix(in srgb, var(--ivoire) 95%, black);
   --ink-82:rgba(236,231,220,.82);
   --ink-80:rgba(236,231,220,.80);
   --ink-78:rgba(236,231,220,.78);
