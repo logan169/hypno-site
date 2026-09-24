@@ -230,7 +230,7 @@ h3{font-size:1.35rem;font-weight:500}
   border:1px solid transparent;cursor:pointer;border-radius:var(--rayon-btn);
   transition:background var(--transition),color var(--transition),transform var(--transition),border-color var(--transition);
 }
-.btn:hover{transform:translateY(-1px)}
+.btn:hover:not(.btn-back){transform:translateY(-1px)}
 .btn-primary{background:var(--forest);color:var(--on-forest)}
 .btn-primary:hover{background:var(--forest-deep)}
 .btn-ghost{border-color:var(--ink-35);color:var(--ink);background:transparent}

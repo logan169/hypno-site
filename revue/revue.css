@@ -8,13 +8,25 @@ body.revue{background:var(--bg);color:var(--ink);line-height:1.75}
 .revue-current{color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
 .foot-current{color:var(--paper)}
 
-/* ── Bouton « Retour à la revue » flottant (C20) — droit, mi-page ── */
+/* ── Bouton « Retour à la revue » flottant (C20) — droit, mi-page ──
+   C37 :
+   (1) .btn:hover (spécificité 0-2-0) écrasait transform:translateY(-50%) (0-1-0)
+       → le bouton sautait de 28px au survol. Fix dans main.css avec
+       .btn:hover:not(.btn-back) (pas de transform résiduel).
+   (2) Aligné au bord DROIT DE LA COLONNE DE TEXTE (min(1180px,92%)/2 du
+       viewport), au lieu du bord du viewport + 1,1rem. Sur mobile
+       (<720px) la grille collapse et il n'y a plus de gouttière : on retombe
+       sur right:1rem. */
 .btn-back{
-  position:fixed;right:1.1rem;top:50%;z-index:40;
+  position:fixed;top:50%;z-index:40;
   transform:translateY(-50%);
   box-shadow:0 14px 30px -18px rgba(0,0,0,.5);
   opacity:.92;
   transition:opacity .3s ease,box-shadow .3s ease;
+  right:1rem;
+}
+@media (min-width:900px){
+  .btn-back{right:max(1rem,var(--btn-back-inset,2vw))}
 }
 .btn-back:hover{
   opacity:1;box-shadow:0 18px 36px -18px rgba(0,0,0,.6);

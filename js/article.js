@@ -36,17 +36,18 @@
     };
   } catch (e) {}
   var NAV = {
-    fr: { home:'Accueil', sig:'Signaux', pil:'Piliers', app:'Approche',
+    fr: { sig:'Signaux', pil:'Piliers', app:'Approche',
           aprop:'À propos', comp:'Comprendre', faq:'FAQ', cta:'Prendre rendez-vous',
           tag:'Hypnose · Santé des femmes · Intégrative', back:'← Retour à la revue' },
-    en: { home:'Home', sig:'Signals', pil:'Pillars', app:'Approach',
+    en: { sig:'Signals', pil:'Pillars', app:'Approach',
           aprop:'About', comp:'Understand', faq:'FAQ', cta:'Book an appointment',
           tag:'Hypnotherapy · Women’s health · Integrative', back:'← Back to the review' }
   };
-  // Liens de la nav (desktop + mobile), tous dans .site-nav. Le bouton flottant
-  // « Retour à la revue » est volontairement exclu (géré séparément, cf. .btn-back).
+  // Liens de la nav (desktop + mobile), dans .site-nav — SANS la marque « Marion »
+  // (la marque n'est jamais traduite telle quelle : seul son libellé .brand-tag
+  // l'est, cf. plus bas. C35 : une ancienne entrée 'home' ciblabait la marque
+  // et remplacait « Marion + sous-titre » par le mot « Accueil »).
   var LINKS = [
-    ['.revue .site-nav a[href="../#accueil"]',            'home'],
     ['.revue .site-nav a[href="../#signals"]',            'sig'],
     ['.revue .site-nav a[href="../#piliers"]',            'pil'],
     ['.revue .site-nav a[href="../#approche"]',            'app'],
@@ -66,6 +67,7 @@
     var bb = document.querySelector('.revue .btn-back'); if (bb) bb.textContent = m.back;
     var btg = document.querySelector('.revue .lang-toggle'); if (btg) btg.textContent = (l === 'en') ? 'FR' : 'EN';
     root.setAttribute('lang', (l === 'en') ? 'en' : 'fr');
+    if (typeof pinBack === 'function') pinBack();
   }
 
   /* ── 3 · Menu mobile ── */
@@ -102,4 +104,23 @@
     applyLang(next);
   });
   wireBurger();
+
+  /* C37 (2) — bouton retour collé au bord DROIT de la colonne de TEXTE
+     (.revue-article, max 62ch), pas au bord du viewport.
+     Le JS mesure la distance depuis le bord droit du texte jusqu'au
+     bord du viewport (= innerWidth − article.right) et l'expose comme
+     --btn-back-inset, lu par le CSS. Recalculé au resize et après
+     changement de langue (la largeur du texte varie). */
+  function pinBack(){
+    var b = document.querySelector('.btn-back');
+    var a = document.querySelector('.revue-article');
+    if(!b || !a) return;
+    var inset = innerWidth - a.getBoundingClientRect().right;
+    if(isFinite(inset) && inset > 16){
+      b.style.setProperty('--btn-back-inset', Math.round(inset) + 'px');
+    }
+  }
+  if(document.readyState !== 'loading') pinBack();
+  else document.addEventListener('DOMContentLoaded', pinBack);
+  window.addEventListener('resize', pinBack);
 })();
