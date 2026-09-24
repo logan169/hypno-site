@@ -111,7 +111,7 @@
     'The first step is a simple conversation. We take stock of what brings you, what you expect, and — where relevant — the options that make sense. No commitment, no script.',
     '<strong>Format</strong><br>By video call — full support, from the comfort of your home',
     'Name', 'Email', 'What brings you in',                                         // form labels
-    'Choose…', 'Hypnosis, stress or sleep', 'Women’s health', 'Integrative health', 'Other / not sure yet', // options
+    'Choose…', 'Hypnosis, stress or sleep', 'Women’s health', 'Integrative health', 'Other / I’d rather discuss on a call', // options
     'Message', 'Send my request →',                                                // message + submit
     'Your information stays confidential — never shared, never passed to third parties.',
     'Your message opens in your e-mail app (subject and body pre-filled). Just click “Send” — a reply arrives within 24 business hours.',
@@ -262,13 +262,15 @@
       var mail = String(d.get('email') || '').trim();
       var subject = String(d.get('sujet') || '').trim() || (lang() === 'en' ? 'Discovery appointment' : 'Demande de rendez-vous');
       var message = String(d.get('message') || '').trim();
+      var SEP = '\r\n';
+      var BLANK = SEP + SEP; // double retour à la ligne = vrai espace visuel dans le client mail
       var body = [
         lang() === 'en' ? 'Name :' : 'Nom :', name,
         lang() === 'en' ? 'Email :' : 'Email :', mail,
         lang() === 'en' ? 'Subject :' : 'Sujet :', subject,
-        '', message,
-        '', '— Envoyé depuis le site marion-cabin.ca (formulaire de contact) —'
-      ].join('\n');
+        BLANK, message,
+        BLANK, lang() === 'en' ? '— Sent via the marion-cabin.ca contact form —' : '— Envoyé depuis le site marion-cabin.ca (formulaire de contact) —'
+      ].join(SEP);
       var base = form.dataset.formaction || 'mailto:bonjour@marion-cabin.ca';
       var sub = lang() === 'en' ? 'Discovery appointment — ' : 'Rendez-vous découverte — ';
       var mailto = base + '?subject=' + encodeURIComponent(sub + subject + ' — ' + name) + '&body=' + encodeURIComponent(body);
