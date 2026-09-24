@@ -121,7 +121,12 @@
     'Nothing on this site replaces a physician’s advice.'
   ];
 
-  function lang() { try { return localStorage.getItem('marion-lang') || 'fr'; } catch (e) { return 'fr'; } }
+  function lang() {
+    try { var v = localStorage.getItem('marion-lang'); if (v) return v; } catch (e) {}
+    // C45 : défaut = préférence navigateur, sinon FR.
+    var b = (navigator.language || '').toLowerCase();
+    return b.indexOf('en') === 0 ? 'en' : 'fr';
+  }
   function applyLang(l) {
     // Texte
     var els = Array.prototype.slice.call(document.querySelectorAll('[data-i18n]'));

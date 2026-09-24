@@ -95,7 +95,15 @@
     st.set(n); paint(n);
   });
 
-  var cur = LS.lang ? LS.lang() : 'fr';
+  // C45 : défaut = préférence navigateur (en → langue AN), sinon FR.
+  // Le choix explicite (bouton EN/FR) est ensuite persisté dans localStorage
+  // et reste prioritaire au-dessus de la préférence système.
+  function lang() {
+    try { var v = localStorage.getItem('marion-lang'); if (v) return v; } catch (e) {}
+    var b = (navigator.language || '').toLowerCase();
+    return b.indexOf('en') === 0 ? 'en' : 'fr';
+  }
+  var cur = lang();
   applyLang(cur);
   var langBtn = document.querySelector('.lang-toggle');
   if (langBtn) langBtn.addEventListener('click', function () {
