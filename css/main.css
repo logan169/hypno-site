@@ -487,8 +487,8 @@ h3{font-size:1.35rem;font-weight:500}
    Fond forêt reste foncé en clair → texte blanc passe AA.
    En dark, --forest-deep lightte vers --sage et devient clair-sauge → texte foncé.
    L'overline (.overline.light) garde intentionally son accent sauge.
-   (R3 QA: remplace #FFFFFF / #1F1D1A par les tokens de la palette —
-   --paper pour blanc, --ambre pour noir. Équivalents hex en 1:1.) */
+   (R3 QA: couleurs textuelles via tokens de la palette — --paper / --ambre —
+   plus d'héritage hors-palette.) */
 .rdv-left,
 .rdv-left h2,
 .rdv-left p,
