@@ -293,4 +293,32 @@
     }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
     fadeEls.forEach(function (el) { observer.observe(el); });
   }
+  /* ═══════ 7 · SCROLL-SPY NAV (hint de position pendant le défilement) ═══════ */
+  if (location.pathname.replace(/index\.html$|\/$/, '').indexOf('revue') === -1) {
+    var spyLinks = [].slice.call(document.querySelectorAll('.nav-links a[href^="#"]')).filter(function (a) {
+      return !a.classList.contains('nav-cta') && a.getAttribute('href').length > 1;
+    });
+    if (spyLinks.length && 'requestAnimationFrame' in window) {
+      var spyTargets = spyLinks
+        .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+        .filter(Boolean);
+      var ticking = false;
+      var setActive = function () {
+        var mid = window.scrollY + window.innerHeight * 0.34;
+        var current = null;
+        for (var i = 0; i < spyTargets.length; i++) {
+          if (spyTargets[i].getBoundingClientRect().top + window.scrollY <= mid) { current = spyTargets[i].id; } else { break; }
+        }
+        var activeHref = (current ? '#' + current : null);
+        document.querySelectorAll('.nav-links a[href^="#"], .mobile-menu a[href^="#"]').forEach(function (a) {
+          a.classList.toggle('nav-active', activeHref !== null && a.getAttribute('href') === activeHref);
+        });
+        ticking = false;
+      };
+      var onScroll = function () { if (!ticking) { ticking = true; window.requestAnimationFrame(setActive); } };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      setActive();
+    }
+  }
 })();
