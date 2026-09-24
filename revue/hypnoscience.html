@@ -18,21 +18,48 @@
 (function(){var s=null;try{s=localStorage.getItem('marion-theme')}catch(e){}var d=s||(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',d);})();
 </script>
 <link rel="stylesheet" href="../css/main.css?v=brief3">
-<link rel="stylesheet" href="revue.css?v=2">
+<link rel="stylesheet" href="revue.css?v=3">
 </head>
 <body class="revue">
 <a class="skip-link" href="#main">Aller au contenu</a>
-<header class="site-nav">
+<header class="site-nav revue-nav">
   <div class="nav-inner">
-    <a class="brand" href="../#accueil" aria-label="Retour à l’accueil"><span class="brand-name">Marion</span></a>
-    <nav class="nav-links" aria-label="Navigation"><a href="../#accueil">Accueil</a><a href="../#approche">Approche</a><a href="../#comprendre" class="revue-current">La revue</a><a href="../#rendezvous" class="nav-cta">Prendre rendez-vous</a></nav>
-    <button class="tool-btn theme-toggle" type="button" aria-label="Mode nuit" aria-pressed="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
-    </button>
-    <a class="btn btn-outline btn-back" href="../#comprendre">← Retour à la revue</a>
+    <a class="brand" href="../#accueil" aria-label="Marion — accueil">
+      <span class="brand-name">Marion</span>
+      <span class="brand-tag">Hypnose · Santé des femmes · Intégrative</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="../#accueil">Accueil</a>
+      <a href="../#signals">Signaux</a>
+      <a href="../#piliers">Piliers</a>
+      <a href="../#approche">Approche</a>
+      <a href="../#apropos">À propos</a>
+      <a href="../#comprendre" class="revue-current">Comprendre</a>
+      <a href="../#faq">FAQ</a>
+      <a href="../#rendezvous" class="nav-cta">Prendre rendez-vous</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="tool-btn theme-toggle" type="button" aria-pressed="false" aria-label="Mode nuit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="tool-btn lang-toggle" type="button" aria-label="English">EN</button>
+      <button class="nav-burger" id="burger-revue" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu-revue">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu-revue" hidden>
+    <a href="../#accueil">Accueil</a>
+    <a href="../#signals">Signaux</a>
+    <a href="../#piliers">Piliers</a>
+    <a href="../#approche">Approche</a>
+    <a href="../#apropos">À propos</a>
+    <a href="../#comprendre" class="revue-current">Comprendre</a>
+    <a href="../#faq">FAQ</a>
+    <a href="../#rendezvous" class="nav-cta">Prendre rendez-vous</a>
   </div>
 </header>
-
+  <a class="btn btn-outline btn-back" href="../#comprendre">← Retour à la revue</a>
 <main id="main" class="revue-main">
   <article class="revue-article">
     <p class="overline">La revue de Marion — Hypnose</p>
@@ -43,7 +70,15 @@
     <section class="revue-section"><h2>Un état d’attention, pas une perte de contrôle</h2><p>Les travaux sur les bases neurophysiologiques de l’hypnose convergent sur un point : c’est un état naturel d’attention focalisée, associé à une plus grande réceptivité. L’imagerie cérébrale observe des variations d’activité dans des réseaux impliqués dans l’attention, le contrôle des impulsions et la perception. On n’observe pas « l’esprit qui s'éteint » — on observe l’attention qui se reorganise. C’est cette reconfiguration, et non un supposé pouvoir de suggestion, qui explique pourquoi l’outil reste utile en clinique.</p></section>
     <section class="revue-section"><h2>Où les données sont les plus solides</h2><p>Les revues les plus fiables placent l’hypnose parmi les approches aux preuves les plus solides pour la gestion de certaines douleurs chroniques, l’anxiété de santé, et certains aspects du sommeil et de la fatigue. L’effet est modéré — de l’ordre de ce que l’on observe pour d’autres interventions non médicamenteuses — et il dépend fortement du contexte, de la relation et de la manière dont l’attention est guidée. Là où les études sont convergentes, je l’utilise en l’assumant comme un levier complémentaire, pas comme une réponse globale.</p></section>
     <section class="revue-section"><h2>Où je reste prudente</h2><p>D’autres domaines — le traitement de certaines phobies, la modification de comportements ancrés, la mémoire — font l’objet d'études moins abouties, ou de méthodologies discutées. Je ne présente pas ces possibilités comme démontrées. Quand une piste n’a qu’un niveau de preuve faible, je vous le dis, et nous choisissons ensemble si elle a tout de même un sens pour votre situation. C’est précisément cette honnêteté qui, à mes yeux, distingue une pratique sérieuse d’une promesse marketing.</p></section>
-    <footer class="revue-close">
+        <section class="revue-sources">
+      <h2 class="revue-sources-h">Sources à consulter</h2>
+      <p class="revue-sources-intro">Cette note s’appuie sur les références ci-dessous, où les données sont les plus accessibles. Elles montrent où la littérature converge, et où elle est encore en discussion.</p>
+      <ol class="revue-sources-list">
+        <li>Milling LS, Kirsch IO, et al. Hypnotic treatment of chronic pain. — Revue des essais contrôlés sur l'analgésie hypnotique (PubMed).<br><a href="https://pubmed.ncbi.nlm.nih.gov/16404678/" target="_blank" rel="noopener">Référence directe&nbsp;→</a></li>
+        <li>Montgomery G, Duhame K, Redd WH. A meta-analysis of hypnotically induced analgesia: How effective is hypnosis? (2000)<br><a href="https://accurateclinic.com/wp-content/uploads/2016/03/A-meta-analysis-of-hypnotically-induced-analgesia-How-effective-is-hypnosis-2000.pdf" target="_blank" rel="noopener">Référence directe&nbsp;→</a></li>
+        <li>NCCIH (NIH) — Hypnosis: What you need to know. Synthèse institutionnelle pour le grand public.<br><a href="https://www.nccih.nih.gov/health/hypnosis" target="_blank" rel="noopener">Référence directe&nbsp;→</a></li>
+      </ol>
+    </section><footer class="revue-close">
       <p class="revue-close-title">En résumé</p>
       <p class="revue-close-body">L’hypnose est un état d’attention mesurable, pas un mystère. La science soutient son utilité dans certains domaines (douleur, anxiété, sommeil) et reste prudente ailleurs. Une pratique sérieuse indique les deux — et c’est ce que je vous propose.</p>
     </footer>
@@ -66,5 +101,5 @@
     <div class="footer-legal"><p>Vancouver, Colombie-Britannique</p><p>© 2026 Marion — Tous droits réservés.</p><p>Ce contenu n’est pas un avis médical.</p></div>
   </div>
 </footer>
-<script src="../js/theme.js?v=2" defer></script>
+<script src="../js/article.js?v=1" defer></script>
 </body></html>

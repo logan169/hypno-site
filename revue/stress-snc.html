@@ -18,21 +18,48 @@
 (function(){var s=null;try{s=localStorage.getItem('marion-theme')}catch(e){}var d=s||(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',d);})();
 </script>
 <link rel="stylesheet" href="../css/main.css?v=brief3">
-<link rel="stylesheet" href="revue.css?v=2">
+<link rel="stylesheet" href="revue.css?v=3">
 </head>
 <body class="revue">
 <a class="skip-link" href="#main">Aller au contenu</a>
-<header class="site-nav">
+<header class="site-nav revue-nav">
   <div class="nav-inner">
-    <a class="brand" href="../#accueil" aria-label="Retour à l’accueil"><span class="brand-name">Marion</span></a>
-    <nav class="nav-links" aria-label="Navigation"><a href="../#accueil">Accueil</a><a href="../#approche">Approche</a><a href="../#comprendre" class="revue-current">La revue</a><a href="../#rendezvous" class="nav-cta">Prendre rendez-vous</a></nav>
-    <button class="tool-btn theme-toggle" type="button" aria-label="Mode nuit" aria-pressed="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
-    </button>
-    <a class="btn btn-outline btn-back" href="../#comprendre">← Retour à la revue</a>
+    <a class="brand" href="../#accueil" aria-label="Marion — accueil">
+      <span class="brand-name">Marion</span>
+      <span class="brand-tag">Hypnose · Santé des femmes · Intégrative</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="../#accueil">Accueil</a>
+      <a href="../#signals">Signaux</a>
+      <a href="../#piliers">Piliers</a>
+      <a href="../#approche">Approche</a>
+      <a href="../#apropos">À propos</a>
+      <a href="../#comprendre" class="revue-current">Comprendre</a>
+      <a href="../#faq">FAQ</a>
+      <a href="../#rendezvous" class="nav-cta">Prendre rendez-vous</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="tool-btn theme-toggle" type="button" aria-pressed="false" aria-label="Mode nuit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="tool-btn lang-toggle" type="button" aria-label="English">EN</button>
+      <button class="nav-burger" id="burger-revue" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu-revue">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu-revue" hidden>
+    <a href="../#accueil">Accueil</a>
+    <a href="../#signals">Signaux</a>
+    <a href="../#piliers">Piliers</a>
+    <a href="../#approche">Approche</a>
+    <a href="../#apropos">À propos</a>
+    <a href="../#comprendre" class="revue-current">Comprendre</a>
+    <a href="../#faq">FAQ</a>
+    <a href="../#rendezvous" class="nav-cta">Prendre rendez-vous</a>
   </div>
 </header>
-
+  <a class="btn btn-outline btn-back" href="../#comprendre">← Retour à la revue</a>
 <main id="main" class="revue-main">
   <article class="revue-article">
     <p class="overline">La revue de Marion — Système nerveux</p>
@@ -43,7 +70,14 @@
     <section class="revue-section"><h2>L’alerte qui ne se débride plus</h2><p>Le système nerveux autonome alterne entre activation (sympathique) et détente (parasympathique). Le stress aigu est un mécanisme de protection : il mobilise, alerte, fait réagir. Le problème n’est pas l’alerte — c’est qu’elle ne se débride plus. L’organisme reste en état de vigilance prolongé : cœur et tension élevés en arrière-plan, respiration haute et courte, muscles en tension, sommeil de surface. Ce n’est pas de la «&nbsp;faiblesse&nbsp;» : c’est un circuit qui, par habitude, n’est pas revenu à son point d'équilibre.</p></section>
     <section class="revue-section"><h2>Ce que la régulation change, concrètement</h2><p>La bonne nouvelle tient en une phrase : le système nerveux est plastique. Les pratiques de régulation — respiration lente, visualisation guidée, ancrages, travail sur les automatismes — ne «&nbsp;calment&nbsp;» pas par la force, mais en réentraînant le circuit à détecter le signal de sécurité. En pratique, cela se traduit par une baisse de la fréquence cardiaque au repos, une réduction des réveils nocturnes, et une moindre amplification de la réponse aux irritants du quotidien. Ce sont des effets mesurables, pas des promesses poétiques.</p></section>
     <section class="revue-section"><h2>Où l’attention et l’hypnose s’insèrent</h2><p>Dans ce circuit, l’attention est un levier. Quand le système nerveux est en sur-activation, l’attention a tendance à rester accrochée à la menace perçue. L’hypnose, en tant qu'état d’attention focalisée, offre un canal pour rediriger cette attention, et par là, influencer la tonus du système nerveux. Ce n’est pas de la «&nbsp;magie&nbsp;» : c’est de la réorientation attentionnelle, utilisée de façon structurée. Elle s’insère dans un ensemble — sommeil, activité, régulation — et ne se substitue pas à une évaluation médicale lorsque c’est nécessaire.</p></section>
-    <footer class="revue-close">
+        <section class="revue-sources">
+      <h2 class="revue-sources-h">Sources à consulter</h2>
+      <p class="revue-sources-intro">Cette note s’appuie sur les références ci-dessous, où les données sont les plus accessibles. Elles montrent où la littérature converge, et où elle est encore en discussion.</p>
+      <ol class="revue-sources-list">
+        <li>McEwen BS. The allostasis load hypothesis — synthèse sur la physiologie du stress chronique (PubMed).<br><a href="https://pubmed.ncbi.nlm.nih.gov/?term=allostasis+McEwen" target="_blank" rel="noopener">Référence directe&nbsp;→</a></li>
+        <li>Porges SW. The Polyvagal Theory: Neurophysiological Foundations of Emotions, Attachment, Communication, and Self-Regulation (Guilford, 2011).<br><a href="https://doi.org/10.1037/e80835-200" target="_blank" rel="noopener">Référence directe&nbsp;→</a></li>
+      </ol>
+    </section><footer class="revue-close">
       <p class="revue-close-title">En résumé</p>
       <p class="revue-close-body">Le stress chronique est un état du système nerveux, pas un trait de caractère. Il est régulable : la plasticité nerveuse permet de réentraîner la détente. L’attention est un levier — et l’hypnose en est un usage structuré. C’est sur cette base, mesurable, que je travaille.</p>
     </footer>
@@ -66,5 +100,5 @@
     <div class="footer-legal"><p>Vancouver, Colombie-Britannique</p><p>© 2026 Marion — Tous droits réservés.</p><p>Ce contenu n’est pas un avis médical.</p></div>
   </div>
 </footer>
-<script src="../js/theme.js?v=2" defer></script>
+<script src="../js/article.js?v=1" defer></script>
 </body></html>
