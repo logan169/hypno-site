@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Écrits &amp; projets — Marion</title>
+<meta name="description" content="Articles d'opinion, notes cliniques et projets de recherche (NIH, santé des femmes, LLMs) — par Marion, Vancouver, C.-B.">
+<link rel="canonical" href="/ecrits.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Marion — Hypnose, santé des femmes & santé intégrative">
+<meta property="og:title" content="Écrits &amp; projets · Marion">
+<meta property="og:description" content="Articles, notes cliniques et projets de recherche.">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:url" content="/ecrits.html">
+<meta property="og:image" content="https://logan169.github.io/hypno-site/static/PHOTO-2026-07-12-10-31-16.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23F5F1E9'/><text x='50%25' y='52%25' font-family='Georgia,serif' font-size='42' text-anchor='middle' fill='%23435249' dominant-baseline='middle'>M</text></svg>">
+<meta name="theme-color" content="#F5F1E9">
+<link rel="preload" as="style" href="css/main.css?v=brief25">
+<script>
+(function(){var s=null;try{s=localStorage.getItem('marion-theme')}catch(e){}var d=s||(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',d);})();
+</script>
+<link rel="stylesheet" href="css/main.css?v=brief25">
+<style>
+/* ── ÉCRITS · page dédiée (auto-portée, hors css/main.css) ── */
+.ec-hero{padding-block:clamp(4.5rem,8vw,7rem) clamp(3rem,6vw,5rem);position:relative;overflow:hidden;
+  background-color:var(--bg-alt);
+  background-image:
+    linear-gradient(color-mix(in srgb,var(--bg-alt) 60%,transparent),color-mix(in srgb,var(--bg-alt) 40%,transparent)),
+    url("static/PHOTO-2026-07-12-10-31-16.jpg");
+  background-size:auto,cover;background-position:center,center 28%;}
+.ec-hero-inner{position:relative;z-index:1;width:min(1080px,92%);margin-inline:auto;display:grid;grid-template-columns:5fr 7fr;gap:clamp(2.5rem,5vw,5rem);align-items:start}
+.ec-portrait{aspect-ratio:4/5;position:relative}
+.ec-portrait img{width:100%;height:100%;object-fit:cover;border-radius:var(--rayon);filter:saturate(.88) contrast(1.02)}
+[data-theme="dark"] .ec-portrait img{filter:brightness(.72) saturate(.82) contrast(1.03)}
+.ec-portrait::after{content:"";position:absolute;inset:16px;z-index:-1;border-radius:var(--rayon);background:var(--lin);border:1px solid var(--ink-08)}
+.ec-socials{display:flex;flex-direction:column;gap:.5rem;margin-top:1.4rem}
+.ec-socials a{display:inline-flex;align-items:center;gap:.55rem;font-size:.92rem;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--ligne);border-radius:calc(var(--rayon) - 6px);padding:.55rem .9rem;transition:border-color .2s}
+.ec-socials a:hover{border-color:var(--forest)}
+.ec-socials a svg{width:16px;height:16px;color:var(--forest)}
+.ec-socials .note{font-size:.82rem;color:var(--ink-72);margin-top:.5rem;line-height:1.5}
+.ec-body h1{font-size:clamp(2.2rem,4.6vw,3.4rem);line-height:1.08;margin-bottom:1.4rem}
+.ec-lede{font-size:1.15rem;line-height:1.75;color:var(--ink-82);max-width:52ch;margin-bottom:1.4rem}
+.ec-sub{color:var(--ink-72);line-height:1.75;max-width:58ch;margin-bottom:2rem}
+.ec-ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.4rem}
+
+.ec-section{padding-block:clamp(3.5rem,6vw,5.5rem);position:relative}
+.ec-section + .ec-section{border-top:1px solid var(--ligne)}
+.ec-section .wrap{width:min(940px,92%);margin-inline:auto}
+.ec-section-head{margin-bottom:2.2rem;max-width:60ch}
+.ec-section-head .overline{display:block;margin-bottom:.75rem}
+.ec-section-head h2{font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:.9rem}
+.ec-section-head .lede{color:var(--ink-78);line-height:1.7;max-width:58ch}
+
+/* Cartes thématiques — repris du design `parcours.html` (C44) */
+.themes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.theme-card{padding:1.6rem 1.5rem 1.5rem;border-radius:var(--rayon);background:var(--bg-alt);border:1px solid var(--ligne);transition:transform .25s ease,border-color .2s ease}
+.theme-card:hover{transform:translateY(-3px);border-color:var(--sauge)}
+.theme-card .theme-tag{font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);margin-bottom:.7rem;display:block}
+.theme-card h3{font-size:1.2rem;font-weight:600;margin-bottom:.9rem;line-height:1.28}
+.theme-card p{color:var(--ink-72);font-size:.92rem;line-height:1.7;margin-bottom:1rem}
+.theme-card ul{list-style:none;margin:0 0 .5rem;padding:0;font-size:.94rem;line-height:1.7}
+.theme-card ul li{position:relative;padding-left:1rem;padding-block:.25rem}
+.theme-card ul li::before{content:"—";position:absolute;left:0;color:var(--sauge)}
+.theme-card .theme-empty{font-size:.85rem;color:var(--ink-62);font-style:italic;padding:0 0 .4rem;line-height:1.6}
+
+/* Projets — timeline sobre (même style que parcours.html) */
+.proj-timeline{display:grid;gap:.6rem 3rem;grid-template-columns:1fr}
+.proj-item{position:relative;padding:1.1rem 0 1.1rem 1.5rem;row-gap:.25rem;border-top:1px solid var(--ligne)}
+.proj-item:first-child{border-top:none}
+.proj-item::before{content:"";position:absolute;left:0;top:1.4rem;width:6px;height:6px;border-radius:50%;background:var(--sauge)}
+.proj-role{font-size:1.05rem;font-weight:500}
+.proj-role small{display:block;font-weight:400;color:var(--ink-62);margin-top:.2rem;font-size:.88rem}
+.proj-detail{color:var(--ink-78);font-size:.98rem;line-height:1.75;margin-top:.55rem}
+
+/* Footer CTA */
+.ec-cta{padding-block:clamp(3rem,6vw,5rem);background:var(--bg-alt);text-align:center}
+.ec-cta .wrap{width:min(780px,92%);margin-inline:auto}
+.ec-cta h2{font-size:clamp(1.4rem,2.4vw,1.9rem);margin-bottom:1rem}
+.ec-cta p{color:var(--ink-78);margin-bottom:1.6rem;line-height:1.7}
+
+/* Mobile */
+@media (max-width:760px){
+  .ec-hero-inner{grid-template-columns:1fr}
+  .ec-portrait{max-width:280px}
+  .ec-socials{flex-direction:row;flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="index.html#accueil" aria-label="Marion — accueil">
+      <span class="brand-name">Marion</span>
+      <span class="brand-tag">Hypnose · Santé des femmes · Intégrative</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="index.html#signals">Signaux</a>
+      <a href="index.html#piliers">Piliers</a>
+      <a href="index.html#approche">Approche</a>
+      <a href="index.html#apropos">À propos</a>
+      <a href="index.html#comprendre">Comprendre</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#rendezvous" class="nav-cta">Prendre rendez-vous</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="tool-btn theme-toggle" type="button" aria-pressed="false" aria-label="Mode nuit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO — Portrait + liens + titre concis -->
+<section class="ec-hero" id="accueil">
+  <div class="ec-hero-inner">
+    <div>
+      <div class="ec-portrait">
+        <img src="static/marion-portrait.jpg"
+             alt="Portrait de Marion — Vancouver, C.-B." loading="eager" decoding="async" fetchpriority="high">
+      </div>
+      <div class="ec-socials">
+        <a href="https://marionfech.github.io/" target="_blank" rel="noopener" aria-label="Site professionnel de Marion">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+          Site professionnel
+        </a>
+        <a href="https://www.linkedin.com/in/marion-fechino-31bb0b153/?locale=fr" target="_blank" rel="noopener" aria-label="LinkedIn de Marion">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.2 9h3.6v11H3.2V9zm5.9 0h3.4v1.5h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.1 2.3 4.1 5.3V20h-3.6v-4.8c0-1.2 0-2.7-1.6-2.7s-1.9 1.3-1.9 2.6V20H9.1V9z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <span class="note">Publications longues, projets data, articles.</span>
+      </div>
+    </div>
+    <div class="ec-body">
+      <p class="overline">Écrits · Projets · Ailleurs</p>
+      <h1>Mes écrits, mes projets, et où me retrouver.</h1>
+      <p class="ec-lede">Un espace pour ce que je publie et ce que je construis — articles, notes cliniques, et projets de recherche — plus les liens où je suis disponible ailleurs.</p>
+      <p class="ec-sub">Rien ici ne remplace un échange direct. Ces pages sont un aperçu de ma trajectoire, pas une vitrine.</p>
+      <div class="ec-ctas">
+        <a class="btn btn-primary" href="parcours.html">Mon parcours</a>
+        <a class="btn btn-outline" href="index.html#rendezvous">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 · ÉCRITS -->
+<section class="ec-section" id="ecrits">
+  <div class="wrap">
+    <div class="ec-section-head">
+      <span class="overline">À lire</span>
+      <h2>Articles &amp; notes, organisés par thème.</h2>
+      <p class="lede">Notes courtes sur la santé des femmes, la cognition, le sommeil, et la douleur — et quelques articles plus longs, en cours de publication sur Medium.</p>
+    </div>
+
+    <article class="theme-card" style="display:block">
+      <span class="theme-tag">Santé des femmes</span>
+      <h3>Cycle, périménopause, corps</h3>
+      <p>Notes cliniques — cycle, sommeil, humeur, périménopause — et articles longs sur les transitions hormonales du corps et du cerveau.</p>
+      <ul>
+        <li><a href="revue/perimena.html">Périménopause — comprendre les changements du corps</a></li>
+        <li><a href="revue/sommeil-hormones.html">Sommeil et santé hormonale</a></li>
+      </ul>
+    </article>
+
+    <article class="theme-card" style="display:block;margin-top:1rem">
+      <span class="theme-tag">Cognition &amp; sommeil</span>
+      <h3>Régulation émotionnelle, attention, sommeil</h3>
+      <p>Ce que les méta-analyses disent du sommeil, de l'attention, de la régulation émotionnelle — et où les études s'arrêtent.</p>
+      <ul>
+        <li><a href="revue/hypnoscience.html">Hypnose — que dit réellement la recherche&nbsp;?</a></li>
+        <li><a href="revue/stress-snc.html">Stress chronique et système nerveux</a></li>
+      </ul>
+    </article>
+
+    <article class="theme-card" style="display:block;margin-top:1rem">
+      <span class="theme-tag">Douleur &amp; corps</span>
+      <h3>La douleur, l'attention, la perception</h3>
+      <p>Comment l'attention modifie l'expérience de la douleur — et ce que cela change pour la pratique clinique.</p>
+      <ul>
+        <li><a href="revue/douleur.html">Le lien entre douleur, attention et cerveau</a></li>
+      </ul>
+    </article>
+
+    <article class="theme-card" style="display:block;margin-top:1rem">
+      <span class="theme-tag">Santé intégrative</span>
+      <h3>Décomposer la notion d'intégratif</h3>
+      <p>Ce que « intégratif » recouvre réellement — et ce qu'il ne recouvre pas — sans l'utiliser comme synonyme de « marketing ».</p>
+      <ul>
+        <li><a href="revue/integratif.html">Santé intégrative — de quoi parle-t-on exactement&nbsp;?</a></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- 02 · PROJETS & RECHERCHE -->
+<section class="ec-section" id="projets">
+  <div class="wrap">
+    <div class="ec-section-head">
+      <span class="overline">Projets &amp; recherche</span>
+      <h2>Ce que je construis.</h2>
+      <p class="lede">Deux directions de travail qui nourrissent ma pratique clinique — traduire la littérature scientifique pour la rendre accessible, et outiller les chercheurs en analyse comportementale. (Mon parcours complet, études NIH incluses, est sur la page « Mon parcours ».)</p>
+    </div>
+    <div class="proj-timeline">
+      <article class="proj-item">
+        <p class="proj-role">Santé des femmes — recherche &amp; data <small>RAG — littérature scientifique sur la santé des femmes</small></p>
+        <p class="proj-detail">Conception de systèmes de recherche assistés par IA (RAG) pour rendre la littérature scientifique accessible — du cycle et de la fertilité à la périménopause. Ce travail a directement informé ma façon de pratiquer : expliquer d'abord, préciser ensuite.</p>
+      </article>
+      <article class="proj-item">
+        <p class="proj-role">Science des données &amp; IA <small>Agent d'exploration de données à base de LLM</small></p>
+        <p class="proj-detail">Conception d'outils d'analyse comportementale — visualisation, détection de signaux faibles, aide à la décision pour les chercheurs. La rigueur méthodologique que ces projets exigent est la même que j'essaie d'appliquer en clinique : des indicateurs clairs, pas des impressions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · AUSSI AILLEURS (CTA) -->
+<section class="ec-cta" id="ailleurs">
+  <div class="wrap">
+    <h2>Ailleurs, je suis là aussi.</h2>
+    <p>Publications longues, projets data, articles en cours. Le lien vers Medium et les réseaux — là où mes écrits apparaissent — sont au-dessus, à côté du portrait.</p>
+    <div>
+      <a class="btn btn-primary" href="parcours.html">Retour au parcours</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><p class="brand-name">Marion</p><p class="brand-tag">Hypnose · Santé des femmes · Santé intégrative</p></div>
+    <nav class="footer-nav" aria-label="Navigation pied de page">
+      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html#approche">Approche</a>
+      <a href="index.html#apropos">À propos</a>
+      <a href="parcours.html">Parcours</a>
+      <a href="ecrits.html" class="foot-current">Écrits</a>
+      <a href="index.html#comprendre">Comprendre</a>
+      <a href="index.html#rendezvous">Rendez-vous</a>
+    </nav>
+    <div class="footer-legal">
+      <p>Vancouver, Colombie-Britannique</p>
+      <p>© 2026 Marion — Tous droits réservés.</p>
+      <p>Aucune information sur ce site ne remplace l'avis d'un médecin.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Thème jour/nuit — identique à parcours.html.
+(function(){
+  'use strict';
+  var root = document.documentElement;
+  var metaT = document.querySelector('meta[name="theme-color"]');
+  var MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>';
+  var SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg>';
+  var st = (function(){var s={get:function(){return null},set:function(){}};try{s={get:function(){return localStorage.getItem('marion-theme')},set:function(v){localStorage.setItem('marion-theme',v)}}}catch(e){}return s})();
+  function paint(t){
+    root.setAttribute('data-theme', t);
+    if(metaT) metaT.setAttribute('content', t==='dark'?'#20241F':'#F5F1E9');
+    var b = document.querySelector('.theme-toggle');
+    if(b){b.setAttribute('aria-pressed', String(t==='dark')); b.innerHTML=(t==='dark')?SUN:MOON}
+  }
+  var tt = document.querySelector('.theme-toggle');
+  if(tt) tt.addEventListener('click', function(){
+    var n = root.getAttribute('data-theme')==='dark'?'light':'dark';
+    st.set(n); paint(n);
+  });
+  paint(st.get() || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+})();
+</script>
+</body>
+</html>
