@@ -406,7 +406,7 @@ h3{font-size:1.35rem;font-weight:500}
   color:var(--forest);margin-bottom:1rem;
 }
 .article h3{font-size:1.4rem;line-height:1.3;margin-bottom:.7rem}
-.article p{font-size:.95rem;line-height:1.65;color:var(--ink-66);margin-bottom:1.3rem}
+.article p{font-size:.95rem;line-height:1.65;color:var(--ink-72);margin-bottom:1.3rem}
 
 /* ── 07 · TÉMOIGNAGES (fondu — flèches ‹ › + glissable, 3 s) ── */
 .tst-carousel{overflow:hidden;margin-top:3.2rem;touch-action:pan-y;user-select:none}
@@ -529,7 +529,7 @@ h3{font-size:1.35rem;font-weight:500}
 .rdv-form input:focus,.rdv-form select:focus,.rdv-form textarea:focus{
   outline:none;border-color:var(--forest);background:#fff;
 }
-.rdv-form ::placeholder{color:var(--ink-55)}
+.rdv-form ::placeholder{color:var(--ink-66)}
 .form-note{
   margin-top:.4rem;padding:.85rem 1rem;
   background:var(--sauge-pale);color:var(--forest);
