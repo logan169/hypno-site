@@ -93,7 +93,10 @@
 [data-theme="dark"] .hero-veil{
   background:linear-gradient(100deg,rgba(32,36,31,.97) 0 32%,rgba(32,36,31,.87) 47%,rgba(32,36,31,.45) 68%,rgba(18,21,18,.62) 100%);
 }
-[data-theme="dark"] .section-foret{background:linear-gradient(160deg,color-mix(in srgb,var(--foret-deep) 82%,black) 0%,color-mix(in srgb,var(--foret-deep) 58%,black) 100%)}
+/* R3 : .section-foret (dark) corrige — le token était --foret-deep (inexistant)
+   → declaration invalide. Utilise le vrai --forest-deep. */
+[data-theme="dark"] .section-foret{background:linear-gradient(160deg,color-mix(in srgb,var(--forest-deep) 82%,black) 0%,color-mix(in srgb,var(--forest-deep) 58%,black) 100%)}
+/* C40 : .nav-active (lien actif) — pastille sauge ; CTA actif → halo sauge. */
 [data-theme="dark"] .about-media::after{background:var(--bg-alt)}
 [data-theme="dark"] .form-note{background:var(--bg-alt);color:var(--forest)}
 [data-theme="dark"] .rdv-form input:focus,[data-theme="dark"] .rdv-form select:focus,[data-theme="dark"] .rdv-form textarea:focus{background:var(--bg-alt)}
@@ -124,8 +127,8 @@ h3{font-size:1.35rem;font-weight:500}
   color:var(--forest);margin-bottom:1rem;display:inline-block;
 }
 .overline.light{color:var(--sauge)}
-.fine{font-size:.85rem;color:var(--ink-55);margin-top:1.6rem}
-.fine.light{color:var(--paper-60)}
+.fine{font-size:.85rem;color:var(--ink-75);margin-top:1.6rem}
+.fine.light{color:var(--paper-75)}
 .text-light{color:var(--paper)}
 .text-light h2,.text-light h3{color:var(--paper)}
 .text-light .lead,.text-light p{color:var(--paper-80)}
@@ -147,7 +150,7 @@ h3{font-size:1.35rem;font-weight:500}
 }
 .brand{display:flex;flex-direction:column;gap:.1rem;line-height:1.1}
 .brand-name{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ink);letter-spacing:.01em}
-.brand-tag{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-50);font-weight:500}
+.brand-tag{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-75);font-weight:500}
 .nav-links{display:flex;align-items:center;gap:1.7rem;flex-wrap:nowrap}
 .nav-links a{
   font-family:var(--serif);font-size:1.06rem;font-weight:500;
@@ -270,7 +273,7 @@ h3{font-size:1.35rem;font-weight:500}
   background-color:var(--bg-alt);
   background-image:
     linear-gradient(color-mix(in srgb,var(--bg-alt) 60%,transparent),color-mix(in srgb,var(--bg-alt) 40%,transparent)),
-    url("https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=2000&q=75");
+    url("static/PHOTO-2026-07-05-11-16-57.jpg");
   background-size:auto,cover;
   background-position:center,center;
   background-repeat:no-repeat;
@@ -280,7 +283,7 @@ h3{font-size:1.35rem;font-weight:500}
   background-color:var(--bg-alt);
   background-image:
     linear-gradient(color-mix(in srgb,var(--bg-alt) 60%,transparent),color-mix(in srgb,var(--bg-alt) 40%,transparent)),
-    url("https://images.unsplash.com/photo-1444044205806-38f3ed106c10?auto=format&fit=crop&w=2000&q=75");
+    url("static/PHOTO-2026-07-05-11-16-57%20(1).jpg");
   background-size:auto,cover;
   background-position:center,center;
   background-repeat:no-repeat;
@@ -292,7 +295,7 @@ h3{font-size:1.35rem;font-weight:500}
   background-color:var(--forest-deep);
   background-image:
     linear-gradient(color-mix(in srgb,var(--forest-deep) 60%,transparent),color-mix(in srgb,var(--forest-deep) 40%,transparent)),
-    url("https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=2000&q=75");
+    url("static/PHOTO-2026-07-12-10-31-16.jpg");
   background-size:auto,cover;
   background-position:center,center;
   background-repeat:no-repeat;
@@ -337,7 +340,7 @@ h3{font-size:1.35rem;font-weight:500}
 .pillar h3{font-size:1.55rem;margin-bottom:.9rem}
 .pillar h3 .pillar-num{
   font-family:var(--serif);font-style:italic;font-weight:500;
-  font-size:.92em;margin:0 .18em .05em 0;color:var(--terre);
+  font-size:.92em;margin:0 .18em .05em 0;color:var(--forest);
   display:inline-block;
 }
 .pillar p{font-size:.97rem;line-height:1.7;color:var(--ink-75);margin-bottom:1.4rem}
@@ -465,7 +468,7 @@ h3{font-size:1.35rem;font-weight:500}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary::after{
   content:"+";flex:0 0 auto;
-  font-family:var(--sans);font-size:1.4rem;font-weight:400;color:var(--sauge);
+  font-family:var(--sans);font-size:1.4rem;font-weight:400;color:var(--forest);
   transition:transform var(--transition);line-height:1;
 }
 .faq-item[open] summary::after{transform:rotate(45deg)}
@@ -483,13 +486,15 @@ h3{font-size:1.35rem;font-weight:500}
 /* C26/C27 — client: "blanc en mode clair, noir en mode sombre".
    Fond forêt reste foncé en clair → texte blanc passe AA.
    En dark, --forest-deep lightte vers --sage et devient clair-sauge → texte foncé.
-   L'overline (.overline.light) garde intentionally son accent sauge. */
+   L'overline (.overline.light) garde intentionally son accent sauge.
+   (R3 QA: remplace #FFFFFF / #1F1D1A par les tokens de la palette —
+   --paper pour blanc, --ambre pour noir. Équivalents hex en 1:1.) */
 .rdv-left,
 .rdv-left h2,
 .rdv-left p,
 .rdv-left .rdv-info li,
 .rdv-left .rdv-info li strong{
-  color:#FFFFFF;
+  color:var(--paper);
 }
 [data-theme="dark"] .rdv-left,
 [data-theme="dark"] .rdv-left h2,
@@ -499,7 +504,7 @@ h3{font-size:1.35rem;font-weight:500}
 [data-theme="dark"] #rendezvous .text-light p,
 [data-theme="dark"] #rendezvous .text-light h2,
 [data-theme="dark"] #rendezvous .text-light strong{
-  color:#1F1D1A;
+  color:var(--ambre);
 }
 .rdv-info{list-style:none;margin-top:2.2rem}
 .rdv-left .rdv-info li{
@@ -509,10 +514,10 @@ h3{font-size:1.35rem;font-weight:500}
 .rdv-left .rdv-info li strong{display:block;font-size:.7rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;margin-bottom:.25rem}
 .rdv-left .rdv-info a{color:inherit;border-bottom:1px solid currentColor}
 /* C26/C27 + QA: accents suivent le texte (blanc clair / noir foncé) — plus d'accent sauge sur fond forêt clair */
-#rendezvous .overline.light{color:#FFFFFF}
-#rendezvous .rdv-info li strong{color:#FFFFFF}
+#rendezvous .overline.light{color:var(--paper)}
+#rendezvous .rdv-info li strong{color:var(--paper)}
 [data-theme="dark"] #rendezvous .overline.light,
-[data-theme="dark"] #rendezvous .rdv-info li strong{color:#1F1D1A}
+[data-theme="dark"] #rendezvous .rdv-info li strong{color:var(--ambre)}
 .rdv-form{
   background:var(--card);color:var(--ink);
   padding:clamp(1.8rem,3.4vw,2.8rem);
@@ -534,7 +539,7 @@ h3{font-size:1.35rem;font-weight:500}
   border-color:rgba(236,231,220,.22);
 }
 .rdv-form input:focus,.rdv-form select:focus,.rdv-form textarea:focus{
-  outline:none;border-color:var(--forest);background:#fff;
+  outline:none;border-color:var(--forest);background:var(--creme);
 }
 .rdv-form ::placeholder{color:var(--ink-66)}
 .form-note{
@@ -545,10 +550,10 @@ h3{font-size:1.35rem;font-weight:500}
 }
 
 /* ── FOOTER (sombre dans les deux thèmes) ── */
-.site-footer{background:#302F2B;color:var(--paper-66);padding-block:3.4rem}
+.site-footer{background:var(--ambre);color:var(--paper-66);padding-block:3.4rem}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:2.5rem}
 .site-footer .brand-name{color:var(--paper)}
-.site-footer .brand-tag{color:var(--paper-40)}
+.site-footer .brand-tag{color:var(--paper-75)}
 .footer-nav{display:grid;gap:.55rem;align-content:start}
 .footer-nav a{font-size:.9rem;transition:color var(--transition)}
 .footer-nav a:hover{color:var(--paper)}

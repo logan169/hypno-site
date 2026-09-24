@@ -24,7 +24,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23F5F1E9'/><text x='50%25' y='52%25' font-family='Georgia,serif' font-size='42' text-anchor='middle' fill='%23435249' dominant-baseline='middle'>M</text></svg>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<!-- R3 / QA : plus d'images Unsplash — toutes les photos sont auto-hébergées dans static/ -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script>
@@ -33,7 +33,7 @@
 var d=s; if(!d){d=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}
 document.documentElement.setAttribute('data-theme',d);})();
 </script>
-<link rel="stylesheet" href="css/main.css?v=brief22">
+<link rel="stylesheet" href="css/main.css?v=brief23">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n>Aller au contenu</a>
@@ -82,10 +82,11 @@ document.documentElement.setAttribute('data-theme',d);})();
 <!-- ══════════════════ 01 · HÉROS ══════════════════ -->
 <section class="hero fade" id="accueil">
   <div class="hero-media">
-    <!-- PHOTO MONDE 1 (nature / contemplation) — à remplacer par la photo réelle du client -->
-    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=75"
-         alt="Sentier de forêt de Colombie-Britannique dans la lumière douce" data-i18n-attr="alt"
-         data-i18n-attr-en="Forest trail in British Columbia in soft light" fetchpriority="high">
+    <!-- PHOTO 1 — hero (portrait local — organic, editorial, on-brand).
+         Avant : Unsplash. R3 / QA : auto-hébergé pour fiabilité. -->
+    <img src="static/PHOTO-2026-07-05-11-16-57%20(2).jpg"
+         alt="Fleurs de jardin en pleine lumière naturelle" data-i18n-attr="alt"
+         data-i18n-attr-en="Garden flowers in soft natural light" fetchpriority="high">
     <div class="hero-veil" aria-hidden="true"></div>
   </div>
   <div class="hero-inner">
@@ -348,6 +349,15 @@ document.documentElement.setAttribute('data-theme',d);})();
       </label>
       <label><span data-i18n>Message</span> <textarea name="message" rows="5" required></textarea></label>
       <button type="submit" class="btn btn-primary btn-block" data-i18n>Envoyer ma demande →</button>
+      <!-- C55 / R3 QA : sans JS, le bouton « Envoyer » ne fait rien.
+           Un lien mailto natif est donc proposé directement. -->
+      <noscript>
+        <p class="form-note">
+          <a href="mailto:bonjour@marion-cabin.ca?subject=Demande%20de%20rendez-vous" style="color:var(--sauge);border-bottom:1px solid currentColor">
+            Envoyer directement par email →
+          </a>
+        </p>
+      </noscript>
       <p class="fine light" data-i18n>Vos informations restent confidentielles — jamais partagées, jamais transmises à des tiers.</p>
       <p class="form-note" id="formNote" hidden data-i18n>Votre message s’ouvre dans votre application e-mail (objet et contenu pré-remplis). Il vous suffit de cliquer sur «&nbsp;Envoyer&nbsp;» — une réponse arrive sous 24&nbsp;h ouvrées.</p>
     </form>
@@ -378,6 +388,6 @@ document.documentElement.setAttribute('data-theme',d);})();
   </div>
 </footer>
 
-<script src="js/main.js?v=brief22"></script>
+<script src="js/main.js?v=brief23"></script>
 </body>
 </html>
