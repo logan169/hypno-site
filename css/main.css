@@ -240,13 +240,14 @@ h3{font-size:1.35rem;font-weight:500}
   margin-top:1.5rem;font-size:.78rem;font-weight:500;
   letter-spacing:.14em;text-transform:uppercase;color:var(--forest);
 }
-.hero-ctas{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;column-gap:1rem;margin-top:2.2rem}
-.hero-ctas .btn-primary{grid-column:2;justify-self:center}
-.hero-ctas .btn-ghost{grid-column:3;justify-self:start}
-/* Mobile: empile à pleine largeur (le grid 3 colonnes n'est plus utile). */
+/* C52 + C53 : le client a retiré la primaire « Découvrir mon approche » —
+   une seule CTA reste, sur UNE ligne (C52) en fin de colonne. */
+.hero-ctas{display:flex;justify-content:flex-end;align-items:center;margin-top:2.2rem}
+.hero-ctas .btn-ghost{white-space:nowrap}
+/* Mobile : pleine largeur, une seule ligne. */
 @media (max-width:600px){
-  .hero-ctas{grid-template-columns:1fr;row-gap:1rem;column-gap:0}
-  .hero-ctas>*{grid-column:1;justify-self:stretch;width:100%;text-align:center}
+  .hero-ctas{justify-content:stretch}
+  .hero-ctas .btn-ghost{width:100%;text-align:center}
 }
 
 /* ── BOUTONS ── */
@@ -268,22 +269,26 @@ h3{font-size:1.35rem;font-weight:500}
 /* ── SECTIONS ── */
 .section{padding-block:clamp(5rem,9vw,8.5rem)}
 .section-lin{background:var(--bg-alt)}
-/* 03 · PILIERS — photo de fond voilée (thème clair + nuit) */
+/* 03 · PILIERS — C56 : le client veut le dégradé de fond « comme avant » (sans photo).
+   Dégradé vertical léger, du ton ivoire/lin — aucune image de fond. */
 #piliers{
   background-color:var(--bg-alt);
-  background-image:
-    linear-gradient(color-mix(in srgb,var(--bg-alt) 60%,transparent),color-mix(in srgb,var(--bg-alt) 40%,transparent)),
-    url("static/PHOTO-2026-07-05-11-16-57.jpg");
-  background-size:auto,cover;
-  background-position:center,center;
+  background-image:linear-gradient(
+    180deg,
+    color-mix(in srgb,var(--creme) 70%,transparent) 0%,
+    color-mix(in srgb,var(--bg-alt) 100%,transparent) 55%,
+    color-mix(in srgb,var(--bg-alt) 72%,var(--sauge)) 100%
+  );
+  background-size:100% 100%;
   background-repeat:no-repeat;
 }
-/* 07 · TÉMOIGNAGES — photo de fond voilée (thème clair + nuit) */
+/* 07 · TÉMOIGNAGES — C55 : le client veut un fond « nature ».
+   On prend la photo du lac / côte (nature) de la collection statique. */
 #temoignages{
   background-color:var(--bg-alt);
   background-image:
     linear-gradient(color-mix(in srgb,var(--bg-alt) 60%,transparent),color-mix(in srgb,var(--bg-alt) 40%,transparent)),
-    url("static/PHOTO-2026-07-05-11-16-57%20(1).jpg");
+    url("static/PHOTO-2026-07-12-10-31-16.jpg");
   background-size:auto,cover;
   background-position:center,center;
   background-repeat:no-repeat;
@@ -295,7 +300,7 @@ h3{font-size:1.35rem;font-weight:500}
   background-color:var(--forest-deep);
   background-image:
     linear-gradient(color-mix(in srgb,var(--forest-deep) 60%,transparent),color-mix(in srgb,var(--forest-deep) 40%,transparent)),
-    url("static/PHOTO-2026-07-12-10-31-16.jpg");
+    url("static/PHOTO-2026-07-05-11-16-57%20(2).jpg");
   background-size:auto,cover;
   background-position:center,center;
   background-repeat:no-repeat;

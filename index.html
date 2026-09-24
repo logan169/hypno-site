@@ -33,7 +33,7 @@
 var d=s; if(!d){d=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}
 document.documentElement.setAttribute('data-theme',d);})();
 </script>
-<link rel="stylesheet" href="css/main.css?v=brief23">
+<link rel="stylesheet" href="css/main.css?v=brief24">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n>Aller au contenu</a>
@@ -82,11 +82,12 @@ document.documentElement.setAttribute('data-theme',d);})();
 <!-- ══════════════════ 01 · HÉROS ══════════════════ -->
 <section class="hero fade" id="accueil">
   <div class="hero-media">
-    <!-- PHOTO 1 — hero (portrait local — organic, editorial, on-brand).
-         Avant : Unsplash. R3 / QA : auto-hébergé pour fiabilité. -->
-    <img src="static/PHOTO-2026-07-05-11-16-57%20(2).jpg"
-         alt="Fleurs de jardin en pleine lumière naturelle" data-i18n-attr="alt"
-         data-i18n-attr-en="Garden flowers in soft natural light" fetchpriority="high">
+    <!-- PHOTO HERO — forêt (arbres, lumière douce).
+         C54 : le client revient à la photo d'arbres ; les fleurs (C54) vont sur
+         « Rendez-vous » en bas de page. Toutes les photos sont auto-hébergées. -->
+    <img src="static/hero-forest.jpg"
+         alt="Sentier de forêt de Colombie-Britannique dans la lumière douce" data-i18n-attr="alt"
+         data-i18n-attr-en="Forest trail in British Columbia in soft light" fetchpriority="high">
     <div class="hero-veil" aria-hidden="true"></div>
   </div>
   <div class="hero-inner">
@@ -96,7 +97,8 @@ document.documentElement.setAttribute('data-theme',d);})();
       <p class="hero-sub" data-i18n>Une approche intégrative de la santé des femmes, où l’hypnose thérapeutique s’appuie sur la science plutôt que sur les clichés.</p>
       <p class="hero-meta" data-i18n>Hypnose thérapeutique&nbsp;·&nbsp;Santé des femmes&nbsp;·&nbsp;Approche intégrative</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#approche" data-i18n>Découvrir mon approche</a>
+        <!-- C53 : le bouton primaire « Découvrir mon approche » a été retiré à la demande du client.
+             (C52) CTA « Prendre rendez-vous » : toujours sur une seule ligne. -->
         <a class="btn btn-ghost" href="#rendezvous" data-i18n>Prendre rendez-vous</a>
       </div>
     </div>
@@ -388,6 +390,6 @@ document.documentElement.setAttribute('data-theme',d);})();
   </div>
 </footer>
 
-<script src="js/main.js?v=brief23"></script>
+<script src="js/main.js?v=brief24"></script>
 </body>
 </html>

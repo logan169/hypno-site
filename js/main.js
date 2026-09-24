@@ -52,7 +52,7 @@
     'Body and mind,<br>in dialogue.',                                              // h1
     'An integrative approach to women’s health, where therapeutic hypnosis is grounded in science rather than clichés.', // hero-sub
     'Hypnotherapeutic&nbsp;·&nbsp;Women’s health&nbsp;·&nbsp;Integrative approach',          // hero-meta
-    'Discover my approach', 'Book an appointment',                                 // hero CTAs
+    'Book an appointment',                                                                // hero CTA (C53 : primaire retirée — plus qu'une seule ligne)
     'You may be here because…',                                                    // signals overline
     'Your body is sending you signals.',                                           // h2
     'Sometimes it isn’t one precise ache that brings you in — it’s the feeling that things are coming apart. These themes come up again and again with the people I work with&nbsp;:', // lead
