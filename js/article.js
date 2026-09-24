@@ -22,7 +22,7 @@
   })();
   function paint(t) {
     root.setAttribute('data-theme', t);
-    if (metaT) metaT.setAttribute('content', t === 'dark' ? '#20241F' : '#F5F1E9');
+    if (metaT) metaT.setAttribute('content', t === 'dark' ? '#302F2B' : '#F5F1E9');
     var b = document.querySelector('.theme-toggle');
     if (b) { b.setAttribute('aria-pressed', String(t === 'dark')); b.innerHTML = (t === 'dark') ? SUN : MOON; }
   }

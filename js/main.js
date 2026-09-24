@@ -11,7 +11,7 @@
   var metaTheme = document.querySelector('meta[name="theme-color"]');
   function paintTheme(t) {
     root.setAttribute('data-theme', t);
-    if (metaTheme) metaTheme.setAttribute('content', t === 'dark' ? '#20241F' : '#F5F1E9');
+    if (metaTheme) metaTheme.setAttribute('content', t === 'dark' ? '#302F2B' : '#F5F1E9');
     var tb = document.querySelector('.theme-toggle');
     if (tb) {
       tb.setAttribute('aria-pressed', String(t === 'dark'));

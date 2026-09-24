@@ -100,6 +100,18 @@
 [data-theme="dark"] .about-media::after{background:var(--bg-alt)}
 [data-theme="dark"] .form-note{background:var(--bg-alt);color:var(--forest)}
 [data-theme="dark"] .rdv-form input:focus,[data-theme="dark"] .rdv-form select:focus,[data-theme="dark"] .rdv-form textarea:focus{background:var(--bg-alt)}
+/* QA · Round-3 : sur les surfaces sombres (--card / --bg), les teintes 72–85 %
+   étaient sous AA (< 4.5) pour le texte courant. Mise à --ink complet dans le
+   thème nuit (≈ 10 :1) et --forest → --ink pour les liens discrets. */
+[data-theme="dark"] .pillar p,
+[data-theme="dark"] .principle p,
+[data-theme="dark"] .tst-card figcaption,
+[data-theme="dark"] .rdv-form label,
+[data-theme="dark"] .rdv-form select,
+[data-theme="dark"] .rdv-form .select,
+[data-theme="dark"] .pillar .pillar-num,
+[data-theme="dark"] .article p{color:var(--ink)}
+[data-theme="dark"] .link-quiet{color:var(--ink)}
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
