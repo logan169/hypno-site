@@ -215,7 +215,7 @@
       var w = track.clientWidth || 1;
       if (Math.abs(dx) > w * 0.25) {
         var n = idx + (dx < 0 ? 1 : -1);
-        if (n >= 0 && n <= max && n !== idx) { idx = n; clearTimeout(pending); pending = setTimeout(render, FADE); bump(); }
+        if (n >= 0 && n <= max && n !== idx) { idx = n; clearTimeout(pending); render(); bump(); }
       }
     }
     track.addEventListener('pointerup', end);
@@ -228,7 +228,11 @@
       var n = idx + dir;
       if (n < 0) n = max;
       if (n > max) n = 0;
-      if (n !== idx) { idx = n; clearTimeout(pending); pending = setTimeout(render, FADE); }
+      // C47 : render IMMÉDIAT — le fondu 650 ms est géré par la transition
+      // CSS (opacity .65s). Avant, un setTimeout(render, 650) ajoutait une
+      // zone morte de 650 ms après chaque clic/glissement : l'effet paraissait
+      // "bloqué" (le client voyait la carte figée avant qu'elle ne change).
+      if (n !== idx) { idx = n; clearTimeout(pending); render(); }
       bump();
     }
     if (prevBtn) prevBtn.addEventListener('click', function () { go(-1); });
