@@ -237,7 +237,14 @@ h3{font-size:1.35rem;font-weight:500}
   margin-top:1.5rem;font-size:.78rem;font-weight:500;
   letter-spacing:.14em;text-transform:uppercase;color:var(--forest);
 }
-.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.2rem}
+.hero-ctas{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;column-gap:1rem;margin-top:2.2rem}
+.hero-ctas .btn-primary{grid-column:2;justify-self:center}
+.hero-ctas .btn-ghost{grid-column:3;justify-self:start}
+/* Mobile: empile à pleine largeur (le grid 3 colonnes n'est plus utile). */
+@media (max-width:600px){
+  .hero-ctas{grid-template-columns:1fr;row-gap:1rem;column-gap:0}
+  .hero-ctas>*{grid-column:1;justify-self:stretch;width:100%;text-align:center}
+}
 
 /* ── BOUTONS ── */
 .btn{
@@ -584,6 +591,5 @@ html.fx-fade .fade.visible,html.fx-fade .fade .reveal.visible{opacity:1;transfor
 @media (max-width:600px){
   .signals-grid{grid-template-columns:1fr;gap:0 0}
   .articles{grid-template-columns:1fr}
-  .hero-ctas .btn{width:100%;text-align:center}
   .footer-grid{grid-template-columns:1fr}
 }
