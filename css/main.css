@@ -238,6 +238,16 @@ h3{font-size:1.35rem;font-weight:500}
 /* ── SECTIONS ── */
 .section{padding-block:clamp(5rem,9vw,8.5rem)}
 .section-lin{background:var(--bg-alt)}
+/* 03 · PILIERS — photo de fond voilée (thème clair + nuit) */
+#piliers{
+  background-color:var(--bg-alt);
+  background-image:
+    linear-gradient(color-mix(in srgb,var(--bg-alt) 86%,transparent),color-mix(in srgb,var(--bg-alt) 93%,transparent)),
+    url("https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=2000&q=75");
+  background-size:auto,cover;
+  background-position:center,center;
+  background-repeat:no-repeat;
+}
 .section-creme{background:var(--card)}
 .section-foret{background:linear-gradient(160deg,var(--forest) 0%,var(--forest-deep) 100%)}
 
