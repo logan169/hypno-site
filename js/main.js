@@ -324,12 +324,24 @@
         .filter(Boolean);
       var ticking = false;
       var setActive = function () {
-        var mid = window.scrollY + window.innerHeight * 0.34;
-        var current = null;
+        // C51 : section « la plus visible » du viewport (hauteur en px)
+        // plutôt que le seuil fixe à 34 %. Le seuil de 34 % était correct
+        // au milieu de la page, mais avec #rendezvous (dernière section,
+        // plus haute que le viewport) le haut de la section restait en
+        // dessous du seuil sur une large bande de scroll → c’était
+        // « FAQ » qui restait actif alors que l’utilisateur était déjà
+        // sur « Prendre rendez-vous ». La règle « la plus visible »
+        // active #rendezvous dès qu’elle occupe la majorité du viewport,
+        // sans toucher au comportement des autres sections.
+        var vh = window.innerHeight;
+        var best = null, bestVis = 0;
         for (var i = 0; i < spyTargets.length; i++) {
-          if (spyTargets[i].getBoundingClientRect().top + window.scrollY <= mid) { current = spyTargets[i].id; } else { break; }
+          var r = spyTargets[i].getBoundingClientRect();
+          if (r.bottom < 0) continue;
+          var vis = Math.min(r.bottom, vh) - Math.max(r.top, 0);
+          if (vis > bestVis || best === null) { best = spyTargets[i].id; bestVis = Math.max(vis, 1); }
         }
-        var activeHref = (current ? '#' + current : null);
+        var activeHref = (best ? '#' + best : null);
         document.querySelectorAll('.nav-links a[href^="#"], .mobile-menu a[href^="#"]').forEach(function (a) {
           a.classList.toggle('nav-active', activeHref !== null && a.getAttribute('href') === activeHref);
         });

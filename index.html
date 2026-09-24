@@ -33,7 +33,7 @@
 var d=s; if(!d){d=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}
 document.documentElement.setAttribute('data-theme',d);})();
 </script>
-<link rel="stylesheet" href="css/main.css?v=brief21">
+<link rel="stylesheet" href="css/main.css?v=brief22">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n>Aller au contenu</a>
@@ -179,10 +179,10 @@ document.documentElement.setAttribute('data-theme',d);})();
 <section class="section section-creme fade" id="apropos">
   <div class="wrap about-grid">
     <div class="about-media">
-      <!-- PHOTO MONDE 2 (portrait éditorial) — à remplacer par la photo réelle du client -->
-      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1200&q=75"
-           alt="Portrait éditorial, lumière naturelle" data-i18n-attr="alt"
-           data-i18n-attr-en="Editorial portrait, natural light" loading="lazy">
+      <!-- Photo réelle du client (IMG_8438) — auto-hébergée dans static/ -->
+      <img src="static/marion-portrait.jpg"
+           alt="Portrait en lumière naturelle, ambiance organique" data-i18n-attr="alt"
+           data-i18n-attr-en="Editorial portrait, natural light" loading="eager" decoding="async">
     </div>
     <div class="about-body">
       <p class="overline" data-i18n>À propos</p>
@@ -378,6 +378,6 @@ document.documentElement.setAttribute('data-theme',d);})();
   </div>
 </footer>
 
-<script src="js/main.js?v=brief21"></script>
+<script src="js/main.js?v=brief22"></script>
 </body>
 </html>

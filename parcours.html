@@ -17,15 +17,23 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23F5F1E9'/><text x='50%25' y='52%25' font-family='Georgia,serif' font-size='42' text-anchor='middle' fill='%23435249' dominant-baseline='middle'>M</text></svg>">
 <meta name="theme-color" content="#F5F1E9">
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="preload" as="style" href="css/main.css?v=brief21">
+<link rel="preload" as="style" href="css/main.css?v=brief22">
 <script>
 (function(){var s=null;try{s=localStorage.getItem('marion-theme')}catch(e){}var d=s||(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',d);})();
 </script>
-<link rel="stylesheet" href="css/main.css?v=brief21">
+<link rel="stylesheet" href="css/main.css?v=brief22">
 <!-- Page dédiée: petite feuille pour les spécificités de la page parcours -->
 <style>
 /* ── PARCOURS · spécifique à la page (hors css/main.css) ── */
-.pc-hero{padding-block:clamp(4.5rem,8vw,7rem) clamp(3rem,6vw,5rem);position:relative;overflow:hidden}
+.pc-hero{padding-block:clamp(4.5rem,8vw,7rem) clamp(3rem,6vw,5rem);position:relative;overflow:hidden;
+  /* C50 : photo réelle (plage — static/PHOTO-2026-07-12-10-31-16.jpg) voilée
+     comme les sections « lede » de la page d'accueil (60 % → 40 %). */
+  background-color:var(--bg-alt);
+  background-image:
+    linear-gradient(color-mix(in srgb,var(--bg-alt) 60%,transparent),color-mix(in srgb,var(--bg-alt) 40%,transparent)),
+    url("static/PHOTO-2026-07-12-10-31-16.jpg");
+  background-size:auto,cover;
+  background-position:center,center 28%;}
 .pc-hero-inner{position:relative;z-index:1;width:min(1080px,92%);margin-inline:auto;display:grid;grid-template-columns:5fr 7fr;gap:clamp(2.5rem,5vw,5rem);align-items:start}
 .pc-portrait{aspect-ratio:4/5;position:relative}
 .pc-portrait img{width:100%;height:100%;object-fit:cover;border-radius:var(--rayon);filter:saturate(.88) contrast(1.02)}
@@ -137,8 +145,9 @@
 <section class="pc-hero" id="accueil">
   <div class="pc-hero-inner">
     <div class="pc-portrait">
-      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1200&q=75"
-           alt="Portrait éditorial de Marion — Vancouver, C.-B." fetchpriority="high">
+      <!-- C49 : photo réelle (IMG_8438) — même image que #apropos sur l'accueil -->
+      <img src="static/marion-portrait.jpg"
+           alt="Portrait de Marion — Vancouver, C.-B." loading="eager" decoding="async" fetchpriority="high">
     </div>
     <div class="pc-body">
       <p class="overline">À propos — parcours, pratique, lecture</p>
