@@ -48,7 +48,7 @@
     'Hypnotherapy · Women’s health · Integrative',                                 // brand-tag
     'Signals', 'Pillars', 'Approach', 'About', 'Understand', 'FAQ', 'Book an appointment',   // nav-links (7)
     'Signals', 'Pillars', 'Approach', 'About', 'Understand', 'FAQ', 'Book an appointment',   // mobile menu (7)
-    'Clinical hypnotherapy — Vancouver, B.C.',                                     // hero overline
+    'Clinical hypnotherapy — online: Vancouver & B.C., Québec, across Canada · France soon',            // hero overline
     'Body and mind,<br>in dialogue.',                                              // h1
     'An integrative approach to women’s health, where therapeutic hypnosis is grounded in science rather than clichés.', // hero-sub
     'Hypnotherapeutic&nbsp;·&nbsp;Women’s health&nbsp;·&nbsp;Integrative approach',          // hero-meta
