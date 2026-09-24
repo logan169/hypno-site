@@ -83,7 +83,7 @@
     'Hypnotherapist and integrative health practitioner in Vancouver. My path crosses research and clinical work — and it is precisely that meeting I want to pass on to you&nbsp;:',
     'Scientific background', 'PhD in psychology', 'Research in emotion regulation and sleep', 'Teaching &amp; science communication',
     'Therapeutic approaches', 'Therapeutic hypnosis — certified training', 'Women’s health — cycle, fertility, perimenopause', 'Integrative health — lifestyle, sleep',
-    'Discover my background',                                                      // btn
+    'Discover my background',                                                   // btn → /parcours.html (C43)
     'Understand', 'Marion’s review.',                                              // comprendre
     'Short, clear, sourced notes to better understand the mechanisms before choosing a path. Read to understand — not to convince.',
     'Hypnotherapy', 'Hypnosis: what does the research actually say?', 'What meta-analyses show, what they don’t, and where the honest limits of the method lie.', 'Read →',
