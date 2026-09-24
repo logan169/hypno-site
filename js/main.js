@@ -178,42 +178,44 @@
     mobileMenu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
   }
 
-  /* ═══════ 4 · CARROUSEL TÉMOIGNAGES (glissable) ═══════ */
+  /* ═══════ 4 · CARROUSEL TÉMOIGNAGES (fondu — glissable, 3 s) ═══════ */
   var track = document.getElementById('tstTrack');
   if (track) {
-    var idx = 0;
-    var max = track.children.length - 1;
+    var cards = [].slice.call(track.children);
+    var max = cards.length - 1;
+    var idx = 0, pending = null;
     function clamp() { idx = Math.max(0, Math.min(max, idx)); }
-    function render() { track.style.transform = 'translateX(-' + (idx * 100) + '%)'; }
+    function render() {
+      cards.forEach(function (c, i) {
+        var on = i === idx;
+        c.classList.toggle('is-active', on);
+        c.setAttribute('aria-hidden', on ? 'false' : 'true');
+      });
+    }
+    var FADE = 650; // ms — fondu entrant/sortant (3 s total / témoignage, cf. client C32)
+    // — Glisser (doigt) : la sortie se fait quand le geste dépasse ~25 % de la largeur —
     var dragging = false, startX = 0, dx = 0;
     track.addEventListener('pointerdown', function (e) {
       if (e.pointerType === 'mouse' && e.button !== 0) return;
       dragging = true; startX = e.clientX; dx = 0;
       track.classList.add('dragging');
       try { track.setPointerCapture(e.pointerId); } catch (_) {}
-      track.style.transform = 'translateX(' + (-(idx * 100)) + '%)';
     });
-    track.addEventListener('pointermove', function (e) {
-      if (!dragging) return;
-      dx = e.clientX - startX;
-      var w = track.clientWidth || 1;
-      track.style.transform = 'translateX(' + (-(idx * 100) + (dx / w * 100)) + '%)';
-    });
+    track.addEventListener('pointermove', function (e) { if (dragging) dx = e.clientX - startX; });
     function end(e) {
       if (!dragging) return;
       dragging = false;
       track.classList.remove('dragging');
-      if (e && e.type === 'pointercancel') { render(); return; }
+      if (e && e.type === 'pointercancel') return;
       var w = track.clientWidth || 1;
-      if (Math.abs(dx) > w * 0.14) {
-        clamp();
-        idx = (dx < 0 && idx < max) ? idx + 1 : (dx > 0 && idx > 0) ? idx - 1 : idx;
-      } else { clamp(); }
-      render();
+      if (Math.abs(dx) > w * 0.25) {
+        var n = idx + (dx < 0 ? 1 : -1);
+        if (n >= 0 && n <= max && n !== idx) { idx = n; clearTimeout(pending); pending = setTimeout(render, FADE); bump(); }
+      }
     }
     track.addEventListener('pointerup', end);
     track.addEventListener('pointercancel', end);
-    // Flèches ‹ › (souris + clavier)
+    // — Flèches ‹ › (souris) + clavier ‹ › —
     var prevBtn = document.getElementById('tstPrev');
     var nextBtn = document.getElementById('tstNext');
     function go(dir) {
@@ -221,18 +223,17 @@
       var n = idx + dir;
       if (n < 0) n = max;
       if (n > max) n = 0;
-      if (n !== idx) { idx = n; render(); }
+      if (n !== idx) { idx = n; clearTimeout(pending); pending = setTimeout(render, FADE); }
       bump();
     }
     if (prevBtn) prevBtn.addEventListener('click', function () { go(-1); });
     if (nextBtn) nextBtn.addEventListener('click', function () { go(1); });
     track.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowRight') { if (idx < max) { idx++; render(); bump(); } }
-      else if (e.key === 'ArrowLeft') { if (idx > 0) { idx--; render(); bump(); } }
+      if (e.key === 'ArrowRight') { if (idx < max) go(1); }
+      else if (e.key === 'ArrowLeft') { if (idx > 0) go(-1); }
     });
-    // Auto-avance : ~6,5 s par témoignage, en boucle (→ puis retour à gauche) ;
-    // pause au survol / focus / glissement, reprise au retrait.
-    var timer = null, delay = 6500;
+    // — Auto-avance 3 s (boucle), pause au survol / focus / glissement — //
+    var timer = null, delay = 3000;
     function bump() { if (timer) { clearInterval(timer); startAuto(); } }
     function startAuto() {
       if (reduceMotion) return;
