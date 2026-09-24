@@ -248,8 +248,28 @@ h3{font-size:1.35rem;font-weight:500}
   background-position:center,center;
   background-repeat:no-repeat;
 }
+/* 07 · TÉMOIGNAGES — photo de fond voilée (thème clair + nuit) */
+#temoignages{
+  background-color:var(--bg-alt);
+  background-image:
+    linear-gradient(color-mix(in srgb,var(--bg-alt) 88%,transparent),color-mix(in srgb,var(--bg-alt) 94%,transparent)),
+    url("https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=2000&q=75");
+  background-size:auto,cover;
+  background-position:center,center;
+  background-repeat:no-repeat;
+}
 .section-creme{background:var(--card)}
 .section-foret{background:linear-gradient(160deg,var(--forest) 0%,var(--forest-deep) 100%)}
+/* 09 · RENDEZ-VOUS — photo de fond voilée (thème clair + nuit) */
+#rendezvous{
+  background-color:var(--forest-deep);
+  background-image:
+    linear-gradient(color-mix(in srgb,var(--forest-deep) 86%,transparent),color-mix(in srgb,var(--forest-deep) 94%,transparent)),
+    url("https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=2000&q=75");
+  background-size:auto,cover;
+  background-position:center,center;
+  background-repeat:no-repeat;
+}
 
 /* ── 02 · SIGNAUX ── */
 .signals-grid{
