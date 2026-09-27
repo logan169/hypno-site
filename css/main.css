@@ -173,18 +173,13 @@ h3{font-size:1.35rem;font-weight:500}
   color:var(--ink-72);white-space:nowrap;
   transition:color var(--transition);position:relative;letter-spacing:.01em;
 }
-.nav-links a::after{
-  content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;
-  background:var(--forest);transition:width var(--transition);
-}
+/* Pas de soulignement au survol ni sur l'item actif — accent par couleur + pastille. */
 .nav-links a:hover{color:var(--ink)}
-.nav-links a:hover::after{width:100%}
-/* Scroll-spy : l'item dont la section est en vue est MARQUÉ (pastille +
-   soulignement persistent), distinct du survol (uniquement souligné). */
+/* Scroll-spy : l'item dont la section est en vue est MARQUÉ (pastille),
+   distinct du survol (couleur seule, pas de soulignement). */
 .nav-links a.nav-active{
   color:var(--ink);position:relative;z-index:0;
 }
-.nav-links a.nav-active::after{width:100%}
 .nav-links a.nav-active::before{
   content:"";position:absolute;inset:-.3rem -.65rem;z-index:-1;
   background:color-mix(in srgb,var(--sauge) 26%,transparent);

@@ -5,7 +5,7 @@ body.revue{background:var(--bg);color:var(--ink);line-height:1.75}
 
 /* ── Nav revue (C19) — le markup reprend la nav d'accueil, déjà stylée par main.css.
      Il ne reste à définir que : le marqueur de page courante et le bouton retour. ── */
-.revue-current{color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+.revue-current{color:var(--ink);font-weight:600;text-decoration:none}
 .foot-current{color:var(--paper)}
 
 /* ── Bouton « Retour à la revue » flottant (C20) — droit, mi-page ──
