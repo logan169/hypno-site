@@ -164,27 +164,28 @@ h3{font-size:1.35rem;font-weight:500}
   gap:1.4rem;padding:.95rem 0;
 }
 .brand{display:flex;flex-direction:row;align-items:center;gap:.55rem;line-height:1.1}
-.brand-mark{display:block;width:34px;height:34px;flex:0 0 auto}
+.brand-mark{display:block;width:46px;height:46px;flex:0 0 auto}
 .brand-name{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ink);letter-spacing:.01em}
 .brand-tag{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-75);font-weight:500}
 .nav-links{display:flex;align-items:center;gap:1.7rem;flex-wrap:nowrap}
 .nav-links a{
   font-family:var(--serif);font-size:1.06rem;font-weight:500;
   color:var(--ink-72);white-space:nowrap;
-  transition:color var(--transition);position:relative;letter-spacing:.01em;
+  transition:color var(--transition),background-color var(--transition);
+  position:relative;letter-spacing:.01em;
+  padding:.35rem .85rem;border-radius:999px;
 }
-/* Pas de soulignement au survol ni sur l'item actif — accent par couleur + pastille. */
-.nav-links a:hover{color:var(--ink)}
-/* Scroll-spy : l'item dont la section est en vue est MARQUÉ (pastille),
-   distinct du survol (couleur seule, pas de soulignement). */
+/* Pas de soulignement — accent par couleur + pilule (pastille) arrondie
+   au survol ET sur l'item actif (scroll-spy). */
+.nav-links a:hover{
+  color:var(--ink);
+  background:color-mix(in srgb,var(--sauge) 20%,transparent);
+}
+/* Scroll-spy : l'item dont la section est en vue est MARQUÉ (pastille plus
+   soutenue que le survol, même rayonnement arrondi). */
 .nav-links a.nav-active{
   color:var(--ink);position:relative;z-index:0;
-}
-.nav-links a.nav-active::before{
-  content:"";position:absolute;inset:-.3rem -.65rem;z-index:-1;
   background:color-mix(in srgb,var(--sauge) 26%,transparent);
-  border-radius:999px;
-  transition:background var(--transition);
 }
 .mobile-menu a.nav-active{color:var(--forest);font-weight:600}
 .nav-links a.nav-cta{
@@ -312,7 +313,7 @@ h3{font-size:1.35rem;font-weight:500}
   background-color:var(--bg-alt);
   background-image:
     linear-gradient(color-mix(in srgb,var(--bg-alt) 60%,transparent),color-mix(in srgb,var(--bg-alt) 40%,transparent)),
-    url("static/PHOTO-2026-07-12-10-31-16.jpg");
+    url("../img/PHOTO-2026-07-12-10-31-16.jpg");
   background-size:auto,cover;
   background-position:center,center;
   background-repeat:no-repeat;
@@ -324,7 +325,7 @@ h3{font-size:1.35rem;font-weight:500}
   background-color:var(--forest-deep);
   background-image:
     linear-gradient(color-mix(in srgb,var(--forest-deep) 60%,transparent),color-mix(in srgb,var(--forest-deep) 40%,transparent)),
-    url("static/PHOTO-2026-07-05-11-16-57%20(2).jpg");
+    url("../img/PHOTO-2026-07-05-11-16-57.jpg");
   background-size:auto,cover;
   background-position:center,center;
   background-repeat:no-repeat;
@@ -580,6 +581,7 @@ h3{font-size:1.35rem;font-weight:500}
 
 /* ── FOOTER (sombre dans les deux thèmes) ── */
 .site-footer{background:var(--ambre);color:var(--paper-66);padding-block:3.4rem}
+.footer-logo{display:block;width:52px;height:52px;margin-bottom:.6rem}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:2.5rem}
 .site-footer .brand-name{color:var(--paper)}
 .site-footer .brand-tag{color:var(--paper-75)}
