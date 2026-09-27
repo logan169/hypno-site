@@ -114,7 +114,10 @@
 [data-theme="dark"] .link-quiet{color:var(--ink)}
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+  /* Compense le nav sticky : les sauts d'ancres (#piliers, #faq…) ne doivent
+     pas laisser le haut de la section caché sous la barre de navigation. */
+  scroll-padding-top:92px}
 body{
   font-family:var(--sans);
   font-size:16px;line-height:1.7;
