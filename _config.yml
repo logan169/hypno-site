@@ -8,7 +8,7 @@ author:
   name_and_logo: false
 
 url: "https://logan169.github.io"
-baseurl: ""
+baseurl: "/hypno-site"
 encoding: utf-8
 highlighter: rouge
 

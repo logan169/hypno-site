@@ -32,15 +32,15 @@
   </script>
 
   <!-- Favicon : SVG transparent qui suit le thème (favicon.js), + PNG iOS/PWA fixes -->
-  <link rel="icon" type="image/svg+xml" href="{{ baseurl | default: '' }}assets/img/logo-dark.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ baseurl }}/assets/icons/marion-180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ baseurl }}/assets/icons/marion-192.png">
-  <script src="{{ baseurl }}/assets/js/favicon.js"></script>
-  <script>window.__BASEURL__="{{ baseurl }}/";</script>
+  <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/img/logo-dark.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/icons/marion-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/icons/marion-192.png">
+  <script src="{{ site.baseurl }}/assets/js/favicon.js"></script>
+  <script>window.__BASEURL__="{{ site.baseurl }}/";</script>
 
   <!-- Styles (notre design) -->
-  <link rel="stylesheet" href="{{ baseurl }}/assets/css/marion.css?v=brand33">
-  {% if page.collection == 'revue' %}<link rel="stylesheet" href="{{ baseurl }}/assets/css/revue.css?v=3">{% endif %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/marion.css?v=brand33">
+  {% if page.collection == 'revue' %}<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/revue.css?v=3">{% endif %}
 
   <!-- Google Analytics (GA4) -->
   {% if site.analytics.enabled and site.analytics.id and jekyll.environment == 'production' %}
@@ -52,5 +52,5 @@
     gtag('config', '{{ site.analytics.id }}');
   </script>
   {% endif %}
-<link rel="manifest" href="{{ baseurl }}/manifest.webmanifest">
+<link rel="manifest" href="{{ site.baseurl }}/manifest.webmanifest">
 </head>

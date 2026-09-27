@@ -1,0 +1,2 @@
+# dev overrides: build with  jekyll build --config _config.yml,_config_local.yml
+baseurl: ""

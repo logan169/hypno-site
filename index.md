@@ -13,7 +13,7 @@ comments: false
     <!-- PHOTO HERO — forêt (arbres, lumière douce).
          C54 : le client revient à la photo d'arbres ; les fleurs (C54) vont sur
          « Rendez-vous » en bas de page. Toutes les photos sont auto-hébergées. -->
-    <img src="{{ site.baseurl }}assets/img/hero-forest.jpg"
+    <img src="{{ site.baseurl }}/assets/img/hero-forest.jpg"
          alt="Sentier de forêt de Colombie-Britannique dans la lumière douce" data-i18n-attr="alt"
          data-i18n-attr-en="Forest trail in British Columbia in soft light" fetchpriority="high">
     <div class="hero-veil" aria-hidden="true"></div>
@@ -111,7 +111,7 @@ comments: false
   <div class="wrap about-grid">
     <div class="about-media">
       <!-- Photo réelle du client (IMG_8438) — auto-hébergée dans static/ -->
-      <img src="{{ site.baseurl }}assets/img/marion-portrait.jpg"
+      <img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
            alt="Portrait en lumière naturelle, ambiance organique" data-i18n-attr="alt"
            data-i18n-attr-en="Editorial portrait, natural light" width="800" height="1000" loading="lazy" decoding="async"
     </div>
@@ -139,7 +139,7 @@ comments: false
           </ul>
         </div>
       </div>
-      <a class="btn btn-outline" href="parcours.html" data-i18n>Découvrir mon parcours</a>
+      <a class="btn btn-outline" href="{{ site.baseurl }}/parcours/" data-i18n>Découvrir mon parcours</a>
     </div>
   </div>
 </section>
@@ -156,37 +156,37 @@ comments: false
       <p class="article-tag" data-i18n>Hypnose</p>
       <h3 data-i18n>Hypnose : que dit réellement la recherche&nbsp;?</h3>
       <p data-i18n>Ce que les méta-analyses montrent, ce qu’elles ne montrent pas, et où se trouvent les limites honnêtes de la méthode.</p>
-      <a href="revue/hypnoscience.html" class="link-quiet" data-i18n>Lire →</a>
+      <a href="{{ site.baseurl }}/revue/hypnoscience/" class="link-quiet" data-i18n>Lire →</a>
     </article>
     <article class="article">
       <p class="article-tag" data-i18n>Santé des femmes</p>
       <h3 data-i18n>Périménopause : comprendre les changements du corps et du cerveau</h3>
       <p data-i18n>Hormones, sommeil, humeur — ce qui bouge réellement, et ce qu’on peut y faire avec des outils fondés.</p>
-      <a href="revue/perimena.html" class="link-quiet" data-i18n>Lire →</a>
+      <a href="{{ site.baseurl }}/revue/perimena/" class="link-quiet" data-i18n>Lire →</a>
     </article>
     <article class="article">
       <p class="article-tag" data-i18n>Système nerveux</p>
       <h3 data-i18n>Stress chronique et système nerveux</h3>
       <p data-i18n>Pourquoi l’anxiété s’installe dans le corps, et ce que la régulation nerveuse change concrètement.</p>
-      <a href="revue/stress-snc.html" class="link-quiet" data-i18n>Lire →</a>
+      <a href="{{ site.baseurl }}/revue/stress-snc/" class="link-quiet" data-i18n>Lire →</a>
     </article>
     <article class="article">
       <p class="article-tag" data-i18n>Sommeil</p>
       <h3 data-i18n>Sommeil et santé hormonale</h3>
       <p data-i18n>Le lien bidirectionnel entre sommeil, cycle et hormones — et les leviers qui comptent vraiment.</p>
-      <a href="revue/sommeil-hormones.html" class="link-quiet" data-i18n>Lire →</a>
+      <a href="{{ site.baseurl }}/revue/sommeil-hormones/" class="link-quiet" data-i18n>Lire →</a>
     </article>
     <article class="article">
       <p class="article-tag" data-i18n>Douleur</p>
       <h3 data-i18n>Le lien entre douleur, attention et cerveau</h3>
       <p data-i18n>Ce que la recherche de la douleur nous apprend sur l’attention — et pourquoi cela change la pratique.</p>
-      <a href="revue/douleur.html" class="link-quiet" data-i18n>Lire →</a>
+      <a href="{{ site.baseurl }}/revue/douleur/" class="link-quiet" data-i18n>Lire →</a>
     </article>
     <article class="article">
       <p class="article-tag" data-i18n>Intégratif</p>
       <h3 data-i18n>Santé intégrative : de quoi parle-t-on exactement&nbsp;?</h3>
       <p data-i18n>Décomposer le terme pour en distinguer ce qui est rigoureux de ce qui est marketing.</p>
-      <a href="revue/integratif.html" class="link-quiet" data-i18n>Lire →</a>
+      <a href="{{ site.baseurl }}/revue/integratif/" class="link-quiet" data-i18n>Lire →</a>
     </article>
   </div>
 </section>

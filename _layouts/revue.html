@@ -8,7 +8,7 @@
   {% include head.html %}
   <body class="revue">
     {% include masthead.html scope="revue" %}
-    <a class="btn btn-outline btn-back" href="{{ baseurl }}/#accueil" aria-label="Retour à l’accueil">← Accueil</a>
+    <a class="btn btn-outline btn-back" href="{{ site.baseurl }}/#accueil" aria-label="Retour à l’accueil">← Accueil</a>
     <main id="main" class="revue-main">
       <article class="revue-article">
         {% if page.overline %}<p class="overline">{{ page.overline }}</p>{% endif %}
