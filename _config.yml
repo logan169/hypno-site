@@ -13,10 +13,6 @@ encoding: utf-8
 highlighter: rouge
 
 # Chargement de NOTRE CSS compilé (assets/css/marion.css), pas de Sass ici.
-sass:
-  sass_dir: false
-  source_map: false
-
 navigation:
   - name: Signaux
     href: "#signals"
