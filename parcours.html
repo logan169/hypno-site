@@ -80,6 +80,13 @@
 .pc-tl-role small{display:block;font-weight:400;color:var(--ink-62);margin-top:.2rem;font-size:.88rem}
 .pc-tl-detail{color:var(--ink-78);font-size:.98rem;line-height:1.75;margin-top:.55rem}
 .pc-tl-detail a{color:var(--forest);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;font-weight:500}
+/* Mobile ≤640px : la colonne « étape » passe à 88px (au lieu de 200px) — supprime le débordement horizontal à 390px */
+@media (max-width:640px){
+  .pc-timeline{grid-template-columns:88px 1fr;gap:.45rem 1rem}
+  .pc-tl-item{grid-template-columns:88px 1fr;gap:.9rem;padding-left:1.1rem}
+  .pc-tl-year{font-size:1.02rem;line-height:1.25}
+  .pc-tl-detail{min-width:0}
+}
 .pc-tl-detail a:hover{color:var(--forest-deep)}
 .pc-tl-detail ul{margin:.6rem 0 .2rem;padding-left:1.15rem}
 .pc-tl-detail ul li{margin:.3rem 0}
