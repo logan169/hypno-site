@@ -1,23 +1,12 @@
-/* MARION — marque adaptative jour/nuit (favicon + logo de la barre de nav)
-   - Écoute data-theme sur <html> (MutationObserver) → fonctionne même sans main.js.
-   - Jour : static/logo.svg (encre sur ivoire) · Nuit : static/logo-dark.svg (couleurs inversées).
-   - Chemins relatifs au dossier de la page : / → static/… · /revue/ → ../static/…
-   - Chargé sur toutes les pages, avant main.js, pour aucun flash et cohérence. */
+/* MARION — logo de la barre de navigation adaptatif jour/nuit
+   - Le FAVICON reste fixe (static/logo.svg sur toutes les pages) — pas de changement de couleur.
+   - Seul le logo nav suit data-theme : MutationObserver → fonctionne même sans main.js.
+   - Chemins relatifs au dossier de la page : / → static/… · /revue/ → ../static/… */
 (function () {
   'use strict';
   var prefix = location.pathname.indexOf('/revue/') > -1 ? '../static/' : 'static/';
   function markUrl(t) { return prefix + (t === 'dark' ? 'logo-dark.svg' : 'logo.svg'); }
   function apply(t) {
-    // 1) Favicon
-    var link = document.querySelector('link[rel="icon"]');
-    if (!link) {
-      link = document.createElement('link');
-      link.rel = 'icon';
-      link.type = 'image/svg+xml';
-      document.head.appendChild(link);
-    }
-    link.href = markUrl(t);
-    // 2) Logo de la barre de navigation
     var mark = document.querySelector('.brand-mark');
     if (mark) mark.src = markUrl(t);
   }
