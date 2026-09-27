@@ -1,0 +1,43 @@
+---
+# Layout « revue » — articles de La revue de Marion.
+# Le design (revue.css) appliqué via body class, StaticMan en bas de page,
+# liste des « autres notes » générée automatiquement depuis la collection.
+---
+<!DOCTYPE html>
+<html lang="fr">
+  {% include head.html %}
+  <body class="revue">
+    {% include masthead.html scope="revue" %}
+    <a class="btn btn-outline btn-back" href="{{ baseurl }}/#accueil" aria-label="Retour à l’accueil">← Accueil</a>
+    <main id="main" class="revue-main">
+      <article class="revue-article">
+        {% if page.overline %}<p class="overline">{{ page.overline }}</p>{% endif %}
+        <h1 class="revue-h1">{{ page.title }}</h1>
+        {% if page.note %}<p class="revue-meta">{{ page.note }}</p>{% endif %}
+        {% if page.lede %}<p class="revue-lede">{{ page.lede }}</p>{% endif %}
+        {{ content }}
+      </article>
+
+      <aside class="revue-siblings">
+        <h2 class="revue-siblings-h">Autres notes de la revue</h2>
+        <ul class="revue-siblings-list">
+          {% for r in site.revue %}
+            {% unless r.url == page.url %}
+              <li><a href="{{ r.url | relative_url }}">{{ r.title }}</a></li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      </aside>
+    </main>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+
+    {% if page.comments and site.comments.provider == 'staticman_v2' %}
+      <section class="revue-comments" itemscope itemtype="https://schema.org/CommentPage">
+        <h2 class="revue-comments-h" itemprop="name">Commentaires</h2>
+        {% include comments.html %}
+      </section>
+    {% endif %}
+  </body>
+</html>

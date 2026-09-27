@@ -1,0 +1,297 @@
+---
+layout: default
+title: Marion
+permalink: /
+comments: false
+---
+
+
+
+<!-- ══════════════════ 01 · HÉROS ══════════════════ -->
+<section class="hero fade" id="accueil">
+  <div class="hero-media">
+    <!-- PHOTO HERO — forêt (arbres, lumière douce).
+         C54 : le client revient à la photo d'arbres ; les fleurs (C54) vont sur
+         « Rendez-vous » en bas de page. Toutes les photos sont auto-hébergées. -->
+    <img src="{{ site.baseurl }}assets/img/hero-forest.jpg"
+         alt="Sentier de forêt de Colombie-Britannique dans la lumière douce" data-i18n-attr="alt"
+         data-i18n-attr-en="Forest trail in British Columbia in soft light" fetchpriority="high">
+    <div class="hero-veil" aria-hidden="true"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="overline" data-i18n>Hypnothérapie clinique — en visioconférence : Vancouver et C.-B., Québec, partout au Canada · France bientôt</p>
+      <h1 data-i18n>Le corps et l’esprit,<br>en dialogue.</h1>
+      <p class="hero-sub" data-i18n>Une approche intégrative de la santé des femmes, où l’hypnose thérapeutique s’appuie sur la science plutôt que sur les clichés.</p>
+      <p class="hero-meta" data-i18n>Hypnose thérapeutique&nbsp;·&nbsp;Santé des femmes&nbsp;·&nbsp;Approche intégrative</p>
+      <div class="hero-ctas">
+        <!-- C53 : le bouton primaire « Découvrir mon approche » a été retiré à la demande du client.
+             (C52) CTA « Prendre rendez-vous » : toujours sur une seule ligne. -->
+        <a class="btn btn-ghost" href="#rendezvous" data-i18n>Prendre rendez-vous</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 02 · SIGNAUX ══════════════════ -->
+<section class="section fade" id="signals">
+  <div class="wrap prose">
+    <p class="overline" data-i18n>Vous êtes peut-être ici parce que…</p>
+    <h2 data-i18n>Votre corps vous envoie des signaux.</h2>
+    <p class="lead" data-i18n>Parfois, ce n’est pas une douleur précise qui vous amène — c’est l’impression de ne plus tenir ensemble. Ces éléments reviennent souvent chez les personnes que j’accompagne&nbsp;:</p>
+  </div>
+  <div class="wrap signals-grid">
+    <span class="signal" data-i18n>Stress et anxiété persistants</span>
+    <span class="signal" data-i18n>Sommeil perturbé, réveils nombreux</span>
+    <span class="signal" data-i18n>Fatigue qui ne se règle pas en dormant</span>
+    <span class="signal" data-i18n>Tensions, douleurs, inconforts physiques</span>
+    <span class="signal" data-i18n>Transitions hormonales, périménopause</span>
+    <span class="signal" data-i18n>Un rapport difficile à son corps</span>
+    <span class="signal" data-i18n>Changements de vie qui bouleversent l'équilibre</span>
+    <span class="signal" data-i18n>Le besoin, simplement, de retrouver un équilibre</span>
+  </div>
+  <div class="wrap prose">
+    <blockquote class="pull" data-i18n>Je vous accompagne avec une approche qui considère la santé dans sa globalité — physiologie, système nerveux, vécu émotionnel et contexte de vie. Sans promesse magique : des outils éprouvés, appliqués à votre histoire.</blockquote>
+  </div>
+</section>
+
+<!-- ══════════════════ 03 · TROIS PILIERS ══════════════════ -->
+<section class="section section-lin fade" id="piliers">
+  <div class="wrap prose">
+    <p class="overline" data-i18n>Ce que je propose</p>
+    <h2 data-i18n>Trois dimensions d’une même approche.</h2>
+    <p class="lead" data-i18n>Ce ne sont pas trois services côte à côte. C’est une même manière de penser la santé — vue de trois angles complémentaires.</p>
+  </div>
+  <div class="wrap pillars">
+    <article class="pillar">
+      <h3 data-i18n><span class="pillar-num">01</span> Hypnose</h3>
+      <p data-i18n>Comprendre le rôle de l’inconscient, des automatismes, des émotions et du système nerveux dans votre expérience quotidienne. L’hypnose comme outil thérapeutique précis — ni mystère, ni spectacle.</p>
+      <a class="link-quiet" href="#comprendre" data-i18n>Découvrir l’hypnose →</a>
+    </article>
+    <article class="pillar">
+      <h3 data-i18n><span class="pillar-num">02</span> Santé des femmes</h3>
+      <p data-i18n>Une attention particulière aux réalités physiologiques et psychologiques qui traversent la vie des femmes — cycle, fertilité, périménopause, rapport au corps — avec un vocabulaire exact, jamais décoratif.</p>
+      <a class="link-quiet" href="#rendezvous" data-i18n>Découvrir l’accompagnement →</a>
+    </article>
+    <article class="pillar">
+      <h3 data-i18n><span class="pillar-num">03</span> Santé intégrative</h3>
+      <p data-i18n>Mettre en relation corps, psychologie, habitudes de vie et données issues de la recherche, pour des recommandations cohérentes. Vous savez pourquoi, pas seulement comment.</p>
+      <a class="link-quiet" href="#approche" data-i18n>Comprendre mon approche →</a>
+    </article>
+  </div>
+  <div class="wrap prose">
+    <p class="fine" data-i18n>Recommandation&nbsp;: chaque piste de travail est présentée avec son niveau de preuve — y compris ce que la littérature ne permet pas encore d’affirmer.</p>
+  </div>
+</section>
+
+<!-- ══════════════════ 04 · MA FAÇON DE TRAVAILLER ══════════════════ -->
+<section class="section fade" id="approche">
+  <div class="wrap prose">
+    <p class="overline" data-i18n>Ma façon de travailler</p>
+    <h2 data-i18n>Une approche humaine, rigoureuse et intégrative.</h2>
+  </div>
+  <div class="wrap principles">
+    <article class="principle">
+      <h3 data-i18n>Fondée sur les connaissances</h3>
+      <p data-i18n>Les outils que je vous propose s’appuient, autant que possible, sur les données disponibles et leur niveau de preuve. Quand la littérature est limitative, je vous le dis.</p>
+    </article>
+    <article class="principle">
+      <h3 data-i18n>Centrée sur la personne</h3>
+      <p data-i18n>La recherche donne des repères. Votre histoire, votre corps et votre expérience restent singuliers — et priment sur le manuel.</p>
+    </article>
+    <article class="principle">
+      <h3 data-i18n>Corps et esprit en interaction</h3>
+      <p data-i18n>Stress, sommeil, hormones, émotions et santé physique interagissent constamment. Les traiter séparément, c’est s’interdire de voir le tableau entier.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════════════ 05 · À PROPOS ══════════════════ -->
+<section class="section section-creme fade" id="apropos">
+  <div class="wrap about-grid">
+    <div class="about-media">
+      <!-- Photo réelle du client (IMG_8438) — auto-hébergée dans static/ -->
+      <img src="{{ site.baseurl }}assets/img/marion-portrait.jpg"
+           alt="Portrait en lumière naturelle, ambiance organique" data-i18n-attr="alt"
+           data-i18n-attr-en="Editorial portrait, natural light" width="800" height="1000" loading="lazy" decoding="async"
+    </div>
+    <div class="about-body">
+      <p class="overline" data-i18n>À propos</p>
+      <h2 data-i18n>Bonjour, je suis Marion.</h2>
+      <p class="lead" data-i18n>Hypnothérapeute et praticienne en santé intégrative à Vancouver. Mon parcours croise la recherche et la clinique — et c’est précisément cette rencontre que je souhaite vous transmettre&nbsp;:</p>
+      <div class="cred-grid">
+        <div class="cred">
+          <h3 data-i18n>Parcours scientifique</h3>
+          <!-- À COMPLÉTER : diplômes et publications réels du client -->
+          <ul>
+            <li data-i18n>Doctorat en psychologie</li>
+            <li data-i18n>Recherche en régulation émotionnelle et sommeil</li>
+            <li data-i18n>Enseignement &amp; vulgarisation scientifique</li>
+          </ul>
+        </div>
+        <div class="cred">
+          <h3 data-i18n>Approches thérapeutiques</h3>
+          <!-- À COMPLÉTER : formations certifiantes réelles du client -->
+          <ul>
+            <li data-i18n>Hypnose thérapeutique — formation certifiante</li>
+            <li data-i18n>Santé des femmes — cycle, fertilité, périménopause</li>
+            <li data-i18n>Santé intégrative — habitudes de vie, sommeil</li>
+          </ul>
+        </div>
+      </div>
+      <a class="btn btn-outline" href="parcours.html" data-i18n>Découvrir mon parcours</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 06 · COMPRENDRE (REVIEW) ══════════════════ -->
+<section class="section fade" id="comprendre">
+  <div class="wrap prose">
+    <p class="overline" data-i18n>Comprendre</p>
+    <h2 data-i18n>La revue de Marion.</h2>
+    <p class="lead" data-i18n>Des notes courtes, claires et sourcées, pour mieux comprendre les mécanismes avant de choisir une démarche. Lire pour comprendre — pas pour convaincre.</p>
+  </div>
+  <div class="wrap articles">
+    <article class="article">
+      <p class="article-tag" data-i18n>Hypnose</p>
+      <h3 data-i18n>Hypnose : que dit réellement la recherche&nbsp;?</h3>
+      <p data-i18n>Ce que les méta-analyses montrent, ce qu’elles ne montrent pas, et où se trouvent les limites honnêtes de la méthode.</p>
+      <a href="revue/hypnoscience.html" class="link-quiet" data-i18n>Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag" data-i18n>Santé des femmes</p>
+      <h3 data-i18n>Périménopause : comprendre les changements du corps et du cerveau</h3>
+      <p data-i18n>Hormones, sommeil, humeur — ce qui bouge réellement, et ce qu’on peut y faire avec des outils fondés.</p>
+      <a href="revue/perimena.html" class="link-quiet" data-i18n>Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag" data-i18n>Système nerveux</p>
+      <h3 data-i18n>Stress chronique et système nerveux</h3>
+      <p data-i18n>Pourquoi l’anxiété s’installe dans le corps, et ce que la régulation nerveuse change concrètement.</p>
+      <a href="revue/stress-snc.html" class="link-quiet" data-i18n>Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag" data-i18n>Sommeil</p>
+      <h3 data-i18n>Sommeil et santé hormonale</h3>
+      <p data-i18n>Le lien bidirectionnel entre sommeil, cycle et hormones — et les leviers qui comptent vraiment.</p>
+      <a href="revue/sommeil-hormones.html" class="link-quiet" data-i18n>Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag" data-i18n>Douleur</p>
+      <h3 data-i18n>Le lien entre douleur, attention et cerveau</h3>
+      <p data-i18n>Ce que la recherche de la douleur nous apprend sur l’attention — et pourquoi cela change la pratique.</p>
+      <a href="revue/douleur.html" class="link-quiet" data-i18n>Lire →</a>
+    </article>
+    <article class="article">
+      <p class="article-tag" data-i18n>Intégratif</p>
+      <h3 data-i18n>Santé intégrative : de quoi parle-t-on exactement&nbsp;?</h3>
+      <p data-i18n>Décomposer le terme pour en distinguer ce qui est rigoureux de ce qui est marketing.</p>
+      <a href="revue/integratif.html" class="link-quiet" data-i18n>Lire →</a>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════════════ 07 · TÉMOIGNAGES ══════════════════ -->
+<section class="section section-lin fade" id="temoignages">
+  <div class="wrap prose">
+    <p class="overline" data-i18n>Paroles de patientes</p>
+    <h2 data-i18n>Des patientes, en leurs mots.</h2>
+  </div>
+  <div class="wrap">
+    <div class="tst-carousel">
+      <div class="tst-track" id="tstTrack" role="region" aria-roledescription="carrousel"
+           aria-label="témoignages de patientes (glisser pour parcourir)" tabindex="0"
+           data-i18n-attr="aria-label" data-i18n-attr-en="Patient testimonials (swipe to browse)">
+        <figure class="tst-card is-active">
+          <blockquote data-i18n>« Je pensais que l’hypnose serait floue. En réalité, c’est une méthode structurée&nbsp;: des objectifs, des outils, un suivi. Ça m’a aidée à retrouver un sommeil stable. »</blockquote>
+          <figcaption data-i18n>— Patiente, accompagnement sommeil</figcaption>
+        </figure>
+        <figure class="tst-card">
+          <blockquote data-i18n>« Marion m’a accompagnée dans ma périménopause sans jamais me promettre des miracles, en s’appuyant sur ce qu’on sait. C’est cette honnêteté qui m’a rassurée. »</blockquote>
+          <figcaption data-i18n>— Patiente, santé des femmes</figcaption>
+        </figure>
+        <figure class="tst-card">
+          <blockquote data-i18n>« Un espace où l’on m'écoute, où l’on explique. J’y suis allée anxieuse, j’en suis repartie avec un plan clair que je pouvais comprendre et suivre. »</blockquote>
+          <figcaption data-i18n>— Patiente, anxiété et stress</figcaption>
+        </figure>
+      </div>
+      <div class="tst-nav" role="group" aria-label="Navigation des témoignages">
+        <button class="tst-arrow" id="tstPrev" type="button" aria-label="Témoignage précédent">‹</button>
+        <button class="tst-arrow" id="tstNext" type="button" aria-label="Témoignage suivant">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 08 · FAQ ══════════════════ -->
+<section class="section fade" id="faq">
+  <div class="wrap prose">
+    <p class="overline" data-i18n>Questions fréquentes</p>
+    <h2 data-i18n>Avant de prendre rendez-vous.</h2>
+  </div>
+  <div class="wrap faq-list">
+    <details class="faq-item" open>
+      <summary data-i18n>L’hypnose a-t-elle une base scientifique&nbsp;?</summary>
+      <p data-i18n>Oui — à des degrés. Des méta-analyses soutiennent son usage pour la gestion de certaines douleurs, le stress et certains aspects du sommeil. D’autres domaines font l’objet de recherches moins abouties. Je vous indique, pour chaque piste, ce que les données disent — et où elles s’arrêtent.</p>
+    </details>
+    <details class="faq-item">
+      <summary data-i18n>Comment se déroule une séance&nbsp;?</summary>
+      <p data-i18n>Elle commence par un échange sur ce qui vous amène, puis des objectifs communs. L’hypnose en elle-même est un état naturel d’attention focalisée — vous ne «&nbsp;perdez pas le contrôle&nbsp;», et vous en sortez avec des outils concrets. Une séance dure de 60 à 75 minutes.</p>
+    </details>
+    <details class="faq-item">
+      <summary data-i18n>Est-ce pour moi&nbsp;?</summary>
+      <p data-i18n>Si vous cherchez une réponse unique et définitive, probablement pas. Si vous cherchez un accompagnement structuré, où l’on explique, où l’on mesure, et où votre expérience est prise sérieusement — probablement oui. Un appel découverte de 15 minutes suffit pour s’en assurer ensemble.</p>
+    </details>
+    <details class="faq-item">
+      <summary data-i18n>Peut-on travailler à distance&nbsp;?</summary>
+      <p data-i18n>Oui. Un grand nombre de séances se déroulent par visioconférence, y compris depuis la Colombie-Britannique. La qualité du travail ne dépend pas de la salle — elle dépend de la relation et du cadre, et nous les maintenons tous deux à distance.</p>
+    </details>
+    <details class="faq-item">
+      <summary data-i18n>Qu’est-ce que la «&nbsp;santé intégrative&nbsp;» précisément&nbsp;?</summary>
+      <p data-i18n>Une démarche qui met en relation plusieurs niveaux de l’expérience — corps, psychologie, habitudes, contexte — et qui s’appuie sur les données disponibles. Elle se distingue de la médecine conventionnelle par son regard sur l’ensemble de la personne — et de l’approche «&nbsp;wellness&nbsp;» par son exigence de preuves. J’aime cette position : celle du centre.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ══════════════════ 09 · RENDEZ-VOUS / CONTACT ══════════════════ -->
+<section class="section section-foret fade text-light" id="rendezvous">
+  <div class="wrap rdv-grid">
+    <div class="rdv-left">
+      <p class="overline light" data-i18n>Premier pas</p>
+      <h2 data-i18n>Un appel découverte, de 15 minutes.</h2>
+      <p data-i18n>Le premier pas, c’est une simple conversation. On fait le point sur ce qui vous amène, sur ce que vous attendez, et — le cas échéant — sur les options qui ont un sens. Sans engagement, et sans script.</p>
+      <ul class="rdv-info">
+        <li data-i18n><strong>Modalité</strong><br>En visioconférence — l'accompagnement complet, depuis le confort de votre foyer</li>
+      </ul>
+    </div>
+    <form class="rdv-form" id="contactForm" data-formaction="mailto:bonjour@marion-cabin.ca" novalidate>
+      <label><span data-i18n>Nom</span> <input type="text" name="nom" required autocomplete="name"></label>
+      <label><span data-i18n>Email</span> <input type="email" name="email" required autocomplete="email"></label>
+      <label>
+        <span data-i18n>Ce qui vous amène</span>
+        <select name="sujet" required>
+          <option value="" selected disabled data-i18n>Choisir…</option>
+          <option data-i18n>Hypnose, stress ou sommeil</option>
+          <option data-i18n>Santé des femmes</option>
+          <option data-i18n>Santé intégrative</option>
+          <option data-i18n>Autre / je préfère qu'on en parle en appel</option>
+        </select>
+      </label>
+      <label><span data-i18n>Message</span> <textarea name="message" rows="5" required></textarea></label>
+      <button type="submit" class="btn btn-primary btn-block" data-i18n>Envoyer ma demande →</button>
+      <!-- C55 / R3 QA : sans JS, le bouton « Envoyer » ne fait rien.
+           Un lien mailto natif est donc proposé directement. -->
+      <noscript>
+        <p class="form-note">
+          <a href="mailto:bonjour@marion-cabin.ca?subject=Demande%20de%20rendez-vous" style="border-bottom:1px solid currentColor">
+            Envoyer directement par email →
+          </a>
+        </p>
+      </noscript>
+      <p class="fine light" data-i18n>Vos informations restent confidentielles — jamais partagées, jamais transmises à des tiers.</p>
+      <p class="form-note" id="formNote" hidden data-i18n>Votre message s’ouvre dans votre application e-mail (objet et contenu pré-remplis). Il vous suffit de cliquer sur «&nbsp;Envoyer&nbsp;» — une réponse arrive sous 24&nbsp;h ouvrées.</p>
+    </form>
+  </div>
+</section>
+
+

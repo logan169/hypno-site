@@ -1,0 +1,19 @@
+---
+# Layout principal — héberge le contenu, charge NOTRE CSS/JS.
+# (Minimal Mistakes fait office d'outillage : StaticMan, sitemap, feed)
+---
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+  {% include head.html %}
+  <body>
+    {% include masthead.html %}
+    <main id="main">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include scripts.html %}
+    {% if page.comments and site.comments.provider == 'staticman_v2' %}
+      {% include comments.html %}
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,85 @@
+locale: fr
+title: Marion
+tagline: Hypnose · Santé des femmes · Santé intégrative — Vancouver
+description: Hypnothérapie clinique à Vancouver, C.-B. — hypnose, santé des femmes, intégrative.
+author:
+  name: Marion
+  email: bonjour@marion-cabin.ca
+  name_and_logo: false
+
+url: "https://logan169.github.io"
+baseurl: ""
+encoding: utf-8
+highlighter: rouge
+
+# Chargement de NOTRE CSS compilé (assets/css/marion.css), pas de Sass ici.
+sass:
+  sass_dir: false
+  source_map: false
+
+navigation:
+  - name: Signaux
+    href: "#signals"
+  - name: Piliers
+    href: "#piliers"
+  - name: Approche
+    href: "#approche"
+  - name: À propos
+    href: "#apropos"
+  - name: Comprendre
+    href: "#comprendre"
+  - name: FAQ
+    href: "#faq"
+  - name: Prendre rendez-vous
+    href: "#rendezvous"
+    cta: true
+
+analytics:
+  enabled: true
+  id: ""
+
+repository: "logan169/hypno-site"   # user/repo — requis par StaticMan (MM)
+comments:
+  provider: staticman_v2
+  staticman:
+    branch: main
+    endpoint: "https://api.staticman.net/v3/entry/github/"
+    allowedOrigins:
+      - localhost
+      - logan169.github.io
+    allowedFields:
+      - name
+      - email
+      - url
+      - message
+
+collections:
+  revue:
+    output: true
+    permalink: /revue/:title/
+
+defaults:
+  - scope:
+      collection: revue
+    values:
+      layout: revue
+      author: Marion
+      comments: true
+      show_toc: false
+
+show_excerpts: true
+future: true
+
+exclude:
+  - .sass-cache
+  - .jekyll-cache
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - CHANGELOG.md
+  - staticman.yml
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed

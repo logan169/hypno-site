@@ -1,0 +1,143 @@
+/* REVUE — articles (style additionnel au main.css)
+   Palette : même 7 hex de base via var(--…); le reste est des
+   transparences et typographies. */
+body.revue{background:var(--bg);color:var(--ink);line-height:1.75}
+
+/* ── Nav revue (C19) — le markup reprend la nav d'accueil, déjà stylée par main.css.
+     Il ne reste à définir que : le marqueur de page courante et le bouton retour. ── */
+.revue-current{color:var(--ink);font-weight:600;text-decoration:none}
+.foot-current{color:var(--paper)}
+
+/* ── Bouton « Retour à la revue » flottant (C20) — droit, mi-page ──
+   C37 :
+   (1) .btn:hover (spécificité 0-2-0) écrasait transform:translateY(-50%) (0-1-0)
+       → le bouton sautait de 28px au survol. Fix dans main.css avec
+       .btn:hover:not(.btn-back) (pas de transform résiduel).
+   (2) Aligné au bord DROIT DE LA COLONNE DE TEXTE (.revue-article,
+       max 62ch) via --btn-back-inset mesuré par article.js.
+       Sur mobile (<900px) on revient sur right:1rem (pas de gouttière). */
+.btn-back{
+  position:fixed;top:50%;z-index:40;
+  transform:translateY(-50%);
+  box-shadow:0 14px 30px -18px rgba(0,0,0,.5);
+  opacity:.92;
+  transition:opacity .3s ease,box-shadow .3s ease;
+  right:1rem;
+}
+@media (min-width:900px){
+  .btn-back{right:max(1rem,var(--btn-back-inset,2vw))}
+}
+.btn-back:hover{
+  opacity:1;box-shadow:0 18px 36px -18px rgba(0,0,0,.6);
+}
+.revue-main{
+  display:grid;grid-template-columns:minmax(0,1fr) 320px;
+  gap:clamp(3rem,7vw,7rem);align-items:start;
+  width:min(1180px,92%);margin-inline:auto;padding-block:4.2rem 6rem;
+}
+.revue-article{max-width:62ch}
+.revue-article .overline{margin-bottom:.7rem}
+.revue-h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(2.3rem,4.4vw,3.5rem);line-height:1.08;
+  margin-bottom:1.1rem;text-wrap:balance;
+}
+.revue-meta{
+  font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink-50);display:flex;align-items:center;gap:.9rem;
+  margin-bottom:2rem;
+}
+.revue-meta::after{content:"";flex:1;height:1px;background:var(--ligne)}
+.revue-lede{
+  font-size:1.12rem;line-height:1.8;color:var(--ink-82);
+  margin-block:0 1.6rem;
+}
+.revue-preview-note{
+  background:var(--bg-alt);border-left:2px solid var(--terre);
+  padding:1.05rem 1.25rem;font-size:.95rem;line-height:1.65;
+  color:var(--ink-80);margin-block:2rem;
+  border-radius:var(--rayon-btn);
+}
+.revue-preview-note a{color:var(--forest);border-bottom:1px solid var(--sauge);padding-bottom:1px}
+.revue-section{margin-block:2.7rem}
+.revue-section h2{
+  font-family:var(--serif);font-size:1.55rem;font-weight:500;
+  margin-bottom:.85rem;color:var(--ink);
+}
+.revue-section p{font-size:1rem;line-height:1.8;color:var(--ink-82)}
+.revue-close{
+  margin-top:3.6rem;padding-top:2rem;border-top:1px solid var(--ligne);
+}
+.revue-close-title{
+  font-family:var(--serif);font-style:italic;font-size:1.05rem;
+  color:var(--forest);letter-spacing:.03em;margin-bottom:.55rem;
+}
+.revue-close-body{font-size:1.05rem;line-height:1.78;color:var(--ink)}
+.revue-siblings{position:sticky;top:5.5rem}
+.revue-siblings-h{
+  font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--forest);margin-bottom:1.1rem;border-bottom:1px solid var(--ligne);
+  padding-bottom:.7rem;
+}
+.revue-siblings-list{list-style:none;display:grid;gap:.7rem}
+.revue-siblings-list li{position:relative;padding-left:1.1rem;font-size:.95rem;line-height:1.55}
+.revue-siblings-list li::before{content:"—";position:absolute;left:0;top:0;color:var(--terre)}
+.revue-siblings-list a{color:var(--ink-80);transition:color .25s}
+.revue-siblings-list a:hover{color:var(--forest)}
+
+/* ── Section « Sources à consulter » (C21) ── */
+.revue-sources{
+  margin-top:3.8rem;padding-top:2.4rem;border-top:1px solid var(--ligne);
+}
+.revue-sources-h{
+  font-family:var(--serif);font-size:1.55rem;font-weight:500;
+  margin-bottom:.85rem;color:var(--ink);
+}
+.revue-sources-intro{
+  font-size:1rem;line-height:1.78;color:var(--ink-82);margin-bottom:1.6rem;
+}
+.revue-sources-list{list-style:none;counter-reset:rev;counter-increment:0;display:grid;gap:1.1rem;margin:0;padding:0}
+.revue-sources-list li{
+  counter-increment:rev;
+  position:relative;padding-left:2.3rem;font-size:.95rem;line-height:1.65;color:var(--ink-82);
+}
+.revue-sources-list li::before{
+  content:counter(rev,lower-roman) ".";
+  position:absolute;left:0;top:.06rem;
+  font-family:var(--serif);font-style:italic;color:var(--terre);font-size:1.05rem;
+}
+.revue-sources-list a{color:var(--forest);border-bottom:1px solid var(--sauge);text-underline-offset:3px;padding:0 .02em .04em 0}
+.revue-sources-list a:hover{border-color:var(--forest);color:var(--forest-deep)}
+.revue-sources-list em{font-style:italic;color:var(--ink-82)}
+
+@media (max-width:900px){
+  .revue-main{grid-template-columns:1fr;padding-block:3.2rem 4.5rem}
+  .revue-siblings{position:static;margin-top:3.5rem}
+  /* C20 — bouton retour flottant : plus petit en mobile */
+  .btn-back{right:1rem;font-size:.82rem;padding:.5rem .95rem}
+}
+
+
+/* ── Commentaires (StaticMan) — style « revue » ──────────── */
+.revue-comments{margin:5rem 0 2rem 0;padding-top:1.5rem;border-top:1px solid var(--ligne);width:min(62ch,100%)}
+.revue-comments,.page__comments,.page__comments-form,.page__comments-title{font-family:var(--sans)}
+.revue-comments-h{font-family:var(--serif);font-size:1.9rem;margin:0 0 1.3rem}
+.page__comments-title{font-family:var(--serif);font-size:1.4rem;margin:1.4rem 0 .6rem}
+.page__comments p{font-size:.95rem;line-height:1.7;color:var(--ink-80);margin:.5rem 0}
+.page__comment{padding:1.1rem 0;border-bottom:1px solid var(--ligne)}
+.page__comment-author{font-weight:600}
+.page__comment a{color:var(--forest)}
+.page__comment-date{font-size:.8rem;color:var(--ink-60)}
+.page__comments-form{display:grid;gap:.9rem;margin:1.2rem 0}
+.page__comments-form label{font-size:.85rem;font-weight:500;display:flex;flex-direction:column;gap:.35rem}
+.page__comments-form input,.page__comments-form textarea{
+  font:inherit;padding:.7rem .8rem;border:1px solid var(--ligne);border-radius:var(--rayon);background:var(--card);color:var(--ink)}
+.page__comments-form .js-form-submit,.page__comments-form button[type=submit]{
+  font:inherit;font-weight:600;padding:.8rem 1.4rem;border:0;border-radius:999px;background:var(--forest);color:var(--on-forest);cursor:pointer;justify-self:start}
+.page__comments-form .js-notice{padding:.7rem .9rem;border-radius:var(--rayon);font-size:.9rem}
+.page__comments-form .js-notice.success{background:color-mix(in srgb,var(--forest) 12%,transparent);color:var(--forest)}
+.page__comments-form .js-notice.danger{background:color-mix(in srgb,#b04040 12%,transparent);color:#a03535}
+.page__comments-form .js-notice.hidden{display:none}
+.page__comment-count{font-variant-numeric:tabular-nums}
+/* MM comment list helpers */
+.js-comments{margin-top:1.2rem}

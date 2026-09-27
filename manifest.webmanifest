@@ -1,15 +1,12 @@
 {
-  "name": "Marion — Hypnose · Santé des femmes · Santé intégrative",
+  "name": "Marion — Hypnose · Santé des femmes",
   "short_name": "Marion",
-  "description": "Hypnothérapie clinique à Vancouver, C.-B. : une approche intégrative qui unit hypnose thérapeutique, santé des femmes et données scientifiques.",
-  "lang": "fr-CA",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
   "background_color": "#1F241F",
   "theme_color": "#344039",
   "icons": [
-    { "src": "static/icons/marion-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "static/icons/marion-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "assets/icons/marion-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/marion-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
