@@ -22,11 +22,11 @@
 <link rel="icon" type="image/png" sizes="512x512" href="static/icons/marion-512.png">
 <link rel="manifest" href="manifest.webmanifest">
 <script src="js/favicon.js"></script>
-<link rel="preload" as="style" href="css/main.css?v=brand27">
+<link rel="preload" as="style" href="css/main.css?v=brand29">
 <script>
 (function(){var s=null;try{s=localStorage.getItem('marion-theme')}catch(e){}var d=s||(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',d);})();
 </script>
-<link rel="stylesheet" href="css/main.css?v=brand27">
+<link rel="stylesheet" href="css/main.css?v=brand29">
 <style>
 /* ── ÉCRITS · page dédiée (auto-portée, hors css/main.css) ── */
 .ec-hero{padding-block:clamp(4.5rem,8vw,7rem) clamp(3rem,6vw,5rem);position:relative;overflow:hidden;
@@ -102,20 +102,25 @@
       <img class="brand-mark" src="static/logo.svg" width="34" height="34" alt="Marion" aria-label="Marion">
       <span class="brand-tag">Hypnose · Santé des femmes · Intégrative</span>
     </a>
-    <nav class="nav-links" aria-label="Navigation principale">
-      <a href="index.html#signals">Signaux</a>
-      <a href="index.html#piliers">Piliers</a>
-      <a href="index.html#approche">Approche</a>
-      <a href="index.html#apropos">À propos</a>
-      <a href="index.html#comprendre">Comprendre</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#rendezvous" class="nav-cta">Prendre rendez-vous</a>
-    </nav>
+  
     <div class="nav-tools">
+      <a class="tool-btn nav-cta-mini" href="index.html#rendezvous">RDV</a>
       <button class="tool-btn theme-toggle" type="button" aria-pressed="false" aria-label="Mode nuit">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
       </button>
+      <button class="nav-burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="index.html#accueil" data-close>Accueil</a>
+    <a href="index.html#signals" data-close>Signaux</a>
+    <a href="index.html#piliers" data-close>Piliers</a>
+    <a href="index.html#approche" data-close>Approche</a>
+    <a href="index.html#comprendre" data-close>Comprendre</a>
+    <a href="index.html#faq" data-close>FAQ</a>
+    <a href="index.html#rendezvous" data-close class="nav-cta">Prendre rendez-vous</a>
   </div>
 </header>
 
@@ -284,5 +289,25 @@
   paint(st.get() || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 })();
 </script>
+
+<script>
+/* burger + menu mobile (parcours/ecrits : main.js non chargé sur ces pages) */
+(function(){
+  var burger=document.getElementById('burger');
+  var menu=document.getElementById('mobileMenu');
+  var nav=document.getElementById('top');
+  if(!burger||!menu||!nav) return;
+  function close(){ nav.classList.remove('open'); menu.hidden=true; burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Ouvrir le menu'); }
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    menu.hidden=!open;
+    burger.setAttribute('aria-expanded',String(open));
+    burger.setAttribute('aria-label', open?'Fermer le menu':'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+
 </body>
 </html>

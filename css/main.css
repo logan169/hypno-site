@@ -217,6 +217,19 @@ h3{font-size:1.35rem;font-weight:500}
 .tool-btn:hover{border-color:var(--forest);color:var(--forest)}
 .tool-btn svg{width:17px;height:17px;display:block}
 .nav-burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+/* CTA compacte « RDV » — visible uniquement ≤860px sur ecrits/parcours (les pages
+   sans main.js), remplace le lien .nav-cta masqué. Invisible au-dessus. */
+.nav-cta-mini{display:none}
+@media (max-width:860px){
+  .nav-cta-mini{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:0 .85rem;font-weight:600;letter-spacing:.1em;
+    color:var(--on-forest,#fff);background:var(--forest);border-color:transparent;
+  }
+  /* Les liens sociaux LinkedIn / site-pro restent accessibles dans le hero ;
+     les masquer ici pour laisser la place à CTA-mini + thème + burger. */
+  .nav-tools .social-link{display:none}
+}
 .nav-burger span{display:block;width:22px;height:1.6px;background:var(--ink);margin:5px 0;transition:transform .3s,opacity .3s}
 .mobile-menu{display:none;flex-direction:column;width:100%}
 .mobile-menu a{padding:.9rem 4%;border-bottom:1px solid var(--ligne);font-size:.95rem;color:var(--ink)}
