@@ -1,6 +1,8 @@
-/* MARION — logo de la barre de navigation adaptatif jour/nuit
-   - Le FAVICON reste fixe (static/logo.svg sur toutes les pages) — pas de changement de couleur.
-   - Seul le logo nav suit data-theme : MutationObserver → fonctionne même sans main.js.
+/* MARION — favicon + logo nav adaptatifs jour/nuit
+   - Le FAVICON est TOUJOURS identique au logo de la barre de navigation :
+     même fichier (même couleur), fond transparent — light : logo.svg (encre),
+     dark : logo-dark.svg (crème).
+   - MutationObserver sur data-theme → fonctionne même sans main.js.
    - Chemins relatifs au dossier de la page : / → static/… · /revue/ → ../static/… */
 (function () {
   'use strict';
@@ -9,6 +11,10 @@
   function apply(t) {
     var mark = document.querySelector('.brand-mark');
     if (mark) mark.src = markUrl(t);
+    /* favicon : le <link rel="icon" ...svg...> sans taille = le seul qui suit le thème.
+       Les PNG (apple-touch-icon, PWA) gardent leur carré — iOS réclame un fond opaque. */
+    var fav = document.querySelector('link[rel="icon"]:not([sizes])');
+    if (fav) fav.href = markUrl(t);
   }
   try {
     apply(document.documentElement.getAttribute('data-theme') || 'light');
