@@ -12,7 +12,7 @@ comments: false
 <div>
 <div class="ec-portrait">
 <img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
-alt="Portrait de Marion. Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
+alt="Portrait de Marion Fechino. Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
 </div>
 <div class="ec-socials">
 <a href="https://marionfech.github.io/" target="_blank" rel="noopener" aria-label="Site professionnel de Marion">

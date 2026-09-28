@@ -33,9 +33,9 @@
   /* ═══════ 2 · LANGUE FR ⇄ EN ═══════ */
   /* Éléments "fragiles" (aria/title/meta) en EN — indexés par clé */
   var EN_KEYS = {
-    title: 'Marion — Hypnotherapy · Women’s health · Integrative — Vancouver',
+    title: 'Marion Fechino — Hypnotherapy · Women’s health · Integrative — Vancouver',
     'meta.desc': 'Clinical hypnotherapy in Vancouver, B.C.: an integrative approach uniting therapeutic hypnosis, women’s health and scientific evidence — for stress, sleep, perimenopause and overall balance.',
-    'og.title': 'Marion — Hypnotherapy · Women’s health · Integrative',
+    'og.title': 'Marion Fechino — Hypnotherapy · Women’s health · Integrative',
     'og.desc': 'An integrative, science-based approach to women’s health: therapeutic hypnosis, sleep, perimenopause. Vancouver, B.C.',
     'aria.nav': 'Main navigation',
     'aria.foot': 'Footer navigation',
@@ -43,27 +43,47 @@
   };
 
   // Texte EN correspondant à chaque élément data-i18n, dans l'ordre du DOM.
-  var EN_LIST = [
-    'Skip to content',                                                              // skip-link
-    'Hypnotherapy · Women’s health · Integrative',                                 // brand-tag
-    'Signals', 'Pillars', 'Approach', 'About', 'Understand', 'FAQ', 'Book an appointment',   // nav-links (7)
-    'Signals', 'Pillars', 'Approach', 'About', 'Understand', 'FAQ', 'Book an appointment',   // mobile menu (7)
-    'Clinical hypnotherapy — online: Vancouver & B.C., Québec, across Canada · France soon',            // hero overline
-    'Body and mind,<br>in dialogue.',                                              // h1
-    'An integrative approach to women’s health: therapeutic hypnosis used as a precise tool, grounded in what can be verified.', // hero-sub
-    'Hypnotherapeutic&nbsp;·&nbsp;Women’s health&nbsp;·&nbsp;Integrative approach',          // hero-meta
-    'Book an appointment',                                                                // hero CTA (C53 : primaire retirée — plus qu'une seule ligne)
-    'You may be here because…',                                                    // signals overline
-    'Your body is sending you signals.',                                           // h2
-    'Sometimes it isn’t one precise ache that brings you in — it’s the feeling that things are coming apart. These themes come up again and again with the people I work with&nbsp;:', // lead
-    'Persistent stress and anxiety', 'Disrupted sleep, frequent waking', 'Fatigue that sleep doesn’t fix',
-    'Tension, pain, physical discomfort', 'Hormonal shifts, perimenopause',
-    'A difficult relationship with your body', 'Life changes that upset your balance',
-    'The need, simply, to regain a sense of balance',                              // 8 signals
-    'I work to see you whole: physiology, nervous system, life as it is lived, context. I don’t make promises I can’t keep. We put tools to work on your situation.', // pull
-    'What I offer',                                                                // pillars overline
-    'Three dimensions of a single approach.',                                      // h2
-    'These aren’t three separate services. It’s one way of thinking about health, seen from three angles.', // lead
+    // Texte EN, organisé par FORME DE PAGE (le DOM est indexé positionnellement):
+  //   home        : chrome(16) + corps(113) + footer(8)  = 137 éléments
+  //   sous-pages  : chrome(16) + footer(8)             = 24 éléments
+  // Toute page dont le DOM contient plus de 50 [data-i18n] est la page d'accueil.
+  var EN_HOME = [
+    'Skip to content',
+    'Hypnotherapy · Women’s health · Integrative',
+    'Signals',
+    'Pillars',
+    'Approach',
+    'About',
+    'Understand',
+    'FAQ',
+    'Book an appointment',
+    'Signals',
+    'Pillars',
+    'Approach',
+    'About',
+    'Understand',
+    'FAQ',
+    'Book an appointment',
+    'Clinical hypnotherapy — online: Vancouver & B.C., Québec, across Canada · France soon',
+    'Body and mind,<br>in dialogue.',
+    'An integrative approach to women’s health: therapeutic hypnosis used as a precise tool, grounded in what can be verified.',
+    'Hypnotherapeutic&nbsp;·&nbsp;Women’s health&nbsp;·&nbsp;Integrative approach',
+    'Book an appointment',
+    'You may be here because…',
+    'Your body is sending you signals.',
+    'Sometimes it isn’t one precise ache that brings you in — it’s the feeling that things are coming apart. These themes come up again and again with the people I work with&nbsp;:',
+    'Persistent stress and anxiety',
+    'Disrupted sleep, frequent waking',
+    'Fatigue that sleep doesn’t fix',
+    'Tension, pain, physical discomfort',
+    'Hormonal shifts, perimenopause',
+    'A difficult relationship with your body',
+    'Life changes that upset your balance',
+    'The need, simply, to regain a sense of balance',
+    'I work to see you whole: physiology, nervous system, life as it is lived, context. I don’t make promises I can’t keep. We put tools to work on your situation.',
+    'What I offer',
+    'Three dimensions of a single approach.',
+    'These aren’t three separate services. It’s one way of thinking about health, seen from three angles.',
     '<span class="pillar-num">01</span> Hypnosis',
     'Understanding what your unconscious, your habits, your emotions and your nervous system do in everyday life. Hypnosis is one tool among others, and I present it that way.',
     'Discover hypnosis →',
@@ -73,30 +93,64 @@
     '<span class="pillar-num">03</span> Integrative health',
     'I connect body, psychology, lifestyle habits and research findings. Every recommendation comes with its reason, not just the prescription.',
     'Understand my approach →',
-    'For each avenue, I tell you the level of evidence. When the literature doesn’t support a claim, I flag it rather than act as if it did.', // fine
-    'How I work',                                                                  // approche overline
-    'A human, rigorous, integrative approach.',                                    // h2
-    'Grounded in knowledge', 'The tools I offer rely, whenever possible, on the available evidence and its level of proof. When the literature is limited, I tell you.',
-    'Centre on the person', 'Research gives reference points. When your story, your body and your experience don’t match the manual, your story wins.',
-    'Body and mind in interaction', 'Stress, sleep, hormones, emotions and physical health constantly interact. Treating them in isolation is refusing to see the whole picture.', // 3 principes
-    'About', 'Hello, I’m Marion.',                                                 // apropos
+    'For each avenue, I tell you the level of evidence. When the literature doesn’t support a claim, I flag it rather than act as if it did.',
+    'How I work',
+    'A human, rigorous, integrative approach.',
+    'Grounded in knowledge',
+    'The tools I offer rely, whenever possible, on the available evidence and its level of proof. When the literature is limited, I tell you.',
+    'Centre on the person',
+    'Research gives reference points. When your story, your body and your experience don’t match the manual, your story wins.',
+    'Body and mind in interaction',
+    'Stress, sleep, hormones, emotions and physical health constantly interact. Treating them in isolation is refusing to see the whole picture.',
+    'About',
+    'Hello, I’m Marion Fechino.',
     'Hypnotherapist and integrative health practitioner in Vancouver. My path crosses research and clinical work — and it is precisely that meeting I want to pass on to you&nbsp;:',
-    'Scientific background', 'PhD in psychology', 'Research in emotion regulation and sleep', 'Teaching &amp; science communication',
-    'Therapeutic approaches', 'Therapeutic hypnosis — certified training', 'Women’s health — cycle, fertility, perimenopause', 'Integrative health — lifestyle, sleep',
-    'Discover my background',                                                   // btn → /parcours.html (C43)
-    'Understand', 'Marion’s review.',                                              // comprendre
+    'Scientific background',
+    'Cognitive scientist by training, research background in neuroscience',
+    'NIH-funded longitudinal studies (emotion regulation, sleep)',
+    'Teaching &amp; scientific communication',
+    'Therapeutic approaches',
+    'Clinical hypnotherapy certification, in progress. Supervised practice since 2024',
+    'Women’s health — cycle, fertility, perimenopause',
+    'Women’s health: cycle, fertility, perimenopause',
+    'Discover my background',
+    'Understand',
+    'Marion’s review.',
     'Short, clear, sourced notes to better understand the mechanisms before choosing a path. Read to understand — not to convince.',
-    'Hypnotherapy', 'Hypnosis: what does the research actually say?', 'What meta-analyses show, what they don’t, and where the honest limits of the method lie.', 'Read →',
-    'Women’s health', 'Perimenopause: understanding the changes in body and brain', 'Hormones, sleep, mood — what actually shifts, and what evidence-based tools can do about it.', 'Read →',
-    'Nervous system', 'Chronic stress and the nervous system', 'Why anxiety settles into the body, and what nervous-system regulation concretely changes.', 'Read →',
-    'Sleep', 'Sleep and hormonal health', 'The two-way link between sleep, cycle and hormones — and the levers that really matter.', 'Read →',
-    'Pain', 'The link between pain, attention and the brain', 'What pain research teaches us about attention — and why it changes practice.', 'Read →',
-    'Integrative', 'Integrative health: what are we actually talking about?', 'Breaking down the term to separate what is rigorous from what is marketing.', 'Read →', // 6 articles
-    'In patients’ own words', 'Patients, in their own words.',                     // temoignages
-    '“I thought hypnosis would be vague. In reality, it’s a structured method: goals, tools, follow-up. It helped me regain stable sleep.”', '— Patient, sleep support',
-    '“Marion supported me through perimenopause without ever promising miracles, grounding herself in what we know. That honesty is what reassured me.”', '— Patient, women’s health',
-    '“A space where I’m listened to, where things are explained. I came in anxious, and left with a clear plan I could understand and follow.”', '— Patient, anxiety and stress',
-    'Frequently asked questions', 'Before booking an appointment.',                // faq
+    'Hypnotherapy',
+    'Hypnosis: what does the research actually say?',
+    'What meta-analyses show, what they don’t, and where the honest limits of the method lie.',
+    'Read →',
+    'Women’s health',
+    'Perimenopause: understanding the changes in body and brain',
+    'Hormones, sleep, mood — what actually shifts, and what evidence-based tools can do about it.',
+    'Read →',
+    'Nervous system',
+    'Chronic stress and the nervous system',
+    'Why anxiety settles into the body, and what nervous-system regulation concretely changes.',
+    'Read →',
+    'Sleep',
+    'Sleep and hormonal health',
+    'The two-way link between sleep, cycle and hormones — and the levers that really matter.',
+    'Read →',
+    'Pain',
+    'The link between pain, attention and the brain',
+    'What pain research teaches us about attention — and why it changes practice.',
+    'Read →',
+    'Integrative',
+    'Integrative health: what are we actually talking about?',
+    'Breaking down the term to separate what is rigorous from what is marketing.',
+    'Read →',
+    'In patients’ own words',
+    'Patients, in their own words.',
+    '“I thought hypnosis would be vague. In reality, it’s a structured method: goals, tools, follow-up. It helped me regain stable sleep.”',
+    'Patient, sleep support',
+    '“Marion supported me through perimenopause without ever promising miracles, grounding herself in what we know. That honesty is what reassured me.”',
+    'Patient, women’s health',
+    '“A space where I’m listened to, where things are explained. I came in anxious, and left with a clear plan I could understand and follow.”',
+    'Patient, anxiety and stress',
+    'Frequently asked questions',
+    'Before booking an appointment.',
     'Does hypnosis have a scientific basis?',
     'Yes — to varying degrees. Meta-analyses support its use for certain pain management, stress and some aspects of sleep. Other areas are less settled in research. For each avenue, I tell you what the data say — and where they stop.',
     'What does a session look like?',
@@ -106,20 +160,59 @@
     'Can we work remotely?',
     'Yes. Many sessions happen by video call, including from British Columbia. Quality doesn’t depend on the room — it depends on the relationship and the framework, and we keep both intact at a distance.',
     'What exactly is “integrative health”?',
-    'An approach that connects several levels of experience — body, psychology, habits, context. It sits apart from conventional medicine, which attends less to the whole person, and from the “wellness” approach, which asks for little evidence. I find it more useful than either.', // 5 Q/R
-    'First step', 'A discovery call, 15 minutes.',                                 // rdv
+    'An approach that connects several levels of experience — body, psychology, habits, context. It sits apart from conventional medicine, which attends less to the whole person, and from the “wellness” approach, which asks for little evidence. I find it more useful than either.',
+    'First step',
+    'A discovery call, 15 minutes.',
     'The first step is an ordinary conversation. We take stock of what brings you, what you expect, and the options that make sense. You’re not committing to anything.',
     '<strong>Format</strong><br>By video call — full support, from the comfort of your home',
-    'Name', 'Email', 'What brings you in',                                         // form labels
-    'Choose…', 'Hypnosis, stress or sleep', 'Women’s health', 'Integrative health', 'Other / I’d rather discuss on a call', // options
-    'Message', 'Send my request →',                                                // message + submit
+    'Name',
+    'Email',
+    'What brings you in',
+    'Choose…',
+    'Hypnosis, stress or sleep',
+    'Women’s health',
+    'Integrative health',
+    'Other / I’d rather discuss on a call',
+    'Message',
+    'Send my request →',
     'Your information stays confidential — never shared, never passed to third parties.',
     'Your message opens in your e-mail app (subject and body pre-filled). Just click “Send” — a reply arrives within 24 business hours.',
-    'Hypnotherapy · Women’s health · Integrative',                                 // footer brand-tag
-    'Home', 'Approach', 'About', 'Understand', 'Appointment',                       // footer-nav
-    'Vancouver, British Columbia', '© 2026 Marion — All rights reserved.',
+    'Hypnotherapy · Women’s health · Integrative',
+    'Home',
+    'Approach',
+    'About',
+    'Understand',
+    'Vancouver, British Columbia',
+    '© 2026 Marion Fechino — All rights reserved.',
     'Nothing on this site replaces a physician’s advice.'
   ];
+  var EN_SUBPAGE = [
+    'Skip to content',
+    'Hypnotherapy · Women’s health · Integrative',
+    'Signals',
+    'Pillars',
+    'Approach',
+    'About',
+    'Understand',
+    'FAQ',
+    'Book an appointment',
+    'Signals',
+    'Pillars',
+    'Approach',
+    'About',
+    'Understand',
+    'FAQ',
+    'Book an appointment',
+    'Hypnotherapy · Women’s health · Integrative',
+    'Home',
+    'Approach',
+    'About',
+    'Understand',
+    'Vancouver, British Columbia',
+    '© 2026 Marion Fechino — All rights reserved.',
+    'Nothing on this site replaces a physician’s advice.'
+  ];
+  var EN_LIST = (document.querySelectorAll('[data-i18n]').length > 50) ? EN_HOME : EN_SUBPAGE;;
 
   function lang() {
     try { var v = localStorage.getItem('marion-lang'); if (v) return v; } catch (e) {}
@@ -144,7 +237,7 @@
       var nav2 = document.querySelector('.nav-links'); if (nav2) nav2.setAttribute('aria-label', 'Navigation principale');
       var foot2 = document.querySelector('.footer-nav'); if (foot2) foot2.setAttribute('aria-label', 'Navigation pied de page');
       var track2 = document.getElementById('tstTrack'); if (track2) track2.setAttribute('aria-label', 'témoignages de patientes (glisser pour parcourir)');
-      document.title = 'Marion — Hypnose · Santé des femmes · Santé intégrative — Vancouver';
+      document.title = 'Marion Fechino — Hypnose · Santé des femmes · Santé intégrative — Vancouver';
       var md2 = document.querySelector('meta[name="description"]'); if (md2 && md2._fr) md2.setAttribute('content', md2._fr);
       var ogd2 = document.querySelector('meta[property="og:description"]'); if (ogd2 && ogd2._fr) ogd2.setAttribute('content', ogd2._fr);
       var oglo2 = document.querySelector('meta[property="og:locale"]'); if (oglo2) oglo2.setAttribute('content', 'fr_CA');

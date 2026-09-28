@@ -117,24 +117,22 @@ comments: false
 </div>
 <div class="about-body">
 <p class="overline" data-i18n>À propos</p>
-<h2 data-i18n>Bonjour, je suis Marion.</h2>
+<h2 data-i18n>Bonjour, je suis Marion Fechino.</h2>
 <p class="lead" data-i18n>Je suis hypnothérapeute et praticienne en santé intégrative à Vancouver. Mon parcours croise la recherche et la clinique. Je travaille à cette intersection, et c’est cela que je vous transmets&nbsp;:</p>
 <div class="cred-grid">
 <div class="cred">
 <h3 data-i18n>Parcours scientifique</h3>
-<!-- À COMPLÉTER : diplômes et publications réels du client -->
 <ul>
-<li data-i18n>Doctorat en psychologie</li>
-<li data-i18n>Recherche en régulation émotionnelle et sommeil</li>
-<li data-i18n>Enseignement &amp; vulgarisation scientifique</li>
+<li data-i18n>Cognitiviste de formation, parcours en recherche en neurosciences</li>
+<li data-i18n>Études longitudinales financées par les NIH (régulation émotionnelle, sommeil)</li>
+<li data-i18n>Enseignement et vulgarisation scientifique</li>
 </ul>
 </div>
 <div class="cred">
 <h3 data-i18n>Approches thérapeutiques</h3>
-<!-- À COMPLÉTER : formations certifiantes réelles du client -->
 <ul>
-<li data-i18n>Hypnose thérapeutique, formation certifiante</li>
-<li data-i18n>Santé des femmes, cycle, fertilité, périménopause</li>
+<li data-i18n>Certification en hypnothérapie clinique, en cours. Pratique supervisionnée depuis 2024</li>
+<li data-i18n>Santé des femmes : cycle, fertilité, périménopause</li>
 <li data-i18n>Santé intégrative, habitudes de vie, sommeil</li>
 </ul>
 </div>
@@ -204,15 +202,15 @@ comments: false
            data-i18n-attr="aria-label" data-i18n-attr-en="Patient testimonials (swipe to browse)">
 <figure class="tst-card is-active">
 <blockquote data-i18n>« Je pensais que l’hypnose serait floue. En réalité, c’est une méthode structurée&nbsp;: des objectifs, des outils, un suivi. Ça m’a aidée à retrouver un sommeil stable. »</blockquote>
-<figcaption data-i18n>. Patiente, accompagnement sommeil</figcaption>
+<figcaption data-i18n>Patiente, accompagnement sommeil</figcaption>
 </figure>
 <figure class="tst-card">
 <blockquote data-i18n>« Marion m’a accompagnée dans ma périménopause sans jamais me promettre des miracles, en s’appuyant sur ce qu’on sait. C’est cette honnêteté qui m’a rassurée. »</blockquote>
-<figcaption data-i18n>. Patiente, santé des femmes</figcaption>
+<figcaption data-i18n>Patiente, santé des femmes</figcaption>
 </figure>
 <figure class="tst-card">
 <blockquote data-i18n>« Un espace où l’on m'écoute, où l’on explique. J’y suis allée anxieuse, j’en suis repartie avec un plan clair que je pouvais comprendre et suivre. »</blockquote>
-<figcaption data-i18n>. Patiente, anxiété et stress</figcaption>
+<figcaption data-i18n>Patiente, anxiété et stress</figcaption>
 </figure>
 </div>
 <div class="tst-nav" role="group" aria-label="Navigation des témoignages">

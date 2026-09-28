@@ -13,7 +13,7 @@ comments: false
 <div class="pc-portrait">
 <!-- C49 : photo réelle (IMG_8438), même image que #apropos sur l'accueil -->
 <img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
-alt="Portrait de Marion. Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
+alt="Portrait de Marion Fechino. Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
 </div>
 <!-- C59 : site pro + LinkedIn à côté du portrait (déplacés depuis « À lire ») -->
 <div class="pc-socials">
@@ -34,7 +34,7 @@ LinkedIn
 </div><!-- /.pc-portrait-col -->
 <div class="pc-body">
 <p class="overline">À propos, parcours, pratique, lecture</p>
-<h1>Bonjour, je suis Marion.</h1>
+<h1>Bonjour, je suis Marion Fechino.</h1>
 <p class="pc-lede">Cognitiviste de formation, chercheuse en neurosciences et en santé des femmes, et hypnothérapeute clinicienne en pratique à Vancouver. Mon travail relie les recherches sur la cognition, la régulation émotionnelle et la santé des femmes à la clinique quotidienne. Là, j’aime ce que les données montrent, et je signale quand elles n’ont rien à dire.</p>
 <p class="pc-sub">Je crois à une santé fondée sur deux piliers égaux : la science (méta-analyses, études contrôlées, physiologie documentée) et la réflexion clinique dans l'écoute. Ce que je propose n'est ni l'un ni l'autre mais leur intersection : comprendre à partir des données disponibles, puis appliquer à la situation unique de chaque personne.</p>
 <div class="pc-ctas">
