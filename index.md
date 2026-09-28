@@ -10,7 +10,7 @@ comments: false
 <!-- ══════════════════ 01 · HÉROS ══════════════════ -->
 <section class="hero fade" id="accueil">
 <div class="hero-media">
-<!-- PHOTO HERO — forêt (arbres, lumière douce).
+<!-- PHOTO HERO, forêt (arbres, lumière douce).
          C54 : le client revient à la photo d'arbres ; les fleurs (C54) vont sur
          « Rendez-vous » en bas de page. Toutes les photos sont auto-hébergées. -->
 <img src="{{ site.baseurl }}/assets/img/hero-forest.jpg"
@@ -110,7 +110,7 @@ comments: false
 <section class="section section-creme fade" id="apropos">
 <div class="wrap about-grid">
 <div class="about-media">
-<!-- Photo réelle du client (IMG_8438) — auto-hébergée dans static/ -->
+<!-- Photo réelle du client (IMG_8438), auto-hébergée dans static/ -->
 <img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
      alt="Portrait en lumière naturelle, ambiance organique" data-i18n-attr="alt"
      data-i18n-attr-en="Editorial portrait, natural light" width="800" height="1000" loading="lazy" decoding="async">
@@ -133,9 +133,9 @@ comments: false
 <h3 data-i18n>Approches thérapeutiques</h3>
 <!-- À COMPLÉTER : formations certifiantes réelles du client -->
 <ul>
-<li data-i18n>Hypnose thérapeutique — formation certifiante</li>
-<li data-i18n>Santé des femmes — cycle, fertilité, périménopause</li>
-<li data-i18n>Santé intégrative — habitudes de vie, sommeil</li>
+<li data-i18n>Hypnose thérapeutique, formation certifiante</li>
+<li data-i18n>Santé des femmes, cycle, fertilité, périménopause</li>
+<li data-i18n>Santé intégrative, habitudes de vie, sommeil</li>
 </ul>
 </div>
 </div>
@@ -161,7 +161,7 @@ comments: false
 <article class="article">
 <p class="article-tag" data-i18n>Santé des femmes</p>
 <h3 data-i18n>Périménopause : comprendre les changements du corps et du cerveau</h3>
-<p data-i18n>Hormones, sommeil, humeur — ce qui bouge vraiment dans le corps pendant la périménopause. Des leviers qu'on peut mesurer.</p>
+<p data-i18n>Hormones, sommeil, humeur, ce qui bouge vraiment dans le corps pendant la périménopause. Des leviers qu'on peut mesurer.</p>
 <a href="{{ site.baseurl }}/revue/perimena/" class="link-quiet" data-i18n>Lire →</a>
 </article>
 <article class="article">
@@ -179,7 +179,7 @@ comments: false
 <article class="article">
 <p class="article-tag" data-i18n>Douleur</p>
 <h3 data-i18n>Le lien entre douleur, attention et cerveau</h3>
-<p data-i18n>Ce que la recherche de la douleur nous apprend sur l’attention — et pourquoi cela change la pratique.</p>
+<p data-i18n>Ce que la recherche de la douleur nous apprend sur l’attention, et pourquoi cela change la pratique.</p>
 <a href="{{ site.baseurl }}/revue/douleur/" class="link-quiet" data-i18n>Lire →</a>
 </article>
 <article class="article">
@@ -204,15 +204,15 @@ comments: false
            data-i18n-attr="aria-label" data-i18n-attr-en="Patient testimonials (swipe to browse)">
 <figure class="tst-card is-active">
 <blockquote data-i18n>« Je pensais que l’hypnose serait floue. En réalité, c’est une méthode structurée&nbsp;: des objectifs, des outils, un suivi. Ça m’a aidée à retrouver un sommeil stable. »</blockquote>
-<figcaption data-i18n>— Patiente, accompagnement sommeil</figcaption>
+<figcaption data-i18n>. Patiente, accompagnement sommeil</figcaption>
 </figure>
 <figure class="tst-card">
 <blockquote data-i18n>« Marion m’a accompagnée dans ma périménopause sans jamais me promettre des miracles, en s’appuyant sur ce qu’on sait. C’est cette honnêteté qui m’a rassurée. »</blockquote>
-<figcaption data-i18n>— Patiente, santé des femmes</figcaption>
+<figcaption data-i18n>. Patiente, santé des femmes</figcaption>
 </figure>
 <figure class="tst-card">
 <blockquote data-i18n>« Un espace où l’on m'écoute, où l’on explique. J’y suis allée anxieuse, j’en suis repartie avec un plan clair que je pouvais comprendre et suivre. »</blockquote>
-<figcaption data-i18n>— Patiente, anxiété et stress</figcaption>
+<figcaption data-i18n>. Patiente, anxiété et stress</figcaption>
 </figure>
 </div>
 <div class="tst-nav" role="group" aria-label="Navigation des témoignages">
@@ -232,7 +232,7 @@ comments: false
 <div class="wrap faq-list">
 <details class="faq-item" open>
 <summary data-i18n>L’hypnose a-t-elle une base scientifique&nbsp;?</summary>
-<p data-i18n>Pour chaque piste, je vous dis ce que les données indiquent et où elles s’arrêtent. Les témoignages de patientes parlent du sentiment d'avoir un plan clair à emporter — pas juste une explication.</p>
+<p data-i18n>Pour chaque piste, je vous dis ce que les données indiquent et où elles s’arrêtent. Les témoignages de patientes parlent du sentiment d'avoir un plan clair à emporter, pas juste une explication.</p>
 </details>
 <details class="faq-item">
 <summary data-i18n>Comment se déroule une séance&nbsp;?</summary>

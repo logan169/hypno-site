@@ -2,10 +2,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.title == site.title or page.title == nil %}
-    <title>{{ site.title }} — Hypnose · Santé des femmes · Santé intégrative — Vancouver</title>
-    <meta property="og:title" content="Marion — Hypnose · Santé des femmes · Santé intégrative">
+    <title>{{ site.title }}. Hypnose · Santé des femmes · Santé intégrative. Vancouver</title>
+    <meta property="og:title" content="Marion. Hypnose · Santé des femmes · Santé intégrative">
   {% else %}
-    <title>{{ page.title }} — {{ site.title }}</title>
+    <title>{{ page.title }}, {{ site.title }}</title>
     <meta property="og:title" content="{{ page.title }} · La revue de Marion">
   {% endif %}
   <meta name="description" content="{{ page.excerpt | default: site.description }}">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="fr_CA">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Marion">
-  <meta property="og:title" content="{{ page.title | default: site.title }} — {{ site.title }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}, {{ site.title }}">
   <meta property="og:description" content="{{ page.excerpt | default: site.description }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
 

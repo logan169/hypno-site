@@ -1,5 +1,5 @@
 ---
-# Layout « revue » — articles de La revue de Marion.
+# Layout « revue », articles de La revue de Marion.
 # Ordre : article (sources + « En résumé ») → « Autres notes » + bouton RETOUR
 # rempli (dedans la colonne, sous les liens) → COMMENTAIRES → footer de site.
 # Le formulaire de commentaires est le nôtre (fetch, sans jQuery/MM brut).
@@ -97,7 +97,7 @@
             .then(function () {
               f.reset();
               btn.textContent = 'Merci !';
-              say('Merci — votre commentaire sera publié dès sa relecture.', true);
+              say('Merci, votre commentaire sera publié dès sa relecture.', true);
             })
             .catch(function () {
               btn.disabled = false; btn.textContent = 'Envoyer mon commentaire';

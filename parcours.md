@@ -1,19 +1,19 @@
 ---
 layout: default
-title: 'Mon parcours — Marion · Hypnose · Santé des femmes · Intégrative'
-excerpt: 'Marion Fechino — parcours scientifique, recherche (NIH, cognition, sommeil), hypnothérapie, santé des femmes, santé intégrative — Vancouver, C.-B.'
+title: 'Mon parcours. Marion · Hypnose · Santé des femmes · Intégrative'
+excerpt: 'Marion Fechino, parcours scientifique, recherche (NIH, cognition, sommeil), hypnothérapie, santé des femmes, santé intégrative. Vancouver, C.-B.'
 permalink: /parcours/
 comments: false
 ---
 
-<!-- HERO — Portrait + qui-suis-je en une phrase -->
+<!-- HERO. Portrait + qui-suis-je en une phrase -->
 <section class="pc-hero" id="accueil">
 <div class="pc-hero-inner">
 <div class="pc-portrait-col">
 <div class="pc-portrait">
-<!-- C49 : photo réelle (IMG_8438) — même image que #apropos sur l'accueil -->
+<!-- C49 : photo réelle (IMG_8438), même image que #apropos sur l'accueil -->
 <img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
-alt="Portrait de Marion — Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
+alt="Portrait de Marion. Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
 </div>
 <!-- C59 : site pro + LinkedIn à côté du portrait (déplacés depuis « À lire ») -->
 <div class="pc-socials">
@@ -33,7 +33,7 @@ LinkedIn
 </div>
 </div><!-- /.pc-portrait-col -->
 <div class="pc-body">
-<p class="overline">À propos — parcours, pratique, lecture</p>
+<p class="overline">À propos, parcours, pratique, lecture</p>
 <h1>Bonjour, je suis Marion.</h1>
 <p class="pc-lede">Cognitiviste de formation, chercheuse en neurosciences et en santé des femmes, et hypnothérapeute clinicienne en pratique à Vancouver. Mon travail relie les recherches sur la cognition, la régulation émotionnelle et la santé des femmes à la clinique quotidienne. Là, j’aime ce que les données montrent, et je signale quand elles n’ont rien à dire.</p>
 <p class="pc-sub">Je crois à une santé fondée sur deux piliers égaux : la science (méta-analyses, études contrôlées, physiologie documentée) et la réflexion clinique dans l'écoute. Ce que je propose n'est ni l'un ni l'autre mais leur intersection : comprendre à partir des données disponibles, puis appliquer à la situation unique de chaque personne.</p>
@@ -48,7 +48,7 @@ LinkedIn
 <span>Santé des femmes</span>
 <span>Hypnothérapie clinique</span>
 <span>Cognition · Neurosciences</span>
-<span>Visioconférence — partout au Canada</span>
+<span>Visioconférence, partout au Canada</span>
 </div>
 </section>
 
@@ -62,28 +62,28 @@ LinkedIn
 </div>
 <div class="pc-timeline">
 <article class="pc-tl-item">
-<span class="pc-tl-year">Chercheuse — neurosciences cognitives</span>
+<span class="pc-tl-year">Chercheuse, neurosciences cognitives</span>
 <div>
-<p class="pc-tl-role">Étude longitudinale, NIH — Vancouver <small>Recherche en régulation émotionnelle et sommeil</small></p>
-<p class="pc-tl-detail">Participation à des études longitudinales financées par les NIH — visualisation de données, génération d'insights, analyse comportementale. C'est dans ce travail que j'ai appris à distinguer ce que les données établissent de ce qu'inférer serait aller trop loin.</p>
+<p class="pc-tl-role">Étude longitudinale, NIH. Vancouver <small>Recherche en régulation émotionnelle et sommeil</small></p>
+<p class="pc-tl-detail">Participation à des études longitudinales financées par les NIH, visualisation de données, génération d'insights, analyse comportementale. C'est dans ce travail que j'ai appris à distinguer ce que les données établissent de ce qu'inférer serait aller trop loin.</p>
 </div>
 </article>
 <article class="pc-tl-item">
-<span class="pc-tl-year">Formation — hypnothérapie clinique</span>
+<span class="pc-tl-year">Formation, hypnothérapie clinique</span>
 <div>
-<p class="pc-tl-role">Certification en hypnothérapie clinique — en cours <small>Pratique supervisionnée depuis 2024&nbsp;· Vancouver, C.-B.</small></p>
-<p class="pc-tl-detail">La formation clinicienne a été pour moi un retour au corps — après des années de modélisation cognitive, j'étais prête à pratiquer directement. La pratique se déroule à Vancouver et par visioconférence, avec un suivi supervisé.</p>
+<p class="pc-tl-role">Certification en hypnothérapie clinique, en cours <small>Pratique supervisionnée depuis 2024&nbsp;· Vancouver, C.-B.</small></p>
+<p class="pc-tl-detail">La formation clinicienne a été pour moi un retour au corps, après des années de modélisation cognitive, j'étais prête à pratiquer directement. La pratique se déroule à Vancouver et par visioconférence, avec un suivi supervisé.</p>
 </div>
 </article>
 <article class="pc-tl-item">
 <span class="pc-tl-year">Enseignement &amp; vulgarisation</span>
 <div>
 <p class="pc-tl-role">Publications, ateliers et vulgarisation <small>Psychologie, neurosciences cognitives, santé</small></p>
-<p class="pc-tl-detail">Des ateliers et publications sur la cognition, le sommeil, la régulation émotionnelle et le changement de comportement — souvent avec un lecteur non spécialiste. C'est ce travail qui a nourri ma façon d'écrire ici.</p>
+<p class="pc-tl-detail">Des ateliers et publications sur la cognition, le sommeil, la régulation émotionnelle et le changement de comportement, souvent avec un lecteur non spécialiste. C'est ce travail qui a nourri ma façon d'écrire ici.</p>
 </div>
 </article>
 <article class="pc-tl-item">
-<span class="pc-tl-year">Projets — recherche &amp; données</span>
+<span class="pc-tl-year">Projets, recherche &amp; données</span>
 <div>
 <p class="pc-tl-role">Trois directions qui nourrissent la clinique <small>RAG santé des femmes · Agent LLM · Études NIH</small></p>
 <p class="pc-tl-detail">La rigueur méthodologique des projets que je conçois est la même que j'essaie d'appliquer en clinique : je préfère un indicateur concret qu'une impression. <a href="{{ site.baseurl }}/ecrits/#projets">Les voir sur la page « Écrits »</a>.</p>
@@ -99,7 +99,7 @@ LinkedIn
 <div class="pc-section-head">
 <span class="overline">Champs d'exploration</span>
 <h2>Des questions qui traversent mon travail.</h2>
-<p class="lede">Quatre entrées — la santé des femmes, la cognition et le sommeil, le changement de comportement, la recherche en santé — qui, d'après moi, tournent autour de la même question : comment aider une personne à faire un choix qu'elle pourra comprendre et reprendre en mains elle-même&nbsp;?</p>
+<p class="lede">Quatre entrées, la santé des femmes, la cognition et le sommeil, le changement de comportement, la recherche en santé, qui, d'après moi, tournent autour de la même question : comment aider une personne à faire un choix qu'elle pourra comprendre et reprendre en mains elle-même&nbsp;?</p>
 </div>
 <div class="creds">
 <div class="cred-card">
@@ -107,9 +107,9 @@ LinkedIn
 <h3>Cycle, fertilité, périménopause, rapport au corps</h3>
 <ul>
 <li>Cycle menstruel &amp; sommeil</li>
-<li>Périménopause — transitions hormonales</li>
+<li>Périménopause, transitions hormonales</li>
 <li>Confort, douleur, humeur</li>
-<li>Littérature scientifique — accès &amp; synthèse</li>
+<li>Littérature scientifique, accès &amp; synthèse</li>
 </ul>
 </div>
 <div class="cred-card">
@@ -137,14 +137,14 @@ LinkedIn
 <ul>
 <li>Méta-analyses &amp; synthèses</li>
 <li>Publications &amp; vulgarisation</li>
-<li>Études NIH — contribution data</li>
+<li>Études NIH, contribution data</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
 
-<!-- 03 · ÉCRITS & PROJETS — C59 : la section détaillée a été déplacée sur ecrits.html.
+<!-- 03 · ÉCRITS & PROJETS. C59 : la section détaillée a été déplacée sur ecrits.html.
 Ici, un simple bloc CTA pour y accéder sans encombrer cette page. -->
 <section class="pc-section" id="ecrits" style="background:var(--bg-alt)">
 <div class="wrap prose" style="max-width:60ch">
@@ -162,7 +162,7 @@ Ici, un simple bloc CTA pour y accéder sans encombrer cette page. -->
 <div class="wrap prose" style="max-width:60ch">
 <span class="overline">En pratique</span>
 <h2 style="margin-top:.7rem">Comment je l'applique.</h2>
-<p class="lead">Ce que je propose n'est pas du bien-être générique, et pas non plus un protocole. C'est une pratique qui se construit séance après séance : un échange long, des objectifs, des mesures qui permettent de voir où l'on en est, et des points de vigilance. L'approche est détaillée sur la page d'accueil — <a href="{{ site.baseurl }}/#approche">là</a> — avant d'en discuter ensemble.</p>
+<p class="lead">Ce que je propose n'est pas du bien-être générique, et pas non plus un protocole. C'est une pratique qui se construit séance après séance : un échange long, des objectifs, des mesures qui permettent de voir où l'on en est, et des points de vigilance. L'approche est détaillée sur la page d'accueil, <a href="{{ site.baseurl }}/#approche">là</a>, avant d'en discuter ensemble.</p>
 <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem">
 <a class="btn btn-primary" href="{{ site.baseurl }}/#rendezvous">Prendre un appel découverte</a>
 <a class="btn btn-outline" href="{{ site.baseurl }}/#apropos">Retour à la section À propos</a>

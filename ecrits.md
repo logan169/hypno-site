@@ -1,18 +1,18 @@
 ---
 layout: default
-title: 'Écrits &amp; projets — Marion'
-excerpt: "Articles d'opinion, notes cliniques et projets de recherche (NIH, santé des femmes, LLMs) — par Marion, Vancouver, C.-B."
+title: 'Écrits &amp; projets. Marion'
+excerpt: "Articles d'opinion, notes cliniques et projets de recherche (NIH, santé des femmes, LLMs), par Marion, Vancouver, C.-B."
 permalink: /ecrits/
 comments: false
 ---
 
-<!-- HERO — Portrait + liens + titre concis -->
+<!-- HERO. Portrait + liens + titre concis -->
 <section class="ec-hero" id="accueil">
 <div class="ec-hero-inner">
 <div>
 <div class="ec-portrait">
 <img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
-alt="Portrait de Marion — Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
+alt="Portrait de Marion. Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
 </div>
 <div class="ec-socials">
 <a href="https://marionfech.github.io/" target="_blank" rel="noopener" aria-label="Site professionnel de Marion">
@@ -33,7 +33,7 @@ LinkedIn
 <div class="ec-body">
 <p class="overline">Écrits · Projets · Ailleurs</p>
 <h1>Mes écrits, mes projets, et où me retrouver.</h1>
-<p class="ec-lede">Un espace pour ce que je publie et ce que je construis — articles, notes cliniques, et projets de recherche — plus les liens où je suis disponible ailleurs.</p>
+<p class="ec-lede">Un espace pour ce que je publie et ce que je construis, articles, notes cliniques, et projets de recherche, plus les liens où je suis disponible ailleurs.</p>
 <p class="ec-sub">Rien ici ne remplace un échange direct. Ces pages sont un aperçu de ma trajectoire, pas une vitrine.</p>
 <div class="ec-ctas">
 <a class="btn btn-primary" href="{{ site.baseurl }}/parcours/">Mon parcours</a>
@@ -49,15 +49,15 @@ LinkedIn
 <div class="ec-section-head">
 <span class="overline">À lire</span>
 <h2>Articles &amp; notes, organisés par thème.</h2>
-<p class="lede">Notes courtes sur la santé des femmes, la cognition, le sommeil, et la douleur — et quelques articles plus longs, en cours de publication sur Medium.</p>
+<p class="lede">Notes courtes sur la santé des femmes, la cognition, le sommeil, et la douleur, et quelques articles plus longs, en cours de publication sur Medium.</p>
 </div>
 
 <article class="theme-card" style="display:block">
 <span class="theme-tag">Santé des femmes</span>
 <h3>Cycle, périménopause, corps</h3>
-<p>Notes cliniques — cycle, sommeil, humeur, périménopause — et articles longs sur les transitions hormonales du corps et du cerveau.</p>
+<p>Notes cliniques, cycle, sommeil, humeur, périménopause, et articles longs sur les transitions hormonales du corps et du cerveau.</p>
 <ul>
-<li><a href="{{ site.baseurl }}/revue/perimena/">Périménopause — comprendre les changements du corps</a></li>
+<li><a href="{{ site.baseurl }}/revue/perimena/">Périménopause, comprendre les changements du corps</a></li>
 <li><a href="{{ site.baseurl }}/revue/sommeil-hormones/">Sommeil et santé hormonale</a></li>
 </ul>
 </article>
@@ -65,9 +65,9 @@ LinkedIn
 <article class="theme-card" style="display:block;margin-top:1rem">
 <span class="theme-tag">Cognition &amp; sommeil</span>
 <h3>Régulation émotionnelle, attention, sommeil</h3>
-<p>Ce que les méta-analyses disent du sommeil, de l'attention, de la régulation émotionnelle — et où les études s'arrêtent.</p>
+<p>Ce que les méta-analyses disent du sommeil, de l'attention, de la régulation émotionnelle, et où les études s'arrêtent.</p>
 <ul>
-<li><a href="{{ site.baseurl }}/revue/hypnoscience/">Hypnose — que dit réellement la recherche&nbsp;?</a></li>
+<li><a href="{{ site.baseurl }}/revue/hypnoscience/">Hypnose, que dit réellement la recherche&nbsp;?</a></li>
 <li><a href="{{ site.baseurl }}/revue/stress-snc/">Stress chronique et système nerveux</a></li>
 </ul>
 </article>
@@ -75,7 +75,7 @@ LinkedIn
 <article class="theme-card" style="display:block;margin-top:1rem">
 <span class="theme-tag">Douleur &amp; corps</span>
 <h3>La douleur, l'attention, la perception</h3>
-<p>Comment l'attention modifie l'expérience de la douleur — et ce que cela change pour la pratique clinique.</p>
+<p>Comment l'attention modifie l'expérience de la douleur, et ce que cela change pour la pratique clinique.</p>
 <ul>
 <li><a href="{{ site.baseurl }}/revue/douleur/">Le lien entre douleur, attention et cerveau</a></li>
 </ul>
@@ -84,9 +84,9 @@ LinkedIn
 <article class="theme-card" style="display:block;margin-top:1rem">
 <span class="theme-tag">Santé intégrative</span>
 <h3>Décomposer la notion d'intégratif</h3>
-<p>Ce que « intégratif » recouvre réellement — et ce qu'il ne recouvre pas — sans l'utiliser comme synonyme de « marketing ».</p>
+<p>Ce que « intégratif » recouvre réellement, et ce qu'il ne recouvre pas, sans l'utiliser comme synonyme de « marketing ».</p>
 <ul>
-<li><a href="{{ site.baseurl }}/revue/integratif/">Santé intégrative — de quoi parle-t-on exactement&nbsp;?</a></li>
+<li><a href="{{ site.baseurl }}/revue/integratif/">Santé intégrative, de quoi parle-t-on exactement&nbsp;?</a></li>
 </ul>
 </article>
 </div>
@@ -98,16 +98,16 @@ LinkedIn
 <div class="ec-section-head">
 <span class="overline">Projets &amp; recherche</span>
 <h2>Ce que je construis.</h2>
-<p class="lede">Deux directions de travail qui nourrissent ma pratique clinique — traduire la littérature scientifique pour la rendre accessible, et outiller les chercheurs en analyse comportementale. (Mon parcours complet, études NIH incluses, est sur la page « Mon parcours ».)</p>
+<p class="lede">Deux directions de travail qui nourrissent ma pratique clinique, traduire la littérature scientifique pour la rendre accessible, et outiller les chercheurs en analyse comportementale. (Mon parcours complet, études NIH incluses, est sur la page « Mon parcours ».)</p>
 </div>
 <div class="proj-timeline">
 <article class="proj-item">
-<p class="proj-role">Santé des femmes — recherche &amp; data <small>RAG — littérature scientifique sur la santé des femmes</small></p>
-<p class="proj-detail">Conception de systèmes de recherche assistés par IA (RAG) pour rendre la littérature scientifique accessible — du cycle et de la fertilité à la périménopause. Ce travail a directement informé ma façon de pratiquer : expliquer d'abord, préciser ensuite.</p>
+<p class="proj-role">Santé des femmes, recherche &amp; data <small>RAG, littérature scientifique sur la santé des femmes</small></p>
+<p class="proj-detail">Conception de systèmes de recherche assistés par IA (RAG) pour rendre la littérature scientifique accessible, du cycle et de la fertilité à la périménopause. Ce travail a directement informé ma façon de pratiquer : expliquer d'abord, préciser ensuite.</p>
 </article>
 <article class="proj-item">
 <p class="proj-role">Science des données &amp; IA <small>Agent d'exploration de données à base de LLM</small></p>
-<p class="proj-detail">Conception d'outils d'analyse comportementale — visualisation, détection de signaux faibles, aide à la décision pour les chercheurs. La rigueur méthodologique que ces projets exigent est la même que j'essaie d'appliquer en clinique : je préfère un indicateur concret qu'une impression.</p>
+<p class="proj-detail">Conception d'outils d'analyse comportementale, visualisation, détection de signaux faibles, aide à la décision pour les chercheurs. La rigueur méthodologique que ces projets exigent est la même que j'essaie d'appliquer en clinique : je préfère un indicateur concret qu'une impression.</p>
 </article>
 </div>
 </div>
@@ -117,7 +117,7 @@ LinkedIn
 <section class="ec-cta" id="ailleurs">
 <div class="wrap">
 <h2>Ailleurs, je suis là aussi.</h2>
-<p>Publications longues, projets data, articles en cours. Le lien vers Medium et les réseaux — là où mes écrits apparaissent — sont au-dessus, à côté du portrait.</p>
+<p>Publications longues, projets data, articles en cours. Le lien vers Medium et les réseaux, là où mes écrits apparaissent, sont au-dessus, à côté du portrait.</p>
 <div>
 <a class="btn btn-primary" href="{{ site.baseurl }}/parcours/">Retour au parcours</a>
 </div>
