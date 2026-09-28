@@ -20,7 +20,7 @@ comments: false
 </div>
 <div class="hero-inner">
 <div class="hero-text">
-<p class="overline" data-i18n>Hypnothérapie clinique — en visioconférence : Vancouver et C.-B., Québec, partout au Canada · France bientôt</p>
+<p class="overline" data-i18n>Hypnothérapie clinique en visioconférence. Vancouver et C.-B., Québec, tout le Canada, et bientôt la France</p>
 <h1 data-i18n>Le corps et l’esprit,<br>en dialogue.</h1>
 <p class="hero-sub" data-i18n>Une approche intégrative de la santé des femmes : l’hypnose y est utilisée comme un outil thérapeutique, adossée à ce qui est vérifiable.</p>
 <p class="hero-meta" data-i18n>Hypnose thérapeutique&nbsp;·&nbsp;Santé des femmes&nbsp;·&nbsp;Approche intégrative</p>
@@ -38,7 +38,7 @@ comments: false
 <div class="wrap prose">
 <p class="overline" data-i18n>Vous êtes peut-être ici parce que…</p>
 <h2 data-i18n>Votre corps vous envoie des signaux.</h2>
-<p class="lead" data-i18n>Parfois, ce n’est pas une douleur précise qui vous amène — c’est l’impression de ne plus tenir ensemble. Ces éléments reviennent souvent chez les personnes que j’accompagne&nbsp;:</p>
+<p class="lead" data-i18n>Ce n’est pas toujours une douleur précise qui vous amène. Parfois, c’est la sensation que cela ne tient plus. Voici ce qui revient le plus souvent chez les personnes que j’accompagne&nbsp;:</p>
 </div>
 <div class="wrap signals-grid">
 <span class="signal" data-i18n>Stress et anxiété persistants</span>
@@ -51,7 +51,7 @@ comments: false
 <span class="signal" data-i18n>Le besoin, simplement, de retrouver un équilibre</span>
 </div>
 <div class="wrap prose">
-<blockquote class="pull" data-i18n>Je vous accompagne avec une approche qui considère la santé dans sa globalité — physiologie, système nerveux, vécu émotionnel et contexte de vie. Sans promesse magique : des outils éprouvés, appliqués à votre histoire.</blockquote>
+<blockquote class="pull" data-i18n>J’essaie de vous voir dans l’ensemble : physiologie, système nerveux, vécu, contexte. Je ne fais pas de promesses que je ne peux pas tenir. Je vous propose des outils, et nous les appliquons à votre situation.</blockquote>
 </div>
 </section>
 
@@ -60,27 +60,27 @@ comments: false
 <div class="wrap prose">
 <p class="overline" data-i18n>Ce que je propose</p>
 <h2 data-i18n>Trois dimensions d’une même approche.</h2>
-<p class="lead" data-i18n>Ce ne sont pas trois services côte à côte. Une même manière de penser la santé, vue de trois angles complémentaires.</p>
+<p class="lead" data-i18n>Ce ne sont pas trois services séparés. C’est une manière de penser la santé, vue sous trois angles.</p>
 </div>
 <div class="wrap pillars">
 <article class="pillar">
 <h3 data-i18n><span class="pillar-num">01</span> Hypnose</h3>
-<p data-i18n>Comprendre le rôle de l’inconscient, des automatismes, des émotions et du système nerveux dans votre expérience quotidienne. L’hypnose comme outil thérapeutique précis — ni mystère, ni spectacle.</p>
+<p data-i18n>Comprendre ce que font l’inconscient, les automatismes, les émotions et le système nerveux dans le quotidien. L’hypnose est un outil parmi d’autres, et je vous la présente comme telle.</p>
 <a class="link-quiet" href="#comprendre" data-i18n>Découvrir l’hypnose →</a>
 </article>
 <article class="pillar">
 <h3 data-i18n><span class="pillar-num">02</span> Santé des femmes</h3>
-<p data-i18n>Une attention particulière aux réalités physiologiques et psychologiques qui traversent la vie des femmes — cycle, fertilité, périménopause, rapport au corps — avec un vocabulaire exact, jamais décoratif.</p>
+<p data-i18n>Le cycle, la fertilité, la périménopause, le rapport au corps : ces réalités traversent la vie des femmes. J’y parle d’elles avec des mots exacts, sans vocabulaire décoratif.</p>
 <a class="link-quiet" href="#rendezvous" data-i18n>Découvrir l’accompagnement →</a>
 </article>
 <article class="pillar">
 <h3 data-i18n><span class="pillar-num">03</span> Santé intégrative</h3>
-<p data-i18n>Mettre en relation corps, psychologie, habitudes de vie et données issues de la recherche, pour des recommandations cohérentes. Vous savez pourquoi, pas seulement comment.</p>
+<p data-i18n>Je relie le corps, la psychologie, les habitudes de vie et les données de la recherche. Chaque recommandation s’accompagne de sa raison, pas d’une simple prescription.</p>
 <a class="link-quiet" href="#approche" data-i18n>Comprendre mon approche →</a>
 </article>
 </div>
 <div class="wrap prose">
-<p class="fine" data-i18n>Recommandation&nbsp;: chaque piste de travail est présentée avec son niveau de preuve — y compris ce que la littérature ne permet pas encore d’affirmer.</p>
+<p class="fine" data-i18n>Pour chaque piste, je vous indique le niveau de preuve. Si la littérature ne permet pas encore quelque chose, je vous le signale plutôt que de faire comme si.</p>
 </div>
 </section>
 
@@ -88,20 +88,20 @@ comments: false
 <section class="section fade" id="approche">
 <div class="wrap prose">
 <p class="overline" data-i18n>Ma façon de travailler</p>
-<h2 data-i18n>Une approche humaine, rigoureuse et intégrative.</h2>
+<h2 data-i18n>Une approche sérieuse et humaine.</h2>
 </div>
 <div class="wrap principles">
 <article class="principle">
 <h3 data-i18n>Fondée sur les connaissances</h3>
-<p data-i18n>Les outils que je vous propose s’appuient, autant que possible, sur les données disponibles et leur niveau de preuve. Quand la littérature est limitative, je vous le dis.</p>
+<p data-i18n>Les outils que je propose s’appuient, autant que possible, sur les données. Quand la littérature est maigre, je le dis.</p>
 </article>
 <article class="principle">
 <h3 data-i18n>Centrée sur la personne</h3>
-<p data-i18n>La recherche donne des repères. Votre histoire, votre corps et votre expérience restent singuliers — et priment sur le manuel.</p>
+<p data-i18n>La recherche donne des repères. Quand votre histoire, votre corps, votre expérience ne coïncident pas avec le manuel, c’est votre histoire qui l’emporte.</p>
 </article>
 <article class="principle">
 <h3 data-i18n>Corps et esprit en interaction</h3>
-<p data-i18n>Stress, sommeil, hormones, émotions et santé physique interagissent constamment. Les traiter séparément, c’est s’interdire de voir le tableau entier.</p>
+<p data-i18n>Le stress, le sommeil, les hormones, les émotions et la santé physique interagissent en permanence. Traiter l’un en ignorant les autres, c’est refuser de voir le tableau.</p>
 </article>
 </div>
 </section>
@@ -118,7 +118,7 @@ comments: false
 <div class="about-body">
 <p class="overline" data-i18n>À propos</p>
 <h2 data-i18n>Bonjour, je suis Marion.</h2>
-<p class="lead" data-i18n>Hypnothérapeute et praticienne en santé intégrative à Vancouver. Mon parcours croise la recherche et la clinique — et c’est précisément cette rencontre que je souhaite vous transmettre&nbsp;:</p>
+<p class="lead" data-i18n>Je suis hypnothérapeute et praticienne en santé intégrative à Vancouver. Mon parcours croise la recherche et la clinique. Je travaille à cette intersection, et c’est cela que je vous transmets&nbsp;:</p>
 <div class="cred-grid">
 <div class="cred">
 <h3 data-i18n>Parcours scientifique</h3>
@@ -149,13 +149,13 @@ comments: false
 <div class="wrap prose">
 <p class="overline" data-i18n>Comprendre</p>
 <h2 data-i18n>La revue de Marion.</h2>
-<p class="lead" data-i18n>Des notes courtes, claires et sourcées, pour mieux comprendre les mécanismes avant de choisir une démarche. Lire pour comprendre — pas pour convaincre.</p>
+<p class="lead" data-i18n>Des notes courtes, claires et sourcées, pour comprendre les mécanismes avant de choisir une démarche. Je ne cherche pas à vous convaincre, mais à vous faire comprendre.</p>
 </div>
 <div class="wrap articles">
 <article class="article">
 <p class="article-tag" data-i18n>Hypnose</p>
 <h3 data-i18n>Hypnose : que dit réellement la recherche&nbsp;?</h3>
-<p data-i18n>Ce que les méta-analyses montrent, ce qu’elles ne montrent pas, et où se trouvent les limites honnêtes de la méthode.</p>
+<p data-i18n>Ce que les méta-analyses montrent, ce qu’elles ne montrent pas, et où la méthode a ses limites.</p>
 <a href="{{ site.baseurl }}/revue/hypnoscience/" class="link-quiet" data-i18n>Lire →</a>
 </article>
 <article class="article">
@@ -232,23 +232,23 @@ comments: false
 <div class="wrap faq-list">
 <details class="faq-item" open>
 <summary data-i18n>L’hypnose a-t-elle une base scientifique&nbsp;?</summary>
-<p data-i18n>Oui — à des degrés. Des méta-analyses soutiennent son usage pour la gestion de certaines douleurs, le stress et certains aspects du sommeil. D’autres domaines font l’objet de recherches moins abouties. Je vous indique, pour chaque piste, ce que les données disent — et où elles s’arrêtent.</p>
+<p data-i18n>Oui, à des degrés. Pour certaines douleurs, le stress et certains aspects du sommeil, des méta-analyses soutiennent son usage. Ailleurs, la recherche est moins avancée. Pour chaque piste, je vous dis ce que les données indiquent et où elles s’arrêtent.</p>
 </details>
 <details class="faq-item">
 <summary data-i18n>Comment se déroule une séance&nbsp;?</summary>
-<p data-i18n>Elle commence par un échange sur ce qui vous amène, puis des objectifs communs. L’hypnose en elle-même est un état naturel d’attention focalisée — vous ne «&nbsp;perdez pas le contrôle&nbsp;», et vous en sortez avec des outils concrets. Une séance dure de 60 à 75 minutes.</p>
+<p data-i18n>La séance commence par un échange sur ce qui vous amène, puis nous fixons des objectifs ensemble. L’hypnose est un état naturel d’attention focalisée : vous ne perdez pas le contrôle. Vous en sortez avec des outils concrets. Elle dure 60 à 75 minutes.</p>
 </details>
 <details class="faq-item">
 <summary data-i18n>Est-ce pour moi&nbsp;?</summary>
-<p data-i18n>Si vous cherchez une réponse unique et définitive, probablement pas. Si vous cherchez un accompagnement structuré, où l’on explique, où l’on mesure, et où votre expérience est prise sérieusement — probablement oui. Un appel découverte de 15 minutes suffit pour s’en assurer ensemble.</p>
+<p data-i18n>Si vous cherchez une réponse unique et définitive, probablement pas. Si vous cherchez un accompagnement structuré, où l’on explique, où l’on mesure et où votre expérience est prise au sérieux, probablement oui. Un appel découverte de 15 minutes suffit pour s’en assurer ensemble.</p>
 </details>
 <details class="faq-item">
 <summary data-i18n>Peut-on travailler à distance&nbsp;?</summary>
-<p data-i18n>Oui. Un grand nombre de séances se déroulent par visioconférence, y compris depuis la Colombie-Britannique. La qualité du travail ne dépend pas de la salle — elle dépend de la relation et du cadre, et nous les maintenons tous deux à distance.</p>
+<p data-i18n>Oui. Beaucoup de séances se déroulent par visioconférence, y compris depuis la Colombie-Britannique. Je ne crois pas que la qualité dépende de la salle : elle dépend de la relation et du cadre.</p>
 </details>
 <details class="faq-item">
 <summary data-i18n>Qu’est-ce que la «&nbsp;santé intégrative&nbsp;» précisément&nbsp;?</summary>
-<p data-i18n>Une démarche qui met en relation plusieurs niveaux de l’expérience — corps, psychologie, habitudes, contexte — et qui s’appuie sur les données disponibles. Elle se distingue de la médecine conventionnelle par son regard sur l’ensemble de la personne — et de l’approche «&nbsp;wellness&nbsp;» par son exigence de preuves. J’aime cette position : celle du centre.</p>
+<p data-i18n>Elle se distingue de la médecine conventionnelle, qui tient moins compte de l’ensemble de la personne, et du «&nbsp;wellness&nbsp;», qui demande peu de preuves. Je la trouve plus utile que les deux.</p>
 </details>
 </div>
 </section>
@@ -259,9 +259,9 @@ comments: false
 <div class="rdv-left">
 <p class="overline light" data-i18n>Premier pas</p>
 <h2 data-i18n>Un appel découverte, de 15 minutes.</h2>
-<p data-i18n>Le premier pas, c’est une simple conversation. On fait le point sur ce qui vous amène, sur ce que vous attendez, et — le cas échéant — sur les options qui ont un sens. Sans engagement, et sans script.</p>
+<p data-i18n>Le premier pas est une conversation simple. Nous faisons le point sur ce qui vous amène, ce que vous attendez, les options qui ont un sens. Vous ne vous engagez à rien.</p>
 <ul class="rdv-info">
-<li data-i18n><strong>Modalité</strong><br>En visioconférence — l'accompagnement complet, depuis le confort de votre foyer</li>
+<li data-i18n><strong>Modalité</strong><br>En visioconférence : l'accompagnement complet, depuis le confort de votre foyer</li>
 </ul>
 </div>
 <form class="rdv-form" id="contactForm" data-formaction="mailto:bonjour@marion-cabin.ca" novalidate>
@@ -288,8 +288,8 @@ comments: false
 </a>
 </p>
 </noscript>
-<p class="fine light" data-i18n>Vos informations restent confidentielles — jamais partagées, jamais transmises à des tiers.</p>
-<p class="form-note" id="formNote" hidden data-i18n>Votre message s’ouvre dans votre application e-mail (objet et contenu pré-remplis). Il vous suffit de cliquer sur «&nbsp;Envoyer&nbsp;» — une réponse arrive sous 24&nbsp;h ouvrées.</p>
+<p class="fine light" data-i18n>Vos informations restent confidentielles. Elles ne seront jamais partagées ni transmises à des tiers.</p>
+<p class="form-note" id="formNote" hidden data-i18n>Votre message s’ouvre dans votre application e-mail, objet et contenu prêts. Il ne reste qu’à cliquer sur «&nbsp;Envoyer&nbsp;». Je réponds sous 24&nbsp;h ouvrées.</p>
 </form>
 </div>
 </section>

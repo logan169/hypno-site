@@ -107,7 +107,7 @@ LinkedIn
 </article>
 <article class="proj-item">
 <p class="proj-role">Science des données &amp; IA <small>Agent d'exploration de données à base de LLM</small></p>
-<p class="proj-detail">Conception d'outils d'analyse comportementale — visualisation, détection de signaux faibles, aide à la décision pour les chercheurs. La rigueur méthodologique que ces projets exigent est la même que j'essaie d'appliquer en clinique : des indicateurs clairs, pas des impressions.</p>
+<p class="proj-detail">Conception d'outils d'analyse comportementale — visualisation, détection de signaux faibles, aide à la décision pour les chercheurs. La rigueur méthodologique que ces projets exigent est la même que j'essaie d'appliquer en clinique : je préfère un indicateur concret qu'une impression.</p>
 </article>
 </div>
 </div>

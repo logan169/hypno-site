@@ -60,24 +60,24 @@
     'Tension, pain, physical discomfort', 'Hormonal shifts, perimenopause',
     'A difficult relationship with your body', 'Life changes that upset your balance',
     'The need, simply, to regain a sense of balance',                              // 8 signals
-    'I work with you through an approach that considers health as a whole — physiology, nervous system, emotional experience and life context. No magic promises: proven tools, applied to your story.', // pull
+    'I work to see you whole: physiology, nervous system, life as it is lived, context. I don’t make promises I can’t keep. We put tools to work on your situation.', // pull
     'What I offer',                                                                // pillars overline
     'Three dimensions of a single approach.',                                      // h2
-    'These aren’t three services side by side. One way of thinking about health, seen from three complementary angles.', // lead
+    'These aren’t three separate services. It’s one way of thinking about health, seen from three angles.', // lead
     '<span class="pillar-num">01</span> Hypnosis',
-    'Understanding the role of the unconscious, of habits, of emotions and of the nervous system in your daily experience. Hypnosis as a precise therapeutic tool — neither mystery nor spectacle.',
+    'Understanding what your unconscious, your habits, your emotions and your nervous system do in everyday life. Hypnosis is one tool among others, and I present it that way.',
     'Discover hypnosis →',
     '<span class="pillar-num">02</span> Women’s health',
     'Particular attention to the physiological and psychological realities that shape women’s lives — cycle, fertility, perimenopause, relationship with the body — with precise language, never decorative.',
     'Discover the support →',
     '<span class="pillar-num">03</span> Integrative health',
-    'Bringing together body, psychology, lifestyle and research findings into coherent recommendations. You know the why, not just the how.',
+    'I connect body, psychology, lifestyle habits and research findings. Every recommendation comes with its reason, not just the prescription.',
     'Understand my approach →',
-    'Note: each working avenue is presented with its level of evidence — including what the literature does not yet allow us to claim.', // fine
+    'For each avenue, I tell you the level of evidence. When the literature doesn’t support a claim, I flag it rather than act as if it did.', // fine
     'How I work',                                                                  // approche overline
     'A human, rigorous, integrative approach.',                                    // h2
     'Grounded in knowledge', 'The tools I offer rely, whenever possible, on the available evidence and its level of proof. When the literature is limited, I tell you.',
-    'Centre on the person', 'Research gives reference points. Your story, your body and your experience remain unique — and take precedence over the manual.',
+    'Centre on the person', 'Research gives reference points. When your story, your body and your experience don’t match the manual, your story wins.',
     'Body and mind in interaction', 'Stress, sleep, hormones, emotions and physical health constantly interact. Treating them in isolation is refusing to see the whole picture.', // 3 principes
     'About', 'Hello, I’m Marion.',                                                 // apropos
     'Hypnotherapist and integrative health practitioner in Vancouver. My path crosses research and clinical work — and it is precisely that meeting I want to pass on to you&nbsp;:',
@@ -106,9 +106,9 @@
     'Can we work remotely?',
     'Yes. Many sessions happen by video call, including from British Columbia. Quality doesn’t depend on the room — it depends on the relationship and the framework, and we keep both intact at a distance.',
     'What exactly is “integrative health”?',
-    'An approach that connects several levels of experience — body, psychology, habits, context — and relies on the available evidence. It differs from conventional medicine in its view of the whole person — and from the “wellness” approach by its demand for proof. I like this position: the centre.', // 5 Q/R
+    'An approach that connects several levels of experience — body, psychology, habits, context. It sits apart from conventional medicine, which attends less to the whole person, and from the “wellness” approach, which asks for little evidence. I find it more useful than either.', // 5 Q/R
     'First step', 'A discovery call, 15 minutes.',                                 // rdv
-    'The first step is a simple conversation. We take stock of what brings you, what you expect, and — where relevant — the options that make sense. No commitment, no script.',
+    'The first step is an ordinary conversation. We take stock of what brings you, what you expect, and the options that make sense. You’re not committing to anything.',
     '<strong>Format</strong><br>By video call — full support, from the comfort of your home',
     'Name', 'Email', 'What brings you in',                                         // form labels
     'Choose…', 'Hypnosis, stress or sleep', 'Women’s health', 'Integrative health', 'Other / I’d rather discuss on a call', // options

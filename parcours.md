@@ -29,13 +29,13 @@ Site professionnel
 </svg>
 LinkedIn
 </a>
-<span class="pc-socials-note">Écrits, projets &amp; publications — <a href="{{ site.baseurl }}/ecrits/">tout voir</a></span>
+<span class="pc-socials-note">Écrits, projets &amp; publications : <a href="{{ site.baseurl }}/ecrits/">tout voir</a></span>
 </div>
 </div><!-- /.pc-portrait-col -->
 <div class="pc-body">
 <p class="overline">À propos — parcours, pratique, lecture</p>
 <h1>Bonjour, je suis Marion.</h1>
-<p class="pc-lede">Cognitiviste de formation, chercheuse en neurosciences et en santé des femmes, et hypnothérapeute clinicienne en pratique à Vancouver. Mon travail relie les recherches sur la cognition, la régulation émotionnelle et la santé des femmes à la clinique quotidienne — en gardant toujours ce que les données permettent d'affirmer, et d'en indiquer l'horizon.</p>
+<p class="pc-lede">Cognitiviste de formation, chercheuse en neurosciences et en santé des femmes, et hypnothérapeute clinicienne en pratique à Vancouver. Mon travail relie les recherches sur la cognition, la régulation émotionnelle et la santé des femmes à la clinique quotidienne. Là, j’aime ce que les données montrent, et je signale quand elles n’ont rien à dire.</p>
 <p class="pc-sub">Je crois à une santé fondée sur deux piliers égaux : la science (méta-analyses, études contrôlées, physiologie documentée) et la réflexion clinique dans l'écoute. Ce que je propose n'est ni l'un ni l'autre mais leur intersection : comprendre à partir des données disponibles, puis appliquer à la situation unique de chaque personne.</p>
 <div class="pc-ctas">
 <a class="btn btn-primary" href="{{ site.baseurl }}/#rendezvous">Prendre rendez-vous</a>
@@ -65,7 +65,7 @@ LinkedIn
 <span class="pc-tl-year">Chercheuse — neurosciences cognitives</span>
 <div>
 <p class="pc-tl-role">Étude longitudinale, NIH — Vancouver <small>Recherche en régulation émotionnelle et sommeil</small></p>
-<p class="pc-tl-detail">Participation à des études longitudinales financées par les NIH — visualisation de données, génération d'insights, analyse comportementale. Ces années m'ont appris à lire ce que les données permettent d'affirmer — et où elles s'arrêtent.</p>
+<p class="pc-tl-detail">Participation à des études longitudinales financées par les NIH — visualisation de données, génération d'insights, analyse comportementale. C'est dans ce travail que j'ai appris à distinguer ce que les données établissent de ce qu'inférer serait aller trop loin.</p>
 </div>
 </article>
 <article class="pc-tl-item">
@@ -86,7 +86,7 @@ LinkedIn
 <span class="pc-tl-year">Projets — recherche &amp; données</span>
 <div>
 <p class="pc-tl-role">Trois directions qui nourrissent la clinique <small>RAG santé des femmes · Agent LLM · Études NIH</small></p>
-<p class="pc-tl-detail">La rigueur méthodologique des projets que je conçois est la même que j'essaie d'appliquer en clinique : des indicateurs clairs, pas des impressions. <a href="{{ site.baseurl }}/ecrits/#projets">Les voir sur la page « Écrits »</a>.</p>
+<p class="pc-tl-detail">La rigueur méthodologique des projets que je conçois est la même que j'essaie d'appliquer en clinique : je préfère un indicateur concret qu'une impression. <a href="{{ site.baseurl }}/ecrits/#projets">Les voir sur la page « Écrits »</a>.</p>
 </div>
 </article>
 </div>
@@ -99,7 +99,7 @@ LinkedIn
 <div class="pc-section-head">
 <span class="overline">Champs d'exploration</span>
 <h2>Des questions qui traversent mon travail.</h2>
-<p class="lede">Quatre entrées — la santé des femmes, la cognition et le sommeil, le changement de comportement, la recherche en santé — que je crois imbriquées dans la même question : comment aider une personne à faire un choix qu'elle pourra comprendre et reprendre en mains elle-même ?</p>
+<p class="lede">Quatre entrées — la santé des femmes, la cognition et le sommeil, le changement de comportement, la recherche en santé — qui, d'après moi, tournent autour de la même question : comment aider une personne à faire un choix qu'elle pourra comprendre et reprendre en mains elle-même&nbsp;?</p>
 </div>
 <div class="creds">
 <div class="cred-card">
@@ -150,7 +150,7 @@ Ici, un simple bloc CTA pour y accéder sans encombrer cette page. -->
 <div class="wrap prose" style="max-width:60ch">
 <span class="overline">À lire</span>
 <h2 style="margin-top:.7rem">Mes écrits &amp; projets.</h2>
-<p class="lead">Quatre articles en cours de lecture (santé des femmes, cognition &amp; sommeil, douleur, approche intégrative) et trois directions de travail qui nourrissent la pratique clinicienne. Tout est regroupé sur une page dédiée — lisible, sans accumulation.</p>
+<p class="lead">Quatre articles en cours de lecture (santé des femmes, cognition &amp; sommeil, douleur, approche intégrative) et trois directions de travail qui nourrissent la pratique clinicienne. Tout est regroupé sur la page dédiée.</p>
 <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem">
 <a class="btn btn-primary" href="{{ site.baseurl }}/ecrits/">Voir mes écrits &amp; projets</a>
 </div>
@@ -162,7 +162,7 @@ Ici, un simple bloc CTA pour y accéder sans encombrer cette page. -->
 <div class="wrap prose" style="max-width:60ch">
 <span class="overline">En pratique</span>
 <h2 style="margin-top:.7rem">Comment je l'applique.</h2>
-<p class="lead">Ce que je propose n’est pas du bien-être générique, et pas non plus un protocole. C'est une pratique qui se construit séance après séance : un échange long, des objectifs clairs, des mesures de progression qui permettent de vérifier que l'on avance — et des points de vigilance. L'approche est détaillée sur la page d'accueil — <a href="{{ site.baseurl }}/#approche">lisez-la ici</a> — avant d'en discuter ensemble.</p>
+<p class="lead">Ce que je propose n'est pas du bien-être générique, et pas non plus un protocole. C'est une pratique qui se construit séance après séance : un échange long, des objectifs, des mesures qui permettent de voir où l'on en est, et des points de vigilance. L'approche est détaillée sur la page d'accueil — <a href="{{ site.baseurl }}/#approche">là</a> — avant d'en discuter ensemble.</p>
 <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem">
 <a class="btn btn-primary" href="{{ site.baseurl }}/#rendezvous">Prendre un appel découverte</a>
 <a class="btn btn-outline" href="{{ site.baseurl }}/#apropos">Retour à la section À propos</a>
