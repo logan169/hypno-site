@@ -1,5 +1,3 @@
-<!-- Scripts : notre main.js (nav, thème, langue, formulaire) + jQuery/StaticMan si commentaires -->
+<!-- Scripts : notre main.js (nav, thème, menu, formulaire, reveal).
+     Les commentaires des revues sont gérés par fetch natif dans le layout. -->
 <script src="{{ site.baseurl }}/assets/js/main.js"></script>
-{% if page.comments and site.comments.provider == 'staticman_v2' %}
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0yovtbSDIefPHr80fLw=" crossorigin="anonymous"></script>
-{% endif %}

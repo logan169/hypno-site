@@ -1,14 +1,14 @@
 ---
 # Layout « revue » — articles de La revue de Marion.
-# Le design (revue.css) appliqué via body class, StaticMan en bas de page,
-# liste des « autres notes » générée automatiquement depuis la collection.
+# Ordre : article (sources + « En résumé ») → « Autres notes » + bouton RETOUR
+# rempli (dedans la colonne, sous les liens) → COMMENTAIRES → footer de site.
+# Le formulaire de commentaires est le nôtre (fetch, sans jQuery/MM brut).
 ---
 <!DOCTYPE html>
 <html lang="fr">
   {% include head.html %}
   <body class="revue">
     {% include masthead.html scope="revue" %}
-    <a class="btn btn-outline btn-back" href="{{ site.baseurl }}/#accueil" aria-label="Retour à l’accueil">← Accueil</a>
     <main id="main" class="revue-main">
       <article class="revue-article">
         {% if page.overline %}<p class="overline">{{ page.overline }}</p>{% endif %}
@@ -27,17 +27,89 @@
             {% endunless %}
           {% endfor %}
         </ul>
+        <a class="btn btn-primary btn-back" href="{{ site.baseurl }}/#accueil" aria-label="Retour à l’accueil">← Retour à l’accueil</a>
       </aside>
     </main>
 
+    {% if page.comments and site.comments.provider == 'staticman_v2' %}
+    <section class="revue-comments" aria-label="Commentaires">
+      <h2 class="revue-comments-h">Laisser un commentaire</h2>
+
+      {% if site.data.comments[page.slug] %}
+      <div class="rv-list">
+        {% assign commentObjects = '' | split: '' %}
+        {% for c in site.data.comments[page.slug] %}
+          {% assign commentObjects = commentObjects | push: c[1] %}
+        {% endfor %}
+        {% for co in commentObjects | sort: "date" %}
+        <div class="rv-item">
+          <p class="rv-item-head"><span class="rv-item-name">{{ co.name }}</span> · <time class="rv-item-date">{{ co.date | date: "%d %B %Y" }}</time></p>
+          <div class="rv-item-body">{{ co.message | markdownify }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <form id="new_comment" class="rv-form" method="post"
+            action="{{ site.comments.staticman.endpoint }}{{ site.repository }}/{{ site.comments.staticman.branch }}/comments" novalidate>
+        <div class="rv-field">
+          <label for="rv-message">Votre commentaire <span aria-hidden="true">*</span></label>
+          <textarea id="rv-message" name="fields[message]" rows="4" required
+            placeholder="Ce que cette note a déclenché chez vous, une question, une expérience…"></textarea>
+        </div>
+        <div class="rv-row">
+          <div class="rv-field">
+            <label for="rv-name">Prénom <span aria-hidden="true">*</span></label>
+            <input type="text" id="rv-name" name="fields[name]" required autocomplete="given-name">
+          </div>
+          <div class="rv-field">
+            <label for="rv-email">Email (jamais publié) <span aria-hidden="true">*</span></label>
+            <input type="email" id="rv-email" name="fields[email]" required autocomplete="email">
+          </div>
+        </div>
+        <p class="rv-fine">Votre adresse ne sera jamais affichée. Elle sert uniquement à vous répondre si j’ai une question.</p>
+        <p class="rv-notice" role="status" hidden></p>
+        <button type="submit" class="btn btn-primary">Envoyer mon commentaire</button>
+      </form>
+
+      <script>
+        (function () {
+          var f = document.getElementById('new_comment');
+          if (!f) return;
+          var btn = f.querySelector('button[type="submit"]');
+          var notice = f.querySelector('.rv-notice');
+          function say(msg, ok) {
+            notice.hidden = false;
+            notice.textContent = msg;
+            notice.classList.add(ok ? 'ok' : 'err');
+          }
+          f.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!f.checkValidity()) { f.reportValidity(); return; }
+            btn.disabled = true; btn.textContent = 'Envoi en cours…';
+            var body = new URLSearchParams(new FormData(f)).toString();
+            fetch(f.action, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+              body: body
+            })
+            .then(function (r) { if (!r.ok) { throw new Error(r.status); } })
+            .then(function () {
+              f.reset();
+              btn.textContent = 'Merci !';
+              say('Merci — votre commentaire sera publié dès sa relecture.', true);
+            })
+            .catch(function () {
+              btn.disabled = false; btn.textContent = 'Envoyer mon commentaire';
+              say('L’envoi a échoué. Réessayez, ou écrivez-moi à bonjour@marion-cabin.ca.', false);
+            });
+          });
+        })();
+      </script>
+    </section>
+    {% endif %}
+
     {% include footer.html %}
     {% include scripts.html %}
-
-    {% if page.comments and site.comments.provider == 'staticman_v2' %}
-      <section class="revue-comments" itemscope itemtype="https://schema.org/CommentPage">
-        <h2 class="revue-comments-h" itemprop="name">Commentaires</h2>
-        {% include comments.html %}
-      </section>
-    {% endif %}
   </body>
 </html>

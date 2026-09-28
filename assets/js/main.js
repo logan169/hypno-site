@@ -50,7 +50,7 @@
     'Signals', 'Pillars', 'Approach', 'About', 'Understand', 'FAQ', 'Book an appointment',   // mobile menu (7)
     'Clinical hypnotherapy — online: Vancouver & B.C., Québec, across Canada · France soon',            // hero overline
     'Body and mind,<br>in dialogue.',                                              // h1
-    'An integrative approach to women’s health, where therapeutic hypnosis is grounded in science rather than clichés.', // hero-sub
+    'An integrative approach to women’s health: therapeutic hypnosis used as a precise tool, grounded in what can be verified.', // hero-sub
     'Hypnotherapeutic&nbsp;·&nbsp;Women’s health&nbsp;·&nbsp;Integrative approach',          // hero-meta
     'Book an appointment',                                                                // hero CTA (C53 : primaire retirée — plus qu'une seule ligne)
     'You may be here because…',                                                    // signals overline
@@ -63,7 +63,7 @@
     'I work with you through an approach that considers health as a whole — physiology, nervous system, emotional experience and life context. No magic promises: proven tools, applied to your story.', // pull
     'What I offer',                                                                // pillars overline
     'Three dimensions of a single approach.',                                      // h2
-    'These aren’t three services side by side. It’s one way of thinking about health — seen from three complementary angles.', // lead
+    'These aren’t three services side by side. One way of thinking about health, seen from three complementary angles.', // lead
     '<span class="pillar-num">01</span> Hypnosis',
     'Understanding the role of the unconscious, of habits, of emotions and of the nervous system in your daily experience. Hypnosis as a precise therapeutic tool — neither mystery nor spectacle.',
     'Discover hypnosis →',

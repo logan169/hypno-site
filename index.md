@@ -22,7 +22,7 @@ comments: false
 <div class="hero-text">
 <p class="overline" data-i18n>Hypnothérapie clinique — en visioconférence : Vancouver et C.-B., Québec, partout au Canada · France bientôt</p>
 <h1 data-i18n>Le corps et l’esprit,<br>en dialogue.</h1>
-<p class="hero-sub" data-i18n>Une approche intégrative de la santé des femmes, où l’hypnose thérapeutique s’appuie sur la science plutôt que sur les clichés.</p>
+<p class="hero-sub" data-i18n>Une approche intégrative de la santé des femmes : l’hypnose y est utilisée comme un outil thérapeutique, adossée à ce qui est vérifiable.</p>
 <p class="hero-meta" data-i18n>Hypnose thérapeutique&nbsp;·&nbsp;Santé des femmes&nbsp;·&nbsp;Approche intégrative</p>
 <div class="hero-ctas">
 <!-- C53 : le bouton primaire « Découvrir mon approche » a été retiré à la demande du client.
@@ -60,7 +60,7 @@ comments: false
 <div class="wrap prose">
 <p class="overline" data-i18n>Ce que je propose</p>
 <h2 data-i18n>Trois dimensions d’une même approche.</h2>
-<p class="lead" data-i18n>Ce ne sont pas trois services côte à côte. C’est une même manière de penser la santé — vue de trois angles complémentaires.</p>
+<p class="lead" data-i18n>Ce ne sont pas trois services côte à côte. Une même manière de penser la santé, vue de trois angles complémentaires.</p>
 </div>
 <div class="wrap pillars">
 <article class="pillar">

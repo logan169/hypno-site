@@ -162,7 +162,7 @@ Ici, un simple bloc CTA pour y accéder sans encombrer cette page. -->
 <div class="wrap prose" style="max-width:60ch">
 <span class="overline">En pratique</span>
 <h2 style="margin-top:.7rem">Comment je l'applique.</h2>
-<p class="lead">Ce que je propose n'est ni bien-être générique ni protocole. C'est une pratique qui se construit séance après séance : un échange long, des objectifs clairs, des mesures de progression qui permettent de vérifier que l'on avance — et des points de vigilance. L'approche est détaillée sur la page d'accueil — <a href="{{ site.baseurl }}/#approche">lisez-la ici</a> — avant d'en discuter ensemble.</p>
+<p class="lead">Ce que je propose n’est pas du bien-être générique, et pas non plus un protocole. C'est une pratique qui se construit séance après séance : un échange long, des objectifs clairs, des mesures de progression qui permettent de vérifier que l'on avance — et des points de vigilance. L'approche est détaillée sur la page d'accueil — <a href="{{ site.baseurl }}/#approche">lisez-la ici</a> — avant d'en discuter ensemble.</p>
 <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem">
 <a class="btn btn-primary" href="{{ site.baseurl }}/#rendezvous">Prendre un appel découverte</a>
 <a class="btn btn-outline" href="{{ site.baseurl }}/#apropos">Retour à la section À propos</a>

@@ -128,6 +128,9 @@ body{
   transition:background .35s ease,color .35s ease;
 }
 img{display:block;max-width:100%;height:auto}
+/* Sécurité mobile : aucun élément ne doit créer un défilement horizontal */
+html{overflow-x:clip}
+@supports not (overflow:clip){html{overflow-x:hidden}}
 a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
 h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
@@ -607,6 +610,13 @@ html.fx-fade .fade.visible,html.fx-fade .fade .reveal.visible{opacity:1;transfor
   .signals-grid{grid-template-columns:repeat(2,1fr)}
   .articles{grid-template-columns:repeat(2,1fr)}
   .pillars{grid-template-columns:repeat(3,1fr);gap:1.1rem}
+}
+/* ── NAV : on repasse en menu burger dès 940px (au-delà, les 7 liens + CTA + tools ne tiennent plus). ── */
+@media (max-width:940px){
+  .nav-links{display:none}
+  .nav-burger{display:block}
+  .nav-tools{gap:.4rem}
+  .tool-btn{min-width:36px;height:36px}
 }
 @media (max-width:860px){
   .nav-links{display:none}
