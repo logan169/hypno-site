@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Mon parcours. Marion · Hypnose · Santé des femmes · Intégrative'
+title: 'Mon parcours'
 excerpt: 'Marion Fechino, parcours scientifique, recherche (NIH, cognition, sommeil), hypnothérapie, santé des femmes, santé intégrative. Vancouver, C.-B.'
 permalink: /parcours/
 comments: false
@@ -33,10 +33,9 @@ LinkedIn
 </div>
 </div><!-- /.pc-portrait-col -->
 <div class="pc-body">
-<p class="overline">À propos, parcours, pratique, lecture</p>
-<h1>Bonjour, je suis Marion Fechino.</h1>
-<p class="pc-lede">Cognitiviste de formation, chercheuse en neurosciences et en santé des femmes, et hypnothérapeute clinicienne en pratique à Vancouver. Mon travail relie les recherches sur la cognition, la régulation émotionnelle et la santé des femmes à la clinique quotidienne. Là, j’aime ce que les données montrent, et je signale quand elles n’ont rien à dire.</p>
-<p class="pc-sub">Je crois à une santé fondée sur deux piliers égaux : la science (méta-analyses, études contrôlées, physiologie documentée) et la réflexion clinique dans l'écoute. Ce que je propose n'est ni l'un ni l'autre mais leur intersection : comprendre à partir des données disponibles, puis appliquer à la situation unique de chaque personne.</p>
+<p class="overline">Parcours</p>
+<h1>De la recherche à la clinique.</h1>
+<p class="pc-lede">Cognitiviste de formation, chercheuse en neurosciences et en santé des femmes, et hypnothérapeute clinicienne en pratique à Vancouver. Trois étapes, un fil : la recherche en neurosciences et en santé des femmes, la formation clinicienne, puis la pratique en Vancouver — où ce que les données établissent rejoint ce que j'écoute, séance après séance.</p>
 <div class="pc-ctas">
 <a class="btn btn-primary" href="{{ site.baseurl }}/#rendezvous">Prendre rendez-vous</a>
 <a class="btn btn-outline" href="#parcours">Lire mon parcours</a>
@@ -64,7 +63,7 @@ LinkedIn
 <article class="pc-tl-item">
 <span class="pc-tl-year">Chercheuse, neurosciences cognitives</span>
 <div>
-<p class="pc-tl-role">Étude longitudinale, NIH. Vancouver <small>Recherche en régulation émotionnelle et sommeil</small></p>
+<p class="pc-tl-role">Contribution data, étude longitudinale financée par les NIH <small>Recherche en régulation émotionnelle et sommeil · Vancouver</small></p>
 <p class="pc-tl-detail">Participation à des études longitudinales financées par les NIH, visualisation de données, génération d'insights, analyse comportementale. C'est dans ce travail que j'ai appris à distinguer ce que les données établissent de ce qu'inférer serait aller trop loin.</p>
 </div>
 </article>
@@ -76,10 +75,11 @@ LinkedIn
 </div>
 </article>
 <article class="pc-tl-item">
-<span class="pc-tl-year">Enseignement &amp; vulgarisation</span>
+<span class="pc-tl-year">Ateliers &amp; vulgarisation</span>
+
 <div>
-<p class="pc-tl-role">Publications, ateliers et vulgarisation <small>Psychologie, neurosciences cognitives, santé</small></p>
-<p class="pc-tl-detail">Des ateliers et publications sur la cognition, le sommeil, la régulation émotionnelle et le changement de comportement, souvent avec un lecteur non spécialiste. C'est ce travail qui a nourri ma façon d'écrire ici.</p>
+<p class="pc-tl-role">Ateliers, vulgarisation, écritures de synthèse <small>Cognition, sommeil, régulation émotionnelle, changement de comportement</small></p>
+<p class="pc-tl-detail">Des ateliers et des écritures de synthèse sur la cognition, le sommeil, la régulation émotionnelle et le changement de comportement, souvent pour un public non spécialiste. C'est ce travail qui a nourri ma façon d'écrire dans la revue.</p>
 </div>
 </article>
 <article class="pc-tl-item">
@@ -136,7 +136,7 @@ LinkedIn
 <h3>Traduire la science pour les cliniciens &amp; le public</h3>
 <ul>
 <li>Méta-analyses &amp; synthèses</li>
-<li>Publications &amp; vulgarisation</li>
+<li>Écritures de synthèse &amp; vulgarisation</li>
 <li>Études NIH, contribution data</li>
 </ul>
 </div>
@@ -165,7 +165,7 @@ Ici, un simple bloc CTA pour y accéder sans encombrer cette page. -->
 <p class="lead">Ce que je propose n'est pas du bien-être générique, et pas non plus un protocole. C'est une pratique qui se construit séance après séance : un échange long, des objectifs, des mesures qui permettent de voir où l'on en est, et des points de vigilance. L'approche est détaillée sur la page d'accueil, <a href="{{ site.baseurl }}/#approche">là</a>, avant d'en discuter ensemble.</p>
 <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem">
 <a class="btn btn-primary" href="{{ site.baseurl }}/#rendezvous">Prendre un appel découverte</a>
-<a class="btn btn-outline" href="{{ site.baseurl }}/#apropos">Retour à la section À propos</a>
+<a class="btn btn-outline" href="{{ site.baseurl }}/#apropos">Retour à l'à-propos</a>
 </div>
 </div>
 </section>
