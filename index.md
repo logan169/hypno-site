@@ -155,13 +155,13 @@ comments: false
 <article class="article">
 <p class="article-tag" data-i18n>Hypnose</p>
 <h3 data-i18n>Hypnose : que dit réellement la recherche&nbsp;?</h3>
-<p data-i18n>Ce que les méta-analyses montrent, ce qu’elles ne montrent pas, et où la méthode a ses limites.</p>
+<p data-i18n>Ce que vingt ans d'études soutiennent, ce qu'elles laissent en suspens. La distinction entre les deux change concrément comment j'utilise cet outil.</p>
 <a href="{{ site.baseurl }}/revue/hypnoscience/" class="link-quiet" data-i18n>Lire →</a>
 </article>
 <article class="article">
 <p class="article-tag" data-i18n>Santé des femmes</p>
 <h3 data-i18n>Périménopause : comprendre les changements du corps et du cerveau</h3>
-<p data-i18n>Hormones, sommeil, humeur — ce qui bouge réellement, et ce qu’on peut y faire avec des outils fondés.</p>
+<p data-i18n>Hormones, sommeil, humeur — ce qui bouge vraiment dans le corps pendant la périménopause. Des leviers qu'on peut mesurer.</p>
 <a href="{{ site.baseurl }}/revue/perimena/" class="link-quiet" data-i18n>Lire →</a>
 </article>
 <article class="article">
@@ -173,7 +173,7 @@ comments: false
 <article class="article">
 <p class="article-tag" data-i18n>Sommeil</p>
 <h3 data-i18n>Sommeil et santé hormonale</h3>
-<p data-i18n>Le lien bidirectionnel entre sommeil, cycle et hormones — et les leviers qui comptent vraiment.</p>
+<p data-i18n>Sommeil, cycle, hormones : comment ils s'influencent jour après jour, et quels leviers comptent.</p>
 <a href="{{ site.baseurl }}/revue/sommeil-hormones/" class="link-quiet" data-i18n>Lire →</a>
 </article>
 <article class="article">
@@ -185,7 +185,7 @@ comments: false
 <article class="article">
 <p class="article-tag" data-i18n>Intégratif</p>
 <h3 data-i18n>Santé intégrative : de quoi parle-t-on exactement&nbsp;?</h3>
-<p data-i18n>Décomposer le terme pour en distinguer ce qui est rigoureux de ce qui est marketing.</p>
+<p data-i18n>« Intégratif » couvre beaucoup de choses différentes selon qui l'utilise. Cette note précise où commence la science et où s'arrête la mode du moment.</p>
 <a href="{{ site.baseurl }}/revue/integratif/" class="link-quiet" data-i18n>Lire →</a>
 </article>
 </div>
@@ -232,7 +232,7 @@ comments: false
 <div class="wrap faq-list">
 <details class="faq-item" open>
 <summary data-i18n>L’hypnose a-t-elle une base scientifique&nbsp;?</summary>
-<p data-i18n>Oui, à des degrés. Pour certaines douleurs, le stress et certains aspects du sommeil, des méta-analyses soutiennent son usage. Ailleurs, la recherche est moins avancée. Pour chaque piste, je vous dis ce que les données indiquent et où elles s’arrêtent.</p>
+<p data-i18n>Pour chaque piste, je vous dis ce que les données indiquent et où elles s’arrêtent. Les témoignages de patientes parlent du sentiment d'avoir un plan clair à emporter — pas juste une explication.</p>
 </details>
 <details class="faq-item">
 <summary data-i18n>Comment se déroule une séance&nbsp;?</summary>
