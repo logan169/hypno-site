@@ -56,7 +56,7 @@ LinkedIn
 <div class="wrap">
 <div class="pc-section-head">
 <span class="overline">Parcours professionnel</span>
-<h2>De la recherche à la clinique.</h2>
+<h2>Chaque étape a préparé la suivante.</h2>
 <p class="lede">Mon cheminement croise la recherche sur la cognition et la régulation émotionnelle, la science des données et l'accompagnement clinique. C'est cette articulation que j'essaie de préserver dans mon travail au quotidien.</p>
 </div>
 <div class="pc-timeline">
