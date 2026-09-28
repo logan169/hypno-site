@@ -11,20 +11,21 @@ comments: true
 ---
 
 
-<p class="revue-preview-note"><strong>Note</strong> version courte, la suite, avec sources et références détaillées, est en rédaction.</p>
+<p class="revue-preview-note"><strong>Prémisse</strong>&nbsp;: note préliminaire, la version longue est en cours de rédaction, avec les études et les limites discutées une à une.</p>
 <section class="revue-section"><h2>Un état d’attention, pas une perte de contrôle</h2><p>Les travaux sur les bases neurophysiologiques de l’hypnose convergent sur un point : c’est un état naturel d’attention focalisée, associé à une plus grande réceptivité. L’imagerie cérébrale observe des variations d’activité dans des réseaux impliqués dans l’attention, le contrôle des impulsions et la perception. On n’observe pas « l’esprit qui s'éteint », on observe l’attention qui se reorganise. C’est cette reconfiguration, et non un supposé pouvoir de suggestion, qui explique pourquoi l’outil reste utile en clinique.</p></section>
 <section class="revue-section"><h2>Où les données sont les plus solides</h2><p>Les revues les plus fiables placent l’hypnose parmi les approches aux preuves les plus solides pour la gestion de certaines douleurs chroniques, l’anxiété de santé, et certains aspects du sommeil et de la fatigue. L’effet est modéré, de l’ordre de ce que l’on observe pour d’autres interventions non médicamenteuses, et il dépend fortement du contexte, de la relation et de la manière dont l’attention est guidée. Là où les études sont convergentes, je l’utilise en l’assumant comme un levier complémentaire, pas comme une réponse globale.</p></section>
 <section class="revue-section"><h2>Où je reste prudente</h2><p>D’autres domaines, le traitement de certaines phobies, la modification de comportements ancrés, la mémoire, font l’objet d'études moins abouties, ou de méthodologies discutées. Je ne présente pas ces possibilités comme démontrées. Quand une piste n’a qu’un niveau de preuve faible, je vous le dis, et nous choisissons ensemble si elle a tout de même un sens pour votre situation. C’est précisément cette honnêteté qui, à mes yeux, distingue une pratique sérieuse d’une promesse marketing.</p></section>
 <section class="revue-sources">
 <h2 class="revue-sources-h">Sources à consulter</h2>
-<p class="revue-sources-intro">Cette note s’appuie sur les références ci-dessous, où les données sont les plus accessibles. Elles montrent où la littérature converge, et où elle est encore en discussion.</p>
+<p class="revue-sources-intro">Les références ci-dessous sont celles que je cite le plus souvent en séance&nbsp;: deux méta-analyses sur l'effet analgésique de l'hypnose, et la synthèse NCCIH du NIH à jour. C'est par là que je vous oriente, si vous voulez creuser avant de choisir.</p>
 <ol class="revue-sources-list">
-<li>Milling LS, Kirsch IO, et al. Hypnotic treatment of chronic pain.. Revue des essais contrôlés sur l'analgésie hypnotique (PubMed).<br><a href="https://pubmed.ncbi.nlm.nih.gov/16404678/" target="_blank" rel="noopener">Référence directe&nbsp;→</a></li>
-<li>Montgomery G, DuHamel K, Redd WH. A meta-analysis of hypnotically induced analgesia: How effective is hypnosis? (2000)<br><a href="https://pubmed.ncbi.nlm.nih.gov/10769981/" target="_blank" rel="noopener">Référence directe&nbsp;→</a></li>
-<li>NCCIH (NIH). Hypnosis: What you need to know. Synthèse institutionnelle pour le grand public.<br><a href="https://www.nccih.nih.gov/health/hypnosis" target="_blank" rel="noopener">Référence directe&nbsp;→</a></li>
+<li>Milling LS, Kirsch IO, et al. Hypnotic treatment of chronic pain.. Revue des essais contrôlés sur l'analgésie hypnotique (PubMed).<br><a href="https://pubmed.ncbi.nlm.nih.gov/16404678/" target="_blank" rel="noopener">Texte intégral (Montgomery 2000)&nbsp;→</a></li>
+<li>Montgomery G, DuHamel K, Redd WH. A meta-analysis of hypnotically induced analgesia: How effective is hypnosis? (2000)<br><a href="https://pubmed.ncbi.nlm.nih.gov/10769981/" target="_blank" rel="noopener">Voir NCCIH&nbsp;→</a></li>
+<li>NCCIH (NIH). Hypnosis: What you need to know. Synthèse institutionnelle pour le grand public.<br><a href="https://www.nccih.nih.gov/health/hypnosis" target="_blank" rel="noopener">Consulter le texte&nbsp;→</a></li>
 </ol>
 </section><footer class="revue-close">
 <p class="revue-close-title">En résumé</p>
+<p class="revue-close-intro">Ma lecture&nbsp;: ce qui est soutenu par les études, je l'utilise en le disant&nbsp;; ce qui ne l'est pas, je vous le dis aussi.</p>
 <p class="revue-close-body">L’hypnose est un état d’attention mesurable, pas un mystère. La science soutient son utilité dans certains domaines (douleur, anxiété, sommeil) et reste prudente ailleurs. Indiquer ce qui est soutenu, et ce qui ne l'est pas, c'est ça la honnêteté.</p>
 </footer>
 

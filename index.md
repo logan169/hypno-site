@@ -153,7 +153,7 @@ comments: false
 <article class="article">
 <p class="article-tag" data-i18n>Hypnose</p>
 <h3 data-i18n>Hypnose : que dit réellement la recherche&nbsp;?</h3>
-<p data-i18n>Ce que vingt ans d'études soutiennent, ce qu'elles laissent en suspens. La distinction entre les deux change concrément comment j'utilise cet outil.</p>
+<p data-i18n>Ce que vingt ans d'études soutiennent, ce qu'elles laissent en suspens. La distinction entre les deux concrètement change comment j'utilise cet outil.</p>
 <a href="{{ site.baseurl }}/revue/hypnoscience/" class="link-quiet" data-i18n>Lire →</a>
 </article>
 <article class="article">
