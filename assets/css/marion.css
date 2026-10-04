@@ -27,7 +27,7 @@
   --dark-ink:var(--ivoire);
 
   /* Tints */
-  --ink-88:rgba(48,47,43,.88); --ink-80:rgba(48,47,43,.80);
+  --ink-88:rgba(48,47,43,.88); --ink-80:rgba(48,47,43,.80);--ink-05:rgba(48,47,43,.05); --ink-10:rgba(48,47,43,.10); --ink-20:rgba(48,47,43,.20); --ink-66:rgba(48,47,43,.66); --ink-75:rgba(48,47,43,.75); --ink-78:rgba(48,47,43,.78); --ink-82:rgba(48,47,43,.82); 
   --ink-72:rgba(48,47,43,.72); --ink-65:rgba(48,47,43,.65);
   --ink-50:rgba(48,47,43,.50); --ink-35:rgba(48,47,43,.35);
   --paper-75:rgba(245,241,233,.75); --paper-66:rgba(245,241,233,.66);
@@ -59,6 +59,11 @@
   --ligne:rgba(245,241,233,.10);
   --ombre:0 24px 48px -16px rgba(0,0,0,.45);
   --ombre-sm:0 8px 20px -10px rgba(0,0,0,.3);
+  --ink-05:rgba(245,241,233,.05); --ink-10:rgba(245,241,233,.10); --ink-20:rgba(245,241,233,.20);
+  --ink-35:rgba(245,241,233,.35); --ink-50:rgba(245,241,233,.50); --ink-65:rgba(245,241,233,.65);
+  --ink-66:rgba(245,241,233,.66); --ink-72:rgba(245,241,233,.72); --ink-75:rgba(245,241,233,.75);
+  --ink-78:rgba(245,241,233,.78); --ink-80:rgba(245,241,233,.80); --ink-82:rgba(245,241,233,.82);
+  --ink-88:rgba(245,241,233,.88);
 }
 
 /* ── Reset ── */
@@ -73,7 +78,7 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.14;letter-spacing:-.03em;color:var(--ink)}
 h2{font-size:clamp(2rem,3.4vw,2.85rem);margin-top:.15em}
 h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-top:.35em}
-.prose h2{max-width:2.5ch;letter-spacing:-.04em;text-wrap:pretty}
+.prose h2{letter-spacing:-.04em;text-wrap:pretty;max-width:22ch}
 
 ::selection{background:var(--sauge-pale);color:var(--ink)}
 
