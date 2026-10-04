@@ -51,11 +51,11 @@
   --ligne-foret:rgba(245,241,233,.22);
   --nav-bg:rgba(245,241,233,.85);
   --ombre:0 18px 40px -24px rgba(48,47,43,.28);
-  --transition:300ms cubic-bezier(.3,.7,.3,1);
+  --transition:300ms cubic-bezier(.26,.78,.31,1);
 
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Inter',-apple-system,'Segoe UI',sans-serif;
-  --ease:cubic-bezier(.22,.8,.28,1);
+  --ease:cubic-bezier(.26,.78,.31,1);
   --rayon:12px;
   --rayon-btn:8px;
   --rayon-card:14px;
@@ -91,7 +91,7 @@
 [data-theme="dark"] ::selection{background:var(--forest);color:var(--bg)}
 [data-theme="dark"] .hero-media img{filter:brightness(.72) saturate(.82) contrast(1.03)}
 [data-theme="dark"] .hero-veil{
-  background:linear-gradient(100deg,rgba(32,36,31,.97) 0 32%,rgba(32,36,31,.87) 47%,rgba(32,36,31,.45) 68%,rgba(18,21,18,.62) 100%);
+  background:linear-gradient(0deg,rgba(32,36,31,.62) 0%,rgba(32,36,31,.14) 45%,rgba(32,36,31,0) 72%);
 }
 /* R3 : .section-foret (dark) corrige — le token était --foret-deep (inexistant)
    → declaration invalide. Utilise le vrai --forest-deep. */
@@ -120,7 +120,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;
   scroll-padding-top:92px}
 body{
   font-family:var(--sans);
-  font-size:16px;line-height:1.7;
+  font-size:16px;line-height:1.84;
   color:var(--ink);
   background:var(--bg);
   font-feature-settings:'kern';
@@ -132,13 +132,13 @@ img{display:block;max-width:100%;height:auto}
 html{overflow-x:clip}
 @supports not (overflow:clip){html{overflow-x:hidden}}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.022em}
 h2{font-size:clamp(1.8rem,3.2vw,2.6rem)}
 h3{font-size:1.5rem;font-weight:500;line-height:1.2}
 ::selection{background:var(--sauge-pale);color:var(--ink)}
 
 .wrap{width:min(1180px,92%);margin-inline:auto}
-.prose{max-width:760px;margin-inline:auto}
+.prose{max-width:70ch;margin-inline:auto}
 .prose .lead,.lead{font-size:1.12rem;line-height:1.75;color:var(--ink-82);margin-top:1.1rem}
 .overline{
   font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
@@ -184,12 +184,17 @@ h3{font-size:1.5rem;font-weight:500;line-height:1.2}
   color:var(--ink);
   background:color-mix(in srgb,var(--sauge) 20%,transparent);
 }
-/* Scroll-spy : l'item dont la section est en vue est MARQUÉ (pastille plus
-   soutenue que le survol, même rayonnement arrondi). */
+/* Scroll-spy : l'item dont la section est en vue est MARQUÉ — filet
+   éditorial sous la ligne de base (remplace la pastille arrondie). */
 .nav-links a.nav-active{
   color:var(--ink);position:relative;z-index:0;
-  background:color-mix(in srgb,var(--sauge) 26%,transparent);
+  background:transparent;
 }
+.nav-links a.nav-active::after{
+  content:"";position:absolute;left:.06em;right:.06em;bottom:2px;height:2px;
+  background:var(--forest);border-radius:2px;
+}
+[data-theme="dark"] .nav-links a.nav-active::after{background:var(--sauge)}
 .mobile-menu a.nav-active{color:var(--forest);font-weight:600}
 .nav-links a.nav-cta{
   color:var(--on-forest);background:var(--forest);
@@ -258,7 +263,7 @@ h3{font-size:1.5rem;font-weight:500;line-height:1.2}
 .hero-inner{position:relative;z-index:1;width:min(1180px,92%);margin-inline:auto;padding-block:6rem}
 .hero-text{max-width:640px}
 .hero h1{
-  font-size:clamp(2.9rem,6.4vw,4.9rem);
+  font-size:clamp(2.8rem,6vw,4.2rem);
   font-weight:500;line-height:1.04;color:var(--ink);
   margin-top:.4rem;
   text-wrap:balance;
@@ -358,25 +363,36 @@ h3{font-size:1.5rem;font-weight:500;line-height:1.2}
 }
 
 /* ── 03 · PILIERS (cartes arrondies) ── */
+/* ── PILIERS — liste éditoriale verticale (remplace la grille de cartes
+   identiques, anti-pattern signalé en relecture). Numéro serif à gauche,
+   titre + texte au centre, lien à droite. ── */
 .pillars{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1.6rem;margin-top:3.4rem;
+  display:flex;flex-direction:column;
+  margin-top:3.4rem;max-width:840px;
 }
 .pillar{
-  background:var(--card);
-  border:1px solid var(--ligne);
-  border-radius:var(--rayon-card);
-  padding:2.5rem 2.1rem;
-  transition:transform var(--transition),border-color var(--transition),box-shadow var(--transition);
+  background:transparent;
+  border:0;border-radius:0;border-top:1px solid var(--ligne);
+  padding:2.1rem 0 2.1rem 0;
+  display:grid;grid-template-columns:4.5rem minmax(0,1fr) auto;
+  gap:0 1.6rem;align-items:baseline;
+  transition:background var(--transition);
 }
-.pillar:hover{transform:translateY(-4px);border-color:var(--sauge);box-shadow:var(--ombre)}
-.pillar h3{font-size:1.5rem;margin-bottom:.9rem}
+.pillar:last-child{border-bottom:1px solid var(--ligne)}
+.pillar:hover{transform:none;border-color:var(--ligne);box-shadow:none;
+  background:color-mix(in srgb,var(--sauge-pale) 45%,transparent)}
+.pillar h3{font-size:clamp(1.6rem,2.6vw,2rem);margin:0 0 .55rem;grid-column:2;font-weight:500}
 .pillar h3 .pillar-num{
-  font-family:var(--serif);font-style:italic;font-weight:500;
-  font-size:.92em;margin:0 .18em .05em 0;color:var(--forest);
-  display:inline-block;
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:.8em;margin:0 .5em .1em 0;color:var(--terre);
+  display:inline-block;letter-spacing:0;
 }
-.pillar p{font-size:1rem;line-height:1.7;color:var(--ink-75);margin-bottom:1.4rem}
+.pillar p{font-size:1.02rem;line-height:1.8;color:var(--ink-75);margin:0;max-width:58ch;grid-column:2}
+.pillar .link-quiet{grid-column:3;align-self:center;font-size:.85rem}
+@media (max-width:720px){
+  .pillar{grid-template-columns:3rem minmax(0,1fr);gap:0 1rem}
+  .pillar .link-quiet{grid-column:2;grid-row:3;align-self:start;margin-top:.9rem}
+}
 .link-quiet{
   font-size:.85rem;font-weight:500;letter-spacing:.04em;color:var(--forest);
   border-bottom:1px solid var(--sauge);padding-bottom:2px;
@@ -583,7 +599,7 @@ h3{font-size:1.5rem;font-weight:500;line-height:1.2}
 }
 
 /* ── FOOTER (sombre dans les deux thèmes) ── */
-.site-footer{background:var(--ambre);color:var(--paper-66);padding-block:3.4rem}
+.site-footer{background:var(--ambre);color:var(--paper-66);padding-block:4rem}
 .footer-logo{display:block;width:52px;height:52px;margin-bottom:.6rem}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:2.5rem}
 .site-footer .brand-name{color:var(--paper)}
@@ -609,7 +625,6 @@ html.fx-fade .fade.visible,html.fx-fade .fade .reveal.visible{opacity:1;transfor
 @media (max-width:1024px){
   .signals-grid{grid-template-columns:repeat(2,1fr)}
   .articles{grid-template-columns:repeat(2,1fr)}
-  .pillars{grid-template-columns:repeat(3,1fr);gap:1.1rem}
 }
 /* ── NAV : on repasse en menu burger dès 940px (au-delà, les 7 liens + CTA + tools ne tiennent plus). ── */
 @media (max-width:940px){
@@ -624,11 +639,10 @@ html.fx-fade .fade.visible,html.fx-fade .fade .reveal.visible{opacity:1;transfor
   .nav-tools{gap:.4rem}
   .tool-btn{min-width:36px;height:36px}
   .hero-media img{opacity:.94}
-  .hero-veil{background:linear-gradient(180deg,rgba(245,241,233,.92) 0%,rgba(245,241,233,.8) 100%)}
-  [data-theme="dark"] .hero-veil{background:linear-gradient(180deg,rgba(32,36,31,.9) 0%,rgba(32,36,31,.82) 100%)}
+  .hero-veil{background:linear-gradient(0deg,rgba(245,241,233,.88) 0%,rgba(245,241,233,.55) 55%,rgba(245,241,233,.18) 85%)}
+  [data-theme="dark"] .hero-veil{background:linear-gradient(0deg,rgba(32,36,31,.9) 0%,rgba(32,36,31,.72) 55%,rgba(32,36,31,.4) 85%)}
   .about-grid,.rdv-grid{grid-template-columns:1fr}
   .about-media{max-width:460px}
-  .pillars{grid-template-columns:1fr}
   .principles{grid-template-columns:1fr}
   .cred-grid{grid-template-columns:1fr;gap:1.6rem 0}
   .footer-grid{grid-template-columns:1fr 1fr}
