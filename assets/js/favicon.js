@@ -4,11 +4,18 @@
    dark : logo-dark.svg (crème). MutationObserver sur data-theme. */
 (function () {
   'use strict';
-  /* Pages : / (accueil, 0 niveau) et /revue/<slug>/ (2 niveaux).
-     → prefixe relatif résolu par le navigateur : '' | '../../'.
-     (fonctionne local ET prod — baseurl=/hypno-site) */
-  var base = location.pathname.indexOf('/revue/') > -1 ? '../../' : '';
-  function markUrl(t) { return base + 'assets/img/' + (t === 'dark' ? 'logo-dark.svg' : 'logo.svg'); }
+  /* On ne change QUE le nom de fichier (logo.svg / logo-dark.svg) et on dérive
+     la base absolue depuis le src déjà correct du .brand-mark (posé par Jekyll
+     avec site.baseurl). Ça marche à tous les niveaux de profondeur, local et prod. */
+  function markUrl(t) {
+    var mark = document.querySelector('.brand-mark');
+    var file = (t === 'dark' ? 'logo-dark.svg' : 'logo.svg');
+    if (mark && mark.src) {
+      var i = mark.src.lastIndexOf('/');
+      if (i > -1) return mark.src.slice(0, i + 1) + file;
+    }
+    return 'assets/img/' + file; /* fallback */
+  }
   function apply(t) {
     var mark = document.querySelector('.brand-mark');
     if (mark) mark.src = markUrl(t);
