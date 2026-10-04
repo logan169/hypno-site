@@ -40,7 +40,7 @@ LinkedIn
 <h1>De la recherche à la clinique.</h1>
 <p class="pc-lede">Cognitiviste de formation, chercheuse en neurosciences et en santé des femmes, et hypnothérapeute clinicienne en pratique à Vancouver. Trois étapes, un fil : la recherche en neurosciences et en santé des femmes, la formation clinicienne, puis la pratique en Vancouver — où ce que les données établissent rejoint ce que j'écoute, séance après séance.</p>
 <div class="pc-ctas">
-<a class="btn btn-primary" href="{{ site.baseurl }}/#rendezvous">Prendre rendez-vous</a>
+<a class="btn rdv-cta" href="{{ site.baseurl }}/#rendezvous">Prendre rendez-vous</a>
 <a class="btn btn-outline" href="#parcours">Lire mon parcours</a>
 </div>
 </div>
@@ -167,7 +167,7 @@ Ici, un simple bloc CTA pour y accéder sans encombrer cette page. -->
 <h2 style="margin-top:.7rem">Comment je l'applique.</h2>
 <p class="lead">Ce que je propose n'est pas du bien-être générique, et pas non plus un protocole. C'est une pratique qui se construit séance après séance : un échange long, des objectifs, des mesures qui permettent de voir où l'on en est, et des points de vigilance. L'approche est détaillée sur la page d'accueil, <a href="{{ site.baseurl }}/#approche">là</a>, avant d'en discuter ensemble.</p>
 <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem">
-<a class="btn btn-primary" href="{{ site.baseurl }}/#rendezvous">Prendre un appel découverte</a>
+<a class="btn rdv-cta" href="{{ site.baseurl }}/#rendezvous">Prendre un appel découverte</a>
 <a class="btn btn-outline" href="{{ site.baseurl }}/#apropos">Retour à l'à-propos</a>
 </div>
 </div>

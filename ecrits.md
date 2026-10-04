@@ -40,7 +40,7 @@ LinkedIn
 <p class="ec-sub">Rien ici ne remplace un échange direct. Ces pages sont un aperçu de ma trajectoire, pas une vitrine.</p>
 <div class="ec-ctas">
 <a class="btn btn-primary" href="{{ site.baseurl }}/parcours/">Mon parcours</a>
-<a class="btn btn-outline" href="{{ site.baseurl }}/#rendezvous">Prendre rendez-vous</a>
+<a class="btn rdv-cta" href="{{ site.baseurl }}/#rendezvous">Prendre rendez-vous</a>
 </div>
 </div>
 </div>

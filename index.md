@@ -31,7 +31,7 @@ comments: false
 <div class="hero-ctas">
 <!-- C53 : le bouton primaire « Découvrir mon approche » a été retiré à la demande du client.
              (C52) CTA « Prendre rendez-vous » : toujours sur une seule ligne. -->
-<a class="btn btn-ghost" href="#rendezvous" data-i18n>Prendre rendez-vous</a>
+<a class="btn rdv-cta" href="#rendezvous" data-i18n>Prendre rendez-vous</a>
 </div>
 </div>
 </div>

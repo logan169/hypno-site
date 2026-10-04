@@ -120,6 +120,10 @@ h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-
 .nav-cta{color:var(--on-forest)!important;background:var(--forest)!important;padding:.6rem 1.3rem!important;border-radius:999px!important;font-weight:500!important;transition:background var(--trans),transform var(--trans)}
 .nav-cta:hover{background:var(--forest-deep)!important;transform:translateY(-1px)}
 
+/* CTA unification — "Prendre rendez-vous" everywhere */
+.rdv-cta{color:var(--on-forest)!important;background:var(--forest)!important;padding:.6rem 1.3rem!important;border-radius:999px!important;font-weight:500!important;transition:background var(--trans),transform var(--trans)}
+.rdv-cta:hover{background:var(--forest-deep)!important;transform:translateY(-1px)}
+
 /* Tool buttons */
 .tool-btn{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;padding:0 .7rem;border:1px solid var(--ligne);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer;transition:border-color var(--trans),color var(--trans)}
 .tool-btn:hover{border-color:var(--forest);color:var(--forest)}
@@ -246,9 +250,9 @@ h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-
 #temoignages{background-color:var(--bg-alt);position:relative;overflow:hidden}
 #temoignages::before{content:"";position:absolute;inset:0;background:radial-gradient(38% 92% at 54% 70%,var(--sauge-pale) 0%,transparent 68%);pointer-events:none;z-index:0}
 .tst-carousel{max-width:60ch;margin-inline:auto;position:relative;padding-block:1rem}
-.tst-track{overflow:hidden;touch-action:pan-y;user-select:none}
-.tst-card{background:var(--card);border:1px solid var(--ligne);border-radius:var(--rayon-card);padding:clamp(2rem,4.5vw,3.5rem) clamp(.9rem,3.8vw,3.2rem);opacity:0;pointer-events:none;transition:opacity 650ms var(--ease)}
-.tst-card.is-active{opacity:1;pointer-events:auto}
+.tst-track{touch-action:pan-y;user-select:none;position:relative;min-height:max-content}
+.tst-card{background:var(--card);border:1px solid var(--ligne);border-radius:var(--rayon-card);padding:clamp(2rem,4.5vw,3.5rem) clamp(.9rem,3.8vw,3.2rem);position:absolute;inset:auto 0 0;opacity:0;pointer-events:none;transition:opacity 650ms var(--ease);z-index:1}
+.tst-card.is-active{opacity:1;pointer-events:auto;z-index:2}
 .tst-card blockquote{font-family:var(--serif);font-size:clamp(1.28rem,2.3vw,1.74rem);font-weight:500;font-style:italic;line-height:1.5;color:var(--ink);max-width:44ch;text-wrap:pretty}
 .tst-card figcaption{text-align:center;margin-top:1.6rem;font-size:.76rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-65)}
 
