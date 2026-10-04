@@ -12,8 +12,11 @@ comments: false
 <div class="pc-portrait-col">
 <div class="pc-portrait">
 <!-- C49 : photo réelle (IMG_8438), même image que #apropos sur l'accueil -->
-<img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
-alt="Portrait de Marion Fechino. Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
+<picture>
+   <source type="image/webp" srcset="{{ site.baseurl }}/assets/img/marion-portrait-600.webp 600w, {{ site.baseurl }}/assets/img/marion-portrait-1200.webp 1200w" sizes="(max-width: 640px) 600px, 1200px">
+   <img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
+        alt="Portrait de Marion Fechino. Vancouver, C.-B." width="850" height="1062" loading="eager" decoding="async" fetchpriority="high">
+</picture>
 </div>
 <!-- C59 : site pro + LinkedIn à côté du portrait (déplacés depuis « À lire ») -->
 <div class="pc-socials">

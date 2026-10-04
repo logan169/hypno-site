@@ -1,12 +1,29 @@
 {
   "name": "Marion Fechino — Hypnose · Santé des femmes · Intégrative",
   "short_name": "Marion Fechino",
-  "start_url": "/",
+  "start_url": "/hypno-site/",
+  "scope": "/hypno-site/",
   "display": "standalone",
-  "background_color": "#1F241F",
+  "background_color": "#F5F1E9",
   "theme_color": "#344039",
+  "description": "Hypnothérapie clinique à Vancouver, C.-B. — hypnose, santé des femmes, approche intégrative.",
   "icons": [
-    { "src": "assets/icons/marion-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "assets/icons/marion-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "assets/icons/marion-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/marion-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/marion-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

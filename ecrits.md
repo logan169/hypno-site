@@ -11,8 +11,11 @@ comments: false
 <div class="ec-hero-inner">
 <div>
 <div class="ec-portrait">
-<img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
-alt="Portrait de Marion Fechino. Vancouver, C.-B." width="800" height="1000" loading="eager" decoding="async" fetchpriority="high">
+<picture>
+   <source type="image/webp" srcset="{{ site.baseurl }}/assets/img/marion-portrait-600.webp 600w, {{ site.baseurl }}/assets/img/marion-portrait-1200.webp 1200w" sizes="(max-width: 640px) 600px, 1200px">
+   <img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
+        alt="Portrait de Marion Fechino. Vancouver, C.-B." width="850" height="1062" loading="eager" decoding="async" fetchpriority="high">
+</picture>
 </div>
 <div class="ec-socials">
 <a href="https://marionfech.github.io/" target="_blank" rel="noopener" aria-label="Site professionnel de Marion">
