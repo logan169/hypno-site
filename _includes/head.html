@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.title == site.title or page.title == nil %}
-    <title>{{ site.title }}. Hypnose · Santé des femmes · Santé intégrative. Vancouver</title>
+    <title>{{ site.title }}. Hypnose · Santé des femmes · Santé intégrative</title>
     <meta property="og:title" content="Marion Fechino — Hypnose · Santé des femmes · Santé intégrative">
   {% else %}
     <title>{{ page.title }} — Marion Fechino</title>
@@ -39,10 +39,10 @@
   <script>window.__BASEURL__="{{ site.baseurl }}/";</script>
 
   <!-- Styles + JS criticques (préchargés avant <link>/<script> pour couper le TTI) -->
-  <link rel="preload" href="{{ site.baseurl }}/assets/css/marion.css?v=rework11" as="style">
+  <link rel="preload" href="{{ site.baseurl }}/assets/css/marion.css?v=rework12" as="style">
   <link rel="preload" href="{{ site.baseurl }}/assets/js/main.js" as="script">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/marion.css?v=rework11">
-  {% if page.collection == 'revue' %}<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/revue.css?v=rework11">{% endif %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/marion.css?v=rework12">
+  {% if page.collection == 'revue' %}<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/revue.css?v=rework12">{% endif %}
 
   <!-- Google Analytics (GA4) -->
   {% if site.analytics.enabled and site.analytics.id and jekyll.environment == 'production' %}
@@ -60,9 +60,9 @@
   <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/og-1200x630.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Marion Fechino — Hypnothérapie clinique, Vancouver">
+  <meta property="og:image:alt" content="Marion Fechino — Hypnothérapie clinique">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Marion Fechino — Hypnose · Santé des femmes · Santé intégrative — Vancouver">
+  <meta name="twitter:title" content="Marion Fechino — Hypnose · Santé des femmes · Santé intégrative">
   <meta name="twitter:description" content="{{ page.excerpt | default: site.description }}">
   <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/og-1200x630.webp">
 
@@ -76,7 +76,7 @@
         "@id": "{{ page.url | absolute_url }}#marion",
         "name": "Marion Fechino",
         "jobTitle": "Hypnothérapeute clinicienne",
-        "description": "Hypnothérapeute clinicienne à Vancouver (C.-B., Canada). Approche intégrative adossée à la recherche — périménopause, sommeil, stress, santé des femmes.",
+        "description": "Hypnothérapeute clinicienne. Approche intégrative adossée à la recherche — périménopause, sommeil, stress, santé des femmes.",
         "image": "{{ site.url }}{{ site.baseurl }}/assets/img/marion-portrait-1200.webp",
         "knowsAbout": ["Hypnose thérapeutique", "Santé des femmes", "Périménopause", "Santé intégrative"],
         "url": "{{ site.url }}{{ site.baseurl }}/",
@@ -91,10 +91,6 @@
         "name": "Marion Fechino — Hypnothérapie",
         "url": "{{ site.url }}{{ site.baseurl }}/",
         "areaServed": [
-          { "@type": "City", "name": "Vancouver" },
-          { "@type": "AdministrativeArea", "name": "Colombie-Britannique" },
-          { "@type": "Country", "name": "Canada" },
-          { "@type": "Country", "name": "France" }
         ],
         "availableChannel": {
           "@type": "ServiceChannel",
@@ -104,8 +100,6 @@
         },
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Vancouver",
-          "addressRegion": "C.-B.",
           "addressCountry": "CA"
         },
         "knowsAbout": ["Hypnose", "Santé des femmes", "Périménopause", "Intégratif"]
@@ -118,36 +112,6 @@
         "inLanguage": "fr-CA",
         "publisher": { "@id": "{{ page.url | absolute_url }}#marion" },
         "about": { "@id": "{{ page.url | absolute_url }}#marion" }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "{{ page.url | absolute_url }}#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "L'hypnose est-elle vérifiable ? Quelle est sa place dans la médecine ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "L'hypnose est utilisée comme outil thérapeutique adossé à des données de recherche publiées (NIH/NCCIH, NAMS, méta-analyses). Les limites sont indiquées dans chaque article de la revue, avec les références consultées."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Où vous recevoir ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "En visioconférence, depuis Vancouver (C.-B., Canada) — disponible pour tout le Canada et bientôt la France."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Comment prendre rendez-vous ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Via le formulaire de contact en bas de page (mailto vers bonjour@marion-cabin.ca) — réponse habituelle sous 24 h ouvrées."
-            }
-          }
-        ]
       }
     ]
   }

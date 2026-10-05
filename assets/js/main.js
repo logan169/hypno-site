@@ -33,10 +33,10 @@
   /* ═══════ 2 · LANGUE FR ⇄ EN ═══════ */
   /* Éléments "fragiles" (aria/title/meta) en EN — indexés par clé */
   var EN_KEYS = {
-    title: 'Marion Fechino — Hypnotherapy · Women’s health · Integrative — Vancouver',
-    'meta.desc': 'Clinical hypnotherapy in Vancouver, B.C.: an integrative approach uniting therapeutic hypnosis, women’s health and scientific evidence — for stress, sleep, perimenopause and overall balance.',
+    title: 'Marion Fechino — Hypnotherapy · Women’s health · Integrative',
+    'meta.desc': 'Clinical hypnotherapy: an integrative approach uniting therapeutic hypnosis, women’s health and scientific evidence — for stress, sleep, perimenopause and overall balance.',
     'og.title': 'Marion Fechino — Hypnotherapy · Women’s health · Integrative',
-    'og.desc': 'An integrative, science-based approach to women’s health: therapeutic hypnosis, sleep, perimenopause. Vancouver, B.C.',
+    'og.desc': 'An integrative, science-based approach to women’s health: therapeutic hypnosis, sleep, perimenopause.',
     'aria.nav': 'Main navigation',
     'aria.foot': 'Footer navigation',
     'aria.tst': 'Patient testimonials (swipe to browse)'
@@ -62,7 +62,7 @@
     'About',
     'Understand',
     'Book an appointment',
-    'Clinical hypnotherapy — online: Vancouver & B.C., Québec, across Canada · France soon',
+    'Clinical hypnotherapy — online, wherever you are',
     'Body and mind,<br>in dialogue.',
     'An integrative approach to women’s health: therapeutic hypnosis used as a precise tool, grounded in what can be verified.',
     'Hypnotherapeutic&nbsp;·&nbsp;Women’s health&nbsp;·&nbsp;Integrative approach',
@@ -102,7 +102,7 @@
     'Stress, sleep, hormones, emotions and physical health constantly interact. Treating them in isolation is refusing to see the whole picture.',
     'About',
     'Hello, I’m Marion Fechino.',
-    'Hypnotherapist and integrative health practitioner in Vancouver. My path crosses research and clinical work — and it is precisely that meeting I want to pass on to you&nbsp;:',
+    'Hypnotherapist and integrative health practitioner. My path crosses research and clinical work — and it is precisely that meeting I want to pass on to you&nbsp;:',
     'Scientific background',
     'Cognitive scientist by training, research background in neuroscience',
     'NIH-funded longitudinal studies (emotion regulation, sleep)',
@@ -164,11 +164,6 @@
     'Your information stays confidential — never shared, never passed to third parties.',
     'Your message opens in your e-mail app (subject and body pre-filled). Just click “Send” — a reply arrives within 24 business hours.',
     'Hypnotherapy · Women’s health · Integrative',
-    'Home',
-    'Approach',
-    'About',
-    'Understand',
-    'Vancouver, British Columbia',
     '© 2026 Marion Fechino — All rights reserved.',
     'Nothing on this site replaces a physician’s advice.'
   ];
@@ -188,11 +183,6 @@
     'Understand',
     'Book an appointment',
     'Hypnotherapy · Women’s health · Integrative',
-    'Home',
-    'Approach',
-    'About',
-    'Understand',
-    'Vancouver, British Columbia',
     '© 2026 Marion Fechino — All rights reserved.',
     'Nothing on this site replaces a physician’s advice.'
   ];
@@ -221,7 +211,7 @@
       var nav2 = document.querySelector('.nav-links'); if (nav2) nav2.setAttribute('aria-label', 'Navigation principale');
       var foot2 = document.querySelector('.footer-nav'); if (foot2) foot2.setAttribute('aria-label', 'Navigation pied de page');
       var track2 = document.getElementById('tstTrack'); if (track2) track2.setAttribute('aria-label', 'témoignages de patientes (glisser pour parcourir)');
-      document.title = 'Marion Fechino — Hypnose · Santé des femmes · Santé intégrative — Vancouver';
+      document.title = 'Marion Fechino — Hypnose · Santé des femmes · Santé intégrative';
       var md2 = document.querySelector('meta[name="description"]'); if (md2 && md2._fr) md2.setAttribute('content', md2._fr);
       var ogd2 = document.querySelector('meta[property="og:description"]'); if (ogd2 && ogd2._fr) ogd2.setAttribute('content', ogd2._fr);
       var oglo2 = document.querySelector('meta[property="og:locale"]'); if (oglo2) oglo2.setAttribute('content', 'fr_CA');
@@ -397,31 +387,29 @@
       return h.indexOf('#') !== -1 && h.split('#')[1].length > 0;
     });
     if (spyLinks.length && 'requestAnimationFrame' in window) {
-      var spyTargets = spyLinks
+      // R6 — spy robuste : « la dernière section dont le haut est passé au-dessus
+      // de la ligne de référence » (≈25 % du viewport). Remplace la heuristique
+      // « plus visible en px » qui défavorisait les sections courtes (Approche,
+      // Témoignages, ~600 px) face à leurs voisines hautes, et qui cassait
+      // #rendezvous (son seul lien est la CTA sticky, toujours visible).
+      var raw = spyLinks
         .map(function (a) { return document.getElementById(a.getAttribute('href').split('#')[1]); })
         .filter(Boolean);
+      var seen = {}, spyTargets = [];
+      raw.forEach(function (t) { if (t && !seen[t.id]) { seen[t.id] = true; spyTargets.push(t); } });
       var ticking = false;
       var setActive = function () {
-        // C51 : section « la plus visible » du viewport (hauteur en px)
-        // plutôt que le seuil fixe à 34 %. Le seuil de 34 % était correct
-        // au milieu de la page, mais avec #rendezvous (dernière section,
-        // plus haute que le viewport) le haut de la section restait en
-        // dessous du seuil sur une large bande de scroll → c’était
-        // « FAQ » qui restait actif alors que l’utilisateur était déjà
-        // sur « Prendre rendez-vous ». La règle « la plus visible »
-        // active #rendezvous dès qu’elle occupe la majorité du viewport,
-        // sans toucher au comportement des autres sections.
-        var vh = window.innerHeight;
-        var best = null, bestVis = 0;
+        var ref = window.innerHeight * 0.25;
+        var current = null;
         for (var i = 0; i < spyTargets.length; i++) {
-          var r = spyTargets[i].getBoundingClientRect();
-          if (r.bottom < 0) continue;
-          var vis = Math.min(r.bottom, vh) - Math.max(r.top, 0);
-          if (vis > bestVis || best === null) { best = spyTargets[i].id; bestVis = Math.max(vis, 1); }
+          if (spyTargets[i].getBoundingClientRect().top <= ref) current = spyTargets[i].id;
         }
+        // bas de page : forcer la dernière section (la CTA « Prendre rendez-vous »)
+        var atBottom = (window.scrollY + window.innerHeight) >= (document.documentElement.scrollHeight - 4);
+        if (atBottom && spyTargets.length) current = spyTargets[spyTargets.length - 1].id;
         document.querySelectorAll('.nav-links a[href], .mobile-menu a[href]').forEach(function (a) {
           var frag = (a.getAttribute('href') || '').split('#')[1];
-          a.classList.toggle('nav-active', best !== null && frag === best);
+          a.classList.toggle('nav-active', current !== null && frag === current);
         });
         ticking = false;
       };

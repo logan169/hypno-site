@@ -17,14 +17,14 @@ comments: false
    <source type="image/webp" srcset="{{ site.baseurl }}/assets/img/hero-forest-900.webp 900w, {{ site.baseurl }}/assets/img/hero-forest-1400.webp 1400w, {{ site.baseurl }}/assets/img/hero-forest-2048.webp 2048w" sizes="100vw">
    <img src="{{ site.baseurl }}/assets/img/hero-forest.jpg"
         width="2100" height="1181"
-        alt="Sentier de forêt de Colombie-Britannique dans la lumière douce" data-i18n-attr="alt"
-        data-i18n-attr-en="Forest trail in British Columbia in soft light" fetchpriority="high" decoding="async">
+        alt="Sentier de forêt dans la lumière douce" data-i18n-attr="alt"
+        data-i18n-attr-en="Forest trail in soft light" fetchpriority="high" decoding="async">
 </picture>
 <div class="hero-veil" aria-hidden="true"></div>
 </div>
 <div class="hero-inner">
 <div class="hero-text">
-<p class="overline" data-i18n>Hypnothérapie clinique en visioconférence. Vancouver et C.-B., Québec, tout le Canada, et bientôt la France</p>
+<p class="overline" data-i18n>Hypnothérapie clinique en visioconférence — partout où vous êtes</p>
 <h1 data-i18n>Le corps et l’esprit,<br>en dialogue.</h1>
 <p class="hero-sub" data-i18n>Une approche intégrative de la santé des femmes : l’hypnose y est utilisée comme un outil thérapeutique, adossée à ce qui est vérifiable.</p>
 <p class="hero-meta" data-i18n>Hypnose thérapeutique&nbsp;·&nbsp;Santé des femmes&nbsp;·&nbsp;Approche intégrative</p>
@@ -122,7 +122,7 @@ comments: false
 <div class="about-body">
 <p class="overline" data-i18n>À propos</p>
 <h2 data-i18n>Bonjour, je suis Marion Fechino.</h2>
-<p class="lead" data-i18n>Je suis hypnothérapeute et praticienne en santé intégrative à Vancouver. Mon parcours croise la recherche et la clinique. Je travaille à cette intersection, et c’est cela que je vous transmets&nbsp;:</p>
+<p class="lead" data-i18n>Je suis hypnothérapeute et praticienne en santé intégrative. Mon parcours croise la recherche et la clinique. Je travaille à cette intersection, et c’est cela que je vous transmets&nbsp;:</p>
 <div class="cred-grid">
 <div class="cred">
 <h3 data-i18n>Parcours scientifique</h3>
