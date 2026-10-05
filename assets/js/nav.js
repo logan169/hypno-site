@@ -6,10 +6,10 @@
      - bascule FR ⇄ EN : mêmes libellés que l'accuil (EN_LIST de main.js),
        même clé localStorage ('marion-lang') pour une préférence unique
    Libellés FR (défaut) :
-     Signaux · Piliers · Approche · À propos · Comprendre · FAQ · Prendre rendez-vous
+     Signaux · Piliers · Approche · À propos · Comprendre · Prendre rendez-vous
      brand-tag : Hypnose · Santé des femmes · Intégrative
    Libellés EN :
-     Signals · Pillars · Approach · About · Understand · FAQ · Book an appointment
+     Signals · Pillars · Approach · About · Understand · Book an appointment
      brand-tag : Hypnotherapy · Women’s health · Integrative */
 (function () {
   'use strict';
@@ -41,11 +41,11 @@
   var LS = 'marion-lang';
   var FR = {
     tag: 'Hypnose · Santé des femmes · Intégrative',
-    links: ['Signaux', 'Piliers', 'Approche', 'À propos', 'Comprendre', 'FAQ', 'Prendre rendez-vous']
+    links: ['Signaux', 'Piliers', 'Approche', 'À propos', 'Comprendre', 'Prendre rendez-vous']
   };
   var EN = {
     tag: 'Hypnotherapy · Women\u2019s health · Integrative',
-    links: ['Signals', 'Pillars', 'Approach', 'About', 'Understand', 'FAQ', 'Book an appointment']
+    links: ['Signals', 'Pillars', 'Approach', 'About', 'Understand', 'Book an appointment']
   };
   function store(v) { try { localStorage.setItem(LS, v); } catch (e) {} }
   function stored() { try { return localStorage.getItem(LS); } catch (e) { return null; } }

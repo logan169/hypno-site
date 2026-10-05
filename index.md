@@ -225,35 +225,6 @@ comments: false
 </div>
 </section>
 
-<!-- ══════════════════ 08 · FAQ ══════════════════ -->
-<section class="section fade" id="faq">
-<div class="wrap prose">
-<p class="overline" data-i18n>Questions fréquentes</p>
-<h2 data-i18n>Avant de prendre rendez-vous.</h2>
-</div>
-<div class="wrap faq-list">
-<details class="faq-item" open>
-<summary data-i18n>L’hypnose a-t-elle une base scientifique&nbsp;?</summary>
-<p data-i18n>Pour chaque piste, je vous dis ce que les données indiquent et où elles s’arrêtent. Les témoignages de patientes parlent du sentiment d'avoir un plan clair à emporter, pas juste une explication.</p>
-</details>
-<details class="faq-item">
-<summary data-i18n>Comment se déroule une séance&nbsp;?</summary>
-<p data-i18n>La séance commence par un échange sur ce qui vous amène, puis nous fixons des objectifs ensemble. L’hypnose est un état naturel d’attention focalisée : vous ne perdez pas le contrôle. Vous en sortez avec des outils concrets. Elle dure 60 à 75 minutes.</p>
-</details>
-<details class="faq-item">
-<summary data-i18n>Est-ce pour moi&nbsp;?</summary>
-<p data-i18n>Si vous cherchez une réponse unique et définitive, probablement pas. Si vous cherchez un accompagnement structuré, où l’on explique, où l’on mesure et où votre expérience est prise au sérieux, probablement oui. Un appel découverte de 15 minutes suffit pour s’en assurer ensemble.</p>
-</details>
-<details class="faq-item">
-<summary data-i18n>Peut-on travailler à distance&nbsp;?</summary>
-<p data-i18n>Oui. Beaucoup de séances se déroulent par visioconférence, y compris depuis la Colombie-Britannique. Je ne crois pas que la qualité dépende de la salle : elle dépend de la relation et du cadre.</p>
-</details>
-<details class="faq-item">
-<summary data-i18n>Qu’est-ce que la «&nbsp;santé intégrative&nbsp;» précisément&nbsp;?</summary>
-<p data-i18n>Elle se distingue de la médecine conventionnelle, qui tient moins compte de l’ensemble de la personne, et du «&nbsp;wellness&nbsp;», qui demande peu de preuves. Je la trouve plus utile que les deux.</p>
-</details>
-</div>
-</section>
 
 <!-- ══════════════════ 09 · RENDEZ-VOUS / CONTACT ══════════════════ -->
 <section class="section section-foret fade text-light" id="rendezvous">
