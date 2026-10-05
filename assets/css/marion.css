@@ -100,7 +100,12 @@ h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-
    ════════════════════════════════════════════════════ */
 .site-nav{position:sticky;top:0;z-index:80;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px)}
 [data-theme="dark"] .site-nav{background:color-mix(in srgb,var(--dark-bg) 93%,transparent)}
-.nav-inner{width:min(1440px,92%);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:.9rem 0}
+/* ── ITEM 2: nav bar fits at desktop-mode widths (1024–1280) ───────── */
+.nav-inner{width:min(1440px,calc(100% - 3rem));margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:.9rem 0}
+/* ── Adaptive nav: fit the ROW at 1024–1280 desktop-mode widths (do not shrink/hide links) ── */
+@media(max-width:1360px){.nav-inner{gap:1rem}}
+@media(max-width:1200px){.brand-tag{display:none}.nav-links{gap:.9rem}.nav-links a{font-size:.97rem;padding:.3rem .72rem}}
+@media(max-width:1020px){.nav-links a{padding:.28rem .5rem;font-size:.93rem}.nav-tools{gap:.35rem}.lang-toggle{min-width:36px;margin-left:.2rem}}
 
 .brand{display:flex;flex-direction:row;align-items:center;gap:.6rem;line-height:1.1}
 .brand-mark{width:46px;height:46px;flex:0 0 auto}
@@ -116,13 +121,26 @@ h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-
 .nav-links a.nav-active::after{content:"";position:absolute;left:.08em;right:.08em;bottom:2px;height:2px;background:var(--forest);border-radius:2px}
 [data-theme="dark"] .nav-links a.nav-active::after{background:var(--sauge)}
 
-/* CTA nav — filled forest pill */
-.nav-cta{color:var(--on-forest)!important;background:var(--forest)!important;padding:.6rem 1.3rem!important;border-radius:999px!important;font-weight:500!important;transition:background var(--trans),transform var(--trans)}
-.nav-cta:hover{background:var(--forest-deep)!important;transform:translateY(-1px)}
-
-/* CTA unification — "Prendre rendez-vous" everywhere */
-.rdv-cta{color:var(--on-forest)!important;background:var(--forest)!important;padding:.6rem 1.3rem!important;border-radius:999px!important;font-weight:500!important;transition:background var(--trans),transform var(--trans)}
-.rdv-cta:hover{background:var(--forest-deep)!important;transform:translateY(-1px)}
+/* ── UNIFIED outline CTA (transparent bg + 1.5px forest border, centered text, pill) ── */
+/* !important needed: legacy .btn / .nav-links a / old mobile rules would otherwise leak through. */
+.rdv-cta,.nav-cta{
+  background:transparent!important;background-color:transparent!important;
+  border:1.5px solid var(--forest)!important;color:var(--forest)!important;
+  border-radius:999px!important;display:inline-block!important;text-align:center!important;white-space:nowrap;
+  font-family:var(--sans)!important;font-size:.92rem!important;font-weight:500!important;letter-spacing:.02em!important;
+  padding:.66rem 1.4rem!important;line-height:1.3;cursor:pointer;
+  transition:background var(--trans),color var(--trans),transform var(--trans)}
+.rdv-cta:hover,.nav-cta:hover{background:var(--forest)!important;color:var(--on-forest)!important;transform:translateY(-1px)}
+/* dark theme: outline uses the light sage for legibility; hover inverts to sage bg + dark */
+[data-theme="dark"] .rdv-cta,[data-theme="dark"] .nav-cta{border-color:var(--sauge)!important;color:var(--sauge)!important}
+[data-theme="dark"] .rdv-cta:hover,[data-theme="dark"] .nav-cta:hover{background:var(--sauge)!important;color:var(--dark-bg)!important}
+/* keep the RDV form SUBMIT solid (it sits on a light card — outline would look unfinished) */
+.rdv-form .btn-primary{background:var(--forest)!important;color:var(--on-forest)!important;border:none!important}
+.rdv-form .btn-primary:hover{background:var(--forest-deep)!important}
+[data-theme="dark"] .rdv-form .btn-primary{background:var(--sauge)!important;color:var(--dark-bg)!important}
+[data-theme="dark"] .rdv-form .btn-primary:hover{background:#c3ccba!important}
+/* mobile-menu CTA = same outline pill, block layout */
+.mobile-menu .nav-cta{display:block;margin:.8em auto 1rem;width:min(85%,380px);background:transparent!important}
 
 /* Tool buttons */
 .tool-btn{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;padding:0 .7rem;border:1px solid var(--ligne);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer;transition:border-color var(--trans),color var(--trans)}
@@ -135,7 +153,7 @@ h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-
 .nav-burger span{display:block;width:21px;height:1.8px;background:var(--ink);margin:5px 0;transition:transform .3s var(--ease),opacity .3s var(--ease)}
 .mobile-menu{display:none;flex-direction:column;width:100%;padding:.4em 0;border-top:1px solid var(--ligne)}
 .mobile-menu a{padding:.9rem 5%;font-size:.98rem;color:var(--ink);border-bottom:1px solid color-mix(in srgb,var(--ligne) 60%,transparent)}
-.mobile-menu .nav-cta{background:var(--forest);color:var(--on-forest)!important;text-align:center;border-radius:999px;margin:.8em auto 1rem;display:block;width:min(85%,380px);padding:1rem!important;pointer-events:auto}
+.mobile-menu .nav-cta{background:transparent!important;color:var(--forest)!important;border:1.5px solid var(--forest)!important;border-radius:999px!important;text-align:center;margin:.8em auto 1rem;display:block;width:min(85%,380px);pointer-events:auto}
 .site-nav.open .mobile-menu{display:flex}
 .site-nav.open .nav-burger span:nth-child(1){transform:translateY(6.4px) rotate(45deg)}
 .site-nav.open .nav-burger span:nth-child(2){opacity:0}
@@ -250,8 +268,8 @@ h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-
 #temoignages{background-color:var(--bg-alt);position:relative;overflow:hidden}
 #temoignages::before{content:"";position:absolute;inset:0;background:radial-gradient(38% 92% at 54% 70%,var(--sauge-pale) 0%,transparent 68%);pointer-events:none;z-index:0}
 .tst-carousel{max-width:60ch;margin-inline:auto;position:relative;padding-block:1rem}
-.tst-track{touch-action:pan-y;user-select:none;display:grid}
-.tst-card{grid-area:1/1;background:var(--card);border:1px solid var(--ligne);border-radius:var(--rayon-card);padding:clamp(2rem,4.5vw,3.5rem) clamp(.9rem,3.8vw,3.2rem);opacity:0;pointer-events:none;transition:opacity 650ms var(--ease)}
+.tst-track{touch-action:pan-y;user-select:none;position:relative;min-height:max-content}
+.tst-card{background:var(--card);border:1px solid var(--ligne);border-radius:var(--rayon-card);padding:clamp(2rem,4.5vw,3.5rem) clamp(.9rem,3.8vw,3.2rem);position:absolute;inset:auto 0 0;opacity:0;pointer-events:none;transition:opacity 650ms var(--ease);z-index:1}
 .tst-card.is-active{opacity:1;pointer-events:auto;z-index:2}
 .tst-card blockquote{font-family:var(--serif);font-size:clamp(1.28rem,2.3vw,1.74rem);font-weight:500;font-style:italic;line-height:1.5;color:var(--ink);max-width:44ch;text-wrap:pretty}
 .tst-card figcaption{text-align:center;margin-top:1.6rem;font-size:.76rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-65)}
@@ -569,3 +587,55 @@ article{display:block}
 .article h3{font-family:var(--serif);font-size:1.35rem;font-weight:500;margin:.35rem 0 .35rem}
 .article p:not(.article-tag){color:var(--ink-72);font-size:.96rem;line-height:1.62;max-width:62ch}
 .article .link-quiet{margin-top:.8rem}
+
+
+/* ════════════════════════════════════════════════════════════════
+   R4 FIXES (operator) — mobile type scale · article numbering ·
+   touch sticky-hover fix · dark-mode dividers · dark RDV section
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── ITEM 5: article list numbering — CSS counter (no HTML/i18n change) ── */
+.articles{counter-reset:art}
+.article h3{display:flex;align-items:baseline;gap:.55rem}
+.article h3::before{
+  counter-increment:art;
+  content:counter(art,decimal-leading-zero);
+  font-family:var(--serif);font-style:italic;font-size:1.5rem;font-weight:500;
+  color:var(--terre);line-height:1;flex:0 0 auto}
+
+/* ── ITEM 5: kill sticky touch-:hover (only paint hover on real pointers) ── */
+@media (hover:none){
+  .article:hover{background:transparent}
+  .theme-card:hover{transform:none;box-shadow:none;border-color:var(--ligne)}
+  .article, .theme-card{background:transparent}
+}
+
+/* ── ITEM 5: dividers legible in dark mode (10% -> 18% ivory) ─────────── */
+[data-theme="dark"] .article{border-bottom-color:rgba(245,241,233,.18)}
+[data-theme="dark"] .article:first-of-type{border-top-color:rgba(245,241,233,.18)}
+[data-theme="dark"] .theme-card{border-color:rgba(245,241,233,.16)}
+
+/* ITEM 4: dark RDV — the #rendezvous ID rule (specificity 1,0,0) was winning and
+   forcing a light-beige ground with pale text. Deep-green ground in dark: */
+[data-theme="dark"] #rendezvous{background:#23301f!important;color:var(--ivoire)!important}
+[data-theme="dark"] #rendezvous .overline,[data-theme="dark"] #rendezvous .overline.light{color:var(--sauge)!important}
+[data-theme="dark"] #rendezvous h1,[data-theme="dark"] #rendezvous h2,[data-theme="dark"] #rendezvous h3{color:var(--ivoire)!important}
+[data-theme="dark"] #rendezvous p,[data-theme="dark"] #rendezvous li{color:rgba(245,241,233,.82)!important}
+[data-theme="dark"] .rdv-form{background:var(--dark-card);border:1px solid rgba(245,241,233,.18)}
+
+/* ── ITEM 3: mobile type scale — a touch smaller, only <=600px ───────── */
+@media (max-width:600px){
+  h1,.hero-text h1{font-size:clamp(1.9rem,8.5vw,3rem)}
+  h2{font-size:clamp(1.6rem,6.8vw,2.1rem)}
+  h3{font-size:clamp(1.1rem,5vw,1.5rem)}
+  .lead,.prose .lead{font-size:1.02rem}
+  .overline{font-size:.66rem}
+  .prose p,.pull{font-size:.98rem}
+  .signal{font-size:.86rem;padding:.6rem .85rem}
+  .fine{font-size:.76rem}
+  .article h3{font-size:1.18rem}
+  .article h3::before{font-size:1.3rem}
+  .rdv-cta,.nav-cta,.btn{font-size:.9rem;padding:.6rem 1.15rem}
+  .pc-body h1{font-size:clamp(1.8rem,7.5vw,2.6rem)}
+  .ec-body h1{font-size:clamp(1.6rem,7vw,2.4rem)}
+}
