@@ -16,7 +16,7 @@ comments: false
 <picture>
    <source type="image/webp" srcset="{{ site.baseurl }}/assets/img/hero-forest-900.webp 900w, {{ site.baseurl }}/assets/img/hero-forest-1400.webp 1400w, {{ site.baseurl }}/assets/img/hero-forest-2048.webp 2048w" sizes="100vw">
    <img src="{{ site.baseurl }}/assets/img/hero-forest.jpg"
-        width="1600" height="1065"
+        width="2100" height="1181"
         alt="Sentier de forêt de Colombie-Britannique dans la lumière douce" data-i18n-attr="alt"
         data-i18n-attr-en="Forest trail in British Columbia in soft light" fetchpriority="high" decoding="async">
 </picture>
