@@ -193,37 +193,7 @@ comments: false
 </div>
 </section>
 
-<!-- ══════════════════ 07 · TÉMOIGNAGES ══════════════════ -->
-<section class="section section-lin fade" id="temoignages">
-<div class="wrap prose">
-<p class="overline" data-i18n>Paroles de patientes</p>
-<h2 data-i18n>Des patientes, en leurs mots.</h2>
-</div>
-<div class="wrap">
-<div class="tst-carousel">
-<div class="tst-track" id="tstTrack" role="region" aria-roledescription="carrousel"
-           aria-label="témoignages de patientes (glisser pour parcourir)" tabindex="0"
-           data-i18n-attr="aria-label" data-i18n-attr-en="Patient testimonials (swipe to browse)">
-<figure class="tst-card is-active">
-<blockquote data-i18n>« Je pensais que l’hypnose serait floue. En réalité, c’est une méthode structurée&nbsp;: des objectifs, des outils, un suivi. Ça m’a aidée à retrouver un sommeil stable. »</blockquote>
-<figcaption data-i18n>Patiente, accompagnement sommeil</figcaption>
-</figure>
-<figure class="tst-card">
-<blockquote data-i18n>« Marion m’a accompagnée dans ma périménopause sans jamais me promettre des miracles, en s’appuyant sur ce qu’on sait. C’est cette honnêteté qui m’a rassurée. »</blockquote>
-<figcaption data-i18n>Patiente, santé des femmes</figcaption>
-</figure>
-<figure class="tst-card">
-<blockquote data-i18n>« Un espace où l’on m'écoute, où l’on explique. J’y suis allée anxieuse, j’en suis repartie avec un plan clair que je pouvais comprendre et suivre. »</blockquote>
-<figcaption data-i18n>Patiente, anxiété et stress</figcaption>
-</figure>
-</div>
-<div class="tst-nav" role="group" aria-label="Navigation des témoignages">
-<button class="tst-arrow" id="tstPrev" type="button" aria-label="Témoignage précédent">‹</button>
-<button class="tst-arrow" id="tstNext" type="button" aria-label="Témoignage suivant">›</button>
-</div>
-</div>
-</div>
-</section>
+
 
 
 <!-- ══════════════════ 09 · RENDEZ-VOUS / CONTACT ══════════════════ -->
