@@ -78,7 +78,7 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.14;letter-spacing:-.03em;color:var(--ink)}
 h2{font-size:clamp(2rem,3.4vw,2.85rem);margin-top:.15em}
 h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-top:.35em}
-.prose h2{letter-spacing:-.04em;text-wrap:pretty;max-width:22ch}
+.prose h2{letter-spacing:-.04em;text-wrap:pretty}
 
 ::selection{background:var(--sauge-pale);color:var(--ink)}
 
