@@ -405,15 +405,16 @@
      change à chaque section qui prend le dessus, y compris
      « Prendre rendez-vous » sur la section #rendezvous. */
   if (location.pathname.replace(/index\.html$|\/$/, '').indexOf('revue') === -1) {
-    var spyLinks = [].slice.call(document.querySelectorAll('.nav-links a[href^="#"]')).filter(function (a) {
-      // C40 : la CTA « Prendre rendez-vous » participe aussi au spy
-      // (avant elle était exclue → la section #rendezvous activait
-      // par erreur la dernière entrée du menu).
-      return a.getAttribute('href') && a.getAttribute('href').length > 1;
+    var spyLinks = [].slice.call(document.querySelectorAll('.nav-links a[href], .mobile-menu a[href]')).filter(function (a) {
+      // C40 : la CTA « Prendre rendez-vous » participe aussi au spy.
+      // FIX : les href sont absolus (/hypno-site/#piliers) — matcher le fragment,
+      // pas ^# (sinon la liste est vide et le spy ne s'active jamais).
+      var h = a.getAttribute('href') || '';
+      return h.indexOf('#') !== -1 && h.split('#')[1].length > 0;
     });
     if (spyLinks.length && 'requestAnimationFrame' in window) {
       var spyTargets = spyLinks
-        .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+        .map(function (a) { return document.getElementById(a.getAttribute('href').split('#')[1]); })
         .filter(Boolean);
       var ticking = false;
       var setActive = function () {
@@ -434,9 +435,9 @@
           var vis = Math.min(r.bottom, vh) - Math.max(r.top, 0);
           if (vis > bestVis || best === null) { best = spyTargets[i].id; bestVis = Math.max(vis, 1); }
         }
-        var activeHref = (best ? '#' + best : null);
-        document.querySelectorAll('.nav-links a[href^="#"], .mobile-menu a[href^="#"]').forEach(function (a) {
-          a.classList.toggle('nav-active', activeHref !== null && a.getAttribute('href') === activeHref);
+        document.querySelectorAll('.nav-links a[href], .mobile-menu a[href]').forEach(function (a) {
+          var frag = (a.getAttribute('href') || '').split('#')[1];
+          a.classList.toggle('nav-active', best !== null && frag === best);
         });
         ticking = false;
       };

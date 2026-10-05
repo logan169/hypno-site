@@ -117,11 +117,14 @@ h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-
 .nav-links a:hover{color:var(--ink);background:color-mix(in srgb,var(--sauge) 16%,transparent)}
 
 /* Active = underline from palette, no pill-deco */
-.nav-links a.nav-active{color:var(--ink)}
-.nav-links a.nav-active::after{content:"";position:absolute;left:.08em;right:.08em;bottom:2px;height:2px;background:var(--forest);border-radius:2px}
-[data-theme="dark"] .nav-links a.nav-active::after{background:var(--sauge)}
+.nav-links a.nav-active{color:var(--ink);background:color-mix(in srgb,var(--sauge) 22%,transparent)}
+[data-theme="dark"] .nav-links a.nav-active{background:color-mix(in srgb,var(--sauge) 24%,transparent);color:var(--ink)}
+/* keep the old underline removed (replaced by the pill above) */
 
-/* ── UNIFIED outline CTA (transparent bg + 1.5px forest border, centered text, pill) ── */
+/* CTA is a link too — visible pill when its section is active */
+.nav-links a.nav-cta.nav-active{background:var(--forest)!important;color:var(--on-forest)!important;border-color:transparent!important}
+[data-theme="dark"] .nav-links a.nav-cta.nav-active{background:var(--sauge)!important;color:var(--dark-bg)!important}
+
 /* !important needed: legacy .btn / .nav-links a / old mobile rules would otherwise leak through. */
 .rdv-cta,.nav-cta{
   background:transparent!important;background-color:transparent!important;
@@ -452,10 +455,9 @@ html.fx-fade .fade.visible{opacity:1;transform:none}
 :focus-visible{outline:2px solid var(--forest);outline-offset:3px;border-radius:4px}
 input:focus-visible,select:focus-visible,textarea:focus-visible,.tool-btn:focus-visible,.btn:focus-visible{outline-color:color-mix(in srgb,var(--forest) 70%,transparent)}
 
-/* ── Custom scrollbar from palette ── */
-::-webkit-scrollbar{width:6px;height:6px}
-::-webkit-scrollbar-track{background:color-mix(in srgb,var(--bg-alt) 50%,transparent)}
-::-webkit-scrollbar-thumb{background:var(--ink-35);border-radius:99px}
+/* ── Scrollbar: overlay (no reserved gutter → section backgrounds reach the true edge) ── */
+html{scrollbar-width:none;-ms-overflow-style:none}
+html::-webkit-scrollbar{width:0;height:0;display:none}
 
 /* ═══════════ Content-completion pass (operator) ═══════════
    Styles the bare content classes the FE redesign left
