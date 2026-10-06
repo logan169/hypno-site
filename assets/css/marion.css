@@ -643,3 +643,17 @@ article{display:block}
   .pc-body h1{font-size:clamp(1.8rem,7.5vw,2.6rem)}
   .ec-body h1{font-size:clamp(1.6rem,7vw,2.4rem)}
 }
+
+/* ═══ TARIFF BLOCK (regional, build-time values) ═══ */
+.tarif{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--ligne-foret)}
+.tarif-amount{font-size:1.15rem;line-height:1.4;margin:.6rem 0 .5rem}
+.tarif .overline{color:var(--paper)}
+
+/* ═══ LANG LINK (URL-based FR/EN switch) ═══ */
+.lang-link{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:2.4rem;padding:.3rem .55rem;font-size:.8rem;font-weight:600;
+  border:1px solid var(--ligne);border-radius:999px;
+  color:var(--encre);text-decoration:none;
+}
+.lang-link:hover{background:var(--sauge);border-color:var(--sauge);color:#fff}

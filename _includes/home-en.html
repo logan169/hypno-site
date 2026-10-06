@@ -1,0 +1,239 @@
+{%- assign reg = site.data.registry[page.loc][page.lang] -%}
+
+
+
+
+<!-- ══════════════════ 01 · HÉROS ══════════════════ -->
+<section class="hero fade" id="accueil">
+<div class="hero-media">
+<!-- PHOTO HERO, forêt (arbres, lumière douce).
+         C54 : le client revient à la photo d'arbres ; les fleurs (C54) vont sur
+         « Rendez-vous » en bas de page. Toutes les photos sont auto-hébergées. -->
+<picture>
+   <source type="image/webp" srcset="{{ site.baseurl }}/assets/img/hero-forest-900.webp 900w, {{ site.baseurl }}/assets/img/hero-forest-1400.webp 1400w, {{ site.baseurl }}/assets/img/hero-forest-2048.webp 2048w" sizes="100vw">
+   <img src="{{ site.baseurl }}/assets/img/hero-forest.jpg"
+        width="2100" height="1181"
+        alt="Forest trail in soft light" fetchpriority="high" decoding="async">
+</picture>
+<div class="hero-veil" aria-hidden="true"></div>
+</div>
+<div class="hero-inner">
+<div class="hero-text">
+<p class="overline">{{ reg.coverage }}</p>
+<h1>Body and mind,<br>in dialogue.</h1>
+<p class="hero-sub">An integrative approach to women’s health: therapeutic hypnosis used as a precise tool, grounded in what can be verified.</p>
+<p class="hero-meta">Hypnotherapeutic&nbsp;·&nbsp;Women’s health&nbsp;·&nbsp;Integrative approach</p>
+<div class="hero-ctas">
+<!-- C53 : le bouton primaire « Découvrir mon approche » a été retiré à la demande du client.
+             (C52) CTA « Prendre rendez-vous » : toujours sur une seule ligne. -->
+<a class="btn rdv-cta" href="#rendezvous">Book an appointment</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ══════════════════ 02 · SIGNAUX ══════════════════ -->
+<section class="section fade" id="signals">
+<div class="wrap prose">
+<p class="overline">You may be here because…</p>
+<h2>Your body is sending you signals.</h2>
+<p class="lead">Sometimes it isn’t one precise ache that brings you in — it’s the feeling that things are coming apart. These themes come up again and again with the people I work with&nbsp;:</p>
+</div>
+<div class="wrap signals-grid">
+<span class="signal">Persistent stress and anxiety</span>
+<span class="signal">Disrupted sleep, frequent waking</span>
+<span class="signal">Fatigue that sleep doesn’t fix</span>
+<span class="signal">Tension, pain, physical discomfort</span>
+<span class="signal">Hormonal shifts, perimenopause</span>
+<span class="signal">A difficult relationship with your body</span>
+<span class="signal">Life changes that upset your balance</span>
+<span class="signal">The need, simply, to regain a sense of balance</span>
+</div>
+<div class="wrap prose">
+<blockquote class="pull">I work to see you whole: physiology, nervous system, life as it is lived, context. I don’t make promises I can’t keep. We put tools to work on your situation.</blockquote>
+</div>
+</section>
+
+<!-- ══════════════════ 03 · TROIS PILIERS ══════════════════ -->
+<section class="section section-lin fade" id="piliers">
+<div class="wrap prose">
+<p class="overline">What I offer</p>
+<h2>Three dimensions of a single approach.</h2>
+<p class="lead">These aren’t three separate services. It’s one way of thinking about health, seen from three angles.</p>
+</div>
+<div class="wrap pillars">
+<article class="pillar">
+<h3><span class="pillar-num">01</span> Hypnosis</h3>
+<p>Understanding what your unconscious, your habits, your emotions and your nervous system do in everyday life. Hypnosis is one tool among others, and I present it that way.</p>
+<a class="link-quiet" href="#comprendre">Discover hypnosis →</a>
+</article>
+<article class="pillar">
+<h3><span class="pillar-num">02</span> Women’s health</h3>
+<p>Particular attention to the physiological and psychological realities that shape women’s lives — cycle, fertility, perimenopause, relationship with the body — with precise language, never decorative.</p>
+<a class="link-quiet" href="#rendezvous">Discover the support →</a>
+</article>
+<article class="pillar">
+<h3><span class="pillar-num">03</span> Integrative health</h3>
+<p>I connect body, psychology, lifestyle habits and research findings. Every recommendation comes with its reason, not just the prescription.</p>
+<a class="link-quiet" href="#approche">Understand my approach →</a>
+</article>
+</div>
+<div class="wrap prose">
+<p class="fine">For each avenue, I tell you the level of evidence. When the literature doesn’t support a claim, I flag it rather than act as if it did.</p>
+</div>
+</section>
+
+<!-- ══════════════════ 04 · MA FAÇON DE TRAVAILLER ══════════════════ -->
+<section class="section fade" id="approche">
+<div class="wrap prose">
+<p class="overline">How I work</p>
+<h2>A human, rigorous, integrative approach.</h2>
+</div>
+<div class="wrap principles">
+<article class="principle">
+<h3>Grounded in knowledge</h3>
+<p>The tools I offer rely, whenever possible, on the available evidence and its level of proof. When the literature is limited, I tell you.</p>
+</article>
+<article class="principle">
+<h3>Integrative health — lifestyle, sleep</h3>
+<p>Research gives reference points. When your story, your body and your experience don’t match the manual, your story wins.</p>
+</article>
+<article class="principle">
+<h3>Body and mind in interaction</h3>
+<p>Stress, sleep, hormones, emotions and physical health constantly interact. Treating them in isolation is refusing to see the whole picture.</p>
+</article>
+</div>
+</section>
+
+<!-- ══════════════════ 05 · À PROPOS ══════════════════ -->
+<section class="section section-creme fade" id="apropos">
+<div class="wrap about-grid">
+<div class="about-media">
+<!-- Photo réelle du client (IMG_8438), auto-hébergée dans static/ -->
+<img src="{{ site.baseurl }}/assets/img/marion-portrait.jpg"
+     alt="Editorial portrait, natural light" width="800" height="1000" loading="lazy" decoding="async">
+</div>
+<div class="about-body">
+<p class="overline">About</p>
+<h2>Hello, I’m Marion Fechino.</h2>
+<p class="lead">Hypnotherapist and integrative health practitioner. My path crosses research and clinical work — and it is precisely that meeting I want to pass on to you&nbsp;:</p>
+<div class="cred-grid">
+<div class="cred">
+<h3>Scientific background</h3>
+<ul>
+<li>Cognitive scientist by training, research background in neuroscience</li>
+<li>NIH-funded longitudinal studies (emotion regulation, sleep)</li>
+<li>Teaching &amp; scientific communication</li>
+</ul>
+</div>
+<div class="cred">
+<h3>Therapeutic approaches</h3>
+<ul>
+<li>Clinical hypnotherapy certification, in progress. Supervised practice since 2024</li>
+<li>Women’s health — cycle, fertility, perimenopause</li>
+<li>Women’s health: cycle, fertility, perimenopause</li>
+</ul>
+</div>
+</div>
+<a class="btn btn-outline" href="{{ site.baseurl }}/parcours/">Discover my background</a>
+</div>
+</div>
+</section>
+
+<!-- ══════════════════ 06 · COMPRENDRE (REVIEW) ══════════════════ -->
+<section class="section fade" id="comprendre">
+<div class="wrap prose">
+<p class="overline">Understand</p>
+<h2>Marion’s review.</h2>
+<p class="lead">Short, clear, sourced notes to better understand the mechanisms before choosing a path. Read to understand — not to convince.</p>
+</div>
+<div class="wrap articles">
+<article class="article">
+<p class="article-tag">Hypnotherapy</p>
+<h3>Hypnosis: what does the research actually say?</h3>
+<p>What meta-analyses show, what they don’t, and where the honest limits of the method lie.</p>
+<a href="{{ site.baseurl }}/revue/hypnoscience/" class="link-quiet">Read →</a>
+</article>
+<article class="article">
+<p class="article-tag">Women’s health</p>
+<h3>Perimenopause: understanding the changes in body and brain</h3>
+<p>Hormones, sleep, mood — what actually shifts, and what evidence-based tools can do about it.</p>
+<a href="{{ site.baseurl }}/revue/perimena/" class="link-quiet">Read →</a>
+</article>
+<article class="article">
+<p class="article-tag">Nervous system</p>
+<h3>Chronic stress and the nervous system</h3>
+<p>Why anxiety settles into the body, and what nervous-system regulation concretely changes.</p>
+<a href="{{ site.baseurl }}/revue/stress-snc/" class="link-quiet">Read →</a>
+</article>
+<article class="article">
+<p class="article-tag">Sleep</p>
+<h3>Sleep and hormonal health</h3>
+<p>The two-way link between sleep, cycle and hormones — and the levers that really matter.</p>
+<a href="{{ site.baseurl }}/revue/sommeil-hormones/" class="link-quiet">Read →</a>
+</article>
+<article class="article">
+<p class="article-tag">Pain</p>
+<h3>The link between pain, attention and the brain</h3>
+<p>What pain research teaches us about attention — and why it changes practice.</p>
+<a href="{{ site.baseurl }}/revue/douleur/" class="link-quiet">Read →</a>
+</article>
+<article class="article">
+<p class="article-tag">Integrative</p>
+<h3>Integrative health: what are we actually talking about?</h3>
+<p>Breaking down the term to separate what is rigorous from what is marketing.</p>
+<a href="{{ site.baseurl }}/revue/integratif/" class="link-quiet">Read →</a>
+</article>
+</div>
+</section>
+
+
+
+
+<!-- ══════════════════ 09 · RENDEZ-VOUS / CONTACT ══════════════════ -->
+<section class="section section-foret fade text-light" id="rendezvous">
+<div class="wrap rdv-grid">
+<div class="rdv-left">
+<p class="overline light">First step</p>
+<h2>A discovery call, 15 minutes.</h2>
+<p>The first step is an ordinary conversation. We take stock of what brings you, what you expect, and the options that make sense. You’re not committing to anything.</p>
+<ul class="rdv-info">
+<li><strong>Format</strong><br>{{ reg.rdv_mod }}</li>
+</ul>
+<div class="tarif">
+<p class="overline light">Fees &amp; coverage</p>
+<p class="tarif-amount"><strong>{{ reg.tariff }}</strong></p>
+<p class="fine light">{{ reg.billing }}</p>
+</div>
+</div>
+<form class="rdv-form" id="contactForm" data-formaction="mailto:bonjour@marion-cabin.ca" novalidate>
+<label><span>Name</span> <input type="text" name="nom" required autocomplete="name"></label>
+<label><span>Email</span> <input type="email" name="email" required autocomplete="email"></label>
+<label>
+<span>What brings you in</span>
+<select name="sujet" required>
+<option value="" selected disabled>Choose…</option>
+<option>Hypnosis, stress or sleep</option>
+<option>Women’s health</option>
+<option>Integrative health</option>
+<option>Other / I’d rather discuss on a call</option>
+</select>
+</label>
+<label><span>Message</span> <textarea name="message" rows="5" required></textarea></label>
+<button type="submit" class="btn btn-primary btn-block">Send my request →</button>
+<!-- C55 / R3 QA : sans JS, le bouton « Envoyer » ne fait rien.
+           Un lien mailto natif est donc proposé directement. -->
+<noscript>
+<p class="form-note">
+<a href="mailto:bonjour@marion-cabin.ca?subject=Demande%20de%20rendez-vous" style="border-bottom:1px solid currentColor">
+            Envoyer directement par email →
+</a>
+</p>
+</noscript>
+<p class="fine light">Your information stays confidential — never shared, never passed to third parties.</p>
+<p class="form-note" id="formNote" hidden>Your message opens in your e-mail app (subject and body pre-filled). Just click “Send” — a reply arrives within 24 business hours.</p>
+</form>
+</div>
+</section>
+
+

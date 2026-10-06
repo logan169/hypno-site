@@ -1,9 +1,9 @@
 ---
-# Layout principal, héberge le contenu, charge NOTRE CSS/JS.
-# (Minimal Mistakes fait office d'outillage : StaticMan, sitemap, feed)
+# Layout principal — héberge le contenu, charge NOTRE CSS/JS.
+# Langue/region : URL /{fr,en}/loc_{bc,qc,fr}/ — chaque variante est une page réelle.
 ---
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="{{ page.lang | default: 'fr' }}" data-theme="light">
   {% include head.html %}
   <body>
     {% include masthead.html %}

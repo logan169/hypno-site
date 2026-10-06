@@ -1,38 +1,36 @@
-<a class="skip-link" href="{{ site.baseurl }}/#main" data-i18n>Aller au contenu</a>
+<a class="skip-link" href="{{ site.baseurl }}/{% if page.lang == 'en' %}en{% else %}fr{% endif %}/loc_{{ page.loc | default: 'bc' }}/#main">{% if page.lang == 'en' %}Skip to content{% else %}Aller au contenu{% endif %}</a>
 
 <!-- ══════════════════ 00 · NAV ══════════════════ -->
 <header class="site-nav" id="top">
   <div class="nav-inner">
-    <a class="brand" href="{{ site.baseurl }}/#accueil">
+    <a class="brand" href="{{ site.baseurl }}/{% if page.lang == 'en' %}en{% else %}fr{% endif %}/loc_{{ page.loc | default: 'bc' }}/#accueil">
       <img class="brand-mark" src="{{ site.baseurl }}/assets/img/logo.svg" width="46" height="46" alt="Marion Fechino" aria-label="Marion Fechino">
-      <span class="brand-tag" data-i18n>Hypnose · Santé des femmes · Intégrative</span>
+      <span class="brand-tag">{% if page.lang == 'en' %}Hypnotherapy · Women’s health · Integrative{% else %}Hypnose · Santé des femmes · Intégrative{% endif %}</span>
     </a>
-    <nav class="nav-links" aria-label="Navigation principale" data-i18n-attr="aria-label" data-i18n-attr-en="Main navigation">
-      <a href="{{ site.baseurl }}/#signals" data-i18n>Signaux</a>
-      <a href="{{ site.baseurl }}/#piliers" data-i18n>Piliers</a>
-      <a href="{{ site.baseurl }}/#approche" data-i18n>Approche</a>
-      <a href="{{ site.baseurl }}/#apropos" data-i18n>À propos</a>
-      <a href="{{ site.baseurl }}/#comprendre" data-i18n>Comprendre</a>
-      <a href="{{ site.baseurl }}/#rendezvous" class="nav-cta" data-i18n>Prendre rendez-vous</a>
+    <nav class="nav-links" aria-label="{% if page.lang == 'en' %}Main navigation{% else %}Navigation principale{% endif %}">
+      <a href="#signals">{% if page.lang == 'en' %}Signals{% else %}Signaux{% endif %}</a>
+      <a href="#piliers">{% if page.lang == 'en' %}Pillars{% else %}Piliers{% endif %}</a>
+      <a href="#approche">{% if page.lang == 'en' %}Approach{% else %}Approche{% endif %}</a>
+      <a href="#apropos">{% if page.lang == 'en' %}About{% else %}À propos{% endif %}</a>
+      <a href="#comprendre">{% if page.lang == 'en' %}Understand{% else %}Comprendre{% endif %}</a>
+            <a href="#rendezvous" class="nav-cta">{% if page.lang == 'en' %}Book an appointment{% else %}Prendre rendez-vous{% endif %}</a>
     </nav>
     <div class="nav-tools">
-      <button class="tool-btn theme-toggle" type="button" aria-pressed="false" aria-label="Mode nuit" data-i18n-attr="aria-label"
-        data-i18n-attr-en="Dark mode">
+      <button class="tool-btn theme-toggle" type="button" aria-pressed="false" aria-label="{% if page.lang == 'en' %}Dark mode{% else %}Mode nuit{% endif %}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
       </button>
-      <button class="tool-btn lang-toggle" type="button" aria-label="English">EN</button>
-      <button class="nav-burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu"
-        data-i18n-attr="aria-label" data-i18n-attr-en="Open menu">
+      <a class="tool-btn lang-link" type="button" href="{{ site.baseurl }}/{% if page.lang == 'en' %}fr{% else %}en{% endif %}/loc_{{ page.loc | default: 'bc' }}/" aria-label="{% if page.lang == 'en' %}Français{% else %}English{% endif %}">{% if page.lang == 'en' %}FR{% else %}EN{% endif %}</a>
+      <button class="nav-burger" id="burger" aria-label="{% if page.lang == 'en' %}Open menu{% else %}Ouvrir le menu{% endif %}" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu" hidden>
-    <a href="{{ site.baseurl }}/#signals" data-i18n>Signaux</a>
-    <a href="{{ site.baseurl }}/#piliers" data-i18n>Piliers</a>
-    <a href="{{ site.baseurl }}/#approche" data-i18n>Approche</a>
-    <a href="{{ site.baseurl }}/#apropos" data-i18n>À propos</a>
-    <a href="{{ site.baseurl }}/#comprendre" data-i18n>Comprendre</a>
-    <a href="{{ site.baseurl }}/#rendezvous" class="nav-cta" data-i18n>Prendre rendez-vous</a>
+    <a href="#signals">{% if page.lang == 'en' %}Signals{% else %}Signaux{% endif %}</a>
+    <a href="#piliers">{% if page.lang == 'en' %}Pillars{% else %}Piliers{% endif %}</a>
+    <a href="#approche">{% if page.lang == 'en' %}Approach{% else %}Approche{% endif %}</a>
+    <a href="#apropos">{% if page.lang == 'en' %}About{% else %}À propos{% endif %}</a>
+    <a href="#comprendre">{% if page.lang == 'en' %}Understand{% else %}Comprendre{% endif %}</a>
+        <a href="#rendezvous" class="nav-cta">{% if page.lang == 'en' %}Book an appointment{% else %}Prendre rendez-vous{% endif %}</a>
   </div>
 </header>

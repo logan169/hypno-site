@@ -1,9 +1,13 @@
 <footer class="site-footer">
+  {%- assign fx_ = page.loc -%}
+  {%- if page.loc == empty %}{% assign fx_ = "bc" -%}{%- endif -%}
+  {%- assign lx_ = page.lang -%}
+  {%- if page.lang == empty %}{% assign lx_ = "fr" -%}{%- endif -%}
   <div class="wrap footer-bar">
-    <span class="brand-tag" data-i18n>Hypnose · Santé des femmes · Santé intégrative</span>
+    <span class="brand-tag">{% if page.lang == 'en' %}Hypnotherapy · Women’s health · Integrative{% else %}Hypnose · Santé des femmes · Santé intégrative{% endif %}</span>
     <span class="footer-sep" aria-hidden="true">·</span>
-    <span class="footer-legal" data-i18n>© 2026 Marion Fechino — Tous droits réservés.</span>
+    <span class="footer-legal">© 2026 Marion Fechino — {% if page.lang == 'en' %}All rights reserved.{% else %}Tous droits réservés.{% endif %}</span>
     <span class="footer-sep" aria-hidden="true">·</span>
-    <span class="footer-notice" data-i18n>Aucune information sur ce site ne remplace l’avis d’un médecin.</span>
+    <span class="footer-notice">{{ site.data.registry[fx_][lx_].legal }}</span>
   </div>
 </footer>

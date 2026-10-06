@@ -11,7 +11,7 @@
   <meta name="description" content="{{ page.excerpt | default: site.description }}">
   <meta name="author" content="Marion Fechino">
   <meta name="theme-color" content="#F5F1E9">
-  <meta property="og:locale" content="fr_CA">
+  <meta property="og:locale" content="{{ page.locale | default: "fr_CA" }}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Marion Fechino">
   <meta property="og:title" content="{{ page.title | default: site.title }}, {{ site.title }}">
@@ -118,5 +118,13 @@
   </script>
 
 <link rel="manifest" href="{{ site.baseurl }}/manifest.webmanifest">
-</head>
 
+  {%- if page.permalink == '/' -%}
+  <link rel="alternate" hreflang="fr-ca" href="{{ site.url }}{{ site.baseurl }}/fr/loc_bc/">
+  <link rel="alternate" hreflang="fr-ca" href="{{ site.url }}{{ site.baseurl }}/fr/loc_qc/">
+  <link rel="alternate" hreflang="fr-ca" href="{{ site.url }}{{ site.baseurl }}/fr/loc_fr/">
+  <link rel="alternate" hreflang="en-ca" href="{{ site.url }}{{ site.baseurl }}/en/loc_bc/">
+  <link rel="alternate" hreflang="en-ca" href="{{ site.url }}{{ site.baseurl }}/en/loc_qc/">
+  <link rel="alternate" hreflang="en-ca" href="{{ site.url }}{{ site.baseurl }}/en/loc_fr/">
+  {%- endif -%}
+</head>

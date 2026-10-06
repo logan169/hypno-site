@@ -1,0 +1,68 @@
+# ── REGISTRE RÉGIONAL ─────────────────────────────────────────────
+# Contenu qui varie selon la région (loc_bc / loc_qc / loc_fr) et la
+# langue (fr / en). Le design reste identique : seules ces valeurs
+# (couverture, tarif, mentions légales, coordonnées) changent.
+#
+# ⚠️ PLACEHOLDERS — remplacez les valeurs tarif/légal/assurance par
+# les textes définitifs (validés avec Marion) avant d'en faire la
+# promotion externe.
+# ──────────────────────────────────────────────────────────────────
+bc:
+  fr:
+    coverage: "Séances en visioconférence : Colombie-Britannique, Québec, tout le Canada — et bientôt la France"
+    city: "Vancouver, Colombie-Britannique"
+    tariff: "Séance d’accompagnement · 60 à 75 min — 150 $ CAD"
+    billing: "Paiement par virement ou carte; la facture est fournie après chaque séance."
+    legal: "Exercice indépendant en Colombie-Britannique (C.-B.) — aucune information sur ce site ne remplace l’avis d’un médecin."
+    faq_q: "Comment se passe le paiement et la facturation?"
+    faq_a: "Le tarif de la séance est indiqué sur cette page. Le règlement est simple (virement ou carte), et une facture est remise après chaque séance. Les modalités précises de prise en charge ou de remboursement par votre assureur peuvent varier : je vous accompagne pour documenter la séance."
+    rdv_mod: "En visioconférence : l’accompagnement complet, depuis le confort de votre foyer"
+  en:
+    coverage: "Video sessions: British Columbia, Québec, across Canada — France coming soon"
+    city: "Vancouver, British Columbia"
+    tariff: "Session (60–75 min) — CAD 150"
+    billing: "Payment by transfer or card; an invoice is provided after each session."
+    legal: "Independent practice in British Columbia (B.C.) — nothing on this site replaces a physician’s advice."
+    faq_q: "How does payment and billing work?"
+    faq_a: "The session fee is listed on this page. Payment is straightforward (transfer or card), and an invoice is issued after each session. Exact coverage or reimbursement by your insurer can vary — I help you document the session properly."
+    rdv_mod: "By video call — full support, from the comfort of your home"
+
+qc:
+  fr:
+    coverage: "Séances en visioconférence depuis Vancouver (C.-B.) — disponibles au Québec et partout au Canada"
+    city: "Vancouver, C.-B. — accompagnement au Québec par visioconférence"
+    tariff: "Séance d’accompagnement · 60 à 75 min — 150 $ CAD"
+    billing: "Paiement par virement ou carte; une facture détaillée est remise après chaque séance, utilisable dans le cadre de vos dossiers d’assurance applicables."
+    legal: "Accompagnement offert par visioconférence depuis Vancouver (C.-B.). Les services s’adressent aux personnes résidant au Québec; aucune information sur ce site ne remplace l’avis d’un médecin."
+    faq_q: "Comment se passe le paiement, et que dire de l’assurance?"
+    faq_a: "Le tarif de la séance est indiqué sur cette page. Le règlement se fait par virement ou carte, et une facture détaillée vous est remise après chaque séance. Les règles de prise en charge varient selon l’assurance (complémentaire, collective ou privée) : la facture est établie de façon à ce que vous puissiez en faire valoir les coûts; je vous accompagne pour documenter la séance."
+    rdv_mod: "En visioconférence (depuis Vancouver, C.-B.) — l’accompagnement complet, où que vous soyez au Québec"
+  en:
+    coverage: "Video sessions from Vancouver (B.C.) — available in Québec and across Canada"
+    city: "Vancouver, B.C. — supporting Québec via video"
+    tariff: "Session (60–75 min) — CAD 150"
+    billing: "Payment by transfer or card; a detailed invoice is issued after each session, suitable for applicable insurance documentation."
+    legal: "Sessions delivered by video from Vancouver (B.C.). Services are offered to people living in Québec; nothing on this site replaces a physician’s advice."
+    faq_q: "How does payment work, and what about insurance?"
+    faq_a: "The session fee is listed on this page. Payment is by transfer or card, and a detailed invoice is issued after each session. Coverage rules vary by insurer (supplemental, group or private): the invoice is set up so you can claim costs, and I help you document the session."
+    rdv_mod: "By video (from Vancouver, B.C.) — full support, wherever you are in Québec"
+
+fr:
+  fr:
+    coverage: "Séances en visioconférence — France, Canada et Europe (bientôt)"
+    city: "Vancouver, Canada — accompagnement en France par visioconférence"
+    tariff: "Séance d’accompagnement · 60 à 75 min — 130 € EUR"
+    billing: "Paiement par virement SEPA ou carte; une facture européenne (nom, adresse, numéro de séance, montant TTC) est remise après chaque séance."
+    legal: "Séances offertes par visioconférence depuis Vancouver (Canada) à des personnes résidant en France — hors cadre de prescription. Aucune information sur ce site ne remplace l’avis d’un médecin."
+    faq_q: "Comment se passe le paiement et la prise en charge en France?"
+    faq_a: "Le tarif de la séance est indiqué sur cette page (en euros). Le règlement se fait par virement SEPA ou carte, et une facture européenne vous est remise après chaque séance. En France, l’hypnothérapie n’est pas (encore) prise en charge par l’Assurance Maladie; certaines mutuelles ou assurances privées remboursent les séances de thérapies complémentaires — la facture est établie pour que vous puissiez faire valoir ces coûts."
+    rdv_mod: "En visioconférence (depuis Vancouver, Canada) — l’accompagnement complet, où que vous soyez en France"
+  en:
+    coverage: "Video sessions — France, Canada and Europe (coming soon)"
+    city: "Vancouver, Canada — supporting France via video"
+    tariff: "Session (60–75 min) — EUR 130"
+    billing: "Payment by SEPA transfer or card; an EU-style invoice (name, address, session number, amount incl. VAT) is issued after each session."
+    legal: "Sessions delivered by video from Vancouver (Canada) to people living in France — outside any prescription framework. Nothing on this site replaces a physician’s advice."
+    faq_q: "How does payment and coverage work in France?"
+    faq_a: "The session fee is listed on this page (in euros). Payment is by SEPA transfer or card, and an EU-style invoice is issued after each session. In France, hypnotherapy is not (yet) covered by the Assurance Maladie; some mutuelles or private insurers reimburse complementary-therapy sessions — the invoice is set up so you can claim those costs."
+    rdv_mod: "By video (from Vancouver, Canada) — full support, wherever you are in France"
