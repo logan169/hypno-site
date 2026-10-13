@@ -108,7 +108,7 @@ h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-
 @media(max-width:1020px){.nav-links a{padding:.28rem .5rem;font-size:.93rem}.nav-tools{gap:.35rem}.lang-toggle{min-width:36px;margin-left:.2rem}}
 
 .brand{display:flex;flex-direction:row;align-items:center;gap:.6rem;line-height:1.1}
-.brand-mark{width:46px;height:46px;flex:0 0 auto}
+.brand-mark{width:69px;height:69px;flex:0 0 auto}
 .brand-name{font-family:var(--serif);font-size:1.52rem;font-weight:600;color:var(--ink)}
 .brand-tag{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-72)}
 
@@ -553,7 +553,7 @@ html::-webkit-scrollbar{width:0;height:0;display:none}
 .section-creme{background:var(--bg-alt);padding-block:3.6rem}
 
 /* ═══ Chrome / shared ═══ */
-.footer-logo{display:block;width:52px;height:52px;margin-bottom:.65rem;border-radius:12px}
+.footer-logo{display:block;width:78px;height:78px;margin-bottom:.65rem;border-radius:12px}
 .nav-tools{display:inline-flex;align-items:center;gap:.5rem;margin-left:.4rem}
 .theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;padding:.55rem .7rem;border-radius:10px;background:var(--card);border:1px solid var(--ligne);color:var(--ink-80);font-size:.85rem;letter-spacing:.05em;cursor:pointer;transition:background var(--trans),color var(--trans),border-color var(--trans)}
 .theme-toggle:hover{background:var(--sauge-pale);color:var(--ink);border-color:var(--sauge)}
