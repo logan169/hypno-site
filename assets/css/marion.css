@@ -169,6 +169,17 @@ h3{font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:500;line-height:1.2;margin-
 .hero-media{position:absolute;inset:0;z-index:0}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:left center;filter:brightness(1.05) saturate(.86) contrast(.97);animation:heroDrift 30s ease-in-out infinite alternate;transform-origin:62% 42%}
 @keyframes heroDrift{from{transform:scale(1)}to{transform:scale(1.05)}}
+/* Desktop: the outpainted right edge of hero-forest carries over-bright fern
+   fronds that read worse than mobile's narrow left crop. Hide them at every
+   desktop width (the hero box is width-limited on some widths, height-limited
+   on others, so the crop window varies with aspect) by zooming the image ~2x
+   with the left edge anchored. The visible window then sits in the photo's
+   left portion (moody trail) at all widths, matching the mobile feel.
+   Mobile (<=820px) renders exactly as before. */
+@keyframes heroDriftWide{from{transform:scale(1.85)}to{transform:scale(1.92)}}
+@media (min-width:821px){
+  .hero-media img{transform-origin:0 50%;animation:heroDriftWide 30s ease-in-out infinite alternate;will-change:transform}
+}
 .hero-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(98deg,rgba(245,241,233,.97) 0 36%,rgba(245,241,233,.90) 52%,rgba(245,241,233,.48) 74%,rgba(67,82,73,.14) 100%)}
 [data-theme="dark"] .hero-veil{background:linear-gradient(98deg,rgba(30,32,24,.97) 0 36%,rgba(30,32,24,.93) 52%,rgba(30,32,24,.58) 74%,rgba(67,82,73,.12) 100%)}
 [data-theme="dark"] .hero-media img{filter:brightness(.7) saturate(.82) contrast(1.04)}
